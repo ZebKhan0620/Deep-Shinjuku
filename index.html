@@ -24,12 +24,12 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Main Container with responsive max-width -->
-    <div class="min-h-screen flex justify-center overflow-x-hidden box-border">
-      <div class="w-[1440px] border border-blue-500 bg-[url('/images/worn-dots.png')]">
-        <!-- Changed to fixed width -->
-        <div class="relative border border-green-500">
-          <!-- Removed fixed width for better responsiveness -->
+    <!-- Change this parent container -->
+    <div class="min-h-screen flex justify-center box-border">
+      <!-- Remove overflow-x-hidden from above and add isolation to create stacking context -->
+      <div class="w-[1440px] border border-blue-500 bg-[url('/images/worn-dots.png')] isolation">
+        <!-- Change relative to static to not interfere with sticky positioning -->
+        <div class="border border-green-500">
           <!-- Hero Section -->
           <section
             class="relative h-screen w-[1410px] mx-auto overflow-hidden py-4 border border-red-500"
@@ -370,7 +370,7 @@
                     <g>
                       <polygon
                         class="fill-white"
-                        points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.84 153.84 192.31 192.3 192.31 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85"
+                        points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.84 153.84 192.31 192.3 192.3 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 230.77 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85"
                       />
                     </g>
                   </svg>
@@ -380,9 +380,7 @@
           </section>
         </div>
         <!-- Header Container -->
-        <header
-          class="relative mx-auto mt-12 mb-12 bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] transition-colors duration-300 hover:bg-black group"
-        >
+        <header class="sticky top-0 z-[100] bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] transition-colors duration-300 hover:bg-black group">
           <div
             class="flex h-16 items-center justify-between max-w-[1350px] mx-auto"
           >
@@ -496,105 +494,108 @@
               </g>
             </svg>
           </button>
-          <!-- After the header button, add this menu container -->
+          <!-- After the header button, modify the menu container -->
           <div
             id="menuOverlay"
-            class="fixed top-[85px] inset-x-0 bg-black hidden z-40 h-0 overflow-hidden transition-all duration-300 origin-top"
+            class="absolute w-full bg-black opacity-0 invisible transition-all duration-300 ease-in-out"
           >
-            <div class="max-w-[1440px] h-[664px] mx-auto pt-[64px]">
-              <!-- Left Side -->
-              <div class="flex">
-                <div class="w-[30%] text-center text-white">
-                  <div class="text-center mb-8">
-                    <button
-                      class="arrow-up text-4xl mb-4 hover:text-[#003BFF] transition-colors"
-                    >
-                      △
-                    </button>
-                    <p class="text-2xl font-dotgothic16">MAYU</p>
-                    <p class="text-xl font-dotgothic16">2024年 1月号</p>
-                    <button
-                      class="arrow-down text-4xl mt-4 hover:text-[#003BFF] transition-colors"
-                    >
-                      ▽
-                    </button>
+            <div class="max-h-[calc(100vh-64px)] max-w-[1440px] mx-auto overflow-y-auto">
+              <!-- Content wrapper -->
+              <div class="min-h-[calc(100vh-64px)] pt-[64px]">
+                <!-- Left Side -->
+                <div class="flex">
+                  <div class="w-[30%] text-center text-white">
+                    <div class="text-center mb-8">
+                      <button
+                        class="arrow-up text-4xl mb-4 hover:text-[#003BFF] transition-colors"
+                      >
+                        △
+                      </button>
+                      <p class="text-2xl font-dotgothic16">MAYU</p>
+                      <p class="text-xl font-dotgothic16">2024年 1月号</p>
+                      <button
+                        class="arrow-down text-4xl mt-4 hover:text-[#003BFF] transition-colors"
+                      >
+                        ▽
+                      </button>
+                    </div>
                   </div>
-                </div>
 
-                <!-- Right Side -->
-                <div class="flex-1 space-y-[48px] pr-8">
-                  <!-- Article Items -->
-                  <!-- Article 1 -->
-                  <a href="#" class="relative h-[120px] group block">
-                    <div
-                      class="absolute inset-0 bg-[url('/images/article1.jpg')] bg-cover bg-center opacity-70"
-                    ></div>
-                    <div class="relative px-6 py-4">
-                      <span
-                        class="inline-block bg-white text-black px-2 py-1 text-sm mb-2"
-                        >No. 1</span
-                      >
-                      <h3
-                        class="text-xl font-dotgothic16 text-white bg-white/80 p-2 group-hover:bg-[#003BFF]/80 transition-colors"
-                      >
-                        新[ネオ]レトロ再燃！新宿、今こそ喫茶でしょ。
-                      </h3>
-                    </div>
-                  </a>
+                  <!-- Right Side -->
+                  <div class="flex-1 space-y-[48px] pr-8">
+                    <!-- Article Items -->
+                    <!-- Article 1 -->
+                    <a href="#" class="relative h-[120px] group block">
+                      <div
+                        class="absolute inset-0 bg-[url('/images/article1.jpg')] bg-cover bg-center opacity-70"
+                      ></div>
+                      <div class="relative px-6 py-4">
+                        <span
+                          class="inline-block bg-white text-black px-2 py-1 text-sm mb-2"
+                          >No. 1</span
+                        >
+                        <h3
+                          class="text-xl font-dotgothic16 text-white bg-white/80 p-2 group-hover:bg-[#003BFF]/80 transition-colors"
+                        >
+                          新[ネオ]レトロ再燃！新宿、今こそ喫茶でしょ。
+                        </h3>
+                      </div>
+                    </a>
 
-                  <!-- Article 2 -->
-                  <a href="#" class="relative h-[120px] group block">
-                    <div
-                      class="absolute inset-0 bg-[url('/images/article2.jpg')] bg-cover bg-center opacity-70"
-                    ></div>
-                    <div class="relative px-6 py-4">
-                      <span
-                        class="inline-block bg-white text-black px-2 py-1 text-sm mb-2"
-                        >No. 2</span
-                      >
-                      <h3
-                        class="text-xl font-dotgothic16 text-white bg-white/80 p-2 group-hover:bg-[#003BFF]/80 transition-colors"
-                      >
-                        はじまりのコリアンタウン
-                      </h3>
-                    </div>
-                  </a>
+                    <!-- Article 2 -->
+                    <a href="#" class="relative h-[120px] group block">
+                      <div
+                        class="absolute inset-0 bg-[url('/images/article2.jpg')] bg-cover bg-center opacity-70"
+                      ></div>
+                      <div class="relative px-6 py-4">
+                        <span
+                          class="inline-block bg-white text-black px-2 py-1 text-sm mb-2"
+                          >No. 2</span
+                        >
+                        <h3
+                          class="text-xl font-dotgothic16 text-white bg-white/80 p-2 group-hover:bg-[#003BFF]/80 transition-colors"
+                        >
+                          はじまりのコリアンタウン
+                        </h3>
+                      </div>
+                    </a>
 
-                  <!-- Article 3 -->
-                  <a href="#" class="relative h-[120px] group block">
-                    <div
-                      class="absolute inset-0 bg-[url('/images/article3.jpg')] bg-cover bg-center opacity-70"
-                    ></div>
-                    <div class="relative px-6 py-4">
-                      <span
-                        class="inline-block bg-white text-black px-2 py-1 text-sm mb-2"
-                        >No. 3</span
-                      >
-                      <h3
-                        class="text-xl font-dotgothic16 text-white bg-white/80 p-2 group-hover:bg-[#003BFF]/80 transition-colors"
-                      >
-                        新宿駅に"地底人"!?
-                      </h3>
-                    </div>
-                  </a>
+                    <!-- Article 3 -->
+                    <a href="#" class="relative h-[120px] group block">
+                      <div
+                        class="absolute inset-0 bg-[url('/images/article3.jpg')] bg-cover bg-center opacity-70"
+                      ></div>
+                      <div class="relative px-6 py-4">
+                        <span
+                          class="inline-block bg-white text-black px-2 py-1 text-sm mb-2"
+                          >No. 3</span
+                        >
+                        <h3
+                          class="text-xl font-dotgothic16 text-white bg-white/80 p-2 group-hover:bg-[#003BFF]/80 transition-colors"
+                        >
+                          新宿駅に"地底人"!?
+                        </h3>
+                      </div>
+                    </a>
 
-                  <!-- Article 4 -->
-                  <a href="#" class="relative h-[120px] group block">
-                    <div
-                      class="absolute inset-0 bg-[url('/images/article4.jpg')] bg-cover bg-center opacity-70"
-                    ></div>
-                    <div class="relative px-6 py-4">
-                      <span
-                        class="inline-block bg-white text-black px-2 py-1 text-sm mb-2"
-                        >No. 4</span
-                      >
-                      <h3
-                        class="text-xl font-dotgothic16 text-white bg-white/80 p-2 group-hover:bg-[#003BFF]/80 transition-colors"
-                      >
-                        コズミックパワー全開！！&lt;宇宙村&gt;の神秘
-                      </h3>
-                    </div>
-                  </a>
+                    <!-- Article 4 -->
+                    <a href="#" class="relative h-[120px] group block">
+                      <div
+                        class="absolute inset-0 bg-[url('/images/article4.jpg')] bg-cover bg-center opacity-70"
+                      ></div>
+                      <div class="relative px-6 py-4">
+                        <span
+                          class="inline-block bg-white text-black px-2 py-1 text-sm mb-2"
+                          >No. 4</span
+                        >
+                        <h3
+                          class="text-xl font-dotgothic16 text-white bg-white/80 p-2 group-hover:bg-[#003BFF]/80 transition-colors"
+                        >
+                          コズミックパワー全開！！&lt;宇宙村&gt;の神秘
+                        </h3>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

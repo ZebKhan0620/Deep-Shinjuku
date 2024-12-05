@@ -5,3 +5,31 @@
     font-weight: 400;
     font-style: normal;
 }
+
+.menu-open {
+  overflow: hidden;
+}
+
+#menuOverlay {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Optional: Add smooth scrolling to the menu content */
+#menuOverlay .max-w-\[1440px\] {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+#menuOverlay .max-w-\[1440px\]::-webkit-scrollbar {
+  width: 6px;
+}
+
+#menuOverlay .max-w-\[1440px\]::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#menuOverlay .max-w-\[1440px\]::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}

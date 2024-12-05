@@ -5,35 +5,31 @@ const upArrow = document.querySelector('.arrow-up');
 const downArrow = document.querySelector('.arrow-down');
 let currentMonth = 1;
 
-// Handle header position on scroll
-window.addEventListener('scroll', () => {
-  const headerOffset = header.offsetTop;
-  if (window.scrollY >= headerOffset) {
-    header.classList.add('fixed', 'top-0', 'w-full', 'z-50');
-    menuOverlay.classList.add('top-0');
-  } else {
-    header.classList.remove('fixed', 'top-0', 'w-full', 'z-50');
-    menuOverlay.classList.remove('top-0');
-  }
-});
-
 // Toggle menu
 menuButton.addEventListener('click', () => {
   const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+  
   menuButton.setAttribute('aria-expanded', !isExpanded);
   
-  if (isExpanded) {
-    menuOverlay.style.height = '0';
-    setTimeout(() => {
-      menuOverlay.classList.add('hidden');
-    }, 300);
+  if (!isExpanded) {
+    menuOverlay.style.visibility = 'visible';
+    menuOverlay.style.opacity = '1';
+    document.body.style.overflow = 'hidden';
+    
+    menuButton.classList.add('bg-black');
+    menuButton.querySelector('svg').classList.add('fill-white');
   } else {
-    menuOverlay.classList.remove('hidden');
-    requestAnimationFrame(() => {
-      // Include header height in total dropdown height
-      const totalHeight = 664 + header.offsetHeight;
-      menuOverlay.style.height = `${totalHeight}px`;
-    });
+    menuOverlay.style.opacity = '0';
+    document.body.style.overflow = 'auto';
+    
+    menuButton.classList.remove('bg-black');
+    menuButton.querySelector('svg').classList.remove('fill-white');
+    
+    setTimeout(() => {
+      if (!menuButton.getAttribute('aria-expanded') === 'true') {
+        menuOverlay.style.visibility = 'hidden';
+      }
+    }, 500);
   }
 });
 
