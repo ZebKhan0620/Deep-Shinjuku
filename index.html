@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MAYU</title>
+    <meta name="description" content="MAYU - 新宿の文化と歴史を探求するウェブマガジン" />
+    <meta name="author" content="MAYU Editorial Team" />
+    <meta name="keywords" content="新宿,カルチャー,ヒストリー,東京,ウェブマガジン" />
+    <meta property="og:title" content="MAYU - 新宿カルチャーマガジン" />
+    <meta property="og:description" content="新宿の文化と歴史を探求するウェブマガジン" />
+    <meta property="og:type" content="website" />
+    <title>MAYU - 新宿カルチャーマガジン</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="/favicon/logo04.svg" />
+    <link rel="icon" href="/favicon/logo04.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="min-h-screen flex justify-center overflow-x-hidden">
-      <div class="max-w-[1410px]">
-        <div class="w-[1408px] mx-auto">
+    <!-- Main Container with responsive max-width -->
+    <div class="min-h-screen flex justify-center overflow-x-hidden box-border border border-red-500">
+      <div class="w-full max-w-[1410px] px-4 border border-blue-500"> <!-- Changed from fixed width -->
+        <div class="relative mx-auto border border-green-500"> <!-- Removed fixed width for better responsiveness -->
           <!-- Hero Section -->
           <section
-            class="relative h-screen max-w-[1408px] mx-auto overflow-hidden px-[32px] py-4 -mx-[100px] border border-red-500"
+            class="relative h-screen w-full mx-auto overflow-hidden py-4" 
+            aria-label="Hero Banner"
           >
             <!-- Main Content Container -->
             <div
               class="relative z-10 h-full flex flex-col items-center justify-center border border-green-500"
+              role="banner"
             >
               <!-- Background Image -->
               <div class="absolute inset-0">
@@ -26,18 +35,23 @@
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/8011d1b2e9b125911fb1d3a131ef5c2fc4aeb7e624f5a21da0997008cc7b0c93"
                   alt="Urban Japanese Street"
                   class="w-full h-full object-cover opacity-80"
+                  loading="lazy"
                 />
                 <div class="bg-black/50 absolute inset-0"></div>
               </div>
               <!-- STATUS HIDDEN/STATUS VISIBLE -->
               <div
                 class="absolute bottom-[115px] right-[43px] flex w-[177px] items-center justify-between"
+                aria-label="Status Indicators"
               >
                 <!-- Status 1 -->
                 <svg
                   class="w-[14px] h-[14px]"
                   viewBox="0 0 192.3 192.31"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                  role="img"
                 >
                   <g>
                     <polygon
@@ -63,6 +77,9 @@
                   class="w-[14px] h-[14px]"
                   viewBox="0 0 192.31 192.31"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                  role="img"
                 >
                   <polygon
                     class="fill-white"
@@ -74,6 +91,9 @@
                   class="w-[14px] h-[14px]"
                   viewBox="0 0 192.3 192.31"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                  role="img"
                 >
                   <g>
                     <polygon
@@ -99,6 +119,9 @@
                   class="w-[14px] h-[14px]"
                   viewBox="0 0 192.31 192.31"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                  role="img"
                 >
                   <polygon
                     class="fill-white"
@@ -110,6 +133,9 @@
                   class="w-[14px] h-[14px]"
                   viewBox="0 0 192.3 192.31"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                  role="img"
                 >
                   <g>
                     <polygon
@@ -133,14 +159,18 @@
               </div>
               <!-- END -->
               <!-- Logo Container -->
-              <!-- ロゴのサイズは810pxと177pxが60%で表示されるように設定した-->
-              <div class="absolute top-8 left-8 w-[810px] h-[177px]">
+              <!-- ロゴのサイズは810pxと177pxが60%で表示されるように設定 -->
+              <div class="absolute top-8 left-8 w-full max-w-[810px] h-auto md:h-[177px] transition-all duration-300">
                 <!-- Your SVG Logo with Tailwind classes -->
                 <svg
                   class="w-full h-auto text-white fill-current transition-transform duration-300 hover:scale-105"
                   viewBox="0 0 1494.02 326.04"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-label="MAYU Logo"
+                  role="img"
                 >
+                  <title>MAYU Logo</title>
+                  <desc>MAYU - 新宿カルチャーマガジン</desc>
                   <g>
                     <g id="_レイヤー_1-2" data-name="レイヤー_1">
                       <g>
@@ -256,19 +286,20 @@
                     </g>
                   </g>
                 </svg>
-                <!-- class="w-full h-auto text-white fill-current transition-transform duration-300 hover:scale-105" -->
               </div>
               <!-- Navigation Controls Container -->
-              <div class="absolute bottom-8 right-8 flex items-center gap-12">
+              <div class="absolute bottom-8 right-8 flex items-center gap-12" aria-label="Slideshow Controls">
                 <!-- Left Arrow -->
-                <!-- 左矢印 -->
                 <button
-                  class="w-[23px] h-[35px] transition-transform hover:scale-110"
+                  class="w-[23px] h-[35px] transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  aria-label="Previous Slide"
                 >
                   <svg
                     class="w-full h-full"
                     viewBox="0 0 269.23 423.08"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    focusable="false"
                   >
                     <g>
                       <polygon
@@ -279,15 +310,16 @@
                   </svg>
                 </button>
                 <!-- Play/Pause Button -->
-                <!-- WORK HERE AND FIX -->
-                <!-- 再生/一時停止ボタン -->
                 <button
-                  class="w-[35px] h-[35px] transition-transform hover:scale-110"
+                  class="w-[35px] h-[35px] transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  aria-label="Play/Pause Slideshow"
                 >
                   <svg
                     class="w-full h-full"
                     viewBox="0 0 423.08 423.08"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    focusable="false"
                   >
                     <g>
                       <polygon
@@ -298,14 +330,16 @@
                   </svg>
                 </button>
                 <!-- Right Arrow -->
-                <!-- 右矢印 -->
                 <button
-                  class="w-[23px] h-[35px] transition-transform hover:scale-110"
+                  class="w-[23px] h-[35px] transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  aria-label="Next Slide"
                 >
                   <svg
                     class="w-full h-full"
                     viewBox="0 0 269.23 423.08"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    focusable="false"
                   >
                     <g>
                       <polygon
@@ -328,17 +362,23 @@
             <!-- class="w-[160px] h-[44px] transition-transform hover:scale-105" -->
             <img
               src="/images/logo04.svg"
+              width="160"
+              height="44"
               alt="MAYU Logo"
               class="w-[160px] h-[44px] transition-transform hover:scale-105"
             />
             <!-- Menu Button -->
             <button
               class="pr-4 absolute right-4 top-1/2 -translate-y-1/2 p-2 transition-transform hover:scale-110"
+              aria-label="Toggle Navigation Menu"
+              aria-expanded="false"
             >
               <svg
                 class="w-8 h-8"
                 viewBox="0 0 403.49 403.49"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
               >
                 <g>
                   <rect width="403.49" height="80.7" />
@@ -390,7 +430,7 @@
             <!-- Top Image (SVG) - Adjusted position and added hover effect -->
              <!-- class="absolute z-10 w-[465px] top-[180px] left-[35px] rotate-[-8deg]
               transition-all duration-300 hover:rotate-[-6deg] hover:scale-105" -->
-              <svg id="_レイヤー_2" data-name="レイヤー_2" class="absolute z-10 w-[360px] h-[190px] top-[190px] left-[-25px] rotate-[-8deg]
+              <svg id="_レイヤー_2" data-name="レイヤー_2" aria-hidden="true" focusable="false" class="absolute z-10 w-[360px] h-[190px] top-[190px] left-[-25px] rotate-[-8deg]
               transition-all duration-300 hover:rotate-[-6deg] hover:scale-105" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 510.83 269.14">
                 <defs>
                   <style>
@@ -446,6 +486,7 @@
               alt="Coffee Image"
               class="absolute z-20 w-[234px] h-[auto] top-[370px] left-[-70px]
               transition-all duration-300 hover:translate-y-[-5px] object-contain"
+              loading="lazy"
             />
             <!-- To000 Deep Image - Repositioned for better overlap -->
             <img
@@ -453,16 +494,20 @@
               alt="Seal Image"
               class="absolute z-30 w-[220px] h-[80px] top-[370px] left-[150px]
               transition-all duration-300 hover:scale-110"
+              loading="lazy"
             >
             <!-- Under Soda Image - Adjusted angle and position -->
               <img src="/images/soda-ad.svg" alt="Under Soda Image" class="absolute z-20 w-[281px] h-[auto] top-[510px] left-[150px] rotate-[12deg]
-              transition-all duration-300 hover:rotate-[20deg] object-contain">
+              transition-all duration-300 hover:rotate-[20deg] object-contain"
+              loading="lazy"
+            >
             <!-- Soda Glass Image - Contained within bounds better -->
             <img
               src="/images/melon-soda.png"
               alt="Soda Glass Image"
               class="absolute z-10 w-[159px] h-[auto] top-[400px] left-[380px] rotate-[15deg]
               transition-all duration-300 hover:translate-y-[-8px] object-contain"
+              loading="lazy"
             />
           </div>
           <div class="relative w-[880px] h-[600px] overflow-hidden">
@@ -470,11 +515,16 @@
               src="https://via.placeholder.com/880x600"
               alt="Main Image"
               class="object-cover w-[880px] h-[600px]"
+              loading="lazy"
+              width="880"
+              height="600"
             />
-            <button class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2
-            transition-colors duration-300 hover:bg-white hover:text-[#003BFF] hover:translate-x-[-4px]">
+            <a href="#" class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2
+            transition-colors duration-300 hover:bg-white hover:text-[#003BFF] hover:translate-x-[-4px]"
+            aria-label="Read More about Neo Retro Coffee Shops"
+            >
               もっと見る→
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -519,24 +569,33 @@
               src="https://via.placeholder.com/880x600"
               alt="Main Image"
               class="object-cover w-[880px] h-[600px]"
+              loading="lazy"
+              width="880"
+              height="600"
             />
-            <button class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2
-              transition-colors duration-300 hover:bg-white hover:text-[#003BFF] hover:translate-x-[-4px]">
+            <a href="#" class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2
+              transition-colors duration-300 hover:bg-white hover:text-[#003BFF] hover:translate-x-[-4px]"
+              aria-label="Read More about Korean Town"
+            >
               もっと見る→
-            </button>
+            </a>
           </div>
           <!-- Right Side - Text and Decorative Images -->
           <div class="relative w-[326px]">
             <!-- Decorative Images -->
             <img src="/images/why.svg" alt="Why Image"
               class="absolute z-30 w-[350px] h-[auto] top-[250px] right-[40px]
-              transition-all duration-300 hover:scale-110 object-contain">
+              transition-all duration-300 hover:scale-110 object-contain"
+              loading="lazy"
+              aria-hidden="true"
+              focusable="false"
+            >
           </div>
         </div>
       </section>
       <!-- SECTION 2 END -->
       <!-- SECTION 3 -->
-      <section class="mt-[184px] mb-[184px] border border-red-500">
+      <section class="mt-[184px] mb-[184px] w-full border border-red-500">
         <!-- Main Content Container -->
          <!-- TEXT -->
          <div class="relative group"> <!-- Added group class -->
@@ -575,12 +634,17 @@
             <img
               src="https://via.placeholder.com/880x600"
               alt="Main Image"
-              class="object-cover w-[880px] h-[600px]"  <!-- Explicit dimensions -->
+              class="object-cover w-[880px] h-[600px]" 
+              loading="lazy"
+              width="880"
+              height="600"
             />
-            <button class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2
-              transition-colors duration-300 hover:bg-white hover:text-[#003BFF] hover:translate-x-[-4px]">
+            <a href="#" class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2
+              transition-colors duration-300 hover:bg-white hover:text-[#003BFF] hover:translate-x-[-4px]"
+              aria-label="Read More about Underground People"
+            >
               もっと見る→
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -625,12 +689,17 @@
             <img
               src="https://via.placeholder.com/880x600"
               alt="Main Image"
-              class="object-cover w-[880px] h-[600px]"  <!-- Explicit dimensions -->
+              class="object-cover w-[880px] h-[600px]"
+              loading="lazy"
+              width="880"
+              height="600"
             />
-            <button class="absolute bottom-0 left-0 text-[20px] text-white bg-black px-4 py-2
-              transition-colors duration-300 hover:bg-white hover:text-[#003BFF] hover:translate-x-[4px]">
+            <a href="#" class="absolute bottom-0 left-0 text-[20px] text-white bg-black px-4 py-2
+              transition-colors duration-300 hover:bg-white hover:text-[#003BFF] hover:translate-x-[4px]"
+              aria-label="Read More about Cosmic Power"
+            >
               もっと見る→
-            </button>
+            </a>
           </div>
           <!-- Right Side - Empty Space -->
           <div class="relative w-[326px]">
@@ -682,11 +751,16 @@
               src="https://via.placeholder.com/880x600"
               alt="Main Image"
               class="object-cover w-[880px] h-[600px]"
+              loading="lazy"
+              width="880"
+              height="600"
             />
-            <button class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2
-              transition-colors duration-300 hover:bg-white hover:text-[#003BFF] hover:translate-x-[-4px]">
+            <a href="#" class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2
+              transition-colors duration-300 hover:bg-white hover:text-[#003BFF] hover:translate-x-[-4px]"
+              aria-label="Read More about Culture and Trip"
+            >
               もっと見る→
-            </button>
+            </a>
           </div>
         </div>
       </section>
