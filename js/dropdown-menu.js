@@ -82,7 +82,6 @@ menuButton.addEventListener('click', () => {
     menuOverlay.classList.add('active');
     menuOverlay.style.visibility = 'visible';
     menuOverlay.style.opacity = '1';
-    document.body.style.overflow = 'hidden';
     
     // Set fixed header styles
     headerContent.style.backgroundColor = '#FFFFFF';
@@ -96,7 +95,6 @@ menuButton.addEventListener('click', () => {
     // Closing menu - Reset everything
     menuOverlay.classList.remove('active');
     menuOverlay.style.opacity = '0';
-    document.body.style.overflow = 'auto';
     
     // Reset all styles
     headerContent.style.backgroundColor = '';
