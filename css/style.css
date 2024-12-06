@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 .dotgothic16-regular {
     font-family: "DotGothic16", serif;
     font-weight: 400;
