@@ -505,30 +505,36 @@
               class="absolute w-full bg-black opacity-0 invisible transition-all duration-300 ease-in-out 
               pointer-events-none [&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:visible"
             >
-              <div class="max-h-[calc(100vh-64px)] max-w-[1440px] mx-auto overflow-y-auto">
+              <div class="max-h-[calc(100vh-64px)] mx-auto overflow-y-auto">
                 <!-- Content wrapper -->
-                <div class="min-h-[calc(100vh-64px)] pt-[64px]">
-                  <!-- Left Side -->
-                  <div class="flex">
-                    <div class="w-[30%] px-16 text-white flex items-center justify-center">
-                      <div class="text-center">
-                        <button class="flex items-center justify-center w-[23px] h-[35px] mx-auto mb-12">
-                          <span class="text-[40px] leading-none text-white translate-y-[-2px]">△</span>
-                        </button>
-                        <p class="text-2xl font-dotgothic16">MAYU</p>
-                        <p class="text-xl font-dotgothic16">2024年 1月号</p>
-                        <button class="flex items-center justify-center w-[23px] h-[35px] mx-auto mt-12">
-                          <span class="text-[40px] leading-none text-white translate-y-[2px]">▽</span>
-                        </button>
+                <div class="min-h-[calc(100vh-64px)] flex items-center">
+                  <!-- Left Side - with max-width container -->
+                  <div class="w-[432px] px-16 text-white flex items-center justify-center">
+                    <div class="text-center">
+                      <button class="flex items-center justify-center w-[40px] h-[40px] mx-auto mb-16">
+                        <span class="text-[48px] leading-none text-white">△</span>
+                      </button>
+                      <div class="inline-flex whitespace-nowrap">
+                        <span class="text-[40px] font-dotgothic16">MAYU</span>
+                        <span class="text-[40px] font-dotgothic16 ml-4">2024年</span>
+                        <span class="text-[40px] font-dotgothic16 ml-4">1月号</span>
                       </div>
+                      <button class="flex items-center justify-center w-[40px] h-[40px] mx-auto mt-16">
+                        <span class="text-[48px] leading-none text-white">▽</span>
+                      </button>
                     </div>
+                  </div>
 
-                    <!-- Right Side -->
-                    <div class="flex-1 px-8 bg-[url('/images/worn-dots.png')] bg-repeat bg-auto">
+                  <!-- Right Side - adjusted width -->
+                  <div class="flex-1 min-h-[calc(100vh-64px)] bg-white bg-[url('/images/worn-dots.png')] bg-repeat bg-auto">
+                    <!-- Inner content with padding -->
+                    <div class="py-12 px-8">
                       <!-- Article Items -->
                       <!-- Article 1 -->
                       <div class="mb-12">
-                        <p class="text-[20px] text-white mb-4">No. 1</p>
+                        <p class="text-[20px] mb-4">
+                          <span class="bg-black text-white inline-block px-2">No. 1</span>
+                        </p>
                         <h3 class="text-[32px] font-dotgothic16 text-white bg-black inline-block">
                           新[ネオ]レトロ再燃！新宿、今こそ喫茶でしょ。
                         </h3>
@@ -536,7 +542,9 @@
 
                       <!-- Article 2 -->
                       <div class="mb-12">
-                        <p class="text-[20px] text-white mb-4">No. 2</p>
+                        <p class="text-[20px] mb-4">
+                          <span class="bg-black text-white inline-block px-2">No. 2</span>
+                        </p>
                         <h3 class="text-[32px] font-dotgothic16 text-white bg-black inline-block">
                           はじまりのコリアンタウン
                         </h3>
@@ -544,7 +552,9 @@
 
                       <!-- Article 3 -->
                       <div class="mb-12">
-                        <p class="text-[20px] text-white mb-4">No. 3</p>
+                        <p class="text-[20px] mb-4">
+                          <span class="bg-black text-white inline-block px-2">No. 3</span>
+                        </p>
                         <h3 class="text-[32px] font-dotgothic16 text-white bg-black inline-block">
                           新宿駅に"地底人"!?
                         </h3>
@@ -552,7 +562,9 @@
 
                       <!-- Article 4 -->
                       <div class="mb-12">
-                        <p class="text-[20px] text-white mb-4">No. 4</p>
+                        <p class="text-[20px] mb-4">
+                          <span class="bg-black text-white inline-block px-2">No. 4</span>
+                        </p>
                         <h3 class="text-[32px] font-dotgothic16 text-white bg-black inline-block">
                           コズミックパワー全開！！&lt;宇宙村&gt;の神秘
                         </h3>
@@ -983,7 +995,7 @@
                 <p
                   class="dotgothic16-regular text-white bg-black p-2 inline-block text-3xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
                 >
-                  公衆の面前で飲酒するスポットTOP3！
+                  公衆の面前で飲酒する���ポットTOP3！
                 </p>
               </div>
               <!-- Writer Credit -->
