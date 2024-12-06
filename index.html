@@ -511,63 +511,130 @@
                   <!-- Left Side - with max-width container -->
                   <div class="w-[432px] px-16 text-white flex items-center justify-center">
                     <div class="text-center">
-                      <button class="flex items-center justify-center w-[40px] h-[40px] mx-auto mb-16">
+                      <button class="flex items-center justify-center w-[40px] h-[40px] mx-auto mb-16 transition-transform hover:scale-110">
                         <span class="text-[48px] leading-none text-white">△</span>
                       </button>
-                      <div class="inline-flex whitespace-nowrap">
-                        <span class="text-[40px] font-dotgothic16">MAYU</span>
-                        <span class="text-[40px] font-dotgothic16 ml-4">2024年</span>
-                        <span class="text-[40px] font-dotgothic16 ml-4">1月号</span>
+                      <div class="inline-flex whitespace-nowrap group transition-colors hover:bg-white">
+                        <span class="text-[40px] font-dotgothic16 transition-colors group-hover:text-[#003BFF]">MAYU</span>
+                        <span class="text-[40px] font-dotgothic16 ml-4 transition-colors group-hover:text-[#003BFF]">2024年</span>
+                        <span class="text-[40px] font-dotgothic16 ml-4 transition-colors group-hover:text-[#003BFF]">1月号</span>
                       </div>
-                      <button class="flex items-center justify-center w-[40px] h-[40px] mx-auto mt-16">
+                      <button class="flex items-center justify-center w-[40px] h-[40px] mx-auto mt-16 transition-transform hover:scale-110">
                         <span class="text-[48px] leading-none text-white">▽</span>
                       </button>
                     </div>
                   </div>
 
                   <!-- Right Side - adjusted width -->
-                  <div class="flex-1 min-h-[calc(100vh-64px)] bg-white bg-[url('/images/worn-dots.png')] bg-repeat bg-auto">
+                  <div class="flex-1 min-h-[calc(100vh-64px)] bg-white bg-[url('/images/worn-dots.png')] bg-repeat bg-auto relative">
+                    <!-- Background image container - absolute positioned -->
+                    <div class="absolute inset-0 transition-opacity duration-300">
+                      <!-- Individual background images - hidden by default, shown on hover -->
+                      <div class="absolute inset-0 opacity-0 transition-opacity duration-300 bg-cover bg-center bg-no-repeat [&.active]:opacity-100" 
+                           data-article="1" 
+                           style="background-image: url('/image/menu-visual/menu_article_01.jpg');">
+                      </div>
+                      <div class="absolute inset-0 opacity-0 transition-opacity duration-300 bg-cover bg-center bg-no-repeat [&.active]:opacity-100" 
+                           data-article="2" 
+                           style="background-image: url('/image/menu-visual/menu_article_02.jpg');">
+                      </div>
+                      <div class="absolute inset-0 opacity-0 transition-opacity duration-300 bg-cover bg-center bg-no-repeat [&.active]:opacity-100" 
+                           data-article="3" 
+                           style="background-image: url('/image/menu-visual/menu_article_03.jpg');">
+                      </div>
+                      <div class="absolute inset-0 opacity-0 transition-opacity duration-300 bg-cover bg-center bg-no-repeat [&.active]:opacity-100" 
+                           data-article="4" 
+                           style="background-image: url('/image/menu-visual/menu_article_04.jpg');">
+                      </div>
+                      <div class="absolute inset-0 opacity-0 transition-opacity duration-300 bg-cover bg-center bg-no-repeat [&.active]:opacity-100" 
+                           data-article="5" 
+                           style="background-image: url('/image/menu-visual/menu_article_05.jpg');">
+                      </div>
+                    </div>
+
                     <!-- Inner content with padding -->
-                    <div class="py-12 px-8">
-                      <!-- Article Items -->
-                      <!-- Article 1 -->
-                      <div class="mb-12">
-                        <p class="text-[20px] mb-4">
-                          <span class="bg-black text-white inline-block px-2">No. 1</span>
-                        </p>
-                        <h3 class="text-[32px] font-dotgothic16 text-white bg-black inline-block">
-                          新[ネオ]レトロ再燃！新宿、今こそ喫茶でしょ。
-                        </h3>
-                      </div>
+                    <div class="py-12 px-8 relative z-10 h-[600px]">
+                      <div class="articles-wrapper relative">
+                        <!-- Article 1 -->
+                        <div class="article-item absolute w-full transition-all duration-300" 
+                             style="top: 0;"
+                             data-article="1">
+                          <a href="/articles/neo-retro-coffee.html" 
+                             class="inline-block group cursor-pointer" 
+                             data-hover-trigger="1">
+                            <p class="text-[20px] mb-4">
+                              <span class="bg-black text-white inline-block px-2 transition-colors group-hover:bg-white group-hover:text-[#003BFF]">No. 1</span>
+                            </p>
+                            <h3 class="text-[32px] font-dotgothic16 text-white bg-black inline-block transition-colors group-hover:bg-white group-hover:text-[#003BFF]">
+                              新[ネオ]レトロ再燃！新宿、今こそ喫茶でしょ。
+                            </h3>
+                          </a>
+                        </div>
 
-                      <!-- Article 2 -->
-                      <div class="mb-12">
-                        <p class="text-[20px] mb-4">
-                          <span class="bg-black text-white inline-block px-2">No. 2</span>
-                        </p>
-                        <h3 class="text-[32px] font-dotgothic16 text-white bg-black inline-block">
-                          はじまりのコリアンタウン
-                        </h3>
-                      </div>
+                        <!-- Article 2 -->
+                        <div class="article-item absolute w-full transition-all duration-300" 
+                             style="top: 168px;"
+                             data-article="2">
+                          <a href="/articles/korean-town.html" 
+                             class="inline-block group cursor-pointer" 
+                             data-hover-trigger="2">
+                            <p class="text-[20px] mb-4">
+                              <span class="bg-black text-white inline-block px-2 transition-colors group-hover:bg-white group-hover:text-[#003BFF]">No. 2</span>
+                            </p>
+                            <h3 class="text-[32px] font-dotgothic16 text-white bg-black inline-block transition-colors group-hover:bg-white group-hover:text-[#003BFF]">
+                              はじまりのコリアンタウン
+                            </h3>
+                          </a>
+                        </div>
 
-                      <!-- Article 3 -->
-                      <div class="mb-12">
-                        <p class="text-[20px] mb-4">
-                          <span class="bg-black text-white inline-block px-2">No. 3</span>
-                        </p>
-                        <h3 class="text-[32px] font-dotgothic16 text-white bg-black inline-block">
-                          新宿駅に"地底人"!?
-                        </h3>
-                      </div>
+                        <!-- Article 3 -->
+                        <div class="article-item absolute w-full transition-all duration-300" 
+                             style="top: 336px;"
+                             data-article="3">
+                          <a href="/articles/underground-people.html" 
+                             class="inline-block group cursor-pointer" 
+                             data-hover-trigger="3">
+                            <p class="text-[20px] mb-4">
+                              <span class="bg-black text-white inline-block px-2 transition-colors group-hover:bg-white group-hover:text-[#003BFF]">No. 3</span>
+                            </p>
+                            <h3 class="text-[32px] font-dotgothic16 text-white bg-black inline-block transition-colors group-hover:bg-white group-hover:text-[#003BFF]">
+                              新宿駅に"地底人"!?
+                            </h3>
+                          </a>
+                        </div>
 
-                      <!-- Article 4 -->
-                      <div class="mb-12">
-                        <p class="text-[20px] mb-4">
-                          <span class="bg-black text-white inline-block px-2">No. 4</span>
-                        </p>
-                        <h3 class="text-[32px] font-dotgothic16 text-white bg-black inline-block">
-                          コズミックパワー全開！！&lt;宇宙村&gt;の神秘
-                        </h3>
+                        <!-- Article 4 -->
+                        <div class="article-item absolute w-full transition-all duration-300" 
+                             style="top: 504px;"
+                             data-article="4">
+                          <a href="/articles/cosmic-power.html" 
+                             class="inline-block group cursor-pointer" 
+                             data-hover-trigger="4">
+                            <p class="text-[20px] mb-4">
+                              <span class="bg-black text-white inline-block px-2 transition-colors group-hover:bg-white group-hover:text-[#003BFF]">No. 4</span>
+                            </p>
+                            <h3 class="text-[32px] font-dotgothic16 text-white bg-black inline-block transition-colors group-hover:bg-white group-hover:text-[#003BFF]">
+                              コズミックパワー全開！！<宙村>の神秘
+                            </h3>
+                          </a>
+                        </div>
+
+                        <!-- Article 5 -->
+                        <div class="article-item absolute w-full transition-all duration-300 opacity-0 pointer-events-none hidden" 
+                             style="top: 504px;"
+                             data-article="5" 
+                             id="article5">
+                          <a href="/articles/takadanobaba.html" 
+                             class="inline-block group cursor-pointer" 
+                             data-hover-trigger="5">
+                            <p class="text-[20px] mb-4">
+                              <span class="bg-black text-white inline-block px-2 transition-colors group-hover:bg-white group-hover:text-[#003BFF]">No. 5</span>
+                            </p>
+                            <h3 class="text-[32px] font-dotgothic16 text-white bg-black inline-block transition-colors group-hover:bg-white group-hover:text-[#003BFF]">
+                              高田馬場って何だ！？新宿の学園都市に潜入
+                            </h3>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -924,7 +991,7 @@
                 <h1
                   class="dotgothic16-regular text-white bg-black p-2 inline-block text-5xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
                 >
-                  コズミックパワー全開！！<���宙村>の神秘
+                  コズミックパワー全開！！<宙村>の神秘
                 </h1>
               </div>
               <!-- Subtitle -->
