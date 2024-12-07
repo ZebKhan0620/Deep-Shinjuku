@@ -51,3 +51,11 @@
 [data-article].active {
   opacity: 1;
 }
+
+.hero-image {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hero-image.fade {
+    opacity: 0;
+}
