@@ -37,3 +37,17 @@
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 3px;
 }
+
+/* Update the current page styles */
+.current-page-style {
+  background-color: white !important;
+  color: #003BFF !important;
+}
+
+[data-article].current-page {
+  opacity: 1;
+}
+
+[data-article].active {
+  opacity: 1;
+}
