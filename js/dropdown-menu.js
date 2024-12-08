@@ -1,20 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Set initial header state
-  if (window.scrollY > 0) {
-    header.classList.add('visible');
-  }
-  
-  // Start observing
-  if (headerTrigger && isTransformingHeader) {
-    headerObserver.observe(headerTrigger);
-  }
-});
-
 const headerTrigger = document.getElementById('headerTrigger');
 const header = document.querySelector('header');
 const menuButton = document.querySelector('[aria-label="Toggle Navigation Menu"]');
 const menuOverlay = document.getElementById('menuOverlay');
-const mayuLogo = document.querySelector('#_レイヤー_2'); // MAYU logo SVG
+const mayuLogo = document.querySelector('header svg[id="_レイヤー_2"]'); // MAYU logo SVG
 const menuIcon = menuButton.querySelector('svg'); // Menu icon SVG
 const headerContent = document.querySelector('header > div'); // Header content div
 const upArrow = document.querySelector('.text-center button:first-child');
@@ -29,54 +17,52 @@ const observerOptions = {
   rootMargin: '0px'
 };
 
-const isTransformingHeader = document.querySelector('header.transform-gpu') !== null;
-
 const headerObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (!entry.isIntersecting) {
+    const triggerPosition = entry.target.getBoundingClientRect().top + window.scrollY;
+    
+    if (window.scrollY >= triggerPosition) {
       header.classList.add('visible');
     } else {
       header.classList.remove('visible');
     }
   });
-}, {
-  threshold: 0,
-  rootMargin: '-1px 0px 0px 0px'
-});
+}, observerOptions);
 
 let lastScrollY = window.scrollY;
 
-if (isTransformingHeader) {
+if (headerTrigger) {
   headerObserver.observe(headerTrigger);
 }
 
 // Add hover effects
 headerContent.addEventListener('mouseenter', (e) => {
+  // Only apply header hover if menu is closed
   if (!e.target.closest('[aria-label="Toggle Navigation Menu"]') && 
       menuButton.getAttribute('aria-expanded') === 'false') {
     headerContent.style.backgroundColor = '#000000';
-    mayuLogo.style.fill = '#FF2F00';
+    if (mayuLogo) {
+      mayuLogo.style.fill = '#FF2F00';
+    }
   }
 });
 
 headerContent.addEventListener('mouseleave', () => {
+  // Only reset styles if menu is closed
   if (menuButton.getAttribute('aria-expanded') === 'false') {
     headerContent.style.backgroundColor = '';
-    mayuLogo.style.fill = '';
+    if (mayuLogo) {
+      mayuLogo.style.fill = '';
+    }
   }
 });
 
-// Update menu button hover
 menuButton.addEventListener('mouseenter', () => {
   // Only apply hover effects if menu is closed
   if (menuButton.getAttribute('aria-expanded') === 'false') {
     menuButton.style.backgroundColor = '#000000';
     menuIcon.style.fill = '#FF2F00';
     headerContent.style.backgroundColor = '#FFFFFF';
-    const svgGroup = mayuLogo.querySelector('g g');
-    if (svgGroup) {
-      svgGroup.style.fill = '#000000';
-    }
   }
 });
 
@@ -96,40 +82,41 @@ menuButton.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', !isExpanded);
   
   if (!isExpanded) {
-    // Opening menu
+    // Opening menu - Set fixed styles
     menuOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    menuOverlay.style.visibility = 'visible';
+    menuOverlay.style.opacity = '1';
     
-    // Set menu styles
+    // Set fixed header styles
     headerContent.style.backgroundColor = '#FFFFFF';
-    const svgGroup = mayuLogo.querySelector('g g');
-    if (svgGroup) {
-      svgGroup.style.fill = '#000000';
+    if (mayuLogo) {
+      mayuLogo.style.fill = '#000000';
     }
+    
+    // Set fixed menu button styles
     menuButton.style.backgroundColor = '#000000';
     menuIcon.style.fill = '#FF2F00';
     
-    setInitialMenuState();
+    // Reapply active states if on article page
+    setArticlePageState();
   } else {
-    // Closing menu
+    // Closing menu - Reset everything
     menuOverlay.classList.remove('active');
-    document.body.style.overflow = '';
+    menuOverlay.style.opacity = '0';
     
-    // Reset styles
+    // Reset all styles
     headerContent.style.backgroundColor = '';
-    const svgGroup = mayuLogo.querySelector('g g');
-    if (svgGroup) {
-      svgGroup.style.fill = '';
+    if (mayuLogo) {
+      mayuLogo.style.fill = '';
     }
     menuButton.style.backgroundColor = '';
     menuIcon.style.fill = '';
     
-    menuOverlay.addEventListener('transitionend', function hideOverlay() {
+    setTimeout(() => {
       if (!menuButton.getAttribute('aria-expanded') === 'true') {
         menuOverlay.style.visibility = 'hidden';
       }
-      menuOverlay.removeEventListener('transitionend', hideOverlay);
-    });
+    }, 500);
   }
 });
 
@@ -200,6 +187,7 @@ downArrow?.addEventListener('click', () => {
 // Initialize positions on load
 document.addEventListener('DOMContentLoaded', () => {
   updateArticlePositions(false);
+  setArticlePageState();
 });
 
 function updateMonthDisplay() {
@@ -217,108 +205,86 @@ function updateMonthDisplay() {
 // Update the background image hover handling
 const hoverTriggers = document.querySelectorAll('[data-hover-trigger]');
 const backgroundImages = document.querySelectorAll('[data-article]');
-const articlePages = {
-  'neo-retro.html': '1',
-  'shin-okubo.html': '2',
-  'chi-tei.html': '3',
-  'uju-mura.html': '4',
-  'takadanobaba.html': '5'
-};
-const currentPage = window.location.pathname.split('/').pop();
 
-// Update the hover handlers
 hoverTriggers.forEach(trigger => {
   trigger.addEventListener('mouseenter', () => {
     const articleId = trigger.getAttribute('data-hover-trigger');
-    const correspondingBg = document.querySelector(`[data-article="${articleId}"]:not(.group)`);
     
-    // Find current page elements
-    const currentPageLink = document.querySelector('.current-article');
+    // Hide all background images first
+    backgroundImages.forEach(bg => bg.classList.remove('active'));
     
-    // Temporarily change current page text styles back to default
-    if (currentPageLink && trigger !== currentPageLink) {
-      const currentNumberSpan = currentPageLink.querySelector('p span');
-      const currentTitleHeading = currentPageLink.querySelector('h3');
-      
-      if (currentNumberSpan) {
-        currentNumberSpan.classList.remove('current-page-style');
-      }
-      if (currentTitleHeading) {
-        currentTitleHeading.classList.remove('current-page-style');
-      }
-    }
-
-    // Background handling
-    backgroundImages.forEach(bg => {
-      bg.classList.remove('active');
-      bg.classList.remove('current-page');
-    });
-    
-    if (correspondingBg) {
-      correspondingBg.classList.add('active');
+    // Show the hovered article's background
+    const hoveredBg = document.querySelector(`[data-article="${articleId}"]`);
+    if (hoveredBg) {
+      hoveredBg.classList.add('active');
     }
   });
 
   trigger.addEventListener('mouseleave', () => {
-    // Find current page elements
-    const currentPageLink = document.querySelector('.current-article');
+    // Get current page's article ID
+    const currentPath = window.location.pathname;
+    const pageName = currentPath.split('/').pop();
+    const currentArticleId = ARTICLE_PAGES[pageName]?.toString();
     
-    // Restore current page text styles
-    if (currentPageLink) {
-      const currentNumberSpan = currentPageLink.querySelector('p span');
-      const currentTitleHeading = currentPageLink.querySelector('h3');
-      
-      if (currentNumberSpan) {
-        currentNumberSpan.classList.add('current-page-style');
-      }
-      if (currentTitleHeading) {
-        currentTitleHeading.classList.add('current-page-style');
-      }
-    }
+    // Hide all background images
+    backgroundImages.forEach(bg => bg.classList.remove('active'));
     
-    // Reset backgrounds
-    backgroundImages.forEach(bg => {
-      bg.classList.remove('active');
-      bg.classList.remove('current-page');
-    });
-    
-    // Show current page background
-    const currentArticleId = articlePages[currentPage];
+    // Show the current page's background image
     if (currentArticleId) {
-      const currentBg = document.querySelector(`[data-article="${currentArticleId}"]:not(.group)`);
+      const currentBg = document.querySelector(`[data-article="${currentArticleId}"]`);
       if (currentBg) {
-        currentBg.classList.add('current-page');
         currentBg.classList.add('active');
       }
     }
   });
 });
-// Update setInitialMenuState to use the global articlePages
-function setInitialMenuState() {
-  const currentArticleId = articlePages[currentPage];
-  
-  if (currentArticleId) {
-    // Set the current article's background
-    const currentBg = document.querySelector(`[data-article="${currentArticleId}"]:not(.group)`);
-    if (currentBg) {
-      currentBg.classList.add('current-page');
-      currentBg.classList.add('active');
-    }
 
-    // Style the current page link
-    const currentLink = document.querySelector(`[data-hover-trigger="${currentArticleId}"]`);
-    if (currentLink) {
-      currentLink.classList.add('current-article');
+// Add after existing constants
+const ARTICLE_PAGES = {
+  'neo-retro.html': 1,
+  'shin-okubo.html': 2,
+  'chi-tei.html': 3,
+  'uju-mura.html': 4,
+  'takano-baba.html': 5
+};
+
+function setArticlePageState() {
+  const currentPath = window.location.pathname;
+  const pageName = currentPath.split('/').pop();
+  
+  if (!ARTICLE_PAGES[pageName]) return;
+  
+  const articleLinks = document.querySelectorAll('[data-article-page]');
+  const backgroundImages = document.querySelectorAll('[data-article]');
+  
+  articleLinks.forEach(link => {
+    const linkPath = link.getAttribute('href').split('/').pop();
+    const isActive = linkPath === pageName;
+    const articleId = ARTICLE_PAGES[linkPath];
+    
+    const numberSpan = link.querySelector('p span');
+    const titleH3 = link.querySelector('h3');
+    
+    if (isActive) {
+      // Set active styles for text
+      numberSpan.classList.add('bg-white', 'text-[#003BFF]');
+      titleH3.classList.add('bg-white', 'text-[#003BFF]');
       
-      const numberSpan = currentLink.querySelector('p span');
-      const titleHeading = currentLink.querySelector('h3');
+      // Set active background image
+      backgroundImages.forEach(bg => {
+        if (bg.getAttribute('data-article') === articleId.toString()) {
+          bg.classList.add('active');
+        } else {
+          bg.classList.remove('active');
+        }
+      });
       
-      if (numberSpan) {
-        numberSpan.classList.add('current-page-style');
-      }
-      if (titleHeading) {
-        titleHeading.classList.add('current-page-style');
-      }
+      link.classList.add('pointer-events-none');
+    } else {
+      // Reset styles for other articles
+      numberSpan.classList.remove('bg-white', 'text-[#003BFF]');
+      titleH3.classList.remove('bg-white', 'text-[#003BFF]');
+      link.classList.remove('pointer-events-none');
     }
-  }
+  });
 }

@@ -99,3 +99,13 @@ header > div {
 [aria-label="Toggle Navigation Menu"] svg {
   transition: fill 0.3s ease;
 }
+
+/* Add to existing styles */
+.article-page [data-article-page] {
+  transition: all 0.3s ease;
+}
+
+/* Ensure no interference with carousel or other components */
+.article-page [data-article-page].pointer-events-none {
+  cursor: default;
+}
