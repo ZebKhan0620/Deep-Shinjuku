@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', () => {
+  // Set initial header state
+  if (window.scrollY > 0) {
+    header.classList.add('visible');
+  }
+  
+  // Start observing
+  if (headerTrigger && isTransformingHeader) {
+    headerObserver.observe(headerTrigger);
+  }
+});
+
 const headerTrigger = document.getElementById('headerTrigger');
 const header = document.querySelector('header');
 const menuButton = document.querySelector('[aria-label="Toggle Navigation Menu"]');
@@ -21,15 +33,16 @@ const isTransformingHeader = document.querySelector('header.transform-gpu') !== 
 
 const headerObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    const triggerPosition = entry.target.getBoundingClientRect().top + window.scrollY;
-    
-    if (window.scrollY >= triggerPosition) {
+    if (!entry.isIntersecting) {
       header.classList.add('visible');
     } else {
       header.classList.remove('visible');
     }
   });
-}, observerOptions);
+}, {
+  threshold: 0,
+  rootMargin: '-1px 0px 0px 0px'
+});
 
 let lastScrollY = window.scrollY;
 
@@ -39,7 +52,6 @@ if (isTransformingHeader) {
 
 // Add hover effects
 headerContent.addEventListener('mouseenter', (e) => {
-  // Only apply header hover if menu is closed
   if (!e.target.closest('[aria-label="Toggle Navigation Menu"]') && 
       menuButton.getAttribute('aria-expanded') === 'false') {
     headerContent.style.backgroundColor = '#000000';
@@ -48,19 +60,23 @@ headerContent.addEventListener('mouseenter', (e) => {
 });
 
 headerContent.addEventListener('mouseleave', () => {
-  // Only reset styles if menu is closed
   if (menuButton.getAttribute('aria-expanded') === 'false') {
     headerContent.style.backgroundColor = '';
     mayuLogo.style.fill = '';
   }
 });
 
+// Update menu button hover
 menuButton.addEventListener('mouseenter', () => {
   // Only apply hover effects if menu is closed
   if (menuButton.getAttribute('aria-expanded') === 'false') {
     menuButton.style.backgroundColor = '#000000';
     menuIcon.style.fill = '#FF2F00';
     headerContent.style.backgroundColor = '#FFFFFF';
+    const svgGroup = mayuLogo.querySelector('g g');
+    if (svgGroup) {
+      svgGroup.style.fill = '#000000';
+    }
   }
 });
 
@@ -80,41 +96,39 @@ menuButton.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', !isExpanded);
   
   if (!isExpanded) {
-    // Opening menu - Set fixed styles
+    // Opening menu
     menuOverlay.classList.add('active');
-    menuOverlay.style.visibility = 'visible';
-    menuOverlay.style.opacity = '1';
+    document.body.style.overflow = 'hidden';
     
-    // Set fixed header styles
+    // Set menu styles
     headerContent.style.backgroundColor = '#FFFFFF';
-    mayuLogo.style.fill = '#000000';
-    
-    // Set fixed menu button styles
+    const svgGroup = mayuLogo.querySelector('g g');
+    if (svgGroup) {
+      svgGroup.style.fill = '#000000';
+    }
     menuButton.style.backgroundColor = '#000000';
     menuIcon.style.fill = '#FF2F00';
     
     setInitialMenuState();
   } else {
-    // Closing menu - Reset everything
+    // Closing menu
     menuOverlay.classList.remove('active');
-    menuOverlay.style.opacity = '0';
+    document.body.style.overflow = '';
     
-    // Reset all styles
+    // Reset styles
     headerContent.style.backgroundColor = '';
-    mayuLogo.style.fill = '';
+    const svgGroup = mayuLogo.querySelector('g g');
+    if (svgGroup) {
+      svgGroup.style.fill = '';
+    }
     menuButton.style.backgroundColor = '';
     menuIcon.style.fill = '';
     
-    setTimeout(() => {
+    menuOverlay.addEventListener('transitionend', function hideOverlay() {
       if (!menuButton.getAttribute('aria-expanded') === 'true') {
         menuOverlay.style.visibility = 'hidden';
       }
-    }, 500);
-
-    // Reset states
-    backgroundImages.forEach(bg => {
-      bg.classList.remove('current-page');
-      bg.style.opacity = '';
+      menuOverlay.removeEventListener('transitionend', hideOverlay);
     });
   }
 });

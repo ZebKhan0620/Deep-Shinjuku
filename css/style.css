@@ -38,24 +38,64 @@
   border-radius: 3px;
 }
 
-/* Update the current page styles */
-.current-page-style {
-  background-color: white !important;
-  color: #003BFF !important;
+/* Update these styles */
+.section-1-hover {
+  position: relative;
 }
 
-[data-article].current-page {
+/* Target both the hovered class and group-hover classes */
+.section-1-hover .right-image-container:hover ~ .text-container .dotgothic16-regular,
+.section-1-hover .right-image-container:hover [class*="group-hover"] {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(0 59 255 / var(--tw-text-opacity)) !important;
+}
+
+/* Ensure smooth transitions */
+.section-1-hover .dotgothic16-regular {
+  transition: all 0.3s ease;
+}
+
+.hovered {
+  background-color: white;
+  color: #003BFF;
+  transition: all 0.3s ease;
+}
+
+header {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+header.visible {
   opacity: 1;
+  transform: translate(-50%, 0);
 }
 
-[data-article].active {
+.menu-overlay {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.active {
   opacity: 1;
+  visibility: visible;
 }
 
-.hero-image {
-    transition: opacity 0.3s ease-in-out;
+/* Add SVG-specific transitions */
+#_レイヤー_2 {
+  transition: fill 0.3s ease;
 }
 
-.hero-image.fade {
-    opacity: 0;
+/* Update header styles */
+header > div {
+  transition: background-color 0.3s ease;
+}
+
+/* Menu button styles */
+[aria-label="Toggle Navigation Menu"] {
+  transition: background-color 0.3s ease;
+}
+
+[aria-label="Toggle Navigation Menu"] svg {
+  transition: fill 0.3s ease;
 }

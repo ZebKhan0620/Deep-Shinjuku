@@ -30,7 +30,7 @@
     >
       <!-- Main container - keep original width but add positioning context -->
       <div
-        class="w-[1440px] relative bg-[url('/images/worn-dots.png')] bg-repeat bg-auto isolation border border-blue-500"
+        class="w-[1440px] relative bg-[url('/image/worn-dots.png')] bg-repeat bg-auto isolation border border-blue-500"
       >
         <!-- Inner container - add proper positioning -->
         <div class="relative border border-green-500">
@@ -51,6 +51,10 @@
                   alt="Urban Japanese Street"
                   class="w-full h-full object-cover hero-image"
                   loading="lazy"
+                  style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  "
                 />
               </div>
               <!-- STATUS HIDDEN/STATUS VISIBLE -->
@@ -541,12 +545,8 @@
             </div>
           </section>
         </div>
-        <!-- Place this exactly where you want the header to appear -->
-        <div
-          id="headerTrigger"
-          class="h-12 opacity-0 pointer-events-none absolute w-full"
-        ></div>
-
+        <!-- Add this right before the header -->
+        <div id="headerTrigger"></div>
         <!-- Then the header -->
         <header
           class="fixed top-0 left-1/2 -translate-x-1/2 w-[1440px] transform-gpu transition-all duration-500 z-[100] opacity-0 -translate-y-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] [&.visible]:opacity-100 [&.visible]:translate-y-0"
@@ -571,81 +571,31 @@
                 >
                   <g id="_レイヤー_1-2" data-name="レイヤー_1">
                     <g>
-                      <polygon
-                        points="193.71 260.65 202.85 225.35 146.54 244.56 193.71 260.65"
-                      />
-                      <polygon
-                        points="137.24 247.73 129.29 250.45 140.17 292.63 185.42 292.63 192.2 266.48 137.25 247.73 137.24 247.73"
-                      />
-                      <polygon
-                        points="120.04 214.56 127.79 244.62 167.96 230.91 120.04 214.56"
-                      />
-                      <polygon
-                        points="23.71 286.47 23.71 292.63 83.43 292.63 83.01 266.23 23.71 286.47"
-                      />
-                      <polygon
-                        points="81.99 201.58 23.71 181.7 23.71 280.12 82.91 259.93 81.99 201.58"
-                      />
-                      <polygon
-                        points="242.78 277.4 287.42 292.63 302.25 292.63 302.25 191.44 243.82 211.37 242.78 277.4"
-                      />
-                      <polygon
-                        points="242.54 292.63 268.84 292.63 242.68 283.71 242.54 292.63"
-                      />
-                      <polygon
-                        points="163.17 196.94 107.53 .74 23.71 .74 23.71 175.36 81.89 195.21 79.72 58.23 118.25 207.62 177.24 227.75 204.65 218.4 246.25 57.86 243.92 205 302.25 185.1 302.25 .74 218.8 .74 163.17 196.94"
-                      />
-                      <path
-                        d="M519.58,0h-104.96l-72.74,247.37,228-77.78h0S519.58,0,519.58,0ZM425,181.37l40.8-141.31,40.43,141.31h-81.23Z"
-                      />
-                      <polygon
-                        points="571.58 175.34 456.41 214.64 512.16 233.66 521.06 233.66 522.04 237.03 597.52 262.78 571.58 175.34"
-                      />
-                      <polygon
-                        points="524.07 244.06 537.81 291.52 538.13 292.63 606.37 292.63 599.61 269.83 524.07 244.06"
-                      />
-                      <polygon
-                        points="384.44 239.2 406.4 246.69 410.17 233.66 493.59 233.66 447.12 217.81 384.44 239.2"
-                      />
-                      <polygon
-                        points="339.81 254.42 328.57 292.63 393.11 292.63 404.73 252.46 375.14 242.37 339.81 254.42"
-                      />
-                      <polygon
-                        points="650.07 148.56 671.37 188.41 671.37 230.66 737.39 208.14 737.39 187.67 746.92 169.91 667.22 142.72 650.07 148.56"
-                      />
-                      <polygon
-                        points="671.37 292.63 737.39 292.63 737.39 214.48 671.37 237 671.37 292.63"
-                      />
-                      <polygon
-                        points="749.8 164.55 782.65 103.33 676.51 139.54 749.8 164.55"
-                      />
-                      <polygon
-                        points="704.38 119.8 645.78 .37 570.86 .37 647.21 143.2 786.81 95.57 837.9 .37 762.98 .37 704.38 119.8"
-                      />
-                      <path
-                        d="M883.8,164.53l43.74,14.92c-.18-3.35-.26-6.8-.26-10.32v-19.44l-43.48,14.84Z"
-                      />
-                      <polygon
-                        points="927.28 .37 861.26 .37 861.26 165.87 927.28 143.35 927.28 .37"
-                      />
-                      <path
-                        d="M971.04,299.68h23.37c69.61,0,99.66-36.41,108.59-87.43l-200.87,68.53c16.55,12,39.01,18.9,68.91,18.9Z"
-                      />
-                      <polygon
-                        points="1040.03 .37 1040.03 46.2 1106.05 68.72 1106.05 .37 1040.03 .37"
-                      />
-                      <path
-                        d="M1028.88,220.37c-7.59,11.54-19.77,18.48-38.55,18.48h-15.21c-31.67,0-44.14-21.64-47.1-52.9l-53.51-18.25-13.25,4.52v1.73c0,42.52,9.14,79.72,35.29,102.39l148.21-50.56-15.88-5.41Z"
-                      />
-                      <path
-                        d="M1040.03,111.22v57.91c0,17.8-2.13,33.78-8.12,45.93l22.14,7.55,49.99-17.05h0c1.39-10.09,2.01-20.67,2.01-31.61v-61.31l-35.08-11.97-30.94,10.55Z"
-                      />
-                      <polygon
-                        points="1106.05 106.3 1106.05 88.7 1080.27 97.5 1106.05 106.3"
-                      />
-                      <polygon
-                        points="1040.03 104.88 1106.05 82.36 1106.05 75.07 1040.03 52.54 1040.03 104.88"
-                      />
+                      <polygon points="193.71 260.65 202.85 225.35 146.54 244.56 193.71 260.65"/>
+                      <polygon points="137.24 247.73 129.29 250.45 140.17 292.63 185.42 292.63 192.2 266.48 137.25 247.73 137.24 247.73"/>
+                      <polygon points="120.04 214.56 127.79 244.62 167.96 230.91 120.04 214.56"/>
+                      <polygon points="23.71 286.47 23.71 292.63 83.43 292.63 83.01 266.23 23.71 286.47"/>
+                      <polygon points="81.99 201.58 23.71 181.7 23.71 280.12 82.91 259.93 81.99 201.58"/>
+                      <polygon points="242.78 277.4 287.42 292.63 302.25 292.63 302.25 191.44 243.82 211.37 242.78 277.4"/>
+                      <polygon points="242.54 292.63 268.84 292.63 242.68 283.71 242.54 292.63"/>
+                      <polygon points="163.17 196.94 107.53 .74 23.71 .74 23.71 175.36 81.89 195.21 79.72 58.23 118.25 207.62 177.24 227.75 204.65 218.4 246.25 57.86 243.92 205 302.25 185.1 302.25 .74 218.8 .74 163.17 196.94"/>
+                      <path d="M519.58,0h-104.96l-72.74,247.37,228-77.78h0S519.58,0,519.58,0ZM425,181.37l40.8-141.31,40.43,141.31h-81.23Z"/>
+                      <polygon points="571.58 175.34 456.41 214.64 512.16 233.66 521.06 233.66 522.04 237.03 597.52 262.78 571.58 175.34"/>
+                      <polygon points="524.07 244.06 537.81 291.52 538.13 292.63 606.37 292.63 599.61 269.83 524.07 244.06"/>
+                      <polygon points="384.44 239.2 406.4 246.69 410.17 233.66 493.59 233.66 447.12 217.81 384.44 239.2"/>
+                      <polygon points="339.81 254.42 328.57 292.63 393.11 292.63 404.73 252.46 375.14 242.37 339.81 254.42"/>
+                      <polygon points="650.07 148.56 671.37 188.41 671.37 230.66 737.39 208.14 737.39 187.67 746.92 169.91 667.22 142.72 650.07 148.56"/>
+                      <polygon points="671.37 292.63 737.39 292.63 737.39 214.48 671.37 237 671.37 292.63"/>
+                      <polygon points="749.8 164.55 782.65 103.33 676.51 139.54 749.8 164.55"/>
+                      <polygon points="704.38 119.8 645.78 .37 570.86 .37 647.21 143.2 786.81 95.57 837.9 .37 762.98 .37 704.38 119.8"/>
+                      <path d="M883.8,164.53l43.74,14.92c-.18-3.35-.26-6.8-.26-10.32v-19.44l-43.48,14.84Z"/>
+                      <polygon points="927.28 .37 861.26 .37 861.26 165.87 927.28 143.35 927.28 .37"/>
+                      <path d="M971.04,299.68h23.37c69.61,0,99.66-36.41,108.59-87.43l-200.87,68.53c16.55,12,39.01,18.9,68.91,18.9Z"/>
+                      <polygon points="1040.03 .37 1040.03 46.2 1106.05 68.72 1106.05 .37 1040.03 .37"/>
+                      <path d="M1028.88,220.37c-7.59,11.54-19.77,18.48-38.55,18.48h-15.21c-31.67,0-44.14-21.64-47.1-52.9l-53.51-18.25-13.25,4.52v1.73c0,42.52,9.14,79.72,35.29,102.39l148.21-50.56-15.88-5.41Z"/>
+                      <path d="M1040.03,111.22v57.91c0,17.8-2.13,33.78-8.12,45.93l22.14,7.55,49.99-17.05h0c1.39-10.09,2.01-20.67,2.01-31.61v-61.31l-35.08-11.97-30.94,10.55Z"/>
+                      <polygon points="1106.05 106.3 1106.05 88.7 1080.27 97.5 1106.05 106.3"/>
+                      <polygon points="1040.03 104.88 1106.05 82.36 1106.05 75.07 1040.03 52.54 1040.03 104.88"/>
                     </g>
                   </g>
                 </svg>
@@ -722,7 +672,7 @@
 
                   <!-- Right Side - adjusted width -->
                   <div
-                    class="flex-1 min-h-[calc(100vh-64px)] bg-white bg-[url('/images/worn-dots.png')] bg-repeat bg-auto relative"
+                    class="flex-1 min-h-[calc(100vh-64px)] bg-white bg-[url('/image/worn-dots.png')] bg-repeat bg-auto relative"
                   >
                     <!-- Background image container - absolute positioned -->
                     <div
@@ -734,6 +684,8 @@
                         data-article="1"
                         style="
                           background-image: url('/image/menu-visual/menu_article_01.jpg');
+                          image-rendering: -webkit-optimize-contrast;
+                          image-rendering: crisp-edges;
                         "
                       ></div>
                       <div
@@ -741,6 +693,8 @@
                         data-article="2"
                         style="
                           background-image: url('/image/menu-visual/menu_article_02.jpg');
+                          image-rendering: -webkit-optimize-contrast;
+                          image-rendering: crisp-edges;
                         "
                       ></div>
                       <div
@@ -748,6 +702,8 @@
                         data-article="3"
                         style="
                           background-image: url('/image/menu-visual/menu_article_03.jpg');
+                          image-rendering: -webkit-optimize-contrast;
+                          image-rendering: crisp-edges;
                         "
                       ></div>
                       <div
@@ -755,6 +711,8 @@
                         data-article="4"
                         style="
                           background-image: url('/image/menu-visual/menu_article_04.jpg');
+                          image-rendering: -webkit-optimize-contrast;
+                          image-rendering: crisp-edges;
                         "
                       ></div>
                       <div
@@ -762,6 +720,8 @@
                         data-article="5"
                         style="
                           background-image: url('/image/menu-visual/menu_article_05.jpg');
+                          image-rendering: -webkit-optimize-contrast;
+                          image-rendering: crisp-edges;
                         "
                       ></div>
                     </div>
@@ -906,52 +866,50 @@
         <main class="mt-[85px] max-w-[1210px] mx-auto border border-red-500">
           <!-- SECTION 1 -->
           <section class="w-full border border-red-500">
-            <!-- TEXT -->
-            <div class="relative group">
-              <!-- Food Tag - Update hover to use parent group -->
-              <div class="absolute top-0 left-8 z-20">
-                <div
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  #フード
+            <div class="relative section-1-hover">
+              <div class="relative text-container">
+                <!-- Food Tag -->
+                <div class="absolute top-0 left-8 z-20">
+                  <div
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    #フード
+                  </div>
+                </div>
+                <!-- Main Title -->
+                <div class="absolute top-8 left-0 z-20">
+                  <h1
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    新[ネオ]レトロ再燃！ 新宿、今こそ喫茶で��ょ。
+                  </h1>
+                </div>
+                <!-- Subtitle -->
+                <div class="absolute top-20 left-8 z-20">
+                  <p
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-2xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    歌舞伎町 喫茶の今を巡る
+                  </p>
+                </div>
+                <!-- Writer Credit -->
+                <div class="absolute top-32 left-8 z-20">
+                  <p
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    writer:Kana Komatsu
+                  </p>
                 </div>
               </div>
-              <!-- Main Title - Update hover to use parent group -->
-              <div class="absolute top-8 left-0 z-20">
-                <h1
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  新[ネオ]レトロ再燃！ 新宿、今こそ喫茶でしょ。
-                </h1>
-              </div>
-              <!-- Subtitle -->
-              <div class="absolute top-20 left-8 z-20">
-                <p
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-2xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  歌舞伎町 喫茶の今を巡る
-                </p>
-              </div>
-              <!-- Writer Credit -->
-              <div class="absolute top-32 left-8 z-20">
-                <p
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  writer:Kana Komatsu
-                </p>
-              </div>
-            </div>
-            <!-- TEXT END -->
-            <div class="flex justify-between">
-              <div class="relative w-[326px]">
-                <!-- IMAGE CONTAINER -->
-                <div
-                  class="absolute top-8 left-12 w-full max-w-[810px] h-auto md:h-[177px] transition-all duration-300"
-                >
+
+              <div class="flex justify-between">
+                <!-- Left side with images -->
+                <div class="relative w-[326px]">
+                  <!-- IMAGE CONTAINER -->
                   <img
                     src="/image/illusts/seals/neo-kissa.png"
                     alt="Neo Kissa"
-                    class="absolute z-10 w-[360px] h-[190px] top-[190px] left-[-25px] rotate-[-8deg]"
+                    class="absolute z-10 w-[360px] h-[190px] top-[190px] left-[25px] rotate-[-8deg]"
                     loading="lazy"
                     width="360"
                     height="190"
@@ -961,156 +919,194 @@
                       image-rendering: crisp-edges;
                     "
                   />
+                  <!-- Coffee Image - Adjusted for better flow -->
+                  <img
+                    src="/image/illusts/seals/coffee-01.png"
+                    alt="Coffee Image"
+                    class="absolute z-20 w-[234px] h-[auto] top-[370px] left-[-70px] object-contain"
+                    loading="lazy"
+                    width="234"
+                    height="auto"
+                    draggable="false"
+                    style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    "
+                  />
+                  <!-- To000 Deep Image - Repositioned for better overlap -->
+                  <img
+                    src="/image/illusts/seals/toooDeep.png"
+                    alt="Seal Image"
+                    class="absolute z-30 w-[220px] h-[80px] top-[400px] left-[155px]"
+                    loading="lazy"
+                    width="220"
+                    height="80"
+                    draggable="false"
+                    style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    "
+                  />
+                  <!-- Under Soda Image - Adjusted angle and position -->
+                  <img
+                    src="/image/illusts/seals/soda.png"
+                    alt="Under Soda Image"
+                    class="absolute z-20 w-[281px] h-[auto] top-[510px] left-[130px] rotate-[12deg] object-contain"
+                    loading="lazy"
+                    width="281"
+                    height="auto"
+                    draggable="false"
+                    style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    "
+                  />
+                  <!-- Soda Glass Image - Contained within bounds better -->
+                  <img
+                    src="/image/illusts/seals/melon-soda.png"
+                    alt="Soda Glass Image"
+                    class="absolute z-10 w-[159px] h-[auto] top-[420px] left-[380px] rotate-[15deg] object-contain"
+                    loading="lazy"
+                    width="159"
+                    height="auto"
+                    draggable="false"
+                    style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    "
+                  />
                 </div>
-                <!-- Coffee Image - Adjusted for better flow -->
-                <img
-                  src="/image/illusts/seals/coffee-01.png"
-                  alt="Coffee Image"
-                  class="absolute z-20 w-[234px] h-[auto] top-[370px] left-[-70px] object-contain"
-                  loading="lazy"
-                  width="234"
-                  height="auto"
-                  draggable="false"
-                  style="
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: crisp-edges;
-                  "
-                />
-                <!-- To000 Deep Image - Repositioned for better overlap -->
-                <img
-                  src="/image/illusts/seals/toooDeep.png"
-                  alt="Seal Image"
-                  class="absolute z-30 w-[220px] h-[80px] top-[400px] left-[155px]"
-                  loading="lazy"
-                  width="220"
-                  height="80"
-                  draggable="false"
-                  style="
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: crisp-edges;
-                  "
-                />
-                <!-- Under Soda Image - Adjusted angle and position -->
-                <img
-                  src="/image/illusts/seals/soda.png"
-                  alt="Under Soda Image"
-                  class="absolute z-20 w-[281px] h-[auto] top-[510px] left-[130px] rotate-[12deg] object-contain"
-                  loading="lazy"
-                  width="281"
-                  height="auto"
-                  draggable="false"
-                  style="
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: crisp-edges;
-                  "
-                />
-                <!-- Soda Glass Image - Contained within bounds better -->
-                <img
-                  src="/image/illusts/seals/melon-soda.png"
-                  alt="Soda Glass Image"
-                  class="absolute z-10 w-[159px] h-[auto] top-[420px] left-[380px] rotate-[15deg] object-contain"
-                  loading="lazy"
-                  width="159"
-                  height="auto"
-                  draggable="false"
-                  style="
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: crisp-edges;
-                  "
-                />
-              </div>
-              <div class="relative w-[880px] h-[600px] overflow-hidden group">
-                <img
-                  src="/image/menu-visual/menu_article_01.jpg"
-                  alt="Main Image"
-                  class="object-cover w-[880px] h-[600px]"
-                  loading="lazy"
-                  width="880"
-                  height="600"
-                  draggable="false"
-                  style="
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: crisp-edges;
-                  "
-                />
-                <a
-                  href="#"
-                  class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  aria-label="Read More about Neo Retro Coffee Shops"
+
+                <!-- Right side with main image and button -->
+                <div
+                  class="relative w-[880px] h-[600px] overflow-hidden right-image-container group"
                 >
-                  もっと見る→
-                </a>
+                  <img
+                    src="/image/thumbNails/thumbnail_01.jpg"
+                    alt="Main Image"
+                    class="object-cover w-[880px] h-[600px]"
+                    loading="lazy"
+                    width="880"
+                    height="600"
+                    draggable="false"
+                    style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    "
+                  />
+                  <a
+                    href="#"
+                    class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                    aria-label="Read More about Neo Retro Coffee Shops"
+                  >
+                    もっと見る→
+                  </a>
+                </div>
               </div>
             </div>
           </section>
           <!-- SECTION 2 -->
           <section class="mt-[184px] mb-[184px] w-full border border-red-500">
-            <!-- Main Content Container -->
-            <!-- TEXT -->
-            <div class="relative group">
-              <!-- Added group class -->
-              <!-- History and Trivia Tags -->
-              <div class="absolute top-0 right-8 z-20">
-                <div
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  #ヒストリー #トリビア
+            <div class="relative section-2-hover">
+              <div class="relative text-container">
+                <!-- History and Trivia Tags -->
+                <div class="absolute top-0 right-8 z-20">
+                  <div
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    #ヒストリー #トリビア
+                  </div>
+                </div>
+                <!-- Main Title -->
+                <div class="absolute top-8 right-0 z-20">
+                  <h1
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-3xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    はじまりのコリアンウン
+                  </h1>
+                </div>
+                <!-- Subtitle -->
+                <div class="absolute top-20 right-8 z-20">
+                  <p
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    アンニョンハセヨ！！ はじめてのしんおおくぼ
+                  </p>
+                </div>
+                <!-- Writer Credit -->
+                <div class="absolute top-32 right-8 z-20">
+                  <p
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    writer:Shin Gen Shun
+                  </p>
                 </div>
               </div>
-              <!-- Main Title -->
-              <div class="absolute top-8 right-0 z-20">
-                <h1
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-3xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+              <div class="flex">
+                <!-- Left Side - Main Image -->
+                <div
+                  class="relative w-[880px] h-[600px] overflow-hidden left-image-container group"
                 >
-                  はじまりのコリアン��ウン
-                </h1>
-              </div>
-              <!-- Subtitle -->
-              <div class="absolute top-20 right-8 z-20">
-                <p
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  アンニョンハセヨ！！ はじめてのしんおおくぼ
-                </p>
-              </div>
-              <!-- Writer Credit -->
-              <div class="absolute top-32 right-8 z-20">
-                <p
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  writer:Shin Gen Shun
-                </p>
-              </div>
-            </div>
-            <div class="flex">
-              <!-- Left Side - Main Image -->
-              <div class="relative w-[880px] h-[600px] overflow-hidden">
-                <img
-                  src="https://via.placeholder.com/880x600"
-                  alt="Main Image"
-                  class="object-cover w-[880px] h-[600px]"
-                  loading="lazy"
-                  width="880"
-                  height="600"
-                />
-                <a
-                  href="#"
-                  class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF] hover:translate-x-[-4px]"
-                  aria-label="Read More about Korean Town"
-                >
-                  もっと見る→
-                </a>
-              </div>
-              <!-- Right Side - Text and Decorative Images -->
-              <div class="relative w-[326px]">
+                  <img
+                    src="/image/thumbNails/thumbnail_02.jpg"
+                    alt="Main Image"
+                    class="object-cover w-[880px] h-[600px]"
+                    loading="lazy"
+                    width="880"
+                    height="600"
+                    style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    "
+                  />
+                  <a
+                    href="#"
+                    class="absolute bottom-0 left-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                    aria-label="Read More about Korean Town"
+                  >
+                    もっと見る→
+                  </a>
+                </div>
+                <!-- Right Side - Text and Decorative Images -->
                 <!-- Decorative Images -->
                 <img
-                  src="/images/why.svg"
-                  alt="Why Image"
-                  class="absolute z-30 w-[350px] h-[auto] top-[250px] right-[40px] transition-all duration-300 hover:scale-110 object-contain"
-                  loading="lazy"
-                  aria-hidden="true"
-                  focusable="false"
+                    src="/image/illusts/seals/why.png"
+                    alt="Why Image"
+                    class="absolute z-30 w-[350px] h-auto top-[250px] right-[40px] rotate-[10deg] object-contain"
+                    width="350"
+                    height="auto"
+                    draggable="false"
+                    style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    "
+                    loading="lazy"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
+                  <img
+                    src="/image/illusts/seals/annyo1.png"
+                    alt="Annyo Image"
+                    class="absolute z-20 w-[307px] h-[168px] top-[370px] right-[0px] object-contain"
+                    width="307"
+                    height="168"
+                    draggable="false"
+                    style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    "
+                  />
+                <img
+                  src="/image/illusts/seals/htg1.png"
+                  alt="Htg1 Image"
+                  class="absolute z-20 w-[487px] h-[304px] top-[400px] right-[100px] object-contain"
+                  width="487"
+                  height="304"
+                  draggable="false"
+                  style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  "
                 />
               </div>
             </div>
@@ -1118,187 +1114,354 @@
           <!-- SECTION 2 END -->
           <!-- SECTION 3 -->
           <section class="mt-[184px] mb-[184px] w-full border border-red-500">
-            <!-- Main Content Container -->
-            <!-- TEXT -->
-            <div class="relative group">
-              <!-- Added group class -->
-              <!-- Culture and History Tags -->
-              <div class="absolute top-0 left-8 z-20">
-                <div
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  #カルチャー #ヒストリー
+            <div class="relative section-3-hover">
+              <div class="relative text-container">
+                <!-- Culture and History Tags -->
+                <div class="absolute top-0 left-8 z-20">
+                  <div
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    #カルチャー #ヒストリー
+                  </div>
+                </div>
+                <!-- Main Title -->
+                <div class="absolute top-[40px] left-0 z-20">
+                  <h1
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-5xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    新宿駅に"地底人"！？
+                  </h1>
+                </div>
+                <!-- Subtitle -->
+                <div class="absolute top-[104px] left-8 z-20">
+                  <p
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-3xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    60'sヒッピー族とフーテン族と新宿の地下
+                  </p>
+                </div>
+                <!-- Writer Credit -->
+                <div class="absolute top-[155px] left-8 z-20">
+                  <p
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    writer:Sou Ikeda
+                  </p>
                 </div>
               </div>
-              <!-- Main Title -->
-              <div class="absolute top-[40px] left-0 z-20">
-                <h1
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-5xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  新宿駅に"地底人"！？
-                </h1>
-              </div>
-              <!-- Subtitle -->
-              <div class="absolute top-[104px] left-8 z-20">
-                <p
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-3xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  60'sヒッピー族とフーテン族と新宿の地下
-                </p>
-              </div>
-              <!-- Writer Credit -->
-              <div class="absolute top-[155px] left-8 z-20">
-                <p
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  writer:Sou Ikeda
-                </p>
-              </div>
-            </div>
-            <div class="flex justify-end">
-              <!-- Right Side - Main Image -->
-              <div class="relative w-[880px] h-[600px] overflow-hidden">
+
+              <div class="flex justify-end">
+                <!-- Left side with images -->
+                <!-- JEANS TAG -->
                 <img
-                  src="https://via.placeholder.com/880x600"
-                  alt="Main Image"
-                  class="object-cover w-[880px] h-[600px]"
-                  loading="lazy"
-                  width="880"
-                  height="600"
-                />
-                <a
-                  href="#"
-                  class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF] hover:translate-x-[-4px]"
-                  aria-label="Read More about Underground People"
+                src="/image/illusts/seals/jeans-tag.png"
+                alt="Jeans Tag"
+                class="absolute z-10 w-[506px] h-[337px] top-[130px] left-[0px] rotate-[-8deg]"
+                loading="lazy"
+                width="506"
+                height="337"
+                draggable="false"
+                style="
+                  image-rendering: -webkit-optimize-contrast;
+                  image-rendering: crisp-edges;
+                "
+              />
+              <!-- CAPSULE IMAGE -->
+              <img
+                src="/image/illusts/seals/capsule.png"
+                alt="Capsule Image"
+                class="absolute z-30 w-[331px] h-[260px] top-[400px] left-[0px]"
+                loading="lazy"
+                width="331"
+                height="260"
+                draggable="false"
+                style="
+                  image-rendering: -webkit-optimize-contrast;
+                  image-rendering: crisp-edges;
+                "
+              />
+              <!-- UNDERGRADE IMAGE -->
+              <img
+              src="/image/illusts/seals/ungra-01.png"
+              alt="Undergrade Image"
+              class="absolute z-30 w-[123px] h-[318px] top-[400px] left-[280px] rotate-[-6deg] object-contain"
+              loading="lazy"
+              width="123"
+              height="318"
+              draggable="false"
+              style="
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+              "
+            />
+            <!-- UNDERGRADE IMAGE 2 -->
+            <img
+              src="/image/illusts/seals/ungra-02.png"
+              alt="Undergrade 2 Image"
+              class="absolute z-40 w-[128px] h-[318px] top-[400px] left-[380px] rotate-[-3deg] object-contain"
+              loading="lazy"
+              width="128"
+              height="318"
+              draggable="false"
+              style="
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+              "
+            />
+                <!-- Right Side - Main Image -->
+                <div
+                  class="relative w-[880px] h-[600px] overflow-hidden right-image-container-2 group"
                 >
-                  もっと見る→
-                </a>
+                  <img
+                    src="/image/thumbNails/thumbnail_03.jpg"
+                    alt="Main Image"
+                    class="object-cover w-[880px] h-[600px]"
+                    loading="lazy"
+                    width="880"
+                    height="600"
+                    style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    "
+                  />
+                  <a
+                    href="#"
+                    class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF] hover:translate-x-[-4px]"
+                    aria-label="Read More about Underground People"
+                  >
+                    もっと見る→
+                  </a>
+                </div>
               </div>
             </div>
           </section>
           <!-- SECTION 3 END -->
           <!-- SECTION 4 -->
           <section class="mt-[184px] mb-[184px] border border-red-500">
-            <!-- Main Content Container -->
-            <!-- TEXT -->
-            <div class="relative group">
-              <!-- Added group class -->
-              <!-- Trip Tag -->
-              <div class="absolute top-0 right-8 z-20">
-                <div
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  #トリップ
+            <div class="relative section-4-hover">
+              <div class="relative text-container">
+                <!-- Trip Tag -->
+                <div class="absolute top-0 right-8 z-20">
+                  <div
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    #トリップ
+                  </div>
+                </div>
+                <!-- Main Title -->
+                <div class="absolute top-[40px] right-0 z-20">
+                  <h1
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-5xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    コズミックパワー全開��！<宙村>の神秘
+                  </h1>
+                </div>
+                <!-- Subtitle -->
+                <div class="absolute top-[104px] right-8 z-20">
+                  <p
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    体感型宇宙（コスモ）ショップ、星に願いを。
+                  </p>
+                </div>
+                <!-- Writer Credit -->
+                <div class="absolute top-[155px] right-8 z-20">
+                  <p
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    writer:Zeb Khan
+                  </p>
                 </div>
               </div>
-              <!-- Main Title -->
-              <div class="absolute top-[40px] right-0 z-20">
-                <h1
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-5xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+              <div class="flex">
+                <!-- Left Side - Main Image -->
+                <div
+                  class="relative w-[880px] h-[600px] overflow-hidden left-image-container-2 group"
                 >
-                  コズミックパワー全開！！<宙村>の神秘
-                </h1>
-              </div>
-              <!-- Subtitle -->
-              <div class="absolute top-[104px] right-8 z-20">
-                <p
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  体感型宇宙（コスモ）ショップ��、星に願いを。
-                </p>
-              </div>
-              <!-- Writer Credit -->
-              <div class="absolute top-[155px] right-8 z-20">
-                <p
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  writer:Zeb Khan
-                </p>
-              </div>
-            </div>
-            <div class="flex">
-              <!-- Left Side - Main Image -->
-              <div class="relative w-[880px] h-[600px] overflow-hidden">
+                  <img
+                    src="/image/thumbNails/thumbnail_04.jpg"
+                    alt="Main Image"
+                    class="object-cover w-[880px] h-[600px]"
+                    loading="lazy"
+                    width="880"
+                    height="600"
+                    style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    "
+                  />
+                  <a
+                    href="#"
+                    class="absolute bottom-0 left-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                    aria-label="Read More about Cosmic Power"
+                  >
+                    もっと見る→
+                  </a>
+                </div>
+                <!-- Right Side - Empty Space -->
+                <div class="relative w-[326px]">
+                  <!-- UJU MURA RIGHT 1 IMAGE -->
+                  <img
+                    src="/image/illusts/seals/uju-mura-right-1.png"
+                    alt="Why Image"
+                    class="absolute z-30 w-[350px] h-auto top-[200px] right-[110px] object-contain"
+                    loading="lazy"
+                    width="350"
+                    height="auto"
+                    draggable="false"
+                    style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    "
+                  />
+                </div>
+                <!-- UJU MURA RIGHT 2 IMAGE -->
                 <img
-                  src="https://via.placeholder.com/880x600"
-                  alt="Main Image"
-                  class="object-cover w-[880px] h-[600px]"
+                  src="/image/illusts/seals/uju-mura-right-2.png"
+                  alt="Annyo Image"
+                  class="absolute z-20 w-[519px] h-[506px] top-[200px] right-[-50px] object-contain"
                   loading="lazy"
-                  width="880"
-                  height="600"
+                  width="519"
+                  height="506"
+                  draggable="false"
+                  style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  "
                 />
-                <a
-                  href="#"
-                  class="absolute bottom-0 left-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF] hover:translate-x-[4px]"
-                  aria-label="Read More about Cosmic Power"
-                >
-                  もっと見る→
-                </a>
+                <!-- UJU MURA RIGHT 3 IMAGE -->
+                <img
+                  src="/image/illusts/seals/uju-mura-right-3.png"
+                  alt="Uju Mura Right 3 Image"
+                  class="absolute z-20 w-[285px] h-[508px] top-[200px] rotate-[-5deg] right-[-50px] object-contain"
+                  loading="lazy"
+                  width="285"
+                  height="508"
+                  draggable="false"
+                  style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  "
+                />
               </div>
-              <!-- Right Side - Empty Space -->
-              <div class="relative w-[326px]"></div>
             </div>
           </section>
           <!-- SECTION 4 END -->
           <!-- SECTION 5 -->
           <section class="mt-[184px] mb-[64px] border border-red-500">
-            <!-- Main Content Container -->
-            <!-- TEXT -->
-            <div class="relative group">
-              <!-- Added group class -->
-              <!-- Culture and Trip Tags -->
-              <div class="absolute top-0 left-8 z-20">
-                <div
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  #カルチャー #トリップ
+            <div class="relative section-5-hover">
+              <div class="relative text-container">
+                <!-- Culture and Trip Tags -->
+                <div class="absolute top-0 left-8 z-20">
+                  <div
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    #カルチャー #トリップ
+                  </div>
+                </div>
+                <!-- Main Title -->
+                <div class="absolute top-[40px] left-0 z-20">
+                  <h1
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    高田馬場って何だ！？新宿の学園都市に潜入
+                  </h1>
+                </div>
+                <!-- Subtitle -->
+                <div class="absolute top-[96px] left-8 z-20">
+                  <p
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-3xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    公衆の面前で飲酒するスポットTOP3！
+                  </p>
+                </div>
+                <!-- Writer Credit -->
+                <div class="absolute top-[148px] left-8 z-20">
+                  <p
+                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                  >
+                    writer:Hunter Nakagawa
+                  </p>
                 </div>
               </div>
-              <!-- Main Title -->
-              <div class="absolute top-[40px] left-0 z-20">
-                <h1
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  高田馬場って何だ！？新宿の学園都市に潜入
-                </h1>
-              </div>
-              <!-- Subtitle -->
-              <div class="absolute top-[96px] left-8 z-20">
-                <p
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-3xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  公衆の面前で飲酒する���ポットTOP3！
-                </p>
-              </div>
-              <!-- Writer Credit -->
-              <div class="absolute top-[148px] left-8 z-20">
-                <p
-                  class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                >
-                  writer:Hunter Nakagawa
-                </p>
-              </div>
-            </div>
-            <div class="flex justify-end">
-              <!-- Left Side - Empty Space -->
-              <div class="relative w-[326px]"></div>
-              <!-- Right Side - Main Image -->
-              <div class="relative w-[880px] h-[600px] overflow-hidden">
+              <div class="flex justify-end">
+                <!-- Left Side - Empty Space -->
                 <img
-                  src="https://via.placeholder.com/880x600"
-                  alt="Main Image"
-                  class="object-cover w-[880px] h-[600px]"
+                  src="/image/illusts/seals/arcademachine 21.png"
+                  class="absolute z-30 w-[240px] h-[321px] rotate-[-8deg] top-[300px] left-[-14px]"
                   loading="lazy"
-                  width="880"
-                  height="600"
+                  width="240"
+                  height="321"
+                  draggable="false"
+                  style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  "
+                  alt="Arcade Machine Image"
                 />
-                <a
-                  href="#"
-                  class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF] hover:translate-x-[-4px]"
-                  aria-label="Read More about Culture and Trip"
+                <img
+                  src="/image/illusts/seals/arcademachine 21.png"
+                  class="absolute z-20 w-[240px] h-[321px] rotate-[8deg] top-[200px] left-[200px]"
+                  loading="lazy"
+                  width="240"
+                  height="321"
+                  draggable="false"
+                  style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  "
+                  alt="Arcade Machine Image"
+                />
+                <img
+                  src="/image/illusts/seals/drunk1.png"
+                  class="absolute z-20 w-[170px] h-[171px] rotate-[10deg] top-[480px] left-[420px]"
+                  alt="Drunk Image"
+                  loading="lazy"
+                  width="170"
+                  height="171"
+                  draggable="false"
+                  style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  "
+                />
+                <img
+                  src="/image/illusts/seals/drunk1.png"
+                  class="absolute z-20 w-[170px] h-[171px] rotate-[10deg] top-[480px] left-[580px]"
+                  alt="Drunk Image"
+                  loading="lazy"
+                  width="170"
+                  height="171"
+                  draggable="false"
+                  style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  "
+                />
+                <!-- Right Side - Main Image -->
+                <div
+                  class="relative w-[880px] h-[600px] overflow-hidden right-image-container-3 group"
                 >
-                  もっと見る→
-                </a>
+                  <img
+                    src="/image/thumbNails/thumbnail_05.jpg"
+                    alt="Main Image"
+                    class="object-cover w-[880px] h-[600px]"
+                    loading="lazy"
+                    width="880"
+                    height="600"
+                    style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    "
+                  />
+                  <a
+                    href="#"
+                    class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
+                    aria-label="Read More about Culture and Trip"
+                  >
+                    もっと見る→
+                  </a>
+                </div>
               </div>
             </div>
           </section>
@@ -1308,6 +1471,8 @@
     </div>
     <!-- JS -->
     <script src="js/dropdown-menu.js"></script>
+    <script src="js/hover-effect.js"></script>
+    <!-- Make sure this loads after dropdown-menu.js -->
     <script src="js/slideshow.js"></script>
   </body>
 </html>
