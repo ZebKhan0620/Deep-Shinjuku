@@ -36,7 +36,7 @@
       >
         <!-- Sticky Header -->
         <header
-          class="fixed top-0 left-1/2 -translate-x-1/2 w-[1440px] bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] z-[100]"
+          class="sticky top-0 w-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] z-[100]"
         >
           <!-- Main header content -->
           <div class="relative transition-colors duration-300">
@@ -397,7 +397,7 @@
         <section class="w-[1440px] relative" aria-label="Hero Banner">
           <div class="relative w-full h-[664px]">
             <img 
-              src="/images/neo-retro/hero.jpg" 
+              src="/image/article_01/article-01_main.jpg" 
               alt="新宿の喫茶の様子" 
               class="w-full h-full object-cover"
             />
@@ -409,7 +409,7 @@
         </section>
 
         <!-- Main Content -->
-        <main class="w-[1210px] mx-auto mt-[80px] border-4 border-[#00FF95]">
+        <main class="w-[1210px] mx-auto mt-4 border-4 border-[#00FF95]">
           <!-- First Section - Text Content -->
           <section class="w-full">
             <!-- Text Container -->
@@ -469,7 +469,7 @@
                 歌舞伎町を連想さた喫茶店、「ニーナナ喫茶」がオープンした。<br />
               </span>
               <span class="text-[16px]">
-                ニーナナ喫茶のオープンをに��MAYUでは新宿喫茶の今を大特集。<br />
+                ニーナナ喫茶のオープンをに、MAYUでは新宿喫茶の今を大特集。<br />
               </span>
             </div>
           </section>
@@ -495,7 +495,7 @@
               </span>
               <br />
               <span class="text-[16px] leading-normal font-[700]">
-                この店の魅力はなんといっても、大人のメロンクリームソーダやオレオを使った特製ドリンクといったユニークなメニュー。
+                この店の魅力はなんといっても、大人のメロンクリームソーダやオ���オを使った特製ドリンクといったユニークなメニュー。
               </span>
               <br />
               <span
@@ -563,40 +563,87 @@
                 </div>
 
                 <!-- Navigation Arrows and Dots Container -->
-                <div class="absolute bottom-8 right-8 flex items-center gap-8">
+                <div class="absolute bottom-8 right-8 flex flex-col gap-4">
                   <!-- Navigation Arrows -->
-                  <div class="flex gap-4">
-                    <button
-                      class="prev-slide w-[40px] h-[40px] flex items-center justify-center text-[48px] leading-none text-white transition-transform hover:scale-110"
+                  <div class="flex gap-8">
+                    <button 
+                      class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group" 
                       aria-label="Previous slide"
                     >
-                      ←
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon 
+                            class="fill-white transition-colors group-hover:fill-[#FF2F00]" 
+                            points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85"
+                          />
+                        </g>
+                      </svg>
                     </button>
-                    <button
-                      class="next-slide w-[40px] h-[40px] flex items-center justify-center text-[48px] leading-none text-white transition-transform hover:scale-110"
+                    <button 
+                      class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group" 
                       aria-label="Next slide"
                     >
-                      →
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon 
+                            class="fill-white transition-colors group-hover:fill-[#FF2F00]" 
+                            points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.31 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85"
+                          />
+                        </g>
+                      </svg>
                     </button>
                   </div>
 
                   <!-- Navigation Dots -->
-                  <div class="flex gap-4">
-                    <button
-                      class="w-[14px] h-[14px] bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity [&.active]:opacity-100"
+                  <div class="flex gap-4 justify-center w-[112px]">
+                    <button 
+                      class="w-[14px] h-[14px] transition-opacity" 
                       aria-label="Go to slide 1"
                       data-slide-dot="1"
-                    ></button>
-                    <button
-                      class="w-[14px] h-[14px] bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity [&.active]:opacity-100"
+                    >
+                      <img 
+                        src="/image/illusts/functional/status-visible.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-100 transition-opacity"
+                      />
+                      <img 
+                        src="/image/illusts/functional/status-hidden.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100"
+                      />
+                    </button>
+                    <button 
+                      class="w-[14px] h-[14px] transition-opacity" 
                       aria-label="Go to slide 2"
                       data-slide-dot="2"
-                    ></button>
-                    <button
-                      class="w-[14px] h-[14px] bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity [&.active]:opacity-100"
+                    >
+                      <img 
+                        src="/image/illusts/functional/status-visible.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-100 hidden transition-opacity"
+                      />
+                      <img 
+                        src="/image/illusts/functional/status-hidden.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100"
+                      />
+                    </button>
+                    <button 
+                      class="w-[14px] h-[14px] transition-opacity" 
                       aria-label="Go to slide 3"
                       data-slide-dot="3"
-                    ></button>
+                    >
+                      <img 
+                        src="/image/illusts/functional/status-visible.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-100 hidden transition-opacity"
+                      />
+                      <img 
+                        src="/image/illusts/functional/status-hidden.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100"
+                      />
+                    </button>
                   </div>
                 </div>
               </div>
@@ -679,7 +726,7 @@
 
             <!-- Subtitle -->
             <h3 class="mt-[16px] text-[16px] font-[800] text-black">
-              ~昼間のャバーで体験する、映える昭和レトロ~
+              ~昼間のャバーで体験す、映える昭和レトロ~
             </h3>
 
             <!-- Main Text Content -->
@@ -695,7 +742,7 @@
               <span
                 class="text-[16px] leading-normal font-[700] w-[1210px] block"
               >
-                ルコールを効��せた「大人のメロンクリームソーダ」は、甘とビターさが絶妙で、訪れる大人のび心をくすぐる。さらに、さまざまなアーティストのミュージックビデオのロケ地とて使われており、フォトジェニックな空間がスタンスタ代に大人気。
+                ルコールを効かせた「大人のメロンクリームソーダ」は、甘とビターさが絶妙で、訪れる大人のび心をくすぐる。さらに、さまざまなアーティストのミュージックビデオのロケ地とて使われており、フォトジェニックな空間がスタンスタ代に大人気。
               </span>
               <br />
               <span class="text-[16px] leading-normal font-[700]">
@@ -757,40 +804,87 @@
                 </div>
 
                 <!-- Navigation Arrows and Dots Container -->
-                <div class="absolute bottom-8 right-8 flex items-center gap-8">
+                <div class="absolute bottom-8 right-8 flex flex-col gap-4">
                   <!-- Navigation Arrows -->
-                  <div class="flex gap-4">
-                    <button
-                      class="prev-slide w-[40px] h-[40px] flex items-center justify-center text-[48px] leading-none text-white transition-transform hover:scale-110"
+                  <div class="flex gap-8">
+                    <button 
+                      class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group" 
                       aria-label="Previous slide"
                     >
-                      ←
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon 
+                            class="fill-white transition-colors group-hover:fill-[#FF2F00]" 
+                            points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85"
+                          />
+                        </g>
+                      </svg>
                     </button>
-                    <button
-                      class="next-slide w-[40px] h-[40px] flex items-center justify-center text-[48px] leading-none text-white transition-transform hover:scale-110"
+                    <button 
+                      class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group" 
                       aria-label="Next slide"
                     >
-                      →
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon 
+                            class="fill-white transition-colors group-hover:fill-[#FF2F00]" 
+                            points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.31 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85"
+                          />
+                        </g>
+                      </svg>
                     </button>
                   </div>
 
                   <!-- Navigation Dots -->
-                  <div class="flex gap-4">
-                    <button
-                      class="w-[14px] h-[14px] bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity [&.active]:opacity-100"
+                  <div class="flex gap-4 justify-center w-[112px]">
+                    <button 
+                      class="w-[14px] h-[14px] transition-opacity" 
                       aria-label="Go to slide 1"
                       data-slide-dot="1"
-                    ></button>
-                    <button
-                      class="w-[14px] h-[14px] bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity [&.active]:opacity-100"
+                    >
+                      <img 
+                        src="/image/illusts/functional/status-visible.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-100 transition-opacity"
+                      />
+                      <img 
+                        src="/image/illusts/functional/status-hidden.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100"
+                      />
+                    </button>
+                    <button 
+                      class="w-[14px] h-[14px] transition-opacity" 
                       aria-label="Go to slide 2"
                       data-slide-dot="2"
-                    ></button>
-                    <button
-                      class="w-[14px] h-[14px] bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity [&.active]:opacity-100"
+                    >
+                      <img 
+                        src="/image/illusts/functional/status-visible.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-100 hidden transition-opacity"
+                      />
+                      <img 
+                        src="/image/illusts/functional/status-hidden.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100"
+                      />
+                    </button>
+                    <button 
+                      class="w-[14px] h-[14px] transition-opacity" 
                       aria-label="Go to slide 3"
                       data-slide-dot="3"
-                    ></button>
+                    >
+                      <img 
+                        src="/image/illusts/functional/status-visible.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-100 hidden transition-opacity"
+                      />
+                      <img 
+                        src="/image/illusts/functional/status-hidden.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100"
+                      />
+                    </button>
                   </div>
                 </div>
               </div>
@@ -872,13 +966,13 @@
 
             <!-- Subtitle -->
             <h3 class="mt-[16px] text-[16px] font-[800] text-black">
-              ~新宿を彩る伝統ある、昭和のスタンドクラス喫茶~
+              ~新宿を彩る伝統ある、昭和レトロ~
             </h3>
 
             <!-- Main Text Content -->
             <div class="mt-[16px] space-y-4">
               <span class="text-[16px] leading-normal font-[700]">
-                「珈琲西武」はその珍しいスタンドクラスが昭和を彩��、訪れる人々を温かく迎える名店。昭和レトロとモダンが見事に融合した内装で、立体、装飾性が特徴。
+                「珈琲西武」はその珍しいスタンドクラスが昭和を彩り、訪れる人々を温かく迎える名店。昭和レトロとモダンが見事に融合した内装で、立体、装飾性が特徴。
               </span>
               <br />
               <span class="text-[16px] leading-normal font-[700]">
@@ -890,7 +984,7 @@
               </span>
               <br />
               <span class="text-[16px] leading-normal font-[700]">
-                待ち合わせや気持ち、一人で静かな心と、昭和レトロでありながらも今どきのニーズをかっちりとこなした素晴らしな喫茶になっている。
+                待ち合わせや気持ち、一人で静かな心と、昭和レトロでありながらも今きのニーズをかっちりとこなした素晴らしな喫茶になっている。
               </span>
             </div>
 
@@ -943,40 +1037,87 @@
                 </div>
 
                 <!-- Navigation Arrows and Dots Container -->
-                <div class="absolute bottom-8 right-8 flex items-center gap-8">
+                <div class="absolute bottom-8 right-8 flex flex-col gap-4">
                   <!-- Navigation Arrows -->
-                  <div class="flex gap-4">
-                    <button
-                      class="prev-slide w-[40px] h-[40px] flex items-center justify-center text-[48px] leading-none text-white transition-transform hover:scale-110"
+                  <div class="flex gap-8">
+                    <button 
+                      class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group" 
                       aria-label="Previous slide"
                     >
-                      ←
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon 
+                            class="fill-white transition-colors group-hover:fill-[#FF2F00]" 
+                            points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85"
+                          />
+                        </g>
+                      </svg>
                     </button>
-                    <button
-                      class="next-slide w-[40px] h-[40px] flex items-center justify-center text-[48px] leading-none text-white transition-transform hover:scale-110"
+                    <button 
+                      class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group" 
                       aria-label="Next slide"
                     >
-                      →
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon 
+                            class="fill-white transition-colors group-hover:fill-[#FF2F00]" 
+                            points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.31 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85"
+                          />
+                        </g>
+                      </svg>
                     </button>
                   </div>
 
                   <!-- Navigation Dots -->
-                  <div class="flex gap-4">
-                    <button
-                      class="w-[14px] h-[14px] bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity [&.active]:opacity-100"
+                  <div class="flex gap-4 justify-center w-[112px]">
+                    <button 
+                      class="w-[14px] h-[14px] transition-opacity" 
                       aria-label="Go to slide 1"
                       data-slide-dot="1"
-                    ></button>
-                    <button
-                      class="w-[14px] h-[14px] bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity [&.active]:opacity-100"
+                    >
+                      <img 
+                        src="/image/illusts/functional/status-visible.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-100 transition-opacity"
+                      />
+                      <img 
+                        src="/image/illusts/functional/status-hidden.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100"
+                      />
+                    </button>
+                    <button 
+                      class="w-[14px] h-[14px] transition-opacity" 
                       aria-label="Go to slide 2"
                       data-slide-dot="2"
-                    ></button>
-                    <button
-                      class="w-[14px] h-[14px] bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity [&.active]:opacity-100"
+                    >
+                      <img 
+                        src="/image/illusts/functional/status-visible.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-100 hidden transition-opacity"
+                      />
+                      <img 
+                        src="/image/illusts/functional/status-hidden.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100"
+                      />
+                    </button>
+                    <button 
+                      class="w-[14px] h-[14px] transition-opacity" 
                       aria-label="Go to slide 3"
                       data-slide-dot="3"
-                    ></button>
+                    >
+                      <img 
+                        src="/image/illusts/functional/status-visible.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-100 hidden transition-opacity"
+                      />
+                      <img 
+                        src="/image/illusts/functional/status-hidden.svg" 
+                        alt="" 
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100"
+                      />
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1020,7 +1161,7 @@
 
                     <div class="font-bold">営業時間</div>
                     <div>
-                      11:00��23:30<br/>
+                      11:00～23:30<br/>
                       日曜日-11:00～23:00
                     </div>
 

@@ -140,47 +140,57 @@ menuButton.addEventListener('click', () => {
   }
 });
 
-// Update these constants with more precise values
-const ARTICLE_SPACING = 168; // Based on the actual spacing in HTML
+// Update constants with more refined values
+const ARTICLE_SPACING = 168;
 const ARTICLE_HEIGHT = 120;
+const TRANSITION_DURATION = '0.4s';
+const TRANSITION_TIMING = 'ease-in-out';
 
 function updateArticlePositions(showingArticle5) {
   const articles = document.querySelectorAll('.article-item');
   
   articles.forEach((article) => {
+    article.style.transition = `all ${TRANSITION_DURATION} ${TRANSITION_TIMING}`;
+    
     const articleNumber = parseInt(article.dataset.article);
     
     if (showingArticle5) {
       if (articleNumber === 1) {
-        // Move Article 1 up and fade out
+        // Move Article 1 up and out
         article.style.top = `-${ARTICLE_HEIGHT + ARTICLE_SPACING}px`;
         article.style.opacity = '0';
         article.style.pointerEvents = 'none';
       } else if (articleNumber === 5) {
-        // Show Article 5 in position 4 (where Article 4 was)
-        article.style.top = `504px`; // Match Article 4's position
-        article.classList.remove('hidden'); // Remove hidden class
-        requestAnimationFrame(() => {
+        // First ensure Article 5 is positioned correctly but hidden
+        article.classList.remove('hidden');
+        article.style.opacity = '0';
+        article.style.top = '504px';
+        article.style.pointerEvents = 'none';
+        
+        // Wait for Article 4 to move up before showing Article 5
+        setTimeout(() => {
           article.style.opacity = '1';
           article.style.pointerEvents = 'auto';
-        });
+        }, 200); // Half of the transition duration
       } else {
-        // Move Articles 2-4 up one position
+        // Move Articles 2-4 up first
         const newPosition = (articleNumber - 2) * ARTICLE_SPACING;
         article.style.top = `${newPosition}px`;
       }
     } else {
-      // Reset to original positions
       if (articleNumber === 1) {
         article.style.top = '0';
         article.style.opacity = '1';
         article.style.pointerEvents = 'auto';
       } else if (articleNumber === 5) {
+        // Hide Article 5 first
         article.style.opacity = '0';
         article.style.pointerEvents = 'none';
+        
+        // Then hide it completely after transition
         setTimeout(() => {
           article.classList.add('hidden');
-        }, 300);
+        }, 400);
       } else {
         const newPosition = (articleNumber - 1) * ARTICLE_SPACING;
         article.style.top = `${newPosition}px`;
@@ -214,6 +224,7 @@ downArrow?.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
   updateArticlePositions(false);
   setArticlePageState();
+  createScrollIndicator();
 });
 
 function updateMonthDisplay(year, month) {
@@ -313,19 +324,22 @@ function setArticlePageState() {
   });
 }
 
-// Add scroll event listener to menu overlay
+// Simple debounced scroll handler
+let scrollTimeout;
 menuOverlay?.addEventListener('wheel', (e) => {
-  if (e.deltaY > 0) { // Scrolling down
-    if (currentArticleSet === 1) {
+  if (scrollTimeout) {
+    clearTimeout(scrollTimeout);
+  }
+  
+  scrollTimeout = setTimeout(() => {
+    if (e.deltaY > 0 && currentArticleSet === 1) {
       currentArticleSet = 2;
       updateArticlePositions(true);
-    }
-  } else { // Scrolling up
-    if (currentArticleSet === 2) {
+    } else if (e.deltaY < 0 && currentArticleSet === 2) {
       currentArticleSet = 1;
       updateArticlePositions(false);
     }
-  }
+  }, 50);
 });
 
 // Remove article visibility toggle from arrow clicks
@@ -336,3 +350,33 @@ upArrow?.addEventListener('click', () => {
 downArrow?.addEventListener('click', () => {
   // Only handle month changes now
 });
+
+function createScrollIndicator() {
+  // Create the indicator element
+  const indicator = document.createElement('div');
+  indicator.className = 'absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-0 transition-opacity duration-300';
+  indicator.innerHTML = `
+    <span class="text-black text-sm mb-2">Scroll for more</span>
+    <svg class="w-6 h-6 animate-bounce" viewBox="0 0 24 24" fill="none">
+      <path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  `;
+  
+  // Add it to the menu overlay's right side
+  const rightSide = document.querySelector('.flex-1.min-h-[calc(100vh-64px)]');
+  rightSide.appendChild(indicator);
+  
+  // Show indicator when menu is opened
+  menuButton.addEventListener('click', () => {
+    if (currentArticleSet === 1) {
+      setTimeout(() => {
+        indicator.style.opacity = '1';
+      }, 500);
+    }
+  });
+  
+  // Hide indicator when scrolling starts or when Article 5 is shown
+  menuOverlay?.addEventListener('wheel', () => {
+    indicator.style.opacity = '0';
+  }, { once: true });
+}

@@ -30,9 +30,7 @@
       <div class="w-[1440px] relative bg-[url('/images/worn-dots.png')] bg-repeat bg-auto isolation">
         
         <!-- Sticky Header -->
-        <header
-          class="fixed top-0 left-1/2 -translate-x-1/2 w-[1440px] bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] z-[100]"
-        >
+        <header class="sticky top-0 w-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] z-[100]">
           <!-- Main header content -->
           <div class="relative transition-colors duration-300">
             <!-- MAYU Logo and menu button container -->
@@ -84,8 +82,9 @@
                 aria-label="Toggle Navigation Menu"
                 aria-expanded="false"
               >
+                <!-- Original Menu Icon -->
                 <svg
-                  class="w-8 h-8 transition-colors duration-300"
+                  class="w-8 h-8 transition-colors duration-300 fill-black menu-icon"
                   viewBox="0 0 403.49 403.49"
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
@@ -95,6 +94,22 @@
                     <rect width="403.49" height="80.7" />
                     <rect y="161.4" width="403.49" height="80.69" />
                     <rect y="322.79" width="403.49" height="80.7" />
+                  </g>
+                </svg>
+
+                <!-- Close Menu Icon -->
+                <svg
+                  class="w-8 h-8 transition-colors duration-300 fill-black menu-close-icon hidden"
+                  viewBox="0 0 403.49 403.49"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <g>
+                    <g>
+                      <rect x="161.39" y="0" width="80.7" height="403.49" transform="translate(-83.57 201.74) rotate(-45)"/>
+                      <rect x="0" y="161.39" width="403.49" height="80.7" transform="translate(-83.57 201.74) rotate(-45)"/>
+                    </g>
                   </g>
                 </svg>
               </button>
@@ -269,7 +284,7 @@
         </section>
 
         <!-- Main Content -->
-        <main class="mt-[80px]">
+        <main class="mt-4">
           <!-- Content sections will be added here based on your spacing requirements -->
         </main>
 

@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevButton = document.querySelector('[aria-label="Previous Slide"]');
     const nextButton = document.querySelector('[aria-label="Next Slide"]');
     const playPauseButton = document.querySelector('[aria-label="Play/Pause Slideshow"]');
+    const playPauseIcon = playPauseButton.querySelector('polygon');
 
     // Update slide and status immediately
     const updateSlide = (index) => {
@@ -69,6 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }, slideshowConfig.autoplayDuration);
         slideshowConfig.isPlaying = true;
         playPauseButton.setAttribute('aria-label', 'Pause Slideshow');
+        // Update button state
+        playPauseButton.dataset.state = 'playing';
+        playPauseButton.classList.remove('paused');
     };
 
     const stopAutoplay = () => {
@@ -78,6 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         slideshowConfig.isPlaying = false;
         playPauseButton.setAttribute('aria-label', 'Play Slideshow');
+        // Update button state
+        playPauseButton.dataset.state = 'paused';
+        playPauseButton.classList.add('paused');
     };
 
     const toggleAutoplay = () => {
@@ -88,24 +95,58 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Event listeners - Updated to restart autoplay timer on manual navigation
+    // Event listeners - Updated to handle navigation without affecting autoplay state
     prevButton.addEventListener('click', () => {
-        stopAutoplay();
+        // Clear current interval but remember the state
+        const wasPlaying = slideshowConfig.isPlaying;
+        if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+            autoplayInterval = null;
+        }
+        
         previousSlide();
-        if (slideshowConfig.isPlaying) {
-            startAutoplay(); // Restart autoplay if it was playing
+        
+        // Only restart if it was playing before
+        if (wasPlaying) {
+            autoplayInterval = setInterval(() => {
+                nextSlide();
+            }, slideshowConfig.autoplayDuration);
         }
     });
 
     nextButton.addEventListener('click', () => {
-        stopAutoplay();
+        // Clear current interval but remember the state
+        const wasPlaying = slideshowConfig.isPlaying;
+        if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+            autoplayInterval = null;
+        }
+        
         nextSlide();
-        if (slideshowConfig.isPlaying) {
-            startAutoplay(); // Restart autoplay if it was playing
+        
+        // Only restart if it was playing before
+        if (wasPlaying) {
+            autoplayInterval = setInterval(() => {
+                nextSlide();
+            }, slideshowConfig.autoplayDuration);
         }
     });
 
-    playPauseButton.addEventListener('click', toggleAutoplay);
+    playPauseButton.addEventListener('click', () => {
+        const isPlaying = playPauseButton.dataset.state === 'playing';
+        
+        if (isPlaying) {
+            // Change to paused state
+            playPauseButton.dataset.state = 'paused';
+            playPauseButton.classList.add('paused');
+            stopAutoplay(); // Stop the slideshow
+        } else {
+            // Change to playing state
+            playPauseButton.dataset.state = 'playing';
+            playPauseButton.classList.remove('paused');
+            startAutoplay(); // Start the slideshow
+        }
+    });
 
     // Initialize slideshow
     updateSlide(currentSlide);
@@ -136,4 +177,43 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     };
+
+    // Function to update button appearance
+    const updateButtonState = (playing) => {
+        if (playing) {
+            playPauseIcon.classList.remove('fill-[#FF2F00]');
+            playPauseIcon.classList.add('fill-white');
+            playPauseButton.setAttribute('data-playing', 'true');
+        } else {
+            playPauseIcon.classList.remove('fill-white');
+            playPauseIcon.classList.add('fill-[#FF2F00]');
+            playPauseButton.setAttribute('data-playing', 'false');
+        }
+    };
+
+    // Toggle play/pause state
+    playPauseButton.addEventListener('click', () => {
+        const isPlaying = playPauseButton.dataset.state === 'playing';
+        updateButtonState(isPlaying);
+        
+        if (isPlaying) {
+            startAutoplay();
+        } else {
+            stopAutoplay();
+        }
+    });
+
+    // Maintain hover effect only when playing
+    playPauseButton.addEventListener('mouseenter', () => {
+        if (slideshowConfig.isPlaying) {
+            playPauseIcon.classList.add('group-hover:fill-[#FF2F00]');
+        }
+    });
+
+    playPauseButton.addEventListener('mouseleave', () => {
+        if (slideshowConfig.isPlaying) {
+            playPauseIcon.classList.remove('fill-[#FF2F00]');
+            playPauseIcon.classList.add('fill-white');
+        }
+    });
 }); 

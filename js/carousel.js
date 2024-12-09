@@ -1,95 +1,84 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Get all carousels
   const carousels = document.querySelectorAll('.carousel');
 
-  carousels.forEach((carousel, carouselIndex) => {
-    // Get elements for this specific carousel
-    const slidesContainer = carousel.querySelector('.slides-container');
+  carousels.forEach(carousel => {
     const slides = carousel.querySelectorAll('.slide');
     const prevButton = carousel.querySelector('.prev-slide');
     const nextButton = carousel.querySelector('.next-slide');
     const dots = carousel.querySelectorAll('[data-slide-dot]');
-
     let currentSlide = 0;
-    const totalSlides = slides.length;
 
-    // Initialize carousel
-    function initCarousel() {
-      // Set initial states
-      slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
-      });
-      updateDots();
-    }
-
-    // Update navigation dots
-    function updateDots() {
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('opacity-100', index === currentSlide);
-        dot.classList.toggle('opacity-50', index !== currentSlide);
-      });
-    }
-
-    // Move to specific slide
-    function goToSlide(index) {
-      if (index < 0) index = totalSlides - 1;
-      if (index >= totalSlides) index = 0;
-
+    // Function to update slide visibility
+    const updateSlide = (index) => {
       slides.forEach((slide, i) => {
         slide.style.transform = `translateX(${100 * (i - index)}%)`;
       });
 
-      currentSlide = index;
-      updateDots();
-    }
+      // Update active dot
+      dots.forEach((dot, i) => {
+        const visibleDot = dot.querySelector('img:nth-child(1)');
+        const hiddenDot = dot.querySelector('img:nth-child(2)');
+        
+        if (i === index) {
+          visibleDot.classList.remove('hidden');
+          hiddenDot.classList.add('hidden');
+        } else {
+          visibleDot.classList.add('hidden');
+          hiddenDot.classList.remove('hidden');
+        }
+      });
+    };
 
-    // Event Listeners
-    prevButton.addEventListener('click', () => {
-      goToSlide(currentSlide - 1);
-    });
+    // Navigation functions
+    const nextSlide = () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlide(currentSlide);
+    };
 
-    nextButton.addEventListener('click', () => {
-      goToSlide(currentSlide + 1);
-    });
+    const previousSlide = () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlide(currentSlide);
+    };
+
+    // Event listeners
+    prevButton.addEventListener('click', previousSlide);
+    nextButton.addEventListener('click', nextSlide);
 
     // Dot navigation
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
-        goToSlide(index);
+        currentSlide = index;
+        updateSlide(currentSlide);
       });
     });
 
-    // Touch events for swipe
+    // Touch support
     let touchStartX = 0;
     let touchEndX = 0;
 
-    if (slidesContainer) {
-      slidesContainer.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-      });
+    carousel.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
 
-      slidesContainer.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-      });
-    }
+    carousel.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
 
-    function handleSwipe() {
+    const handleSwipe = () => {
       const swipeThreshold = 50;
       const diff = touchStartX - touchEndX;
-
+      
       if (Math.abs(diff) > swipeThreshold) {
         if (diff > 0) {
-          // Swipe left
-          goToSlide(currentSlide + 1);
+          nextSlide();
         } else {
-          // Swipe right
-          goToSlide(currentSlide - 1);
+          previousSlide();
         }
       }
-    }
+    };
 
-    // Initialize this carousel
-    initCarousel();
+    // Initialize first slide
+    updateSlide(currentSlide);
   });
 }); 
