@@ -7,9 +7,11 @@ const menuIcon = menuButton.querySelector('svg'); // Menu icon SVG
 const headerContent = document.querySelector('header > div'); // Header content div
 const upArrow = document.querySelector('.text-center button:first-child');
 const downArrow = document.querySelector('.text-center button:last-child');
+let currentYear = 2024;
 let currentMonth = 1;
 const articles = document.querySelectorAll('[data-article]');
 let currentArticleSet = 1; // 1 for articles 1-4, 2 for article 5
+let scrollPosition = 0;  // Add at top with other variables
 
 const observerOptions = {
   root: null,
@@ -63,6 +65,9 @@ menuButton.addEventListener('mouseenter', () => {
     menuButton.style.backgroundColor = '#000000';
     menuIcon.style.fill = '#FF2F00';
     headerContent.style.backgroundColor = '#FFFFFF';
+    if (mayuLogo) {
+      mayuLogo.style.fill = '#000000';  // Keep logo black when hovering menu button
+    }
   }
 });
 
@@ -72,17 +77,24 @@ menuButton.addEventListener('mouseleave', () => {
     menuButton.style.backgroundColor = '';
     menuIcon.style.fill = '';
     headerContent.style.backgroundColor = '';
+    if (mayuLogo) {
+      mayuLogo.style.fill = '';
+    }
   }
 });
 
 // Toggle menu
 menuButton.addEventListener('click', () => {
   const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-  
   menuButton.setAttribute('aria-expanded', !isExpanded);
   
   if (!isExpanded) {
-    // Opening menu - Set fixed styles
+    // Opening menu
+    scrollPosition = window.scrollY;
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = '100%';
     menuOverlay.classList.add('active');
     menuOverlay.style.visibility = 'visible';
     menuOverlay.style.opacity = '1';
@@ -100,7 +112,15 @@ menuButton.addEventListener('click', () => {
     // Reapply active states if on article page
     setArticlePageState();
   } else {
-    // Closing menu - Reset everything
+    // Closing menu
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo({
+      top: scrollPosition,
+      behavior: 'instant'  // Use instant to prevent smooth scrolling
+    });
     menuOverlay.classList.remove('active');
     menuOverlay.style.opacity = '0';
     
@@ -171,17 +191,23 @@ function updateArticlePositions(showingArticle5) {
 
 // Update click handlers
 upArrow?.addEventListener('click', () => {
-  if (currentArticleSet === 2) {
-    currentArticleSet = 1;
-    updateArticlePositions(false);
+  if (currentMonth === 1) {
+    currentMonth = 12;
+    currentYear--;
+  } else {
+    currentMonth--;
   }
+  updateMonthDisplay(currentYear, currentMonth);
 });
 
 downArrow?.addEventListener('click', () => {
-  if (currentArticleSet === 1) {
-    currentArticleSet = 2;
-    updateArticlePositions(true);
+  if (currentMonth === 12) {
+    currentMonth = 1;
+    currentYear++;
+  } else {
+    currentMonth++;
   }
+  updateMonthDisplay(currentYear, currentMonth);
 });
 
 // Initialize positions on load
@@ -190,15 +216,13 @@ document.addEventListener('DOMContentLoaded', () => {
   setArticlePageState();
 });
 
-function updateMonthDisplay() {
-  const monthText = document.querySelector('.font-dotgothic16 + .font-dotgothic16');
-  if (monthText) {
-    // Update the month text based on which set is showing
-    if (currentArticleSet === 1) {
-      monthText.textContent = '2024年 1月号';
-    } else {
-      monthText.textContent = '2024年 2月号';
-    }
+function updateMonthDisplay(year, month) {
+  const yearSpan = document.querySelector('.font-dotgothic16:nth-child(2)');
+  const monthSpan = document.querySelector('.font-dotgothic16:nth-child(3)');
+  
+  if (yearSpan && monthSpan) {
+    yearSpan.textContent = `${year}年`;
+    monthSpan.textContent = `${month}月号`;
   }
 }
 
@@ -288,3 +312,27 @@ function setArticlePageState() {
     }
   });
 }
+
+// Add scroll event listener to menu overlay
+menuOverlay?.addEventListener('wheel', (e) => {
+  if (e.deltaY > 0) { // Scrolling down
+    if (currentArticleSet === 1) {
+      currentArticleSet = 2;
+      updateArticlePositions(true);
+    }
+  } else { // Scrolling up
+    if (currentArticleSet === 2) {
+      currentArticleSet = 1;
+      updateArticlePositions(false);
+    }
+  }
+});
+
+// Remove article visibility toggle from arrow clicks
+upArrow?.addEventListener('click', () => {
+  // Only handle month changes now
+});
+
+downArrow?.addEventListener('click', () => {
+  // Only handle month changes now
+});
