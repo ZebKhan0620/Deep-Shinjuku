@@ -216,4 +216,27 @@ document.addEventListener('DOMContentLoaded', () => {
             playPauseIcon.classList.add('fill-white');
         }
     });
+
+    // Add click handlers for status indicators
+    statusContainers.forEach((container, index) => {
+        container.addEventListener('click', () => {
+            // Clear current interval but remember the state
+            const wasPlaying = slideshowConfig.isPlaying;
+            if (autoplayInterval) {
+                clearInterval(autoplayInterval);
+                autoplayInterval = null;
+            }
+            
+            // Update current slide
+            currentSlide = index;
+            updateSlide(currentSlide);
+            
+            // Restart autoplay if it was playing
+            if (wasPlaying) {
+                autoplayInterval = setInterval(() => {
+                    nextSlide();
+                }, slideshowConfig.autoplayDuration);
+            }
+        });
+    });
 }); 

@@ -1,856 +1,532 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="MAYU - 新宿の文化と歴史を探求するウェブマガジン"
-    />
-    <meta name="author" content="MAYU Editorial Team" />
-    <meta
-      name="keywords"
-      content="新宿,カルチャー,ヒストリー,東京,ウェブマガジン"
-    />
-    <meta property="og:title" content="MAYU - 新宿カルチャーマガジン" />
-    <meta
-      property="og:description"
-      content="新宿の文化と歴史を探求するウェブマガジン"
-    />
-    <meta property="og:type" content="website" />
-    <title>MAYU - 新宿カルチャーマガジン</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="/favicon/logo04.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- Change this parent container -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MAYU - 新宿の文化と歴史を探求するウェブマガジン" />
+  <meta name="author" content="MAYU Editorial Team" />
+  <meta name="keywords" content="新宿,カルチャー,ヒストリー,東京,ウェブマガジン" />
+  <meta property="og:title" content="MAYU - 新宿カルチャーマガジン" />
+  <meta property="og:description" content="新宿の文化と歴史を探求するウェブマガジン" />
+  <meta property="og:type" content="website" />
+  <title>MAYU - 新宿カルチャーマガジン</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="/favicon/logo04.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Change this parent container -->
+  <div class="min-h-screen flex justify-center box-border relative overflow-x-hidden">
+    <!-- Main container - keep original width but add positioning context -->
     <div
-      class="min-h-screen flex justify-center box-border relative overflow-x-hidden"
-    >
-      <!-- Main container - keep original width but add positioning context -->
-      <div
-        class="w-[1440px] relative bg-[url('/image/worn-dots.png')] bg-repeat bg-auto isolation border border-blue-500"
-      >
-        <!-- Inner container - add proper positioning -->
-        <div class="relative border border-green-500">
-          <!-- Hero Section -->
-          <section
-            class="relative h-screen w-[1410px] mx-auto overflow-hidden py-4 border border-red-500"
-            aria-label="Hero Banner"
-          >
-            <!-- Main Content Container -->
-            <div
-              class="relative z-10 h-full mx-[32px] flex flex-col items-center justify-center border border-blue-500"
-              role="banner"
-            >
-              <!-- Background Image -->
-              <div class="absolute inset-0">
-                <img
-                  src="image/hp-main-visual/mainV34 (compressed).jpg"
-                  alt="Urban Japanese Street"
-                  class="w-full h-full object-cover hero-image"
-                  loading="lazy"
-                  style="
+      class="w-[1440px] relative bg-[url('/image/worn-dots.png')] bg-repeat bg-auto isolation border border-blue-500">
+      <!-- Inner container - add proper positioning -->
+      <div class="relative border border-green-500">
+        <!-- Hero Section -->
+        <section class="relative h-screen w-[1410px] mx-auto overflow-hidden py-4 border border-red-500"
+          aria-label="Hero Banner">
+          <!-- Main Content Container -->
+          <div class="relative z-10 h-full mx-[32px] flex flex-col items-center justify-center border border-blue-500"
+            role="banner">
+            <!-- Background Image -->
+            <div class="absolute inset-0">
+              <img src="image/hp-main-visual/mainV34 (compressed).jpg" alt="Urban Japanese Street"
+                class="w-full h-full object-cover hero-image" loading="lazy" style="
                     image-rendering: -webkit-optimize-contrast;
                     image-rendering: crisp-edges;
-                  "
-                />
+                  " />
+            </div>
+            <!-- STATUS HIDDEN/STATUS VISIBLE -->
+            <div class="absolute bottom-[115px] right-[43px] flex w-[177px] items-center justify-between"
+              aria-label="Status Indicators">
+              <!-- Status Container 1 -->
+              <div class="relative w-[14px] h-[14px] cursor-pointer">
+                <!-- Status Visible -->
+                <svg class="w-full h-full absolute inset-0" viewBox="0 0 192.31 192.31"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="153.85 38.46 153.85 0 115.39 0 76.93 0 38.47 0 38.47 38.46 0 38.46 0 76.93 0 115.39 0 153.85 38.47 153.85 38.47 192.31 76.93 192.31 115.39 192.31 153.85 192.31 153.85 153.85 192.31 153.85 192.31 115.39 192.31 76.93 192.31 38.46 153.85 38.46" />
+                  </g>
+                </svg>
+                <!-- Status Hidden -->
+                <svg class="w-full h-full absolute inset-0 hidden" viewBox="0 0 192.3 192.31"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="38.46 76.93 38.46 38.47 0 38.47 0 76.93 0 115.39 0 153.85 38.46 153.85 38.46 115.39 38.46 76.93" />
+                    <polygon class="fill-white"
+                      points="76.92 153.85 38.46 153.85 38.46 192.31 76.92 192.31 115.38 192.31 153.84 192.31 153.84 153.85 115.38 153.85 76.92 153.85" />
+                    <polygon class="fill-white"
+                      points="153.84 76.93 153.84 115.39 153.84 153.85 192.3 153.85 192.3 115.39 192.3 76.93 192.3 38.47 153.84 38.47 153.84 76.93" />
+                    <polygon class="fill-white"
+                      points="115.38 38.47 153.84 38.47 153.84 0 115.38 0 76.92 0 38.46 0 38.46 38.47 76.92 38.47 115.38 38.47" />
+                  </g>
+                </svg>
+                <!-- Carousel Running -->
+                <svg class="w-full h-full absolute inset-0 hidden" viewBox="0 0 423.08 423.08"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="384.62 115.39 384.62 76.92 346.16 76.92 346.16 38.46 307.7 38.46 307.7 0 269.23 0 230.77 0 192.31 0 153.85 0 115.39 0 115.39 38.46 76.93 38.46 76.93 76.92 38.47 76.92 38.47 115.39 0 115.39 0 153.85 0 192.31 0 230.77 0 269.23 0 307.69 38.47 307.69 38.47 346.15 76.93 346.15 76.93 384.62 115.39 384.62 115.39 423.08 153.85 423.08 192.31 423.08 230.77 423.08 269.23 423.08 307.7 423.08 307.7 384.62 346.16 384.62 346.16 346.15 384.62 346.15 384.62 307.69 423.08 307.69 423.08 269.23 423.08 230.77 423.08 192.31 423.08 153.85 423.08 115.39 384.62 115.39" />
+                  </g>
+                </svg>
               </div>
-              <!-- STATUS HIDDEN/STATUS VISIBLE -->
-              <div
-                class="absolute bottom-[115px] right-[43px] flex w-[177px] items-center justify-between"
-                aria-label="Status Indicators"
-              >
-                <!-- Status Container 1 -->
-                <div class="relative w-[14px] h-[14px]">
-                  <!-- Status Visible -->
-                  <svg
-                    class="w-full h-full absolute inset-0"
-                    viewBox="0 0 192.31 192.31"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="153.85 38.46 153.85 0 115.39 0 76.93 0 38.47 0 38.47 38.46 0 38.46 0 76.93 0 115.39 0 153.85 38.47 153.85 38.47 192.31 76.93 192.31 115.39 192.31 153.85 192.31 153.85 153.85 192.31 153.85 192.31 115.39 192.31 76.93 192.31 38.46 153.85 38.46"
-                      />
-                    </g>
-                  </svg>
-                  <!-- Status Hidden -->
-                  <svg
-                    class="w-full h-full absolute inset-0 hidden"
-                    viewBox="0 0 192.3 192.31"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="38.46 76.93 38.46 38.47 0 38.47 0 76.93 0 115.39 0 153.85 38.46 153.85 38.46 115.39 38.46 76.93"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="76.92 153.85 38.46 153.85 38.46 192.31 76.92 192.31 115.38 192.31 153.84 192.31 153.84 153.85 115.38 153.85 76.92 153.85"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="153.84 76.93 153.84 115.39 153.84 153.85 192.3 153.85 192.3 115.39 192.3 76.93 192.3 38.47 153.84 38.47 153.84 76.93"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="115.38 38.47 153.84 38.47 153.84 0 115.38 0 76.92 0 38.46 0 38.46 38.47 76.92 38.47 115.38 38.47"
-                      />
-                    </g>
-                  </svg>
-                  <!-- Carousel Running -->
-                  <svg
-                    class="w-full h-full absolute inset-0 hidden"
-                    viewBox="0 0 423.08 423.08"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="384.62 115.39 384.62 76.92 346.16 76.92 346.16 38.46 307.7 38.46 307.7 0 269.23 0 230.77 0 192.31 0 153.85 0 115.39 0 115.39 38.46 76.93 38.46 76.93 76.92 38.47 76.92 38.47 115.39 0 115.39 0 153.85 0 192.31 0 230.77 0 269.23 0 307.69 38.47 307.69 38.47 346.15 76.93 346.15 76.93 384.62 115.39 384.62 115.39 423.08 153.85 423.08 192.31 423.08 230.77 423.08 269.23 423.08 307.7 423.08 307.7 384.62 346.16 384.62 346.16 346.15 384.62 346.15 384.62 307.69 423.08 307.69 423.08 269.23 423.08 230.77 423.08 192.31 423.08 153.85 423.08 115.39 384.62 115.39"
-                      />
-                    </g>
-                  </svg>
-                </div>
-                <!-- Status Container 2 -->
-                <div class="relative w-[14px] h-[14px]">
-                  <!-- Status Visible -->
-                  <svg
-                    class="w-full h-full absolute inset-0"
-                    viewBox="0 0 192.31 192.31"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="153.85 38.46 153.85 0 115.39 0 76.93 0 38.47 0 38.47 38.46 0 38.46 0 76.93 0 115.39 0 153.85 38.47 153.85 38.47 192.31 76.93 192.31 115.39 192.31 153.85 192.31 153.85 153.85 192.31 153.85 192.31 115.39 192.31 76.93 192.31 38.46 153.85 38.46"
-                      />
-                    </g>
-                  </svg>
-                  <!-- Status Hidden -->
-                  <svg
-                    class="w-full h-full absolute inset-0 hidden"
-                    viewBox="0 0 192.3 192.31"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="38.46 76.93 38.46 38.47 0 38.47 0 76.93 0 115.39 0 153.85 38.46 153.85 38.46 115.39 38.46 76.93"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="76.92 153.85 38.46 153.85 38.46 192.31 76.92 192.31 115.38 192.31 153.84 192.31 153.84 153.85 115.38 153.85 76.92 153.85"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="153.84 76.93 153.84 115.39 153.84 153.85 192.3 153.85 192.3 115.39 192.3 76.93 192.3 38.47 153.84 38.47 153.84 76.93"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="115.38 38.47 153.84 38.47 153.84 0 115.38 0 76.92 0 38.46 0 38.46 38.47 76.92 38.47 115.38 38.47"
-                      />
-                    </g>
-                  </svg>
-                  <!-- Carousel Running -->
-                  <svg
-                    class="w-full h-full absolute inset-0 hidden"
-                    viewBox="0 0 423.08 423.08"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="384.62 115.39 384.62 76.92 346.16 76.92 346.16 38.46 307.7 38.46 307.7 0 269.23 0 230.77 0 192.31 0 153.85 0 115.39 0 115.39 38.46 76.93 38.46 76.93 76.92 38.47 76.92 38.47 115.39 0 115.39 0 153.85 0 192.31 0 230.77 0 269.23 0 307.69 38.47 307.69 38.47 346.15 76.93 346.15 76.93 384.62 115.39 384.62 115.39 423.08 153.85 423.08 192.31 423.08 230.77 423.08 269.23 423.08 307.7 423.08 307.7 384.62 346.16 384.62 346.16 346.15 384.62 346.15 384.62 307.69 423.08 307.69 423.08 269.23 423.08 230.77 423.08 192.31 423.08 153.85 423.08 115.39 384.62 115.39"
-                      />
-                    </g>
-                  </svg>
-                </div>
-                <!-- Status Container 3 -->
-                <div class="relative w-[14px] h-[14px]">
-                  <!-- Status Visible -->
-                  <svg
-                    class="w-full h-full absolute inset-0"
-                    viewBox="0 0 192.31 192.31"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="153.85 38.46 153.85 0 115.39 0 76.93 0 38.47 0 38.47 38.46 0 38.46 0 76.93 0 115.39 0 153.85 38.47 153.85 38.47 192.31 76.93 192.31 115.39 192.31 153.85 192.31 153.85 153.85 192.31 153.85 192.31 115.39 192.31 76.93 192.31 38.46 153.85 38.46"
-                      />
-                    </g>
-                  </svg>
-                  <!-- Status Hidden -->
-                  <svg
-                    class="w-full h-full absolute inset-0 hidden"
-                    viewBox="0 0 192.3 192.31"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="38.46 76.93 38.46 38.47 0 38.47 0 76.93 0 115.39 0 153.85 38.46 153.85 38.46 115.39 38.46 76.93"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="76.92 153.85 38.46 153.85 38.46 192.31 76.92 192.31 115.38 192.31 153.84 192.31 153.84 153.85 115.38 153.85 76.92 153.85"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="153.84 76.93 153.84 115.39 153.84 153.85 192.3 153.85 192.3 115.39 192.3 76.93 192.3 38.47 153.84 38.47 153.84 76.93"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="115.38 38.47 153.84 38.47 153.84 0 115.38 0 76.92 0 38.46 0 38.46 38.47 76.92 38.47 115.38 38.47"
-                      />
-                    </g>
-                  </svg>
-                  <!-- Carousel Running -->
-                  <svg
-                    class="w-full h-full absolute inset-0 hidden"
-                    viewBox="0 0 423.08 423.08"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="384.62 115.39 384.62 76.92 346.16 76.92 346.16 38.46 307.7 38.46 307.7 0 269.23 0 230.77 0 192.31 0 153.85 0 115.39 0 115.39 38.46 76.93 38.46 76.93 76.92 38.47 76.92 38.47 115.39 0 115.39 0 153.85 0 192.31 0 230.77 0 269.23 0 307.69 38.47 307.69 38.47 346.15 76.93 346.15 76.93 384.62 115.39 384.62 115.39 423.08 153.85 423.08 192.31 423.08 230.77 423.08 269.23 423.08 307.7 423.08 307.7 384.62 346.16 384.62 346.16 346.15 384.62 346.15 384.62 307.69 423.08 307.69 423.08 269.23 423.08 230.77 423.08 192.31 423.08 153.85 423.08 115.39 384.62 115.39"
-                      />
-                    </g>
-                  </svg>
-                </div>
-                <!-- Status Container 4 -->
-                <div class="relative w-[14px] h-[14px]">
-                  <!-- Status Visible -->
-                  <svg
-                    class="w-full h-full absolute inset-0"
-                    viewBox="0 0 192.31 192.31"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="153.85 38.46 153.85 0 115.39 0 76.93 0 38.47 0 38.47 38.46 0 38.46 0 76.93 0 115.39 0 153.85 38.47 153.85 38.47 192.31 76.93 192.31 115.39 192.31 153.85 192.31 153.85 153.85 192.31 153.85 192.31 115.39 192.31 76.93 192.31 38.46 153.85 38.46"
-                      />
-                    </g>
-                  </svg>
-                  <!-- Status Hidden -->
-                  <svg
-                    class="w-full h-full absolute inset-0 hidden"
-                    viewBox="0 0 192.3 192.31"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="38.46 76.93 38.46 38.47 0 38.47 0 76.93 0 115.39 0 153.85 38.46 153.85 38.46 115.39 38.46 76.93"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="76.92 153.85 38.46 153.85 38.46 192.31 76.92 192.31 115.38 192.31 153.84 192.31 153.84 153.85 115.38 153.85 76.92 153.85"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="153.84 76.93 153.84 115.39 153.84 153.85 192.3 153.85 192.3 115.39 192.3 76.93 192.3 38.47 153.84 38.47 153.84 76.93"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="115.38 38.47 153.84 38.47 153.84 0 115.38 0 76.92 0 38.46 0 38.46 38.47 76.92 38.47 115.38 38.47"
-                      />
-                    </g>
-                  </svg>
-                  <!-- Carousel Running -->
-                  <svg
-                    class="w-full h-full absolute inset-0 hidden"
-                    viewBox="0 0 423.08 423.08"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="384.62 115.39 384.62 76.92 346.16 76.92 346.16 38.46 307.7 38.46 307.7 0 269.23 0 230.77 0 192.31 0 153.85 0 115.39 0 115.39 38.46 76.93 38.46 76.93 76.92 38.47 76.92 38.47 115.39 0 115.39 0 153.85 0 192.31 0 230.77 0 269.23 0 307.69 38.47 307.69 38.47 346.15 76.93 346.15 76.93 384.62 115.39 384.62 115.39 423.08 153.85 423.08 192.31 423.08 230.77 423.08 269.23 423.08 307.7 423.08 307.7 384.62 346.16 384.62 346.16 346.15 384.62 346.15 384.62 307.69 423.08 307.69 423.08 269.23 423.08 230.77 423.08 192.31 423.08 153.85 423.08 115.39 384.62 115.39"
-                      />
-                    </g>
-                  </svg>
-                </div>
-                <!-- Status Container 5 -->
-                <div class="relative w-[14px] h-[14px]">
-                  <!-- Status Visible -->
-                  <svg
-                    class="w-full h-full absolute inset-0"
-                    viewBox="0 0 192.31 192.31"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="153.85 38.46 153.85 0 115.39 0 76.93 0 38.47 0 38.47 38.46 0 38.46 0 76.93 0 115.39 0 153.85 38.47 153.85 38.47 192.31 76.93 192.31 115.39 192.31 153.85 192.31 153.85 153.85 192.31 153.85 192.31 115.39 192.31 76.93 192.31 38.46 153.85 38.46"
-                      />
-                    </g>
-                  </svg>
-                  <!-- Status Hidden -->
-                  <svg
-                    class="w-full h-full absolute inset-0 hidden"
-                    viewBox="0 0 192.3 192.31"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="38.46 76.93 38.46 38.47 0 38.47 0 76.93 0 115.39 0 153.85 38.46 153.85 38.46 115.39 38.46 76.93"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="76.92 153.85 38.46 153.85 38.46 192.31 76.92 192.31 115.38 192.31 153.84 192.31 153.84 153.85 115.38 153.85 76.92 153.85"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="153.84 76.93 153.84 115.39 153.84 153.85 192.3 153.85 192.3 115.39 192.3 76.93 192.3 38.47 153.84 38.47 153.84 76.93"
-                      />
-                      <polygon
-                        class="fill-white"
-                        points="115.38 38.47 153.84 38.47 153.84 0 115.38 0 76.92 0 38.46 0 38.46 38.47 76.92 38.47 115.38 38.47"
-                      />
-                    </g>
-                  </svg>
-                  <!-- Carousel Running -->
-                  <svg
-                    class="w-full h-full absolute inset-0 hidden"
-                    viewBox="0 0 423.08 423.08"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white"
-                        points="384.62 115.39 384.62 76.92 346.16 76.92 346.16 38.46 307.7 38.46 307.7 0 269.23 0 230.77 0 192.31 0 153.85 0 115.39 0 115.39 38.46 76.93 38.46 76.93 76.92 38.47 76.92 38.47 115.39 0 115.39 0 153.85 0 192.31 0 230.77 0 269.23 0 307.69 38.47 307.69 38.47 346.15 76.93 346.15 76.93 384.62 115.39 384.62 115.39 423.08 153.85 423.08 192.31 423.08 230.77 423.08 269.23 423.08 307.7 423.08 307.7 384.62 346.16 384.62 346.16 346.15 384.62 346.15 384.62 307.69 423.08 307.69 423.08 269.23 423.08 230.77 423.08 192.31 423.08 153.85 423.08 115.39 384.62 115.39"
-                      />
-                    </g>
-                  </svg>
-                </div>
+              <!-- Status Container 2 -->
+              <div class="relative w-[14px] h-[14px] cursor-pointer">
+                <!-- Status Visible -->
+                <svg class="w-full h-full absolute inset-0" viewBox="0 0 192.31 192.31"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="153.85 38.46 153.85 0 115.39 0 76.93 0 38.47 0 38.47 38.46 0 38.46 0 76.93 0 115.39 0 153.85 38.47 153.85 38.47 192.31 76.93 192.31 115.39 192.31 153.85 192.31 153.85 153.85 192.31 153.85 192.31 115.39 192.31 76.93 192.31 38.46 153.85 38.46" />
+                  </g>
+                </svg>
+                <!-- Status Hidden -->
+                <svg class="w-full h-full absolute inset-0 hidden" viewBox="0 0 192.3 192.31"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="38.46 76.93 38.46 38.47 0 38.47 0 76.93 0 115.39 0 153.85 38.46 153.85 38.46 115.39 38.46 76.93" />
+                    <polygon class="fill-white"
+                      points="76.92 153.85 38.46 153.85 38.46 192.31 76.92 192.31 115.38 192.31 153.84 192.31 153.84 153.85 115.38 153.85 76.92 153.85" />
+                    <polygon class="fill-white"
+                      points="153.84 76.93 153.84 115.39 153.84 153.85 192.3 153.85 192.3 115.39 192.3 76.93 192.3 38.47 153.84 38.47 153.84 76.93" />
+                    <polygon class="fill-white"
+                      points="115.38 38.47 153.84 38.47 153.84 0 115.38 0 76.92 0 38.46 0 38.46 38.47 76.92 38.47 115.38 38.47" />
+                  </g>
+                </svg>
+                <!-- Carousel Running -->
+                <svg class="w-full h-full absolute inset-0 hidden" viewBox="0 0 423.08 423.08"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="384.62 115.39 384.62 76.92 346.16 76.92 346.16 38.46 307.7 38.46 307.7 0 269.23 0 230.77 0 192.31 0 153.85 0 115.39 0 115.39 38.46 76.93 38.46 76.93 76.92 38.47 76.92 38.47 115.39 0 115.39 0 153.85 0 192.31 0 230.77 0 269.23 0 307.69 38.47 307.69 38.47 346.15 76.93 346.15 76.93 384.62 115.39 384.62 115.39 423.08 153.85 423.08 192.31 423.08 230.77 423.08 269.23 423.08 307.7 423.08 307.7 384.62 346.16 384.62 346.16 346.15 384.62 346.15 384.62 307.69 423.08 307.69 423.08 269.23 423.08 230.77 423.08 192.31 423.08 153.85 423.08 115.39 384.62 115.39" />
+                  </g>
+                </svg>
               </div>
-              <!-- END -->
-              <!-- Logo Container -->
-              <!-- ロゴのサイズは810pxと177pxが60%で表示されるように設定 -->
-              <div
-                class="absolute top-8 left-8 w-full max-w-[810px] h-auto md:h-[177px] transition-all duration-300"
-              >
-                <svg
-                  class="w-full h-auto fill-current drop-shadow-[0_2px_3px_rgba(0,0,0,0.4)]"
-                  viewBox="0 0 1494.02 326.04"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-label="MAYU Logo"
-                  role="img"
-                >
-                  <g class="fill-white/90">
-                    <g id="_レイヤー_1-2" data-name="レイヤー_1">
+              <!-- Status Container 3 -->
+              <div class="relative w-[14px] h-[14px] cursor-pointer">
+                <!-- Status Visible -->
+                <svg class="w-full h-full absolute inset-0" viewBox="0 0 192.31 192.31"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="153.85 38.46 153.85 0 115.39 0 76.93 0 38.47 0 38.47 38.46 0 38.46 0 76.93 0 115.39 0 153.85 38.47 153.85 38.47 192.31 76.93 192.31 115.39 192.31 153.85 192.31 153.85 153.85 192.31 153.85 192.31 115.39 192.31 76.93 192.31 38.46 153.85 38.46" />
+                  </g>
+                </svg>
+                <!-- Status Hidden -->
+                <svg class="w-full h-full absolute inset-0 hidden" viewBox="0 0 192.3 192.31"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="38.46 76.93 38.46 38.47 0 38.47 0 76.93 0 115.39 0 153.85 38.46 153.85 38.46 115.39 38.46 76.93" />
+                    <polygon class="fill-white"
+                      points="76.92 153.85 38.46 153.85 38.46 192.31 76.92 192.31 115.38 192.31 153.84 192.31 153.84 153.85 115.38 153.85 76.92 153.85" />
+                    <polygon class="fill-white"
+                      points="153.84 76.93 153.84 115.39 153.84 153.85 192.3 153.85 192.3 115.39 192.3 76.93 192.3 38.47 153.84 38.47 153.84 76.93" />
+                    <polygon class="fill-white"
+                      points="115.38 38.47 153.84 38.47 153.84 0 115.38 0 76.92 0 38.46 0 38.46 38.47 76.92 38.47 115.38 38.47" />
+                  </g>
+                </svg>
+                <!-- Carousel Running -->
+                <svg class="w-full h-full absolute inset-0 hidden" viewBox="0 0 423.08 423.08"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="384.62 115.39 384.62 76.92 346.16 76.92 346.16 38.46 307.7 38.46 307.7 0 269.23 0 230.77 0 192.31 0 153.85 0 115.39 0 115.39 38.46 76.93 38.46 76.93 76.92 38.47 76.92 38.47 115.39 0 115.39 0 153.85 0 192.31 0 230.77 0 269.23 0 307.69 38.47 307.69 38.47 346.15 76.93 346.15 76.93 384.62 115.39 384.62 115.39 423.08 153.85 423.08 192.31 423.08 230.77 423.08 269.23 423.08 307.7 423.08 307.7 384.62 346.16 384.62 346.16 346.15 384.62 346.15 384.62 307.69 423.08 307.69 423.08 269.23 423.08 230.77 423.08 192.31 423.08 153.85 423.08 115.39 384.62 115.39" />
+                  </g>
+                </svg>
+              </div>
+              <!-- Status Container 4 -->
+              <div class="relative w-[14px] h-[14px] cursor-pointer">
+                <!-- Status Visible -->
+                <svg class="w-full h-full absolute inset-0" viewBox="0 0 192.31 192.31"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="153.85 38.46 153.85 0 115.39 0 76.93 0 38.47 0 38.47 38.46 0 38.46 0 76.93 0 115.39 0 153.85 38.47 153.85 38.47 192.31 76.93 192.31 115.39 192.31 153.85 192.31 153.85 153.85 192.31 153.85 192.31 115.39 192.31 76.93 192.31 38.46 153.85 38.46" />
+                  </g>
+                </svg>
+                <!-- Status Hidden -->
+                <svg class="w-full h-full absolute inset-0 hidden" viewBox="0 0 192.3 192.31"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="38.46 76.93 38.46 38.47 0 38.47 0 76.93 0 115.39 0 153.85 38.46 153.85 38.46 115.39 38.46 76.93" />
+                    <polygon class="fill-white"
+                      points="76.92 153.85 38.46 153.85 38.46 192.31 76.92 192.31 115.38 192.31 153.84 192.31 153.84 153.85 115.38 153.85 76.92 153.85" />
+                    <polygon class="fill-white"
+                      points="153.84 76.93 153.84 115.39 153.84 153.85 192.3 153.85 192.3 115.39 192.3 76.93 192.3 38.47 153.84 38.47 153.84 76.93" />
+                    <polygon class="fill-white"
+                      points="115.38 38.47 153.84 38.47 153.84 0 115.38 0 76.92 0 38.46 0 38.46 38.47 76.92 38.47 115.38 38.47" />
+                  </g>
+                </svg>
+                <!-- Carousel Running -->
+                <svg class="w-full h-full absolute inset-0 hidden" viewBox="0 0 423.08 423.08"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="384.62 115.39 384.62 76.92 346.16 76.92 346.16 38.46 307.7 38.46 307.7 0 269.23 0 230.77 0 192.31 0 153.85 0 115.39 0 115.39 38.46 76.93 38.46 76.93 76.92 38.47 76.92 38.47 115.39 0 115.39 0 153.85 0 192.31 0 230.77 0 269.23 0 307.69 38.47 307.69 38.47 346.15 76.93 346.15 76.93 384.62 115.39 384.62 115.39 423.08 153.85 423.08 192.31 423.08 230.77 423.08 269.23 423.08 307.7 423.08 307.7 384.62 346.16 384.62 346.16 346.15 384.62 346.15 384.62 307.69 423.08 307.69 423.08 269.23 423.08 230.77 423.08 192.31 423.08 153.85 423.08 115.39 384.62 115.39" />
+                  </g>
+                </svg>
+              </div>
+              <!-- Status Container 5 -->
+              <div class="relative w-[14px] h-[14px] cursor-pointer">
+                <!-- Status Visible -->
+                <svg class="w-full h-full absolute inset-0" viewBox="0 0 192.31 192.31"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="153.85 38.46 153.85 0 115.39 0 76.93 0 38.47 0 38.47 38.46 0 38.46 0 76.93 0 115.39 0 153.85 38.47 153.85 38.47 192.31 76.93 192.31 115.39 192.31 153.85 192.31 153.85 153.85 192.31 153.85 192.31 115.39 192.31 76.93 192.31 38.46 153.85 38.46" />
+                  </g>
+                </svg>
+                <!-- Status Hidden -->
+                <svg class="w-full h-full absolute inset-0 hidden" viewBox="0 0 192.3 192.31"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="38.46 76.93 38.46 38.47 0 38.47 0 76.93 0 115.39 0 153.85 38.46 153.85 38.46 115.39 38.46 76.93" />
+                    <polygon class="fill-white"
+                      points="76.92 153.85 38.46 153.85 38.46 192.31 76.92 192.31 115.38 192.31 153.84 192.31 153.84 153.85 115.38 153.85 76.92 153.85" />
+                    <polygon class="fill-white"
+                      points="153.84 76.93 153.84 115.39 153.84 153.85 192.3 153.85 192.3 115.39 192.3 76.93 192.3 38.47 153.84 38.47 153.84 76.93" />
+                    <polygon class="fill-white"
+                      points="115.38 38.47 153.84 38.47 153.84 0 115.38 0 76.92 0 38.46 0 38.46 38.47 76.92 38.47 115.38 38.47" />
+                  </g>
+                </svg>
+                <!-- Carousel Running -->
+                <svg class="w-full h-full absolute inset-0 hidden" viewBox="0 0 423.08 423.08"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <polygon class="fill-white"
+                      points="384.62 115.39 384.62 76.92 346.16 76.92 346.16 38.46 307.7 38.46 307.7 0 269.23 0 230.77 0 192.31 0 153.85 0 115.39 0 115.39 38.46 76.93 38.46 76.93 76.92 38.47 76.92 38.47 115.39 0 115.39 0 153.85 0 192.31 0 230.77 0 269.23 0 307.69 38.47 307.69 38.47 346.15 76.93 346.15 76.93 384.62 115.39 384.62 115.39 423.08 153.85 423.08 192.31 423.08 230.77 423.08 269.23 423.08 307.7 423.08 307.7 384.62 346.16 384.62 346.16 346.15 384.62 346.15 384.62 307.69 423.08 307.69 423.08 269.23 423.08 230.77 423.08 192.31 423.08 153.85 423.08 115.39 384.62 115.39" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <!-- END -->
+            <!-- Logo Container -->
+            <!-- ロゴのサイズは810pxと177pxが60%で表示されるように設定 -->
+            <div class="absolute top-8 left-8 w-full max-w-[810px] h-auto md:h-[177px] transition-all duration-300">
+              <svg class="w-full h-auto fill-current" viewBox="0 0 1494.02 326.04" xmlns="http://www.w3.org/2000/svg"
+                aria-label="MAYU Logo" role="img">
+                <g class="fill-white">
+                  <g id="_レイヤー_1-2" data-name="レイヤー_1">
+                    <g>
                       <g>
+                        <path
+                          d="M72.13,0C32.36,0,0,32.35,0,72.12v181.79c0,39.77,32.36,72.13,72.13,72.13s72.13-32.36,72.13-72.13V72.12C144.26,32.35,111.9,0,72.13,0ZM143.26,253.91c0,39.22-31.91,71.13-71.13,71.13S1,293.13,1,253.91V72.12C1,32.9,32.91,1,72.13,1s71.13,31.9,71.13,71.12v181.79Z" />
+                        <path
+                          d="M72.13,6C35.67,6,6,35.66,6,72.12v181.79c0,36.47,29.67,66.13,66.13,66.13s66.13-29.66,66.13-66.13V72.12c0-36.46-29.67-66.12-66.13-66.12ZM137.26,253.91c0,35.91-29.22,65.13-65.13,65.13S7,289.82,7,253.91V72.12C7,36.21,36.22,7,72.13,7s65.13,29.21,65.13,65.12v181.79Z" />
+                        <path
+                          d="M72.13,12c-33.15,0-60.13,26.97-60.13,60.12v181.79c0,33.16,26.98,60.13,60.13,60.13s60.13-26.97,60.13-60.13V72.12c0-33.15-26.97-60.12-60.13-60.12ZM131.26,253.91c0,32.6-26.52,59.13-59.13,59.13s-59.13-26.53-59.13-59.13V72.12c0-32.6,26.53-59.12,59.13-59.12s59.13,26.52,59.13,59.12v181.79Z" />
+                        <rect x="58.63" y="97.79" width="28.67" height="4.26" />
+                        <rect x="58.63" y="111.9" width="28.67" height="5.83" />
+                        <path
+                          d="M72.13,18c-29.89,0-54.13,24.23-54.13,54.12v181.79c0,29.9,24.24,54.13,54.13,54.13,14.95,0,28.48-6.06,38.28-15.85,9.79-9.8,15.85-23.33,15.85-38.28V72.12c0-29.89-24.23-54.12-54.13-54.12ZM48.78,118.36v-31.43h48.3v51.95c-.04,2.09-.78,3.89-2.23,5.42-1.44,1.53-3.21,2.35-5.3,2.48h-9.97l-3.64-10.6h9.72c.42-.04.8-.22,1.13-.54.34-.31.51-.72.51-1.22v-7.02h-29.74c-1.46,7.31-4.39,14.09-8.78,20.32l-7.34-8.78c4.89-5.98,7.34-12.84,7.34-20.58ZM72.43,203.24h-10.79v27.41h-9.1v-27.41h-11.48v-9.92h11.48v-12.35h-10.66v-9.48h29.61v9.48h-9.85v12.35h10.79v9.92ZM72.87,174.13h9.09v41.84h-9.09v-41.84ZM97.46,219.11c-.21,2.93-1.38,5.44-3.51,7.56-2.14,2.11-4.67,3.23-7.6,3.35h-7.65l-3.14-9.78h9.67c.83-.05,1.56-.39,2.19-1.04s.98-1.41,1.07-2.29v-47.11h8.97v49.31Z" />
+                        <polygon points="379.2 273.83 388.34 238.53 332.03 257.74 379.2 273.83" />
+                        <polygon
+                          points="322.73 260.91 314.78 263.63 325.66 305.81 370.91 305.81 377.69 279.66 322.74 260.91 322.73 260.91" />
+                        <polygon points="305.53 227.74 313.28 257.8 353.45 244.09 305.53 227.74" />
+                        <polygon points="209.2 299.65 209.2 305.81 268.92 305.81 268.5 279.41 209.2 299.65" />
+                        <polygon points="267.48 214.76 209.2 194.88 209.2 293.3 268.4 273.11 267.48 214.76" />
+                        <polygon
+                          points="428.27 290.58 472.91 305.81 487.74 305.81 487.74 204.62 429.31 224.55 428.27 290.58" />
+                        <polygon points="428.03 305.81 454.33 305.81 428.17 296.89 428.03 305.81" />
+                        <polygon
+                          points="348.66 210.12 293.02 13.92 209.2 13.92 209.2 188.54 267.38 208.39 265.21 71.41 303.74 220.8 362.73 240.93 390.14 231.58 431.74 71.04 429.41 218.18 487.74 198.28 487.74 13.92 404.29 13.92 348.66 210.12" />
+                        <path
+                          d="M705.07,13.18h-104.96l-72.74,247.37,228-77.78h0s-50.3-169.59-50.3-169.59ZM610.49,194.55l40.8-141.31,40.43,141.31h-81.23Z" />
+                        <polygon
+                          points="757.07 188.52 641.9 227.82 697.65 246.84 706.55 246.84 707.53 250.21 783.01 275.96 757.07 188.52" />
+                        <polygon
+                          points="709.56 257.24 723.3 304.7 723.62 305.81 791.86 305.81 785.1 283.01 709.56 257.24" />
+                        <polygon
+                          points="569.93 252.38 591.89 259.87 595.66 246.84 679.08 246.84 632.61 230.99 569.93 252.38" />
+                        <polygon
+                          points="525.3 267.6 514.06 305.81 578.6 305.81 590.22 265.64 560.63 255.55 525.3 267.6" />
+                        <polygon
+                          points="835.56 161.74 856.86 201.59 856.86 243.84 922.88 221.32 922.88 200.85 932.41 183.09 852.71 155.9 835.56 161.74" />
+                        <polygon points="856.86 305.81 922.88 305.81 922.88 227.66 856.86 250.18 856.86 305.81" />
+                        <polygon points="935.29 177.73 968.14 116.51 862 152.72 935.29 177.73" />
+                        <polygon
+                          points="889.87 132.98 831.27 13.55 756.35 13.55 832.7 156.38 972.3 108.75 1023.39 13.55 948.47 13.55 889.87 132.98" />
+                        <path d="M1069.29,177.71l43.74,14.92c-.18-3.35-.26-6.8-.26-10.32v-19.44l-43.48,14.84Z" />
+                        <polygon points="1112.77 13.55 1046.75 13.55 1046.75 179.05 1112.77 156.53 1112.77 13.55" />
+                        <path
+                          d="M1156.53,312.86h23.37c69.61,0,99.66-36.41,108.59-87.43l-200.87,68.53c16.55,12,39.01,18.9,68.91,18.9Z" />
+                        <polygon points="1225.52 13.55 1225.52 59.38 1291.54 81.9 1291.54 13.55 1225.52 13.55" />
+                        <path
+                          d="M1214.37,233.55c-7.59,11.54-19.77,18.48-38.55,18.48h-15.21c-31.67,0-44.14-21.64-47.1-52.9l-53.51-18.25-13.25,4.52v1.73c0,42.52,9.14,79.72,35.29,102.39l148.21-50.56-15.88-5.41Z" />
+                        <path
+                          d="M1225.52,124.4v57.91c0,17.8-2.13,33.78-8.12,45.93l22.14,7.55,49.99-17.05h0c1.39-10.09,2.01-20.67,2.01-31.61v-61.31l-35.08-11.97-30.94,10.55Z" />
+                        <polygon points="1291.54 119.48 1291.54 101.88 1265.76 110.68 1291.54 119.48" />
+                        <polygon points="1225.52 118.06 1291.54 95.54 1291.54 88.25 1225.52 65.72 1225.52 118.06" />
+                      </g>
+                      <g>
+                        <path
+                          d="M1451.04,308.53v-127.22h-60.56v-33.7h14.41c33.45,0,48.59-16.12,48.59-31.74h40.54v192.66h-42.98Z" />
                         <g>
                           <path
-                            d="M72.13,0C32.36,0,0,32.35,0,72.12v181.79c0,39.77,32.36,72.13,72.13,72.13s72.13-32.36,72.13-72.13V72.12C144.26,32.35,111.9,0,72.13,0ZM143.26,253.91c0,39.22-31.91,71.13-71.13,71.13S1,293.13,1,253.91V72.12C1,32.9,32.91,1,72.13,1s71.13,31.9,71.13,71.12v181.79Z"
-                          />
+                            d="M1344.57,310.18h-2.2c-8.8,0-13.65-5-13.65-13.85v-1.5h4.65v1.25c0,6,3.1,9.75,9.1,9.75h2c5.65,0,9.7-2.5,9.7-10.65v-25.8h4.55v25.85c0,10.25-5.45,14.95-14.15,14.95Z" />
                           <path
-                            d="M72.13,6C35.67,6,6,35.66,6,72.12v181.79c0,36.47,29.67,66.13,66.13,66.13s66.13-29.66,66.13-66.13V72.12c0-36.46-29.67-66.12-66.13-66.12ZM137.26,253.91c0,35.91-29.22,65.13-65.13,65.13S7,289.82,7,253.91V72.12C7,36.21,36.22,7,72.13,7s65.13,29.21,65.13,65.12v181.79Z"
-                          />
+                            d="M1386.12,308.43c-.4-.55-.6-1.1-.7-3.55-1.85,2.05-4.75,3.95-9.1,3.95h-2.25c-7.1,0-10.5-3.8-10.5-8.1v-1.05c0-5.8,4.25-8.5,11.15-8.5s9.35-.35,10.65-2.5v-.75c0-2.55-1.9-4.8-7.35-4.8h-2.8c-4.05,0-6.55,1.55-6.85,4.65h-4c.45-5.2,4.4-8.3,10.85-8.3h2.95c7.55,0,11.35,3.25,11.35,8.5v16.95c0,1.5.3,2,.75,2.6v.9h-4.15ZM1385.37,291.88c-1.6,1.95-5.2,2.45-10.45,2.45-5.85,0-7.15,1.95-7.15,5v.95c0,3.35,3.6,4.8,6.95,4.8h2.1c4.3,0,7.3-1.85,8.55-4.45v-8.75Z" />
                           <path
-                            d="M72.13,12c-33.15,0-60.13,26.97-60.13,60.12v181.79c0,33.16,26.98,60.13,60.13,60.13s60.13-26.97,60.13-60.13V72.12c0-33.15-26.97-60.12-60.13-60.12ZM131.26,253.91c0,32.6-26.52,59.13-59.13,59.13s-59.13-26.53-59.13-59.13V72.12c0-32.6,26.53-59.12,59.13-59.12s59.13,26.52,59.13,59.12v181.79Z"
-                          />
-                          <rect
-                            x="58.63"
-                            y="97.79"
-                            width="28.67"
-                            height="4.26"
-                          />
-                          <rect
-                            x="58.63"
-                            y="111.9"
-                            width="28.67"
-                            height="5.83"
-                          />
-                          <path
-                            d="M72.13,18c-29.89,0-54.13,24.23-54.13,54.12v181.79c0,29.9,24.24,54.13,54.13,54.13,14.95,0,28.48-6.06,38.28-15.85,9.79-9.8,15.85-23.33,15.85-38.28V72.12c0-29.89-24.23-54.12-54.13-54.12ZM48.78,118.36v-31.43h48.3v51.95c-.04,2.09-.78,3.89-2.23,5.42-1.44,1.53-3.21,2.35-5.3,2.48h-9.97l-3.64-10.6h9.72c.42-.04.8-.22,1.13-.54.34-.31.51-.72.51-1.22v-7.02h-29.74c-1.46,7.31-4.39,14.09-8.78,20.32l-7.34-8.78c4.89-5.98,7.34-12.84,7.34-20.58ZM72.43,203.24h-10.79v27.41h-9.1v-27.41h-11.48v-9.92h11.48v-12.35h-10.66v-9.48h29.61v9.48h-9.85v12.35h10.79v9.92ZM72.87,174.13h9.09v41.84h-9.09v-41.84ZM97.46,219.11c-.21,2.93-1.38,5.44-3.51,7.56-2.14,2.11-4.67,3.23-7.6,3.35h-7.65l-3.14-9.78h9.67c.83-.05,1.56-.39,2.19-1.04s.98-1.41,1.07-2.29v-47.11h8.97v49.31Z"
-                          />
-                          <polygon
-                            points="379.2 273.83 388.34 238.53 332.03 257.74 379.2 273.83"
-                          />
-                          <polygon
-                            points="322.73 260.91 314.78 263.63 325.66 305.81 370.91 305.81 377.69 279.66 322.74 260.91 322.73 260.91"
-                          />
-                          <polygon
-                            points="305.53 227.74 313.28 257.8 353.45 244.09 305.53 227.74"
-                          />
-                          <polygon
-                            points="209.2 299.65 209.2 305.81 268.92 305.81 268.5 279.41 209.2 299.65"
-                          />
-                          <polygon
-                            points="267.48 214.76 209.2 194.88 209.2 293.3 268.4 273.11 267.48 214.76"
-                          />
-                          <polygon
-                            points="428.27 290.58 472.91 305.81 487.74 305.81 487.74 204.62 429.31 224.55 428.27 290.58"
-                          />
-                          <polygon
-                            points="428.03 305.81 454.33 305.81 428.17 296.89 428.03 305.81"
-                          />
-                          <polygon
-                            points="348.66 210.12 293.02 13.92 209.2 13.92 209.2 188.54 267.38 208.39 265.21 71.41 303.74 220.8 362.73 240.93 390.14 231.58 431.74 71.04 429.41 218.18 487.74 198.28 487.74 13.92 404.29 13.92 348.66 210.12"
-                          />
-                          <path
-                            d="M705.07,13.18h-104.96l-72.74,247.37,228-77.78h0s-50.3-169.59-50.3-169.59ZM610.49,194.55l40.8-141.31,40.43,141.31h-81.23Z"
-                          />
-                          <polygon
-                            points="757.07 188.52 641.9 227.82 697.65 246.84 706.55 246.84 707.53 250.21 783.01 275.96 757.07 188.52"
-                          />
-                          <polygon
-                            points="709.56 257.24 723.3 304.7 723.62 305.81 791.86 305.81 785.1 283.01 709.56 257.24"
-                          />
-                          <polygon
-                            points="569.93 252.38 591.89 259.87 595.66 246.84 679.08 246.84 632.61 230.99 569.93 252.38"
-                          />
-                          <polygon
-                            points="525.3 267.6 514.06 305.81 578.6 305.81 590.22 265.64 560.63 255.55 525.3 267.6"
-                          />
-                          <polygon
-                            points="835.56 161.74 856.86 201.59 856.86 243.84 922.88 221.32 922.88 200.85 932.41 183.09 852.71 155.9 835.56 161.74"
-                          />
-                          <polygon
-                            points="856.86 305.81 922.88 305.81 922.88 227.66 856.86 250.18 856.86 305.81"
-                          />
-                          <polygon
-                            points="935.29 177.73 968.14 116.51 862 152.72 935.29 177.73"
-                          />
-                          <polygon
-                            points="889.87 132.98 831.27 13.55 756.35 13.55 832.7 156.38 972.3 108.75 1023.39 13.55 948.47 13.55 889.87 132.98"
-                          />
-                          <path
-                            d="M1069.29,177.71l43.74,14.92c-.18-3.35-.26-6.8-.26-10.32v-19.44l-43.48,14.84Z"
-                          />
-                          <polygon
-                            points="1112.77 13.55 1046.75 13.55 1046.75 179.05 1112.77 156.53 1112.77 13.55"
-                          />
-                          <path
-                            d="M1156.53,312.86h23.37c69.61,0,99.66-36.41,108.59-87.43l-200.87,68.53c16.55,12,39.01,18.9,68.91,18.9Z"
-                          />
-                          <polygon
-                            points="1225.52 13.55 1225.52 59.38 1291.54 81.9 1291.54 13.55 1225.52 13.55"
-                          />
-                          <path
-                            d="M1214.37,233.55c-7.59,11.54-19.77,18.48-38.55,18.48h-15.21c-31.67,0-44.14-21.64-47.1-52.9l-53.51-18.25-13.25,4.52v1.73c0,42.52,9.14,79.72,35.29,102.39l148.21-50.56-15.88-5.41Z"
-                          />
-                          <path
-                            d="M1225.52,124.4v57.91c0,17.8-2.13,33.78-8.12,45.93l22.14,7.55,49.99-17.05h0c1.39-10.09,2.01-20.67,2.01-31.61v-61.31l-35.08-11.97-30.94,10.55Z"
-                          />
-                          <polygon
-                            points="1291.54 119.48 1291.54 101.88 1265.76 110.68 1291.54 119.48"
-                          />
-                          <polygon
-                            points="1225.52 118.06 1291.54 95.54 1291.54 88.25 1225.52 65.72 1225.52 118.06"
-                          />
-                        </g>
-                        <g>
-                          <path
-                            d="M1451.04,308.53v-127.22h-60.56v-33.7h14.41c33.45,0,48.59-16.12,48.59-31.74h40.54v192.66h-42.98Z"
-                          />
-                          <g>
-                            <path
-                              d="M1344.57,310.18h-2.2c-8.8,0-13.65-5-13.65-13.85v-1.5h4.65v1.25c0,6,3.1,9.75,9.1,9.75h2c5.65,0,9.7-2.5,9.7-10.65v-25.8h4.55v25.85c0,10.25-5.45,14.95-14.15,14.95Z"
-                            />
-                            <path
-                              d="M1386.12,308.43c-.4-.55-.6-1.1-.7-3.55-1.85,2.05-4.75,3.95-9.1,3.95h-2.25c-7.1,0-10.5-3.8-10.5-8.1v-1.05c0-5.8,4.25-8.5,11.15-8.5s9.35-.35,10.65-2.5v-.75c0-2.55-1.9-4.8-7.35-4.8h-2.8c-4.05,0-6.55,1.55-6.85,4.65h-4c.45-5.2,4.4-8.3,10.85-8.3h2.95c7.55,0,11.35,3.25,11.35,8.5v16.95c0,1.5.3,2,.75,2.6v.9h-4.15ZM1385.37,291.88c-1.6,1.95-5.2,2.45-10.45,2.45-5.85,0-7.15,1.95-7.15,5v.95c0,3.35,3.6,4.8,6.95,4.8h2.1c4.3,0,7.3-1.85,8.55-4.45v-8.75Z"
-                            />
-                            <path
-                              d="M1413.82,308.53v-17.75c0-5.4-3.6-7.3-6.75-7.3h-.75c-5.75,0-7.8,3.45-7.8,5.65v19.4h-4.15v-28.85h4.15v4.25c1.7-2.75,4.55-4.45,8.35-4.45h.8c4.75,0,10.35,3.1,10.35,10.65v18.4h-4.2Z"
-                            />
-                            <path d="M1426.37,310.08v-5.05h5.05v5.05h-5.05Z" />
-                          </g>
+                            d="M1413.82,308.53v-17.75c0-5.4-3.6-7.3-6.75-7.3h-.75c-5.75,0-7.8,3.45-7.8,5.65v19.4h-4.15v-28.85h4.15v4.25c1.7-2.75,4.55-4.45,8.35-4.45h.8c4.75,0,10.35,3.1,10.35,10.65v18.4h-4.2Z" />
+                          <path d="M1426.37,310.08v-5.05h5.05v5.05h-5.05Z" />
                         </g>
                       </g>
                     </g>
                   </g>
-                </svg>
-              </div>
-              <!-- Navigation Controls Container -->
-              <div
-                class="absolute bottom-8 right-8 flex items-center gap-12"
-                aria-label="Slideshow Controls"
-              >
-                <!-- Left Arrow -->
-                <button
-                  class="w-[23px] h-[35px] focus:outline-none group"
-                  aria-label="Previous Slide"
-                >
-                  <svg
-                    id="_レイヤー_2"
-                    data-name="レイヤー_2"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 269.23 423.08"
-                    class="w-full h-full"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <g id="_レイヤー_1-2" data-name="レイヤー_1">
-                      <polygon
-                        class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]"
-                        points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85"
-                      />
-                    </g>
-                  </svg>
-                </button>
-                <!-- Play/Pause Button -->
-                <button
-                  class="w-[35px] h-[35px] focus:outline-none group"
-                  aria-label="Play/Pause Slideshow"
-                  data-playing="true"
-                >
-                  <svg
-                    class="w-full h-full"
-                    viewBox="0 0 423.08 423.08"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <g>
-                      <polygon
-                        class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]"
-                        points="384.62 115.39 384.62 76.92 346.16 76.92 346.16 38.46 307.7 38.46 307.7 0 269.23 0 230.77 0 192.31 0 153.85 0 115.39 0 115.39 38.46 76.93 38.46 76.93 76.92 38.47 76.92 38.47 115.39 0 115.39 0 153.85 0 192.31 0 230.77 0 269.23 0 307.69 38.47 307.69 38.47 346.15 76.93 346.15 76.93 384.62 115.39 384.62 115.39 423.08 153.85 423.08 192.31 423.08 230.77 423.08 269.23 423.08 307.7 423.08 307.7 384.62 346.16 384.62 346.16 346.15 384.62 346.15 384.62 307.69 423.08 307.69 423.08 269.23 423.08 230.77 423.08 192.31 423.08 153.85 423.08 115.39 384.62 115.39"
-                      />
-                    </g>
-                  </svg>
-                </button>
-                <!-- Right Arrow -->
-                <button
-                  class="w-[23px] h-[35px] focus:outline-none group"
-                  aria-label="Next Slide"
-                >
-                  <svg
-                    id="_レイヤー_2"
-                    data-name="レイヤー_2"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 269.23 423.08"
-                    class="w-full h-full rotate-180"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <g id="_レイヤー_1-2" data-name="レイヤー_1">
-                      <polygon
-                        class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]"
-                        points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85"
-                      />
-                    </g>
-                  </svg>
-                </button>
-              </div>
+                </g>
+              </svg>
             </div>
-          </section>
-        </div>
-        <!-- Add this right before the header -->
-        <div id="headerTrigger"></div>
-        <!-- Then the header -->
-        <header
-          class="fixed top-0 left-1/2 -translate-x-1/2 w-[1440px] transform-gpu transition-all duration-500 z-[100] opacity-0 -translate-y-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] [&.visible]:opacity-100 [&.visible]:translate-y-0"
-        >
-          <!-- Main header content -->
-          <div
-            class="max-w-[1440px] mx-auto relative transition-colors duration-300"
-          >
-            <!-- MAYU Logo and menu button container -->
-            <div class="flex h-16 items-center justify-between">
-              <!-- Logo and menu button content -->
-              <div
-                class="flex h-16 items-center justify-between max-w-[1350px] mx-auto"
-              >
-                <!-- MAYU Logo -->
-                <svg
-                  id="_レイヤー_2"
-                  class="w-[160px] h-[44px] transition-colors duration-300 fill-black mx-auto"
-                  data-name="レイヤー_2"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1106.05 299.68"
-                >
+            <!-- Navigation Controls Container -->
+            <div class="absolute bottom-8 right-8 flex items-center gap-12" aria-label="Slideshow Controls">
+              <!-- Left Arrow -->
+              <button class="w-[23px] h-[35px] focus:outline-none group" aria-label="Previous Slide">
+                <svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 269.23 423.08"
+                  class="w-full h-full" aria-hidden="true" focusable="false">
                   <g id="_レイヤー_1-2" data-name="レイヤー_1">
-                    <g>
-                      <polygon points="193.71 260.65 202.85 225.35 146.54 244.56 193.71 260.65"/>
-                      <polygon points="137.24 247.73 129.29 250.45 140.17 292.63 185.42 292.63 192.2 266.48 137.25 247.73 137.24 247.73"/>
-                      <polygon points="120.04 214.56 127.79 244.62 167.96 230.91 120.04 214.56"/>
-                      <polygon points="23.71 286.47 23.71 292.63 83.43 292.63 83.01 266.23 23.71 286.47"/>
-                      <polygon points="81.99 201.58 23.71 181.7 23.71 280.12 82.91 259.93 81.99 201.58"/>
-                      <polygon points="242.78 277.4 287.42 292.63 302.25 292.63 302.25 191.44 243.82 211.37 242.78 277.4"/>
-                      <polygon points="242.54 292.63 268.84 292.63 242.68 283.71 242.54 292.63"/>
-                      <polygon points="163.17 196.94 107.53 .74 23.71 .74 23.71 175.36 81.89 195.21 79.72 58.23 118.25 207.62 177.24 227.75 204.65 218.4 246.25 57.86 243.92 205 302.25 185.1 302.25 .74 218.8 .74 163.17 196.94"/>
-                      <path d="M519.58,0h-104.96l-72.74,247.37,228-77.78h0S519.58,0,519.58,0ZM425,181.37l40.8-141.31,40.43,141.31h-81.23Z"/>
-                      <polygon points="571.58 175.34 456.41 214.64 512.16 233.66 521.06 233.66 522.04 237.03 597.52 262.78 571.58 175.34"/>
-                      <polygon points="524.07 244.06 537.81 291.52 538.13 292.63 606.37 292.63 599.61 269.83 524.07 244.06"/>
-                      <polygon points="384.44 239.2 406.4 246.69 410.17 233.66 493.59 233.66 447.12 217.81 384.44 239.2"/>
-                      <polygon points="339.81 254.42 328.57 292.63 393.11 292.63 404.73 252.46 375.14 242.37 339.81 254.42"/>
-                      <polygon points="650.07 148.56 671.37 188.41 671.37 230.66 737.39 208.14 737.39 187.67 746.92 169.91 667.22 142.72 650.07 148.56"/>
-                      <polygon points="671.37 292.63 737.39 292.63 737.39 214.48 671.37 237 671.37 292.63"/>
-                      <polygon points="749.8 164.55 782.65 103.33 676.51 139.54 749.8 164.55"/>
-                      <polygon points="704.38 119.8 645.78 .37 570.86 .37 647.21 143.2 786.81 95.57 837.9 .37 762.98 .37 704.38 119.8"/>
-                      <path d="M883.8,164.53l43.74,14.92c-.18-3.35-.26-6.8-.26-10.32v-19.44l-43.48,14.84Z"/>
-                      <polygon points="927.28 .37 861.26 .37 861.26 165.87 927.28 143.35 927.28 .37"/>
-                      <path d="M971.04,299.68h23.37c69.61,0,99.66-36.41,108.59-87.43l-200.87,68.53c16.55,12,39.01,18.9,68.91,18.9Z"/>
-                      <polygon points="1040.03 .37 1040.03 46.2 1106.05 68.72 1106.05 .37 1040.03 .37"/>
-                      <path d="M1028.88,220.37c-7.59,11.54-19.77,18.48-38.55,18.48h-15.21c-31.67,0-44.14-21.64-47.1-52.9l-53.51-18.25-13.25,4.52v1.73c0,42.52,9.14,79.72,35.29,102.39l148.21-50.56-15.88-5.41Z"/>
-                      <path d="M1040.03,111.22v57.91c0,17.8-2.13,33.78-8.12,45.93l22.14,7.55,49.99-17.05h0c1.39-10.09,2.01-20.67,2.01-31.61v-61.31l-35.08-11.97-30.94,10.55Z"/>
-                      <polygon points="1106.05 106.3 1106.05 88.7 1080.27 97.5 1106.05 106.3"/>
-                      <polygon points="1040.03 104.88 1106.05 82.36 1106.05 75.07 1040.03 52.54 1040.03 104.88"/>
-                    </g>
+                    <polygon class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]"
+                      points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 153.85 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
                   </g>
                 </svg>
-              </div>
-
-              <!-- Menu Button -->
-              <button
-                class="absolute right-0 top-1/2 -translate-y-1/2 h-[64px] p-4 bg-white transition-colors duration-300"
-                aria-label="Toggle Navigation Menu"
-                aria-expanded="false"
-              >
-                <svg
-                  class="w-8 h-8 transition-colors duration-300 fill-black"
-                  viewBox="0 0 403.49 403.49"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <g>
-                    <rect width="403.49" height="80.7" />
-                    <rect y="161.4" width="403.49" height="80.69" />
-                    <rect y="322.79" width="403.49" height="80.7" />
+              </button>
+              <!-- Play/Pause Button -->
+              <button class="w-[35px] h-[35px] focus:outline-none group" aria-label="Play/Pause Slideshow"
+                data-playing="true">
+                <svg class="w-full h-full" viewBox="0 0 423.08 423.08" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true" focusable="false">
+                  <g id="_レイヤー_1-2" data-name="レイヤー_1">
+                    <polygon class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]"
+                      points="384.62 115.39 384.62 76.92 346.16 76.92 346.16 38.46 307.7 38.46 307.7 0 269.23 0 230.77 0 192.31 0 153.85 0 115.39 0 115.39 38.46 76.93 38.46 76.93 76.92 38.47 76.92 38.47 115.39 0 115.39 0 153.85 0 192.31 0 230.77 0 269.23 0 307.69 38.47 307.69 38.47 346.15 76.93 346.15 76.93 384.62 115.39 384.62 115.39 423.08 153.85 423.08 192.31 423.08 230.77 423.08 269.23 423.08 307.7 423.08 307.7 384.62 346.16 384.62 346.16 346.15 384.62 346.15 384.62 307.69 423.08 307.69 423.08 269.23 423.08 230.77 423.08 192.31 423.08 153.85 423.08 115.39 384.62 115.39" />
+                  </g>
+                </svg>
+              </button>
+              <!-- Right Arrow -->
+              <button class="w-[23px] h-[35px] focus:outline-none group" aria-label="Next Slide">
+                <svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 269.23 423.08"
+                  class="w-full h-full rotate-180" aria-hidden="true" focusable="false">
+                  <g id="_レイヤー_1-2" data-name="レイヤー_1">
+                    <polygon class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]"
+                      points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 153.85 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
                   </g>
                 </svg>
               </button>
             </div>
+          </div>
+        </section>
+      </div>
+      <!-- Add this right before the header -->
+      <div id="headerTrigger" class="h-1"></div>
+      <!-- Then the header -->
+      <header
+        class="fixed top-0 left-1/2 -translate-x-1/2 w-[1440px] transform-gpu transition-all duration-500 z-[100] opacity-0 -translate-y-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] [&.visible]:opacity-100 [&.visible]:translate-y-0">
+        <!-- Main header content -->
+        <div class="max-w-[1440px] mx-auto relative">
+          <!-- Single container for logo and menu -->
+          <div class="flex h-16 items-center">
+            <!-- Logo container with hover effect -->
+            <div class="group flex-1 h-full flex items-center justify-start hover:bg-black transition-all duration-300">
+              <!-- MAYU Logo -->
+              <svg id="_レイヤー_2"
+                class="w-[160px] h-[44px] fill-black mx-auto group-hover:fill-[#FF2F00] transition-all duration-300"
+                data-name="���イヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1106.05 299.68">
+                <g id="_レイヤー_1-2" data-name="レイヤー_1">
+                  <g>
+                    <polygon points="193.71 260.65 202.85 225.35 146.54 244.56 193.71 260.65" />
+                    <polygon
+                      points="137.24 247.73 129.29 250.45 140.17 292.63 185.42 292.63 192.2 266.48 137.25 247.73 137.24 247.73" />
+                    <polygon points="120.04 214.56 127.79 244.62 167.96 230.91 120.04 214.56" />
+                    <polygon points="23.71 286.47 23.71 292.63 83.43 292.63 83.01 266.23 23.71 286.47" />
+                    <polygon points="81.99 201.58 23.71 181.7 23.71 280.12 82.91 259.93 81.99 201.58" />
+                    <polygon
+                      points="242.78 277.4 287.42 292.63 302.25 292.63 302.25 191.44 243.82 211.37 242.78 277.4" />
+                    <polygon points="242.54 292.63 268.84 292.63 242.68 283.71 242.54 292.63" />
+                    <polygon
+                      points="163.17 196.94 107.53 .74 23.71 .74 23.71 175.36 81.89 195.21 79.72 58.23 118.25 207.62 177.24 227.75 204.65 218.4 246.25 57.86 243.92 205 302.25 185.1 302.25 .74 218.8 .74 163.17 196.94" />
+                    <path
+                      d="M519.58,0h-104.96l-72.74,247.37,228-77.78h0S519.58,0,519.58,0ZM425,181.37l40.8-141.31,40.43,141.31h-81.23Z" />
+                    <polygon
+                      points="571.58 175.34 456.41 214.64 512.16 233.66 521.06 233.66 522.04 237.03 597.52 262.78 571.58 175.34" />
+                    <polygon
+                      points="524.07 244.06 537.81 291.52 538.13 292.63 606.37 292.63 599.61 269.83 524.07 244.06" />
+                    <polygon
+                      points="384.44 239.2 406.4 246.69 410.17 233.66 493.59 233.66 447.12 217.81 384.44 239.2" />
+                    <polygon
+                      points="339.81 254.42 328.57 292.63 393.11 292.63 404.73 252.46 375.14 242.37 339.81 254.42" />
+                    <polygon
+                      points="650.07 148.56 671.37 188.41 671.37 230.66 737.39 208.14 737.39 187.67 746.92 169.91 667.22 142.72 650.07 148.56" />
+                    <polygon points="671.37 292.63 737.39 292.63 737.39 214.48 671.37 237 671.37 292.63" />
+                    <polygon points="749.8 164.55 782.65 103.33 676.51 139.54 749.8 164.55" />
+                    <polygon
+                      points="704.38 119.8 645.78 .37 570.86 .37 647.21 143.2 786.81 95.57 837.9 .37 762.98 .37 704.38 119.8" />
+                    <path d="M883.8,164.53l43.74,14.92c-.18-3.35-.26-6.8-.26-10.32v-19.44l-43.48,14.84Z" />
+                    <polygon points="927.28 .37 861.26 .37 861.26 165.87 927.28 143.35 927.28 .37" />
+                    <path
+                      d="M971.04,299.68h23.37c69.61,0,99.66-36.41,108.59-87.43l-200.87,68.53c16.55,12,39.01,18.9,68.91,18.9Z" />
+                    <polygon points="1040.03 .37 1040.03 46.2 1106.05 68.72 1106.05 .37 1040.03 .37" />
+                    <path
+                      d="M1028.88,220.37c-7.59,11.54-19.77,18.48-38.55,18.48h-15.21c-31.67,0-44.14-21.64-47.1-52.9l-53.51-18.25-13.25,4.52v1.73c0,42.52,9.14,79.72,35.29,102.39l148.21-50.56-15.88-5.41Z" />
+                    <path
+                      d="M1040.03,111.22v57.91c0,17.8-2.13,33.78-8.12,45.93l22.14,7.55,49.99-17.05h0c1.39-10.09,2.01-20.67,2.01-31.61v-61.31l-35.08-11.97-30.94,10.55Z" />
+                    <polygon points="1106.05 106.3 1106.05 88.7 1080.27 97.5 1106.05 106.3" />
+                    <polygon points="1040.03 104.88 1106.05 82.36 1106.05 75.07 1040.03 52.54 1040.03 104.88" />
+                  </g>
+                </g>
+              </svg>
+            </div>
 
-            <!-- Menu overlay -->
-            <div
-              id="menuOverlay"
-              class="absolute w-full bg-black opacity-0 invisible transition-all duration-300 ease-in-out pointer-events-none [&.active]:pointer-events-auto [&.active]:opacity-100 [&.active]:visible"
-            >
-              <!-- Menu content -->
-              <div class="max-h-[calc(100vh-64px)] mx-auto overflow-y-auto">
-                <!-- Content wrapper -->
-                <div class="min-h-[calc(100vh-64px)] flex items-center">
-                  <!-- Left Side - with max-width container -->
-                  <div
-                    class="w-[432px] px-16 text-white flex items-center justify-center"
-                  >
-                    <div class="text-center">
-                      <button
-                        class="flex items-center justify-center w-[40px] h-[40px] mx-auto mb-16 transition-transform hover:scale-110"
-                      >
-                        <span class="text-[48px] leading-none text-white"
-                          >△</span
-                        >
-                      </button>
-                      <div
-                        class="inline-flex whitespace-nowrap group transition-colors hover:bg-white"
-                      >
-                        <span
-                          class="text-[40px] font-dotgothic16 transition-colors group-hover:text-[#003BFF]"
-                          >MAYU</span
-                        >
-                        <span
-                          class="text-[40px] font-dotgothic16 ml-4 transition-colors group-hover:text-[#003BFF]"
-                          >2024年</span
-                        >
-                        <span
-                          class="text-[40px] font-dotgothic16 ml-4 transition-colors group-hover:text-[#003BFF]"
-                          >1月号</span
-                        >
-                      </div>
-                      <button
-                        class="flex items-center justify-center w-[40px] h-[40px] mx-auto mt-16 transition-transform hover:scale-110"
-                      >
-                        <span class="text-[48px] leading-none text-white"
-                          >▽</span
-                        >
-                      </button>
+            <!-- Menu Button -->
+            <button class="h-16 px-4 bg-white hover:bg-black group transition-all duration-300"
+              aria-label="Toggle Navigation Menu" aria-expanded="false">
+              <!-- Original Menu Icon -->
+              <svg class="w-8 h-8 fill-black group-hover:fill-[#FF2F00] transition-all duration-300 menu-icon"
+                viewBox="0 0 403.49 403.49" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <g>
+                  <rect width="403.49" height="80.7" />
+                  <rect y="161.4" width="403.49" height="80.69" />
+                  <rect y="322.79" width="403.49" height="80.7" />
+                </g>
+              </svg>
+              <!-- Close Menu Icon -->
+              <svg class="w-8 h-8 fill-[#FF2F00] menu-close-icon hidden" viewBox="0 0 403.49 403.49"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <g>
+                  <rect x="0" y="161.39" width="403.49" height="80.7"
+                    transform="translate(-83.57 201.74) rotate(-45)" />
+                  <rect x="0" y="161.39" width="403.49" height="80.7"
+                    transform="translate(201.74 487.06) rotate(-135)" />
+                </g>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Menu overlay -->
+          <div id="menuOverlay"
+            class="absolute w-full bg-black opacity-0 invisible transition-all duration-300 ease-in-out pointer-events-none [&.active]:opacity-100 [&.active]:visible [&.active]:pointer-events-auto">
+            <!-- Menu content -->
+            <div class="max-h-[calc(100vh-64px)] mx-auto overflow-y-auto">
+              <!-- Content wrapper -->
+              <div class="min-h-[calc(100vh-64px)] flex items-center">
+                <!-- Left Side - with max-width container -->
+                <div class="w-[432px] px-16 text-white flex items-center justify-center">
+                  <div class="text-center">
+                    <!-- Up Arrow -->
+                    <button
+                      class="up-arrow flex items-center justify-center w-[40px] h-[40px] mx-auto mb-16 group transition-transform">
+                      <svg class="w-[24px] h-[24px] rotate-90" viewBox="0 0 269.23 423.08"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors duration-300 ease-in-out"
+                            points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
+                        </g>
+                      </svg>
+                    </button>
+
+                    <div class="inline-flex whitespace-nowrap">
+                      <span class="text-[40px] font-dotgothic16">MAYU</span>
+                      <span class="text-[40px] font-dotgothic16 ml-4">2024年</span>
+                      <span class="text-[40px] font-dotgothic16 ml-4">1月号</span>
                     </div>
+
+                    <!-- Down Arrow -->
+                    <button
+                      class="down-arrow flex items-center justify-center w-[40px] h-[40px] mx-auto mt-16 group transition-transform">
+                      <svg class="w-[24px] h-[24px] -rotate-90" viewBox="0 0 269.23 423.08"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors duration-300 ease-in-out"
+                            points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
+                        </g>
+                      </svg>
+                    </button>
                   </div>
+                </div>
 
-                  <!-- Right Side - adjusted width -->
-                  <div
-                    class="flex-1 min-h-[calc(100vh-64px)] bg-white bg-[url('/image/worn-dots.png')] bg-repeat bg-auto relative"
-                  >
-                    <!-- Background image container - absolute positioned -->
-                    <div
-                      class="absolute inset-0 transition-opacity duration-300"
-                    >
-                      <!-- Individual background images - hidden by default, shown on hover -->
-                      <div
-                        class="absolute inset-0 opacity-0 transition-opacity duration-300 bg-cover bg-center bg-no-repeat [&.active]:opacity-100"
-                        data-article="1"
-                        style="
-                          background-image: url('/image/menu-visual/menu_article_01.jpg');
-                          image-rendering: -webkit-optimize-contrast;
-                          image-rendering: crisp-edges;
-                        "
-                      ></div>
-                      <div
-                        class="absolute inset-0 opacity-0 transition-opacity duration-300 bg-cover bg-center bg-no-repeat [&.active]:opacity-100"
-                        data-article="2"
-                        style="
-                          background-image: url('/image/menu-visual/menu_article_02.jpg');
-                          image-rendering: -webkit-optimize-contrast;
-                          image-rendering: crisp-edges;
-                        "
-                      ></div>
-                      <div
-                        class="absolute inset-0 opacity-0 transition-opacity duration-300 bg-cover bg-center bg-no-repeat [&.active]:opacity-100"
-                        data-article="3"
-                        style="
-                          background-image: url('/image/menu-visual/menu_article_03.jpg');
-                          image-rendering: -webkit-optimize-contrast;
-                          image-rendering: crisp-edges;
-                        "
-                      ></div>
-                      <div
-                        class="absolute inset-0 opacity-0 transition-opacity duration-300 bg-cover bg-center bg-no-repeat [&.active]:opacity-100"
-                        data-article="4"
-                        style="
-                          background-image: url('/image/menu-visual/menu_article_04.jpg');
-                          image-rendering: -webkit-optimize-contrast;
-                          image-rendering: crisp-edges;
-                        "
-                      ></div>
-                      <div
-                        class="absolute inset-0 opacity-0 transition-opacity duration-300 bg-cover bg-center bg-no-repeat [&.active]:opacity-100"
-                        data-article="5"
-                        style="
-                          background-image: url('/image/menu-visual/menu_article_05.jpg');
-                          image-rendering: -webkit-optimize-contrast;
-                          image-rendering: crisp-edges;
-                        "
-                      ></div>
-                    </div>
-
-                    <!-- Inner content with padding -->
-                    <div class="py-12 px-8 relative z-10 h-[600px]">
-                      <div class="articles-wrapper relative">
-                        <!-- Article 1 -->
-                        <div
-                          class="article-item absolute w-full transition-all duration-300"
-                          style="top: 0"
-                          data-article="1"
-                        >
-                          <a
-                            href="/neo-retro.html"
-                            class="inline-block group cursor-pointer"
-                            data-hover-trigger="1"
-                          >
+                <!-- Right Side - adjusted width -->
+                <div
+                  class="flex-1 min-h-[calc(100vh-64px)] bg-white bg-[url('/image/worn-dots.png')] bg-repeat bg-auto relative">
+                  <!-- Background container -->
+                  <div class="menu-bg-container">
+                    <!-- Background images for each article -->
+                    <img src="/image/thumbNails/thumbnail_01.jpg" class="menu-bg-image" data-article="1" alt="" />
+                    <img src="/image/thumbNails/thumbnail_02.jpg" class="menu-bg-image" data-article="2" alt="" />
+                    <img src="/image/thumbNails/thumbnail_03.jpg" class="menu-bg-image" data-article="3" alt="" />
+                    <img src="/image/thumbNails/thumbnail_04.jpg" class="menu-bg-image" data-article="4" alt="" />
+                    <img src="/image/thumbNails/thumbnail_05.jpg" class="menu-bg-image" data-article="5" alt="" />
+                  </div>
+                  <div class="py-12 px-8 relative z-10">
+                    <!-- This is the container that should be scrollable -->
+                    <div class="articles-wrapper">
+                      <!-- Article 1 -->
+                      <div class="article-item">
+                        <div class="hover-area w-fit h-fit mb-[48px]" data-article="1">
+                          <a href="/neo-retro.html">
                             <p class="text-[20px] mb-4">
-                              <span
-                                class="bg-black text-white inline-block px-2 transition-colors group-hover:bg-white group-hover:text-[#003BFF]"
-                                >No. 1</span
-                              >
+                              <span class="article-number bg-black text-white inline-block px-2">No. 1</span>
                             </p>
-                            <h3
-                              class="text-[32px] font-dotgothic16 text-white bg-black inline-block transition-colors group-hover:bg-white group-hover:text-[#003BFF]"
-                            >
+                            <h3 class="article-title text-[32px] font-dotgothic16 text-white bg-black inline-block">
                               新[ネオ]レトロ再燃！新宿、今こそ喫茶でしょ。
                             </h3>
                           </a>
                         </div>
+                      </div>
 
-                        <!-- Article 2 -->
-                        <div
-                          class="article-item absolute w-full transition-all duration-300"
-                          style="top: 168px"
-                          data-article="2"
-                        >
-                          <a
-                            href="/shin-okubo.html"
-                            class="inline-block group cursor-pointer"
-                            data-hover-trigger="2"
-                          >
+                      <!-- Article 2 -->
+                      <div class="article-item">
+                        <div class="hover-area w-fit h-fit mb-[48px]" data-article="2">
+                          <a href="/shin-okubo.html">
                             <p class="text-[20px] mb-4">
-                              <span
-                                class="bg-black text-white inline-block px-2 transition-colors group-hover:bg-white group-hover:text-[#003BFF]"
-                                >No. 2</span
-                              >
+                              <span class="article-number bg-black text-white inline-block px-2">No. 2</span>
                             </p>
-                            <h3
-                              class="text-[32px] font-dotgothic16 text-white bg-black inline-block transition-colors group-hover:bg-white group-hover:text-[#003BFF]"
-                            >
+                            <h3 class="article-title text-[32px] font-dotgothic16 text-white bg-black inline-block">
                               はじまりのコリアンタウン
                             </h3>
                           </a>
                         </div>
+                      </div>
 
-                        <!-- Article 3 -->
-                        <div
-                          class="article-item absolute w-full transition-all duration-300"
-                          style="top: 336px"
-                          data-article="3"
-                        >
-                          <a
-                            href="/chi-tei.html"
-                            class="inline-block group cursor-pointer"
-                            data-hover-trigger="3"
-                          >
+                      <!-- Article 3 -->
+                      <div class="article-item">
+                        <div class="hover-area w-fit h-fit mb-[48px]" data-article="3">
+                          <a href="/chi-tei.html">
                             <p class="text-[20px] mb-4">
-                              <span
-                                class="bg-black text-white inline-block px-2 transition-colors group-hover:bg-white group-hover:text-[#003BFF]"
-                                >No. 3</span
-                              >
+                              <span class="article-number bg-black text-white inline-block px-2">No. 3</span>
                             </p>
-                            <h3
-                              class="text-[32px] font-dotgothic16 text-white bg-black inline-block transition-colors group-hover:bg-white group-hover:text-[#003BFF]"
-                            >
+                            <h3 class="article-title text-[32px] font-dotgothic16 text-white bg-black inline-block">
                               新宿駅に"地底人"!?
                             </h3>
                           </a>
                         </div>
+                      </div>
 
-                        <!-- Article 4 -->
-                        <div
-                          class="article-item absolute w-full transition-all duration-300"
-                          style="top: 504px"
-                          data-article="4"
-                        >
-                          <a
-                            href="/uju-mura.html"
-                            class="inline-block group cursor-pointer"
-                            data-hover-trigger="4"
-                          >
+                      <!-- Article 4 -->
+                      <div class="article-item">
+                        <div class="hover-area w-fit h-fit mb-[48px]" data-article="4">
+                          <a href="/uju-mura.html">
                             <p class="text-[20px] mb-4">
-                              <span
-                                class="bg-black text-white inline-block px-2 transition-colors group-hover:bg-white group-hover:text-[#003BFF]"
-                                >No. 4</span
-                              >
+                              <span class="article-number bg-black text-white inline-block px-2">No. 4</span>
                             </p>
-                            <h3
-                              class="text-[32px] font-dotgothic16 text-white bg-black inline-block transition-colors group-hover:bg-white group-hover:text-[#003BFF]"
-                            >
+                            <h3 class="article-title text-[32px] font-dotgothic16 text-white bg-black inline-block">
                               コズミックパワー全開！！<宙村>の神秘
                             </h3>
                           </a>
                         </div>
+                      </div>
 
-                        <!-- Article 5 -->
-                        <div
-                          class="article-item absolute w-full transition-all duration-300 opacity-0 pointer-events-none hidden"
-                          style="top: 504px"
-                          data-article="5"
-                          id="article5"
-                        >
-                          <a
-                            href="/takano-baba.html"
-                            class="inline-block group cursor-pointer"
-                            data-hover-trigger="5"
-                          >
+                      <!-- Article 5 -->
+                      <div class="article-item">
+                        <div class="hover-area w-fit h-fit" data-article="5">
+                          <a href="/takano-baba.html">
                             <p class="text-[20px] mb-4">
-                              <span
-                                class="bg-black text-white inline-block px-2 transition-colors group-hover:bg-white group-hover:text-[#003BFF]"
-                                >No. 5</span
-                              >
+                              <span class="article-number bg-black text-white inline-block px-2">No. 5</span>
                             </p>
-                            <h3
-                              class="text-[32px] font-dotgothic16 text-white bg-black inline-block transition-colors group-hover:bg-white group-hover:text-[#003BFF]"
-                            >
+                            <h3 class="article-title text-[32px] font-dotgothic16 text-white bg-black inline-block">
                               高田馬場って何だ！？新宿の学園都市に潜入
                             </h3>
                           </a>
@@ -862,618 +538,521 @@
               </div>
             </div>
           </div>
-        </header>
-        <!-- MAIN CONTENTS -->
-        <main class="mt-[85px] max-w-[1210px] mx-auto border border-red-500">
-          <!-- SECTION 1 -->
-          <section class="w-full border border-red-500">
-            <div class="relative section-1-hover">
-              <div class="relative text-container">
-                <!-- Food Tag -->
-                <div class="absolute top-0 left-8 z-20">
-                  <div
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    #フード
-                  </div>
-                </div>
-                <!-- Main Title -->
-                <div class="absolute top-8 left-0 z-20">
-                  <h1
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    新[ネオ]レトロ再燃！ 新宿、今こそ喫茶で��ょ。
-                  </h1>
-                </div>
-                <!-- Subtitle -->
-                <div class="absolute top-20 left-8 z-20">
-                  <p
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-2xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    歌舞伎町 喫茶の今を巡る
-                  </p>
-                </div>
-                <!-- Writer Credit -->
-                <div class="absolute top-32 left-8 z-20">
-                  <p
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    writer:Kana Komatsu
-                  </p>
+        </div>
+      </header>
+      <!-- MAIN CONTENTS -->
+      <main class="mt-[85px] max-w-[1210px] mx-auto border border-red-500">
+        <!-- SECTION 1 -->
+        <section class="w-full border border-red-500">
+          <div class="relative">
+            <div class="relative text-container section-1-text">
+              <!-- Food Tag -->
+              <div class="absolute top-0 left-8 z-20">
+                <div class="dotgothic16-regular text-white bg-black p-2 inline-block">
+                  #フード
                 </div>
               </div>
-
-              <div class="flex justify-between">
-                <!-- Left side with images -->
-                <div class="relative w-[326px]">
-                  <!-- IMAGE CONTAINER -->
-                  <img
-                    src="/image/illusts/seals/neo-kissa.png"
-                    alt="Neo Kissa"
-                    class="absolute z-10 w-[360px] h-[190px] top-[190px] left-[25px] rotate-[-8deg]"
-                    loading="lazy"
-                    width="360"
-                    height="190"
-                    draggable="false"
-                    style="
-                      image-rendering: -webkit-optimize-contrast;
-                      image-rendering: crisp-edges;
-                    "
-                  />
-                  <!-- Coffee Image - Adjusted for better flow -->
-                  <img
-                    src="/image/illusts/seals/coffee-01.png"
-                    alt="Coffee Image"
-                    class="absolute z-20 w-[234px] h-[auto] top-[370px] left-[-70px] object-contain"
-                    loading="lazy"
-                    width="234"
-                    height="auto"
-                    draggable="false"
-                    style="
-                      image-rendering: -webkit-optimize-contrast;
-                      image-rendering: crisp-edges;
-                    "
-                  />
-                  <!-- To000 Deep Image - Repositioned for better overlap -->
-                  <img
-                    src="/image/illusts/seals/toooDeep.png"
-                    alt="Seal Image"
-                    class="absolute z-30 w-[220px] h-[80px] top-[400px] left-[155px]"
-                    loading="lazy"
-                    width="220"
-                    height="80"
-                    draggable="false"
-                    style="
-                      image-rendering: -webkit-optimize-contrast;
-                      image-rendering: crisp-edges;
-                    "
-                  />
-                  <!-- Under Soda Image - Adjusted angle and position -->
-                  <img
-                    src="/image/illusts/seals/soda.png"
-                    alt="Under Soda Image"
-                    class="absolute z-20 w-[281px] h-[auto] top-[510px] left-[130px] rotate-[12deg] object-contain"
-                    loading="lazy"
-                    width="281"
-                    height="auto"
-                    draggable="false"
-                    style="
-                      image-rendering: -webkit-optimize-contrast;
-                      image-rendering: crisp-edges;
-                    "
-                  />
-                  <!-- Soda Glass Image - Contained within bounds better -->
-                  <img
-                    src="/image/illusts/seals/melon-soda.png"
-                    alt="Soda Glass Image"
-                    class="absolute z-10 w-[159px] h-[auto] top-[420px] left-[380px] rotate-[15deg] object-contain"
-                    loading="lazy"
-                    width="159"
-                    height="auto"
-                    draggable="false"
-                    style="
-                      image-rendering: -webkit-optimize-contrast;
-                      image-rendering: crisp-edges;
-                    "
-                  />
-                </div>
-
-                <!-- Right side with main image and button -->
-                <div
-                  class="relative w-[880px] h-[600px] overflow-hidden right-image-container group"
-                >
-                  <img
-                    src="/image/thumbNails/thumbnail_01.jpg"
-                    alt="Main Image"
-                    class="object-cover w-[880px] h-[600px]"
-                    loading="lazy"
-                    width="880"
-                    height="600"
-                    draggable="false"
-                    style="
-                      image-rendering: -webkit-optimize-contrast;
-                      image-rendering: crisp-edges;
-                    "
-                  />
-                  <a
-                    href="#"
-                    class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                    aria-label="Read More about Neo Retro Coffee Shops"
-                  >
-                    もっと見る→
-                  </a>
-                </div>
+              <!-- Main Title -->
+              <div class="absolute top-8 left-0 z-20">
+                <h1 class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl">
+                  新[ネオ]レトロ再燃！ 新宿、今こそ喫茶でしょ。
+                </h1>
+              </div>
+              <!-- Subtitle -->
+              <div class="absolute top-20 left-8 z-20">
+                <p class="dotgothic16-regular text-white bg-black p-2 inline-block text-2xl">
+                  歌舞伎町 喫茶の今を巡る
+                </p>
+              </div>
+              <!-- Writer Credit -->
+              <div class="absolute top-32 left-8 z-20">
+                <p class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm">
+                  writer:Kana Komatsu
+                </p>
               </div>
             </div>
-          </section>
-          <!-- SECTION 2 -->
-          <section class="mt-[184px] mb-[184px] w-full border border-red-500">
-            <div class="relative section-2-hover">
-              <div class="relative text-container">
-                <!-- History and Trivia Tags -->
-                <div class="absolute top-0 right-8 z-20">
-                  <div
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    #ヒストリー #トリビア
-                  </div>
-                </div>
-                <!-- Main Title -->
-                <div class="absolute top-8 right-0 z-20">
-                  <h1
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-3xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    はじまりのコリアンウン
-                  </h1>
-                </div>
-                <!-- Subtitle -->
-                <div class="absolute top-20 right-8 z-20">
-                  <p
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    アンニョンハセヨ！！ はじめてのしんおおくぼ
-                  </p>
-                </div>
-                <!-- Writer Credit -->
-                <div class="absolute top-32 right-8 z-20">
-                  <p
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    writer:Shin Gen Shun
-                  </p>
+
+            <div class="flex justify-between">
+              <!-- Left side with images -->
+              <div class="relative w-[326px]">
+                <!-- IMAGE CONTAINER -->
+                <img src="/image/illusts/seals/neo-kissa.png" alt="Neo Kissa"
+                  class="absolute z-10 w-[360px] h-[190px] top-[190px] left-[25px] rotate-[-8deg]" loading="lazy"
+                  width="360" height="190" draggable="false" style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    " />
+                <!-- Coffee Image - Adjusted for better flow -->
+                <img src="/image/illusts/seals/coffee-01.png" alt="Coffee Image"
+                  class="absolute z-20 w-[234px] h-[auto] top-[370px] left-[-70px] object-contain" loading="lazy"
+                  width="234" height="auto" draggable="false" style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    " />
+                <!-- To000 Deep Image - Repositioned for better overlap -->
+                <img src="/image/illusts/seals/toooDeep.png" alt="Seal Image"
+                  class="absolute z-30 w-[220px] h-[80px] top-[400px] left-[155px]" loading="lazy" width="220"
+                  height="80" draggable="false" style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    " />
+                <!-- Under Soda Image - Adjusted angle and position -->
+                <img src="/image/illusts/seals/soda.png" alt="Under Soda Image"
+                  class="absolute z-20 w-[281px] h-[auto] top-[510px] left-[130px] rotate-[12deg] object-contain"
+                  loading="lazy" width="281" height="auto" draggable="false" style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    " />
+                <!-- Soda Glass Image - Contained within bounds better -->
+                <img src="/image/illusts/seals/melon-soda.png" alt="Soda Glass Image"
+                  class="absolute z-10 w-[159px] h-[auto] top-[420px] left-[380px] rotate-[15deg] object-contain"
+                  loading="lazy" width="159" height="auto" draggable="false" style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    " />
+              </div>
+
+              <!-- Right side with main image and button -->
+              <div class="relative w-[880px] h-[600px] overflow-hidden right-image-container group/section1">
+                <img src="/image/thumbNails/thumbnail_01.jpg" alt="Main Image" class="object-cover w-[880px] h-[600px]"
+                  loading="lazy" width="880" height="600" draggable="false" style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    " />
+                <!-- Read More Button -->
+                <a href="neo-retro.html"
+                  class="absolute bottom-0 right-0 bg-black text-white px-4 py-2 flex items-center w-[fit-content] justify-center">
+                  <span class="dotgothic16-regular">もっと見る</span>
+                  <span class="ml-1 dotgothic16-regular">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 2 -->
+        <section class="mt-[184px] mb-[184px] w-full border border-red-500">
+          <div class="relative section-2-hover">
+            <div class="relative text-container section-2-text">
+              <!-- History and Trivia Tags -->
+              <div class="absolute top-0 right-8 z-20">
+                <div class="dotgothic16-regular text-white bg-black p-2 inline-block">
+                  #ヒストリー #トリビア
                 </div>
               </div>
-              <div class="flex">
-                <!-- Left Side - Main Image -->
-                <div
-                  class="relative w-[880px] h-[600px] overflow-hidden left-image-container group"
-                >
-                  <img
-                    src="/image/thumbNails/thumbnail_02.jpg"
-                    alt="Main Image"
-                    class="object-cover w-[880px] h-[600px]"
-                    loading="lazy"
-                    width="880"
-                    height="600"
-                    style="
+              <!-- Main Title -->
+              <div class="absolute top-8 right-0 z-20">
+                <h1 class="dotgothic16-regular text-white bg-black p-2 inline-block text-3xl">
+                  はじまりのコリアンウン
+                </h1>
+              </div>
+              <!-- Subtitle -->
+              <div class="absolute top-20 right-8 z-20">
+                <p class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl">
+                  アンニョンハセヨ！！ はじめてのしんおおくぼ
+                </p>
+              </div>
+              <!-- Writer Credit -->
+              <div class="absolute top-32 right-8 z-20">
+                <p class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm">
+                  writer:Shin Gen Shun
+                </p>
+              </div>
+            </div>
+            <div class="flex">
+              <!-- Left Side - Main Image -->
+              <div class="relative w-[880px] h-[600px] overflow-hidden left-image-container">
+                <img src="/image/thumbNails/thumbnail_02.jpg" alt="Main Image" class="object-cover w-[880px] h-[600px]"
+                  loading="lazy" width="880" height="600" style="
                       image-rendering: -webkit-optimize-contrast;
                       image-rendering: crisp-edges;
-                    "
-                  />
-                  <a
-                    href="#"
-                    class="absolute bottom-0 left-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                    aria-label="Read More about Korean Town"
-                  >
-                    もっと見る→
-                  </a>
-                </div>
-                <!-- Right Side - Text and Decorative Images -->
-                <!-- Decorative Images -->
-                <img
-                    src="/image/illusts/seals/why.png"
-                    alt="Why Image"
-                    class="absolute z-30 w-[350px] h-auto top-[250px] right-[40px] rotate-[10deg] object-contain"
-                    width="350"
-                    height="auto"
-                    draggable="false"
-                    style="
+                    " />
+                <!-- Read More Button -->
+                <a href="/shin-okubo.html"
+                  class="absolute bottom-0 left-0 bg-black text-white px-4 py-2 flex items-center w-[fit-content] justify-center">
+                  <span class="dotgothic16-regular">もっと見る</span>
+                  <span class="ml-1 dotgothic16-regular">→</span>
+                </a>
+              </div>
+              <!-- Right Side - Text and Decorative Images -->
+              <!-- Decorative Images -->
+              <img src="/image/illusts/seals/why.png" alt="Why Image"
+                class="absolute z-30 w-[350px] h-auto top-[250px] right-[40px] rotate-[10deg] object-contain"
+                width="350" height="auto" draggable="false" style="
                       image-rendering: -webkit-optimize-contrast;
                       image-rendering: crisp-edges;
-                    "
-                    loading="lazy"
-                    aria-hidden="true"
-                    focusable="false"
-                  />
-                  <img
-                    src="/image/illusts/seals/annyo1.png"
-                    alt="Annyo Image"
-                    class="absolute z-20 w-[307px] h-[168px] top-[370px] right-[0px] object-contain"
-                    width="307"
-                    height="168"
-                    draggable="false"
-                    style="
+                    " loading="lazy" aria-hidden="true" focusable="false" />
+              <img src="/image/illusts/seals/annyo1.png" alt="Annyo Image"
+                class="absolute z-20 w-[307px] h-[168px] top-[370px] right-[0px] object-contain" width="307"
+                height="168" draggable="false" style="
                       image-rendering: -webkit-optimize-contrast;
                       image-rendering: crisp-edges;
-                    "
-                  />
-                <img
-                  src="/image/illusts/seals/htg1.png"
-                  alt="Htg1 Image"
-                  class="absolute z-20 w-[487px] h-[304px] top-[400px] right-[100px] object-contain"
-                  width="487"
-                  height="304"
-                  draggable="false"
-                  style="
+                    " />
+              <img src="/image/illusts/seals/htg1.png" alt="Htg1 Image"
+                class="absolute z-20 w-[487px] h-[304px] top-[400px] right-[100px] object-contain" width="487"
+                height="304" draggable="false" style="
                     image-rendering: -webkit-optimize-contrast;
                     image-rendering: crisp-edges;
-                  "
-                />
+                  " />
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 2 END -->
+        <!-- SECTION 3 -->
+        <section class="mt-[184px] mb-[184px] w-full border border-red-500">
+          <div class="relative section-3-hover">
+            <div class="relative text-container section-3-text">
+              <!-- Culture and History Tags -->
+              <div class="absolute top-0 left-8 z-20">
+                <div class="dotgothic16-regular text-white bg-black p-2 inline-block">
+                  #カルチャー #ヒストリー
+                </div>
+              </div>
+              <!-- Main Title -->
+              <div class="absolute top-[40px] left-0 z-20">
+                <h1 class="dotgothic16-regular text-white bg-black p-2 inline-block text-5xl">
+                  新宿駅に"地底人"！？
+                </h1>
+              </div>
+              <!-- Subtitle -->
+              <div class="absolute top-[104px] left-8 z-20">
+                <p class="dotgothic16-regular text-white bg-black p-2 inline-block text-3xl">
+                  60'sヒッピー族とフーテン族と宿の地下
+                </p>
+              </div>
+              <!-- Writer Credit -->
+              <div class="absolute top-[155px] left-8 z-20">
+                <p class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm">
+                  writer:Sou Ikeda
+                </p>
               </div>
             </div>
-          </section>
-          <!-- SECTION 2 END -->
-          <!-- SECTION 3 -->
-          <section class="mt-[184px] mb-[184px] w-full border border-red-500">
-            <div class="relative section-3-hover">
-              <div class="relative text-container">
-                <!-- Culture and History Tags -->
-                <div class="absolute top-0 left-8 z-20">
-                  <div
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    #カルチャー #ヒストリー
-                  </div>
-                </div>
-                <!-- Main Title -->
-                <div class="absolute top-[40px] left-0 z-20">
-                  <h1
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-5xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    新宿駅に"地底人"！？
-                  </h1>
-                </div>
-                <!-- Subtitle -->
-                <div class="absolute top-[104px] left-8 z-20">
-                  <p
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-3xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    60'sヒッピー族とフーテン族と新宿の地下
-                  </p>
-                </div>
-                <!-- Writer Credit -->
-                <div class="absolute top-[155px] left-8 z-20">
-                  <p
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    writer:Sou Ikeda
-                  </p>
-                </div>
-              </div>
 
-              <div class="flex justify-end">
-                <!-- Left side with images -->
-                <!-- JEANS TAG -->
-                <img
-                src="/image/illusts/seals/jeans-tag.png"
-                alt="Jeans Tag"
-                class="absolute z-10 w-[506px] h-[337px] top-[130px] left-[0px] rotate-[-8deg]"
-                loading="lazy"
-                width="506"
-                height="337"
-                draggable="false"
-                style="
+            <div class="flex justify-end">
+              <!-- Left side with images -->
+              <!-- JEANS TAG -->
+              <img src="/image/illusts/seals/jeans-tag.png" alt="Jeans Tag"
+                class="absolute z-10 w-[506px] h-[337px] top-[130px] left-[0px] rotate-[-8deg]" loading="lazy"
+                width="506" height="337" draggable="false" style="
                   image-rendering: -webkit-optimize-contrast;
                   image-rendering: crisp-edges;
-                "
-              />
+                " />
               <!-- CAPSULE IMAGE -->
-              <img
-                src="/image/illusts/seals/capsule.png"
-                alt="Capsule Image"
-                class="absolute z-30 w-[331px] h-[260px] top-[400px] left-[0px]"
-                loading="lazy"
-                width="331"
-                height="260"
-                draggable="false"
-                style="
+              <img src="/image/illusts/seals/capsule-06.png" alt="Capsule Image"
+                class="absolute z-30 w-[331px] h-[260px] top-[400px] left-[0px]" loading="lazy" width="331" height="260"
+                draggable="false" style="
                   image-rendering: -webkit-optimize-contrast;
                   image-rendering: crisp-edges;
-                "
-              />
+                " />
               <!-- UNDERGRADE IMAGE -->
-              <img
-              src="/image/illusts/seals/ungra-01.png"
-              alt="Undergrade Image"
-              class="absolute z-30 w-[123px] h-[318px] top-[400px] left-[280px] rotate-[-6deg] object-contain"
-              loading="lazy"
-              width="123"
-              height="318"
-              draggable="false"
-              style="
+              <img src="/image/illusts/seals/ungra-01.png" alt="Undergrade Image"
+                class="absolute z-30 w-[123px] h-[318px] top-[400px] left-[280px] rotate-[-6deg] object-contain"
+                loading="lazy" width="123" height="318" draggable="false" style="
                 image-rendering: -webkit-optimize-contrast;
                 image-rendering: crisp-edges;
-              "
-            />
-            <!-- UNDERGRADE IMAGE 2 -->
-            <img
-              src="/image/illusts/seals/ungra-02.png"
-              alt="Undergrade 2 Image"
-              class="absolute z-40 w-[128px] h-[318px] top-[400px] left-[380px] rotate-[-3deg] object-contain"
-              loading="lazy"
-              width="128"
-              height="318"
-              draggable="false"
-              style="
+              " />
+              <!-- UNDERGRADE IMAGE 2 -->
+              <img src="/image/illusts/seals/ungra-02.png" alt="Undergrade 2 Image"
+                class="absolute z-40 w-[128px] h-[318px] top-[400px] left-[430px] rotate-[-3deg] object-contain"
+                loading="lazy" width="128" height="318" draggable="false" style="
                 image-rendering: -webkit-optimize-contrast;
                 image-rendering: crisp-edges;
-              "
-            />
-                <!-- Right Side - Main Image -->
-                <div
-                  class="relative w-[880px] h-[600px] overflow-hidden right-image-container-2 group"
-                >
-                  <img
-                    src="/image/thumbNails/thumbnail_03.jpg"
-                    alt="Main Image"
-                    class="object-cover w-[880px] h-[600px]"
-                    loading="lazy"
-                    width="880"
-                    height="600"
-                    style="
+              " />
+              <!-- Right Side - Main Image -->
+              <div class="relative w-[880px] h-[600px] overflow-hidden right-image-container-2 group">
+                <img src="/image/thumbNails/thumbnail_03.jpg" alt="Main Image" class="object-cover w-[880px] h-[600px]"
+                  loading="lazy" width="880" height="600" style="
                       image-rendering: -webkit-optimize-contrast;
                       image-rendering: crisp-edges;
-                    "
-                  />
-                  <a
-                    href="#"
-                    class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF] hover:translate-x-[-4px]"
-                    aria-label="Read More about Underground People"
-                  >
-                    もっと見る→
-                  </a>
-                </div>
+                    " />
+                <!-- Read More Button -->
+                <a href="/chi-tei.html"
+                  class="absolute bottom-0 right-0 bg-black text-white px-4 py-2 flex items-center w-[fit-content] justify-center">
+                  <span class="dotgothic16-regular">もっと見る</span>
+                  <span class="ml-1 dotgothic16-regular">→</span>
+                </a>
               </div>
             </div>
-          </section>
-          <!-- SECTION 3 END -->
-          <!-- SECTION 4 -->
-          <section class="mt-[184px] mb-[184px] border border-red-500">
-            <div class="relative section-4-hover">
-              <div class="relative text-container">
-                <!-- Trip Tag -->
-                <div class="absolute top-0 right-8 z-20">
-                  <div
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    #トリ��プ
-                  </div>
-                </div>
-                <!-- Main Title -->
-                <div class="absolute top-[40px] right-0 z-20">
-                  <h1
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-5xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    コズミックパワー全開��！<宙村>の神秘
-                  </h1>
-                </div>
-                <!-- Subtitle -->
-                <div class="absolute top-[104px] right-8 z-20">
-                  <p
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    体感型宇宙（コスモ）ショップ、星に願いを。
-                  </p>
-                </div>
-                <!-- Writer Credit -->
-                <div class="absolute top-[155px] right-8 z-20">
-                  <p
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    writer:Zeb Khan
-                  </p>
+          </div>
+        </section>
+        <!-- SECTION 3 END -->
+        <!-- SECTION 4 -->
+        <section class="mt-[184px] mb-[184px] border border-red-500">
+          <div class="relative section-4-hover">
+            <div class="relative text-container section-4-text">
+              <!-- Trip Tag -->
+              <div class="absolute top-0 right-8 z-20">
+                <div class="dotgothic16-regular text-white bg-black p-2 inline-block">
+                  #トリップ
                 </div>
               </div>
-              <div class="flex">
-                <!-- Left Side - Main Image -->
-                <div
-                  class="relative w-[880px] h-[600px] overflow-hidden left-image-container-2 group"
-                >
-                  <img
-                    src="/image/thumbNails/thumbnail_04.jpg"
-                    alt="Main Image"
-                    class="object-cover w-[880px] h-[600px]"
-                    loading="lazy"
-                    width="880"
-                    height="600"
-                    style="
-                      image-rendering: -webkit-optimize-contrast;
-                      image-rendering: crisp-edges;
-                    "
-                  />
-                  <a
-                    href="#"
-                    class="absolute bottom-0 left-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                    aria-label="Read More about Cosmic Power"
-                  >
-                    もっと見る→
-                  </a>
-                </div>
-                <!-- Right Side - Empty Space -->
-                <div class="relative w-[326px]">
-                  <!-- UJU MURA RIGHT 1 IMAGE -->
-                  <img
-                    src="/image/illusts/seals/uju-mura-right-1.png"
-                    alt="Why Image"
-                    class="absolute z-30 w-[350px] h-auto top-[200px] right-[110px] object-contain"
-                    loading="lazy"
-                    width="350"
-                    height="auto"
-                    draggable="false"
-                    style="
-                      image-rendering: -webkit-optimize-contrast;
-                      image-rendering: crisp-edges;
-                    "
-                  />
-                </div>
-                <!-- UJU MURA RIGHT 2 IMAGE -->
-                <img
-                  src="/image/illusts/seals/uju-mura-right-2.png"
-                  alt="Annyo Image"
-                  class="absolute z-20 w-[519px] h-[506px] top-[200px] right-[-50px] object-contain"
-                  loading="lazy"
-                  width="519"
-                  height="506"
-                  draggable="false"
-                  style="
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: crisp-edges;
-                  "
-                />
-                <!-- UJU MURA RIGHT 3 IMAGE -->
-                <img
-                  src="/image/illusts/seals/uju-mura-right-3.png"
-                  alt="Uju Mura Right 3 Image"
-                  class="absolute z-30 w-[285px] h-[508px] top-[200px] rotate-[-5deg] right-[-50px] object-contain"
-                  loading="lazy"
-                  width="285"
-                  height="508"
-                  draggable="false"
-                  style="
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: crisp-edges;
-                  "
-                />
+              <!-- Main Title -->
+              <div class="absolute top-[40px] right-0 z-20">
+                <h1 class="dotgothic16-regular text-white bg-black p-2 inline-block text-5xl">
+                  コズミックパワー全開！！<宙村>の神秘
+                </h1>
+              </div>
+              <!-- Subtitle -->
+              <div class="absolute top-[104px] right-8 z-20">
+                <p class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl">
+                  体感型宇宙（コスモ）ショップ、星に願いを。
+                </p>
+              </div>
+              <!-- Writer Credit -->
+              <div class="absolute top-[155px] right-8 z-20">
+                <p class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm">
+                  writer:Zeb Khan
+                </p>
               </div>
             </div>
-          </section>
-          <!-- SECTION 4 END -->
-          <!-- SECTION 5 -->
-          <section class="mt-[184px] mb-[64px] border border-red-500">
-            <div class="relative section-5-hover">
-              <div class="relative text-container">
-                <!-- Culture and Trip Tags -->
-                <div class="absolute top-0 left-8 z-20">
-                  <div
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    #カルチャー #トリップ
-                  </div>
-                </div>
-                <!-- Main Title -->
-                <div class="absolute top-[40px] left-0 z-20">
-                  <h1
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    高田馬場って何だ！？新宿の学園都市に潜入
-                  </h1>
-                </div>
-                <!-- Subtitle -->
-                <div class="absolute top-[96px] left-8 z-20">
-                  <p
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-3xl transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    公衆の面前で飲酒するスポットTOP3！
-                  </p>
-                </div>
-                <!-- Writer Credit -->
-                <div class="absolute top-[148px] left-8 z-20">
-                  <p
-                    class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                  >
-                    writer:Hunter Nakagawa
-                  </p>
-                </div>
-              </div>
-              <div class="flex justify-end">
-                <!-- Left Side - Empty Space -->
-                <img
-                  src="/image/illusts/seals/arcademachine 21.png"
-                  class="absolute z-30 w-[240px] h-[321px] rotate-[-8deg] top-[300px] left-[-14px]"
-                  loading="lazy"
-                  width="240"
-                  height="321"
-                  draggable="false"
-                  style="
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: crisp-edges;
-                  "
-                  alt="Arcade Machine Image"
-                />
-                <img
-                  src="/image/illusts/seals/arcademachine 21.png"
-                  class="absolute z-20 w-[240px] h-[321px] rotate-[8deg] top-[200px] left-[200px]"
-                  loading="lazy"
-                  width="240"
-                  height="321"
-                  draggable="false"
-                  style="
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: crisp-edges;
-                  "
-                  alt="Arcade Machine Image"
-                />
-                <img
-                  src="/image/illusts/seals/drunk1.png"
-                  class="absolute z-20 w-[170px] h-[171px] rotate-[10deg] top-[480px] left-[420px]"
-                  alt="Drunk Image"
-                  loading="lazy"
-                  width="170"
-                  height="171"
-                  draggable="false"
-                  style="
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: crisp-edges;
-                  "
-                />
-                <img
-                  src="/image/illusts/seals/drunk1.png"
-                  class="absolute z-20 w-[170px] h-[171px] rotate-[10deg] top-[480px] left-[580px]"
-                  alt="Drunk Image"
-                  loading="lazy"
-                  width="170"
-                  height="171"
-                  draggable="false"
-                  style="
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: crisp-edges;
-                  "
-                />
-                <!-- Right Side - Main Image -->
-                <div
-                  class="relative w-[880px] h-[600px] overflow-hidden right-image-container-3 group"
-                >
-                  <img
-                    src="/image/thumbNails/thumbnail_05.jpg"
-                    alt="Main Image"
-                    class="object-cover w-[880px] h-[600px]"
-                    loading="lazy"
-                    width="880"
-                    height="600"
-                    style="
+            <div class="flex">
+              <!-- Left Side - Main Image -->
+              <div class="relative w-[880px] h-[600px] overflow-hidden left-image-container-2">
+                <img src="/image/thumbNails/thumbnail_04.jpg" alt="Main Image" class="object-cover w-[880px] h-[600px]"
+                  loading="lazy" width="880" height="600" style="
                       image-rendering: -webkit-optimize-contrast;
                       image-rendering: crisp-edges;
-                    "
-                  />
-                  <a
-                    href="#"
-                    class="absolute bottom-0 right-0 text-[20px] text-white bg-black px-4 py-2 transition-colors duration-300 group-hover:bg-white group-hover:text-[#003BFF]"
-                    aria-label="Read More about Culture and Trip"
-                  >
-                    もっと見る→
-                  </a>
+                    " />
+                <!-- Read More Button -->
+                <a href="/uju-mura.html"
+                  class="absolute bottom-0 left-0 bg-black text-white px-4 py-2 flex items-center w-[fit-content] justify-center">
+                  <span class="dotgothic16-regular">もっと見る</span>
+                  <span class="ml-1 dotgothic16-regular">→</span>
+                </a>
+              </div>
+              <!-- Right Side - Empty Space -->
+              <div class="relative w-[326px]">
+                <!-- UJU MURA RIGHT 1 IMAGE -->
+                <img src="/image/illusts/seals/comet.png" alt="Why Image"
+                  class="absolute z-30 w-[350px] h-auto top-[200px] right-[110px] object-contain" loading="lazy"
+                  width="350" height="auto" draggable="false" style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    " />
+              </div>
+              <!-- UJU MURA RIGHT 2 IMAGE -->
+              <img src="/image/illusts/seals/galax-02.png" alt="Annyo Image"
+                class="absolute z-20 w-[519px] h-[506px] top-[200px] right-[-50px] object-contain" loading="lazy"
+                width="519" height="506" draggable="false" style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  " />
+              <!-- UJU MURA RIGHT 3 IMAGE -->
+              <img src="/image/illusts/seals/astr.png" alt="Uju Mura Right 3 Image"
+                class="absolute z-30 w-[285px] h-[508px] top-[200px] rotate-[-5deg] right-[-50px] object-contain"
+                loading="lazy" width="285" height="508" draggable="false" style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  " />
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 4 END -->
+        <!-- SECTION 5 -->
+        <section class="mt-[184px] mb-[64px] border border-red-500">
+          <div class="relative section-5-hover">
+            <div class="relative text-container section-5-text">
+              <!-- Culture and Trip Tags -->
+              <div class="absolute top-0 left-8 z-20">
+                <div class="dotgothic16-regular text-white bg-black p-2 inline-block">
+                  #カルチャー #トリップ
                 </div>
               </div>
+              <!-- Main Title -->
+              <div class="absolute top-[40px] left-0 z-20">
+                <h1 class="dotgothic16-regular text-white bg-black p-2 inline-block text-4xl">
+                  高田馬場って何だ！？新宿の学園都市に潜入
+                </h1>
+              </div>
+              <!-- Subtitle -->
+              <div class="absolute top-[96px] left-8 z-20">
+                <p class="dotgothic16-regular text-white bg-black p-2 inline-block text-3xl">
+                  公衆の面前で飲酒するスポットTOP3！
+                </p>
+              </div>
+              <!-- Writer Credit -->
+              <div class="absolute top-[148px] left-8 z-20">
+                <p class="dotgothic16-regular text-white bg-black p-2 inline-block text-sm">
+                  writer:Hunter Nakagawa
+                </p>
+              </div>
             </div>
-          </section>
-        </main>
-        <!-- END OF MAIN CONTENTS -->
-      </div>
+            <div class="flex justify-end">
+              <!-- Left Side - Empty Space -->
+              <img src="/image/illusts/seals/arcademachine 2.png"
+                class="absolute z-30 w-[240px] h-[321px] rotate-[-8deg] top-[300px] left-[-14px]" loading="lazy"
+                width="240" height="321" draggable="false" style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  " alt="Arcade Machine Image" />
+              <img src="/image/illusts/seals/arcademachine 2.png"
+                class="absolute z-20 w-[240px] h-[321px] rotate-[8deg] top-[200px] left-[200px]" loading="lazy"
+                width="240" height="321" draggable="false" style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  " alt="Arcade Machine Image" />
+              <img src="/image/illusts/seals/drunk 1.png"
+                class="absolute z-20 w-[170px] h-[171px] rotate-[10deg] top-[480px] left-[420px]" alt="Drunk Image"
+                loading="lazy" width="170" height="171" draggable="false" style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  " />
+              <img src="/image/illusts/seals/drunk 1.png"
+                class="absolute z-20 w-[170px] h-[171px] rotate-[10deg] top-[480px] left-[580px]" alt="Drunk Image"
+                loading="lazy" width="170" height="171" draggable="false" style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  " />
+              <!-- Right Side - Main Image -->
+              <div class="relative w-[880px] h-[600px] overflow-hidden right-image-container-3">
+                <img src="/image/thumbNails/thumbnail_05.jpg" alt="Main Image" class="object-cover w-[880px] h-[600px]"
+                  loading="lazy" width="880" height="600" style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    " />
+                <!-- Read More Button -->
+                <a href="/takano-baba.html"
+                  class="absolute bottom-0 right-0 bg-black text-white px-4 py-2 flex items-center w-[fit-content] justify-center">
+                  <span class="dotgothic16-regular">もっと見る</span>
+                  <span class="ml-1 dotgothic16-regular">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- END OF MAIN CONTENTS -->
+
+      <!-- FOOTER -->
+      <footer class="mt-[64px]">
+        <div id="footer" class="flex flex-row w-full justify-between h-3/5 bg-black text-white items-center p-[64px]">
+          <div id="footer-left" class="w-[400px]">
+            <div id="footer-left-socials" class="flex flex-row gap-[16px] pb-[16px]">
+              <a href="#" class="hover:opacity-80">
+                <img src="/image/illusts/sns/instagram-logo.svg" class="h-[48px] w-[48px] mr-[16px]" alt="Instagram" />
+              </a>
+              <a href="#" class="hover:opacity-80">
+                <img src="/image/illusts/sns/x-logo.svg" class="h-[48px] w-[48px] mr-[16px]" alt="X (Twitter)" />
+              </a>
+              <a href="#" class="hover:opacity-80">
+                <img src="/image/illusts/sns/line-logo.svg" class="h-[48px] w-[48px]" alt="LINE" />
+              </a>
+            </div>
+            <hr class="py-[8px]" />
+            <div id="footer-left-articles">
+              <span class="text-[32px] font-bold dotgothic16-regular">1月号</span>
+              <ul class="vdl-v7gothic">
+                <li class="py-[4px]">
+                  <a href="/neo-retro.html" class="hover:text-[#FF2F00] transition-colors">
+                    <span>No.1 新(ネオ)レトロ再燃！ 新宿、今こそ喫茶でしょ。</span>
+                  </a>
+                </li>
+                <li class="py-[4px]">
+                  <a href="/shin-okubo.html" class="hover:text-[#FF2F00] transition-colors">
+                    <span>No.2 はじまりのコリアンタウン</span>
+                  </a>
+                </li>
+                <li class="py-[4px]">
+                  <a href="/chi-tei.html" class="hover:text-[#FF2F00] transition-colors">
+                    <span>No.3 新宿駅に"地底人"！？</span>
+                  </a>
+                </li>
+                <li class="py-[4px]">
+                  <a href="/uju-mura.html" class="hover:text-[#FF2F00] transition-colors">
+                    <span>No.4 コズミックパワー全開！！<宇宙村>の神秘</span>
+                  </a>
+                </li>
+                <li class="py-[4px]">
+                  <a href="/takano-baba.html" class="hover:text-[#FF2F00] transition-colors">
+                    <span>No.5 高田馬場って何だ！？新宿の学園都市に潜入</span>
+                  </a>
+                </li>
+              </ul>
+              <hr class="pt-[8px]" />
+              <div class="text-right">
+                <a href="#" class="hover:text-[#FF2F00] transition-colors vdl-v7gothic">バックナンバーを見る →</a>
+              </div>
+            </div>
+          </div>
+          <div id="footer-right" class="flex flex-col text-right">
+            <svg class="inline-block w-[418px] h-[106px]" viewBox="0 0 1291.54 326.04"
+              xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <style>
+                  .cls-1,
+                  .cls-2 {
+                    fill: #fff;
+                  }
+                </style>
+              </defs>
+              <g id="_レイヤー_1-2" data-name="レイヤー_1">
+                <g>
+                  <g>
+                    <rect class="cls-1" x="58.63" y="97.79" width="28.67" height="4.26" />
+                    <rect class="cls-1" x="58.63" y="111.9" width="28.67" height="5.83" />
+                    <path class="cls-1"
+                      d="M72.13,18c-29.89,0-54.13,24.23-54.13,54.12v181.79c0,29.9,24.24,54.13,54.13,54.13,14.95,0,28.48-6.06,38.28-15.85,9.79-9.8,15.85-23.33,15.85-38.28V72.12c0-29.89-24.23-54.12-54.13-54.12ZM48.78,118.36v-31.43h48.3v51.95c-.04,2.09-.78,3.89-2.23,5.42-1.44,1.53-3.21,2.35-5.3,2.48h-9.97l-3.64-10.6h9.72c.42-.04.8-.22,1.13-.54.34-.31.51-.72.51-1.22v-7.02h-29.74c-1.46,7.31-4.39,14.09-8.78,20.32l-7.34-8.78c4.89-5.98,7.34-12.84,7.34-20.58ZM72.43,203.24h-10.79v27.41h-9.1v-27.41h-11.48v-9.92h11.48v-12.35h-10.66v-9.48h29.61v9.48h-9.85v12.35h10.79v9.92ZM72.87,174.13h9.09v41.84h-9.09v-41.84ZM97.46,219.11c-.21,2.93-1.38,5.44-3.51,7.56-2.14,2.11-4.67,3.23-7.6,3.35h-7.65l-3.14-9.78h9.67c.83-.05,1.56-.39,2.19-1.04s.98-1.41,1.07-2.29v-47.11h8.97v49.31Z" />
+                    <path class="cls-1"
+                      d="M72.13,0C32.36,0,0,32.35,0,72.12v181.79c0,39.77,32.36,72.13,72.13,72.13s72.13-32.36,72.13-72.13V72.12C144.26,32.35,111.9,0,72.13,0ZM143.26,253.91c0,39.22-31.91,71.13-71.13,71.13S1,293.13,1,253.91V72.12C1,32.9,32.91,1,72.13,1s71.13,31.9,71.13,71.12v181.79Z" />
+                    <path class="cls-1"
+                      d="M72.13,6C35.67,6,6,35.66,6,72.12v181.79c0,36.47,29.67,66.13,66.13,66.13s66.13-29.66,66.13-66.13V72.12c0-36.46-29.67-66.12-66.13-66.12ZM137.26,253.91c0,35.91-29.22,65.13-65.13,65.13S7,289.82,7,253.91V72.12C7,36.21,36.22,7,72.13,7s65.13,29.21,65.13,65.12v181.79Z" />
+                    <path class="cls-1"
+                      d="M72.13,12c-33.15,0-60.13,26.97-60.13,60.12v181.79c0,33.16,26.98,60.13,60.13,60.13s60.13-26.97,60.13-60.13V72.12c0-33.15-26.97-60.12-60.13-60.12ZM131.26,253.91c0,32.6-26.52,59.13-59.13,59.13s-59.13-26.53-59.13-59.13V72.12c0-32.6,26.53-59.12,59.13-59.12s59.13,26.52,59.13,59.12v181.79Z" />
+                  </g>
+                  <g class="cls-2">
+                    <path d="M268.5,279.41l-59.3,20.24v6.16h59.72l-.42-26.4Z" />
+                    <path d="M305.53,227.74l7.75,30.06,40.17-13.71-47.92-16.35Z" />
+                    <path d="M267.48,214.76l-58.28-19.88v98.42l59.2-20.19-.92-58.35Z" />
+                    <path d="M428.17,296.89l-.14,8.92h26.3l-26.16-8.92Z" />
+                    <path d="M429.31,224.55l-1.04,66.03,44.64,15.23h14.83v-101.19l-58.43,19.93Z" />
+                    <path d="M332.03,257.74l47.17,16.09,9.14-35.3-56.31,19.21Z" />
+                    <path d="M322.74,260.91h-.01l-7.95,2.72,10.88,42.18h45.25l6.78-26.15-54.95-18.75Z" />
+                    <polygon
+                      points="487.74 13.92 487.74 198.28 429.41 218.18 431.74 71.04 390.14 231.58 362.73 240.93 303.74 220.8 265.21 71.41 267.38 208.39 209.2 188.54 209.2 13.92 293.02 13.92 348.66 210.12 404.29 13.92 487.74 13.92" />
+                    <path
+                      d="M705.07,13.18h-104.96l-72.74,247.37,228-77.78h0s-50.3-169.59-50.3-169.59ZM610.49,194.55l40.8-141.31,40.43,141.31h-81.23Z" />
+                    <path d="M757.07,188.52l-115.17,39.3,55.75,19.02h8.9l.98,3.37,75.48,25.75-25.94-87.44Z" />
+                    <path d="M785.1,283.01l-75.54-25.77,13.74,47.46.32,1.11h68.24l-6.76-22.8Z" />
+                    <path d="M632.61,230.99l-62.68,21.39,21.96,7.49,3.77-13.03h83.42l-46.47-15.85Z" />
+                    <path d="M560.63,255.55l-35.33,12.05-11.24,38.21h64.54l11.62-40.17-29.59-10.09Z" />
+                    <path d="M852.71,155.9l-17.15,5.84,21.3,39.85v42.25l66.02-22.52v-20.47l9.53-17.76-79.7-27.19Z" />
+                    <path d="M856.86,250.18v55.63h66.02v-78.15l-66.02,22.52Z" />
+                    <path d="M862,152.72l73.29,25.01,32.85-61.22-106.14,36.21Z" />
+                    <path
+                      d="M948.47,13.55l-58.6,119.43-58.6-119.43h-74.92l76.35,142.83,139.6-47.63,51.09-95.2h-74.92Z" />
+                    <path d="M1046.75,13.55v165.5l66.02-22.52V13.55h-66.02Z" />
+                    <path d="M1112.77,182.31v-19.44l-43.48,14.84,43.74,14.92c-.18-3.35-.26-6.8-.26-10.32Z" />
+                    <path d="M1225.52,13.55v45.83l66.02,22.52V13.55h-66.02Z" />
+                    <path
+                      d="M1214.37,233.55c-7.59,11.54-19.77,18.48-38.55,18.48h-15.21c-31.67,0-44.14-21.64-47.1-52.9l-53.51-18.25-13.25,4.52v1.73c0,42.52,9.14,79.72,35.29,102.39l148.21-50.56-15.88-5.41Z" />
+                    <path
+                      d="M1256.46,113.85l-30.94,10.55v57.91c0,17.8-2.13,33.78-8.12,45.93l22.14,7.55,49.99-17.05h0c1.39-10.09,2.01-20.67,2.01-31.61v-61.31l-35.08-11.97Z" />
+                    <path d="M1265.76,110.68l25.78,8.8v-17.6l-25.78,8.8Z" />
+                    <path d="M1225.52,65.72v52.34l66.02-22.52v-7.29l-66.02-22.53Z" />
+                    <path
+                      d="M1087.62,293.96c16.55,12,39.01,18.9,68.91,18.9h23.37c69.61,0,99.66-36.41,108.59-87.43l-200.87,68.53Z" />
+                  </g>
+                </g>
+                <line class="cls-1" x1="941.74" y1="108.75" x2="937.58" y2="116.51" />
+                <polygon class="cls-1" points="695.99 305.81 693.06 305.81 692.74 304.7 695.99 305.81" />
+              </g>
+            </svg>
+            <span class="text-[12px] vdl-v7gothic-500">©2024 by MAYU-Editorial department, ltd.(Tokyo) </span>
+          </div>
+        </div>
     </div>
-    <!-- JS -->
-    <script src="js/dropdown-menu.js"></script>
-    <script src="js/hover-effect.js"></script>
-    <!-- Make sure this loads after dropdown-menu.js -->
-    <script src="js/slideshow.js"></script>
-  </body>
+    </footer>
+    <!-- END OF FOOTER -->
+  </div>
+  </div>
+  <!-- JS -->
+  <script type="module" src="js/dropdown-menu.js"></script>
+  <script type="module" src="js/menu.js"></script>
+  <script type="module" src="js/utils.js"></script>
+  <script type="module" src="js/header.js"></script>
+  <script type="module" src="js/hover-effect.js"></script>
+  <script type="module" src="js/section-hover.js"></script>
+  <script type="module" src="js/scroll-behavior.js"></script>
+  <script type="module" src="js/slideshow.js"></script>
+</body>
+
 </html>

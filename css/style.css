@@ -10,11 +10,43 @@
     font-style: normal;
 }
 
+.vdl-v7gothic {
+    font-family: "vdl-v7gothic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.vdl-v7gothic-800 {
+  font-family: "vdl-v7gothic", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.vdl-v7gothic-500 {
+  font-family: "vdl-v7gothic", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.vdl-v7gothic-bold {
+    font-family: "vdl-v7gothic", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
 .menu-open {
   overflow: hidden;
 }
 
 #menuOverlay {
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: 100;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
@@ -43,33 +75,24 @@
   position: relative;
 }
 
-/* Target both the hovered class and group-hover classes */
-.section-1-hover .right-image-container:hover ~ .text-container .dotgothic16-regular,
-.section-1-hover .right-image-container:hover [class*="group-hover"] {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
-  --tw-text-opacity: 1 !important;
-  color: rgb(0 59 255 / var(--tw-text-opacity)) !important;
-}
-
-/* Ensure smooth transitions */
-.section-1-hover .dotgothic16-regular {
-  transition: all 0.3s ease;
-}
-
-.hovered {
-  background-color: white;
-  color: #003BFF;
-  transition: all 0.3s ease;
-}
-
 header {
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  width: 1440px;
+  z-index: 100;
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: white;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
+/* Visible Header State */
 header.visible {
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%) translateY(0);
 }
 
 .menu-overlay {
@@ -108,4 +131,331 @@ header > div {
 /* Ensure no interference with carousel or other components */
 .article-page [data-article-page].pointer-events-none {
   cursor: default;
+}
+
+/* Menu icon transitions */
+.menu-icon,
+.menu-close-icon {
+  transition: opacity 0.3s ease;
+}
+
+.hidden {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Add these new styles */
+header.header-menu-open .group {
+  pointer-events: none;
+}
+
+header.header-menu-open [aria-label="Toggle Navigation Menu"] {
+  background-color: #000000 !important;
+}
+
+header.header-menu-open #_レイヤー_2 {
+  fill: #000000 !important;
+}
+
+header.header-menu-open .menu-close-icon {
+  fill: #FF2F00 !important;
+}
+
+/* Ensure menu button remains clickable */
+header.header-menu-open [aria-label="Toggle Navigation Menu"] {
+  pointer-events: auto;
+}
+
+/* Arrow hover transitions */
+.up-arrow polygon,
+.down-arrow polygon {
+  transition: fill 0.3s ease-in-out;
+}
+
+/* Ensure pointer events work in menu */
+#menuOverlay.active .up-arrow,
+#menuOverlay.active .down-arrow {
+  pointer-events: auto;
+}
+
+/* Add clean, specific menu hover styles */
+#menuOverlay {
+  /* Base styles */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Menu Article Styles */
+.articles-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+#menuOverlay .article-link {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+#menuOverlay .article-number,
+#menuOverlay .article-title {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  backface-visibility: hidden;
+}
+
+/* Menu Visibility States */
+#menuOverlay.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* Hover States */
+#menuOverlay .article-link:hover .article-number,
+#menuOverlay .article-link:hover .article-title {
+  background-color: white !important;
+  color: #003BFF !important;
+}
+
+/* Menu Background Images */
+.menu-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.menu-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  object-fit: cover;
+  object-position: center;
+  will-change: opacity;
+}
+
+.menu-bg-image.active {
+  opacity: 1;
+}
+
+.hover-area {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.article-number,
+.article-title {
+  position: relative;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+/* Hover states for text only */
+#menuOverlay .hover-area:hover .article-number,
+#menuOverlay .hover-area:hover .article-title {
+  background-color: white !important;
+  color: #003BFF !important;
+}
+
+.article-link {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.hover-group {
+  cursor: pointer;
+}
+
+.hover-group .article-number,
+.hover-group .article-title {
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  backface-visibility: hidden;
+}
+
+#menuOverlay .hover-group:hover .article-number,
+#menuOverlay .hover-group:hover .article-title {
+  background-color: white !important;
+  color: #003BFF !important;
+}
+
+#menuOverlay .max-h-\[calc\(100vh-64px\)\] {
+  overflow: hidden;
+}
+
+/* Active state styles for menu items */
+.article-item.active .article-number,
+.article-item.active .article-title {
+  background-color: white !important;
+  color: #003BFF !important;
+}
+
+/* Active state for menu background */
+.menu-bg-image[data-active="true"] {
+  opacity: 1;
+}
+
+/* Active page indicator in menu */
+.article-item[data-active="true"] {
+  position: relative;
+}
+
+.article-item[data-active="true"]::after {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #FF2F00;
+  border-radius: 50%;
+}
+
+/* Hover effect for background images */
+.hover-area:hover + .menu-bg-image,
+.hover-area:hover ~ .menu-bg-container .menu-bg-image[data-article="${data-article}"] {
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+/* Active state styles for menu items */
+.article-item[data-active="true"] .article-number,
+.article-item[data-active="true"] .article-title {
+  background-color: white !important;
+  color: #003BFF !important;
+  transition: all 0.3s ease;
+}
+
+/* Hover states - keeping consistent with active state */
+.hover-area:hover .article-number,
+.hover-area:hover .article-title {
+  background-color: white !important;
+  color: #003BFF !important;
+  transition: all 0.3s ease;
+}
+
+/* Base styles for menu items */
+.article-number,
+.article-title {
+  position: relative;
+  z-index: 3;
+  transition: all 0.3s ease;
+  background-color: black;
+  color: white;
+}
+
+/* Menu article spacing */
+.articles-wrapper .article-item {
+  margin-bottom: 48px;
+}
+
+.articles-wrapper .article-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Menu Overlay Base Styles */
+#menuOverlay {
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: 100;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Active Menu State */
+#menuOverlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  width: 1440px;
+  z-index: 100;
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: white;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Visible Header State */
+header.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Menu Background Container */
+.menu-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Menu Background Images */
+.menu-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  object-fit: cover;
+  object-position: center;
+  will-change: opacity;
+}
+
+.menu-bg-image.active {
+  opacity: 1;
+}
+
+/* Articles Container */
+.articles-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Menu Content */
+.menu-content {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+  overflow: hidden;
 }

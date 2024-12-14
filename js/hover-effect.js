@@ -1,128 +1,173 @@
-// Integrate with existing functionality
-function initializeHoverEffects() {
-  // Section 1 hover effect
-  const rightImageContainer = document.querySelector(".right-image-container");
-  const section1TextElements = document.querySelectorAll(".section-1-hover .text-container [class*='group-hover']");
-  const readMoreButton1 = rightImageContainer?.querySelector("a");
+export const MenuEffects = {
+  config: {
+    selectors: {
+      menuOverlay: '#menuOverlay',
+      articlesWrapper: '.articles-wrapper',
+      articleLink: '.article-link',
+      articleNumber: '.article-number',
+      articleTitle: '.article-title',
+      bgContainer: '.menu-bg-container',
+      bgImage: '.menu-bg-image',
+      articleItem: '.hover-area'
+    },
+    colors: {
+      default: {
+        background: 'black',
+        text: 'white'
+      },
+      hover: {
+        background: 'white',
+        text: '#003BFF'
+      }
+    },
+    articlePages: {
+      'neo-retro.html': '1',
+      'shin-okubo.html': '2',
+      'chi-tei.html': '3',
+      'uju-mura.html': '4',
+      'takano-baba.html': '5'
+    }
+  },
 
-  // Section 2 hover effect
-  const leftImageContainer = document.querySelector(".left-image-container");
-  const section2TextElements = document.querySelectorAll(".section-2-hover .text-container [class*='group-hover']");
-  const readMoreButton2 = leftImageContainer?.querySelector("a");
+  init() {
+    this.menuOverlay = document.querySelector(this.config.selectors.menuOverlay);
+    this.bgContainer = document.querySelector(this.config.selectors.bgContainer);
+    this.hoverAreas = document.querySelectorAll(this.config.selectors.articleItem);
+    this.bgImages = document.querySelectorAll(this.config.selectors.bgImage);
+    
+    if (this.validateElements()) {
+      this.bindEvents();
+      this.setActiveStateFromURL();
+    }
+  },
 
-  // Section 3 hover effect
-  const rightImageContainer2 = document.querySelector(".right-image-container-2");
-  const section3TextElements = document.querySelectorAll(".section-3-hover .text-container [class*='group-hover']");
-  const readMoreButton3 = rightImageContainer2?.querySelector("a");
+  validateElements() {
+    return (
+      this.menuOverlay &&
+      this.bgContainer &&
+      this.hoverAreas.length > 0 &&
+      this.bgImages.length > 0
+    );
+  },
 
-  // Section 4 hover effect
-  const leftImageContainer2 = document.querySelector(".left-image-container-2");
-  const section4TextElements = document.querySelectorAll(".section-4-hover .text-container [class*='group-hover']");
-  const readMoreButton4 = leftImageContainer2?.querySelector("a");
+  bindEvents() {
+    // Hover effects for menu items
+    this.hoverAreas.forEach(area => {
+      area.addEventListener('mouseenter', () => this.handleHover(area, true));
+      area.addEventListener('mouseleave', () => this.handleHover(area, false));
+    });
 
-  // Section 5 hover effect
-  const rightImageContainer3 = document.querySelector(".right-image-container-3");
-  const section5TextElements = document.querySelectorAll(".section-5-hover .text-container [class*='group-hover']");
-  const readMoreButton5 = rightImageContainer3?.querySelector("a");
+    // Handle link clicks for active states
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a');
+      if (link) {
+        const href = link.getAttribute('href');
+        if (href && this.config.articlePages[href.split('/').pop()]) {
+          this.handleLinkClick(href);
+        }
+      }
+    });
+  },
 
-  function createHoverHandlers(textElements, readMoreButton) {
-    function handleMouseEnter() {
-      textElements.forEach(el => {
-        // Remove any existing classes first
-        el.classList.remove("group-hover:bg-white", "group-hover:text-[#003BFF]");
-        // Add hover styles
-        el.style.backgroundColor = "white";
-        el.style.color = "#003BFF";
-      });
+  handleHover(area, isHovered) {
+    const articleId = area.getAttribute('data-article');
+    
+    // Handle text color changes
+    const elements = {
+      number: area.querySelector(this.config.selectors.articleNumber),
+      title: area.querySelector(this.config.selectors.articleTitle)
+    };
 
-      // Handle read more button
-      if (readMoreButton) {
-        readMoreButton.style.backgroundColor = "white";
-        readMoreButton.style.color = "#003BFF";
+    const colors = this.config.colors[isHovered ? 'hover' : 'default'];
+
+    Object.values(elements).forEach(element => {
+      if (element) {
+        element.style.backgroundColor = colors.background;
+        element.style.color = colors.text;
+      }
+    });
+
+    // Handle background image
+    if (isHovered) {
+      this.activateBackgroundImage(articleId);
+    } else {
+      const activeArticleId = document.querySelector('.article-item[data-active="true"] .hover-area')?.getAttribute('data-article');
+      if (activeArticleId) {
+        this.activateBackgroundImage(activeArticleId);
+      } else {
+        this.deactivateAllBackgrounds();
       }
     }
+  },
 
-    function handleMouseLeave() {
-      textElements.forEach(el => {
-        // Reset styles
-        el.style.backgroundColor = "";
-        el.style.color = "";
-        // Restore original classes
-        el.classList.add("group-hover:bg-white", "group-hover:text-[#003BFF]");
-      });
-
-      // Reset read more button
-      if (readMoreButton) {
-        readMoreButton.style.backgroundColor = "";
-        readMoreButton.style.color = "";
-      }
+  setActiveStateFromURL() {
+    const currentPage = window.location.pathname.split('/').pop();
+    const articleId = this.config.articlePages[currentPage];
+    
+    if (articleId) {
+      this.setActiveArticle(articleId);
     }
+  },
 
-    return { handleMouseEnter, handleMouseLeave };
+  setActiveArticle(articleId) {
+    // Remove existing active states
+    document.querySelectorAll('.article-item').forEach(item => {
+      item.removeAttribute('data-active');
+      
+      // Reset styles
+      const number = item.querySelector(this.config.selectors.articleNumber);
+      const title = item.querySelector(this.config.selectors.articleTitle);
+      if (number) {
+        number.style.backgroundColor = this.config.colors.default.background;
+        number.style.color = this.config.colors.default.text;
+      }
+      if (title) {
+        title.style.backgroundColor = this.config.colors.default.background;
+        title.style.color = this.config.colors.default.text;
+      }
+    });
+    
+    // Set new active state
+    const activeItem = document.querySelector(`.hover-area[data-article="${articleId}"]`)?.closest('.article-item');
+    if (activeItem) {
+      activeItem.setAttribute('data-active', 'true');
+      
+      // Apply active styles
+      const number = activeItem.querySelector(this.config.selectors.articleNumber);
+      const title = activeItem.querySelector(this.config.selectors.articleTitle);
+      if (number) {
+        number.style.backgroundColor = this.config.colors.hover.background;
+        number.style.color = this.config.colors.hover.text;
+      }
+      if (title) {
+        title.style.backgroundColor = this.config.colors.hover.background;
+        title.style.color = this.config.colors.hover.text;
+      }
+      
+      this.activateBackgroundImage(articleId);
+    }
+  },
+
+  activateBackgroundImage(articleId) {
+    this.bgImages.forEach(img => {
+      img.classList.toggle('active', img.getAttribute('data-article') === articleId);
+    });
+  },
+
+  deactivateAllBackgrounds() {
+    this.bgImages.forEach(img => img.classList.remove('active'));
+  },
+
+  handleLinkClick(href) {
+    const articleId = this.config.articlePages[href.split('/').pop()];
+    if (articleId) {
+      localStorage.setItem('activeArticle', articleId);
+      this.setActiveArticle(articleId);
+    }
   }
+};
 
-  // Initialize Section 1 hover
-  if (rightImageContainer && section1TextElements.length > 0) {
-    const { handleMouseEnter, handleMouseLeave } = createHoverHandlers(section1TextElements, readMoreButton1);
-    rightImageContainer.removeEventListener("mouseenter", handleMouseEnter);
-    rightImageContainer.removeEventListener("mouseleave", handleMouseLeave);
-    rightImageContainer.addEventListener("mouseenter", handleMouseEnter);
-    rightImageContainer.addEventListener("mouseleave", handleMouseLeave);
-  }
-
-  // Initialize Section 2 hover
-  if (leftImageContainer && section2TextElements.length > 0) {
-    const { handleMouseEnter, handleMouseLeave } = createHoverHandlers(section2TextElements, readMoreButton2);
-    leftImageContainer.removeEventListener("mouseenter", handleMouseEnter);
-    leftImageContainer.removeEventListener("mouseleave", handleMouseLeave);
-    leftImageContainer.addEventListener("mouseenter", handleMouseEnter);
-    leftImageContainer.addEventListener("mouseleave", handleMouseLeave);
-  }
-
-  // Initialize Section 3 hover
-  if (rightImageContainer2 && section3TextElements.length > 0) {
-    const { handleMouseEnter, handleMouseLeave } = createHoverHandlers(section3TextElements, readMoreButton3);
-    rightImageContainer2.removeEventListener("mouseenter", handleMouseEnter);
-    rightImageContainer2.removeEventListener("mouseleave", handleMouseLeave);
-    rightImageContainer2.addEventListener("mouseenter", handleMouseEnter);
-    rightImageContainer2.addEventListener("mouseleave", handleMouseLeave);
-  }
-
-  // Initialize Section 4 hover
-  if (leftImageContainer2 && section4TextElements.length > 0) {
-    const { handleMouseEnter, handleMouseLeave } = createHoverHandlers(section4TextElements, readMoreButton4);
-    leftImageContainer2.removeEventListener("mouseenter", handleMouseEnter);
-    leftImageContainer2.removeEventListener("mouseleave", handleMouseLeave);
-    leftImageContainer2.addEventListener("mouseenter", handleMouseEnter);
-    leftImageContainer2.addEventListener("mouseleave", handleMouseLeave);
-  }
-
-  // Initialize Section 5 hover
-  if (rightImageContainer3 && section5TextElements.length > 0) {
-    const { handleMouseEnter, handleMouseLeave } = createHoverHandlers(section5TextElements, readMoreButton5);
-    rightImageContainer3.removeEventListener("mouseenter", handleMouseEnter);
-    rightImageContainer3.removeEventListener("mouseleave", handleMouseLeave);
-    rightImageContainer3.addEventListener("mouseenter", handleMouseEnter);
-    rightImageContainer3.addEventListener("mouseleave", handleMouseLeave);
-  }
-}
-
-// Initialize on DOMContentLoaded
-document.addEventListener("DOMContentLoaded", initializeHoverEffects);
-
-// Re-initialize when menu is closed
-document.addEventListener("menuClosed", initializeHoverEffects);
-
-// Backup initialization
-window.addEventListener("load", initializeHoverEffects);
-
-// Re-initialize after any potential dynamic content changes
-const observer = new MutationObserver(() => {
-  initializeHoverEffects();
+// Initialize the effects when the DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  MenuEffects.init();
 });
-
-// Start observing the document for any changes in the DOM
-observer.observe(document.body, {
-  childList: true,
-  subtree: true
-}); 
