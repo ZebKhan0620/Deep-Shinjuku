@@ -459,3 +459,97 @@ header.visible {
 body.menu-open {
   overflow: hidden;
 }
+
+.remote-control {
+  position: fixed;
+  /* top: calc(664px + 32px); */
+  top: 50%;
+  right: calc((100vw - 1440px) / 2 + 16px);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  z-index: 90;
+  height: fit-content;
+  width: fit-content;
+  background: #000;
+}
+
+.remote-button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.page-nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0;
+  position: relative;
+}
+
+.remote-button {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  padding: 8px;
+  margin: 0;
+}
+
+.remote-button:hover {
+  background: transparent;
+}
+
+.remote-button.transitioning {
+  background: #FFF;
+  pointer-events: none;
+}
+
+.remote-button svg {
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s ease;
+}
+
+.remote-button .fill-white {
+  fill: #FFFFFF;
+}
+
+.remote-button:hover .fill-white {
+  fill: #000000;
+}
+
+/* Add rotation for each arrow direction */
+.remote-button.article-nav.top svg {
+  transform: rotate(90deg); /* Points straight up */
+}
+
+.remote-button.page-nav.up svg {
+  transform: rotate(90deg); /* Points up */
+}
+
+.remote-button.page-nav.down svg {
+  transform: rotate(90deg); /* Points down */
+}
+
+.remote-button.article-nav.bottom svg {
+  transform: rotate(90deg); /* Points straight down */
+}
+
+/* Adjust SVG sizes to match pixel design */
+.remote-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Keep hover states for arrows */
+.remote-button:hover .fill-white {
+  fill: #FF2F00; /* Change to red on hover */
+}
+

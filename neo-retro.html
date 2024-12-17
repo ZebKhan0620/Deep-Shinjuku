@@ -18,15 +18,16 @@
 
 <body>
   <!-- Outer container with center alignment -->
-  <div class="min-h-screen flex justify-center box-border relative overflow-x-hidden">
-    <!-- Main container with fixed width -->
-    <div class="w-[1440px] relative bg-[url('/image/worn-dots.png')] bg-repeat bg-auto min-h-screen isolation">
+  <div class="min-h-screen flex justify-center box-border relative">
+    <!-- Main container with responsive width -->
+    <div
+      class="w-full max-w-[1440px] relative bg-[url('/image/worn-dots.png')] bg-repeat bg-auto min-h-screen isolation">
       <!-- Add this before the header -->
       <div id="headerTrigger" class="h-1"></div>
 
       <!-- Sticky Header -->
       <header
-        class="fixed top-0 left-1/2 -translate-x-1/2 w-[1440px] transform-gpu transition-all duration-500 z-[100] opacity-0 -translate-y-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] [&.visible]:opacity-100 [&.visible]:translate-y-0">
+        class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1440px] transform-gpu transition-all duration-500 z-[100] opacity-0 -translate-y-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] [&.visible]:opacity-100 [&.visible]:translate-y-0">
         <!-- Main header content -->
         <div class="max-w-[1440px] mx-auto relative">
           <!-- MAYU Logo and menu button container -->
@@ -242,7 +243,7 @@
       </header>
 
       <!-- Hero Section -->
-      <section class="w-[1440px] relative" aria-label="Hero Banner">
+      <section class="relative" aria-label="Hero Banner" id="topPage">
         <div class="relative w-full h-[664px]">
           <img src="/image/article_01/article-01_main.jpg" alt="新宿の喫茶の様子" class="w-full h-full object-cover" />
           <!-- Hero content overlay -->
@@ -252,545 +253,582 @@
         </div>
       </section>
 
-      <!-- Main Content -->
-      <main class="w-[1210px] mx-auto mt-4 border-4 border-[#00FF95]">
-        <!-- First Section - Text Content -->
-        <section class="w-full">
-          <!-- Text Container -->
-          <div class="relative min-h-[200px]">
-            <!-- Food Tag -->
-            <div class="absolute top-0 left-8 z-20">
-              <div class="text-[20px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
-                #フード
+      <div class="relative flex justify-between max-w-[1440px] mx-auto">
+        <!-- Main Content -->
+        <main class="w-full max-w-[1210px] mx-auto mt-4">
+          <!-- First Section - Text Content -->
+          <section class="w-full">
+            <!-- Text Container -->
+            <div class="relative min-h-[200px]">
+              <!-- Food Tag -->
+              <div class="absolute top-0 left-8 z-20">
+                <div class="text-[20px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
+                  #フード
+                </div>
+              </div>
+              <!-- Main Title -->
+              <div class="absolute top-[40px] left-0 z-20">
+                <h1 class="text-[40px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
+                  新[ネオ]レトロ再燃！ 新宿、今こそ喫茶でしょ。
+                </h1>
+              </div>
+              <!-- Subtitle -->
+              <div class="absolute top-[110px] left-8 z-20">
+                <p class="text-[32px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
+                  歌舞伎町 喫茶の今を巡る
+                </p>
+              </div>
+              <!-- Writer Credit -->
+              <div class="absolute top-[170px] left-8 z-20">
+                <p class="text-[16px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
+                  writer:Kana Komatsu
+                </p>
               </div>
             </div>
-
-            <!-- Main Title -->
-            <div class="absolute top-[40px] left-0 z-20">
-              <h1 class="text-[40px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
-                新[ネオ]レトロ再燃！ 新宿、今こそ喫茶でしょ。
-              </h1>
+          </section>
+          <!-- Text Content Section -->
+          <section class="w-full mt-[48px] mb-[64px]">
+            <!-- Bold Text with blue background -->
+            <p
+              class="w-fit max-w-full text-3xl text-white bg-[#003BFF] h-auto flex items-center px-[8px] py-2 inline-block break-words dotgothic16-regular">
+              喫茶店特集：昭和レトロとダダンの融合、若者も虜にする東京の喫茶め
+            </p>
+            <!-- Regular Text with spacing -->
+            <div class="mt-[16px] leading-[2.5] letter-spacing-normal w-full max-w-[1210px] vdl-v7gothic-bold">
+              <span class="text-[16px]">
+                かつて大流行した新宿の「レトロな喫茶店」。2024年、再び喫茶の熱が高まっている。しかし、今回の喫茶熱は一味違う。レトロな喫茶店の良さと新宿の代名詞、歌
+                <br />
+              </span>
+              <span class="text-[16px]">
+                舞伎町を連想させるネオン調を見事に融合させた喫茶店、「ニーナナ喫茶」がオープンしたためだ。<br />
+              </span>
+              <span class="text-[16px]">
+                ニーナナ喫茶のオープンを機に、MAYUでは新宿喫茶の今を大特集。<br />
+              </span>
             </div>
-
+          </section>
+          <!-- Interview Section -->
+          <section class="w-full">
+            <!-- Title -->
+            <div class="w-[fit-content] h-[auto] bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
+              <h2 class="text-[32px] text-white dotgothic16-regular">喫茶ニーナナ</h2>
+            </div>
             <!-- Subtitle -->
-            <div class="absolute top-[110px] left-8 z-20">
-              <p class="text-[32px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
-                歌舞伎町 喫茶の今を巡る
-              </p>
-            </div>
-
-            <!-- Writer Credit -->
-            <div class="absolute top-[170px] left-8 z-20">
-              <p class="text-[16px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
-                writer:Kana Komatsu
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Text Content Section -->
-        <section class="w-full mt-[48px] mb-[64px]">
-          <!-- Bold Text with blue background -->
-          <p
-            class="text-3xl text-white bg-[#003BFF] w-[fit-content] h-[auto] flex items-center px-[8px] py-2 inline-block whitespace-nowrap">
-            喫茶店特集：昭和レトロとダダンの融合、若者も虜にする東京の喫茶め
-          </p>
-          <!-- Regular Text with spacing -->
-          <div class="mt-[16px] leading-[2.5] letter-spacing-normal w-[1210px] vdl-v7gothic-bold">
-            <span class="text-[16px]">
-              かつて大流行した新宿の「レトロな喫茶店」。2024年、再び喫茶の熱が高まっている。しかし、今回の喫茶熱は一味違う。レトロな喫茶店の良さと新宿の代名詞、歌
+            <h3 class="mt-[16px] text-[16px] vdl-v7gothic-800 text-black">
+              ~昼間のャバーで体験する、映える昭和レトロ~
+            </h3>
+            <!-- Main Text Content -->
+            <div class="mt-[16px] leading-[2.5] letter-spacing-normal">
+              <span class="text-[16px] vdl-v7gothic-bold">
+                日中にキャバレー空間を開放し、ネオンライトとミラーボールのめきが特徴の「喫茶ニーナナ」。
+              </span>
               <br />
-            </span>
-            <span class="text-[16px]">
-              舞伎町を連想させるネオン調を見事に融合させた喫茶店、「ニーナナ喫茶」がオープンしたためだ。<br />
-            </span>
-            <span class="text-[16px]">
-              ニーナナ喫茶のオープンを機に、MAYUでは新宿喫茶の今を大特集。<br />
-            </span>
-          </div>
-        </section>
-
-        <!-- Interview Section -->
-        <section class="w-full">
-          <!-- Title -->
-          <div class="w-[fit-content] h-[auto] bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
-            <h2 class="text-[32px] text-white dotgothic16-regular">喫茶ニーナナ</h2>
-          </div>
-
-          <!-- Subtitle -->
-          <h3 class="mt-[16px] text-[16px] vdl-v7gothic-800 text-black">
-            ~昼間のャバーで体験する、映える昭和レトロ~
-          </h3>
-
-          <!-- Main Text Content -->
-          <div class="mt-[16px] leading-[2.5] letter-spacing-normal">
-            <span class="text-[16px] vdl-v7gothic-bold">
-              日中にキャバレー空間を開放し、ネオンライトとミラーボールのめきが特徴の「喫茶ニーナナ」。
-            </span>
-            <br />
-            <span class="text-[16px] vdl-v7gothic-bold">
-              この店の魅力はなんといっても、大人のメロクリームソーダやオレオを使った特製ドリンクといったユニークなメニュー。
-            </span>
-            <br />
-            <span class="text-[16px] vdl-v7gothic-bold">
-              ルコールを効かせた「大人のメロンクリームソーダ」は、甘とビターさが絶妙で、訪れる大人のび心をくすぐる。さらに、さまざまなアーティストのミュージックビデオのロケ地とて使われており、フォトジェニックな空間がスタンスタ代に大人気。
-            </span>
-            <br />
-            <span class="text-[16px] vdl-v7gothic-bold">
-              ここでしか味わえないレトロなひとときを堪能てみては？
-            </span>
-          </div>
-
-          <!-- Image Carousel Section -->
-          <div class="mt-[32px] w-full h-[610px] carousel">
-            <!-- Carousel Container -->
-            <div class="relative w-full h-full">
-              <!-- Slides Container -->
-              <div class="w-full h-full relative overflow-hidden">
-                <!-- Slide 1 -->
-                <div class="slide absolute inset-0 flex gap-[32px] transition-transform duration-500" data-slide="1">
-                  <img src="/image/article_01/ni-nana_01.jpg" alt="ニーナナ喫茶の赤い看板"
-                    class="w-[589px] h-[610px] object-cover" />
-                  <img src="/image/article_01/ni-nana_02.jpg" alt="デスコボールの店" class="w-[589px] h-[610px] object-cover" />
+              <span class="text-[16px] vdl-v7gothic-bold">
+                この店の魅力はなんといっても、大人のメロクリームソーダやオレオを使った特製ドリンクといったユニークなメニュー。
+              </span>
+              <br />
+              <span class="text-[16px] vdl-v7gothic-bold">
+                ルコールを効かせた「大人のメロンクリームソーダ」は、甘とビターさが絶妙で、訪れる大人のび心をくすぐる。さらに、さまざまなアーティストのミュージックビデオのロケ地とて使われており、フォトジェニックな空間がスタンスタ代に大人気。
+              </span>
+              <br />
+              <span class="text-[16px] vdl-v7gothic-bold">
+                ここでしか味わえないレトロなひとときを堪能てみては？
+              </span>
+            </div>
+            <!-- Image Carousel Section -->
+            <div class="mt-[32px] w-full h-[610px] carousel">
+              <!-- Carousel Container -->
+              <div class="relative w-full h-full">
+                <!-- Slides Container -->
+                <div class="w-full h-full relative overflow-hidden">
+                  <!-- Slide 1 -->
+                  <div class="slide absolute inset-0 flex gap-[32px] transition-transform duration-500" data-slide="1">
+                    <div class="w-full max-w-[589px] aspect-[589/610]">
+                      <img src="/image/article_01/ni-nana_01.jpg" alt="ニーナナ喫茶の赤い看板"
+                        class="w-full h-full object-cover" />
+                    </div>
+                    <div class="w-full max-w-[589px] aspect-[589/610]">
+                      <img src="/image/article_01/ni-nana_02.jpg" alt="デスコボールの店" class="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="slide absolute inset-0 flex gap-[32px] translate-x-full transition-transform duration-500"
+                    data-slide="2">
+                    <img src="/image/article_01/ni-nana_03.jpg" alt="店内の様子1" class="w-[589px] h-[610px] object-cover" />
+                    <img src="/image/article_01/ni-nana_04.jpg" alt="店内の様子2" class="w-[589px] h-[610px] object-cover" />
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="3">
+                    <img src="/image/article_01/ni-nana_05.jpg" alt="店内の全景" class="w-full h-[610px] object-cover" />
+                  </div>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="slide absolute inset-0 flex gap-[32px] translate-x-full transition-transform duration-500"
-                  data-slide="2">
-                  <img src="/image/article_01/ni-nana_03.jpg" alt="店内の様子1" class="w-[589px] h-[610px] object-cover" />
-                  <img src="/image/article_01/ni-nana_04.jpg" alt="店内の様子2" class="w-[589px] h-[610px] object-cover" />
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="3">
-                  <img src="/image/article_01/ni-nana_05.jpg" alt="店内の全景" class="w-full h-[610px] object-cover" />
-                </div>
-              </div>
-
-              <!-- Navigation Arrows and Dots Container -->
-              <div class="absolute bottom-8 right-8 flex flex-col gap-4">
-                <!-- Navigation Arrows -->
-                <div class="flex gap-8">
-                  <button
-                    class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
-                    aria-label="Previous slide">
-                    <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                        <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
-                          points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.39 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
-                      </g>
-                    </svg>
-                  </button>
-                  <button
-                    class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
-                    aria-label="Next slide">
-                    <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                        <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
-                          points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.3 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 269.23 269.23 192.31 230.77 192.31 230.77 153.85" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-
-                <!-- Navigation Dots -->
-                <div class="flex gap-4 justify-center w-[112px]">
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 1" data-slide-dot="1">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100" />
-                  </button>
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 2" data-slide-dot="2">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 hidden transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
-                  </button>
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 3" data-slide-dot="3">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 hidden transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
-                  </button>
+                <!-- Navigation Arrows and Dots Container -->
+                <div class="absolute bottom-8 right-8 flex flex-col gap-4">
+                  <!-- Navigation Arrows -->
+                  <div class="flex gap-8">
+                    <button
+                      class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
+                      aria-label="Previous slide">
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
+                            points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.39 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
+                        </g>
+                      </svg>
+                    </button>
+                    <button
+                      class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
+                      aria-label="Next slide">
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
+                            points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.3 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85" />
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- Navigation Dots -->
+                  <div class="flex gap-4 justify-center w-[112px]">
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 1" data-slide-dot="1">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100" />
+                    </button>
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 2" data-slide-dot="2">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 hidden transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
+                    </button>
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 3" data-slide-dot="3">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 hidden transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <!-- Address Section -->
-        <section class="my-[64px]">
-          <!-- Card Container -->
-          <div class="w-[820px] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
-            <!-- Card Content Wrapper -->
-            <div class="flex gap-[32px]">
-              <!-- Left Side - Image -->
-              <div class="w-[362px] h-[276px]">
-                <img src="/image/article_01/ni-nana_link.jpg" alt="ニーナナ喫茶の店内" class="w-full h-full object-cover" />
-              </div>
-
-              <!-- Right Side - Info -->
-              <div class="w-[362px]">
-                <!-- Title -->
-                <div class="bg-[#00FF66] w-full px-2 mb-4">
-                  <h4 class="text-[20px] text-black dotgothic16-regular">ニーナナ喫茶</h4>
+          </section>
+          <!-- Address Section -->
+          <section class="my-[64px]">
+            <!-- Card Container -->
+            <div
+              class="w-full max-w-[820px] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
+              <!-- Card Content Wrapper -->
+              <div class="flex gap-[32px]">
+                <!-- Left Side - Image -->
+                <div class="w-full max-w-[362px] h-[276px]">
+                  <img src="/image/article_01/ni-nana_link.jpg" alt="ニーナナ喫茶の店内" class="w-full h-full object-cover" />
                 </div>
-
-                <!-- Info Grid -->
-                <div class="grid grid-cols-[auto_1fr] gap-x-[48px] gap-y-[16px] text-[14px] text-white">
-                  <div class="dotgothic16-regular">所在地</div>
-                  <div class="dotgothic16-regular">
-                    〒160-0021<br />
-                    東京都新宿区歌舞伎町2丁目36-3<br />
-                    新宿ACb会館 3F
+                <!-- Right Side - Info -->
+                <div class="w-full max-w-[362px]">
+                  <!-- Title -->
+                  <div class="bg-[#00FF66] w-full px-2 mb-4">
+                    <h4 class="text-[20px] text-black dotgothic16-regular">ニーナナ喫茶</h4>
                   </div>
-
-                  <div class="dotgothic16-regular">営業時間</div>
-                  <div class="dotgothic16-regular">
-                    12:00～20:00<br />
-                    月曜日-11:30～20:00<br />
-                    金曜日-11:30～19:30
+                  <!-- Info Grid -->
+                  <div class="grid grid-cols-[auto_1fr] gap-x-[48px] gap-y-[16px] text-[14px] text-white">
+                    <div class="dotgothic16-regular">所在地</div>
+                    <div class="dotgothic16-regular">
+                      〒160-0021<br />
+                      東京都新宿区歌舞伎町2丁目36-3<br />
+                      新宿ACb会館 3F
+                    </div>
+                    <div class="dotgothic16-regular">営業時間</div>
+                    <div class="dotgothic16-regular">
+                      12:00～20:00<br />
+                      月曜日-11:30～20:00<br />
+                      金曜日-11:30～19:30
+                    </div>
+                    <div class="dotgothic16-regular">定休日</div>
+                    <div class="dotgothic16-regular">年中無休</div>
+                    <div class="dotgothic16-regular">ホームページ</div>
+                    <div class="bg-[#00FF66] px-2 dotgothic16-regular">
+                      <a href="https://www.instagram.com/27kissa/" target="_blank" rel="noopener noreferrer"
+                        class="block text-black break-all hover:underline">
+                        https://www.instagram.com/27kissa/
+                      </a>
+                    </div>
+                    <div class="dotgothic16-regular">電話/mail</div>
+                    <div class="dotgothic16-regular">03-6205-5567</div>
                   </div>
-
-                  <div class="dotgothic16-regular">定休日</div>
-                  <div class="dotgothic16-regular">年中無休</div>
-
-                  <div class="dotgothic16-regular">ホームページ</div>
-                  <div class="bg-[#00FF66] px-2 dotgothic16-regular">
-                    <a href="https://www.instagram.com/27kissa/" target="_blank" rel="noopener noreferrer"
-                      class="block text-black break-all hover:underline">
-                      https://www.instagram.com/27kissa/
-                    </a>
-                  </div>
-
-                  <div class="dotgothic16-regular">電話/mail</div>
-                  <div class="dotgothic16-regular">03-6205-5567</div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <div class="border-b-[1px] border-[#000000] mb-[64px]"></div>
-
-        <!-- INTERVIEW SECTION 2 -->
-        <section class="w-full">
-          <!-- Title -->
-          <div class="w-[fit-content] h-[auto] bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
-            <h2 class="text-[32px] text-white dotgothic16-regular">「珈琲の店 ピース」</h2>
-          </div>
-
-          <!-- Subtitle -->
-          <h3 class="mt-[16px] text-[16px] vdl-v7gothic-800 text-black">
-            ~新宿西口で愛煙家が憩う、昭和の香り漂う老舗喫茶~
-          </h3>
-
-          <!-- Main Text Content -->
-          <div class="mt-[16px] leading-[2.5] letter-spacing-normal">
-            <span class="text-[16px] vdl-v7gothic-bold">
-              1962年創業、新宿西口にたたずむ「喫茶ピース」は、昭和の香りが色濃く残る老舗喫茶店。店内でタバコを吸うことが許される数少ない喫茶店で、愛煙家の
-            </span>
-            <br />
-            <span class="text-[16px] vdl-v7gothic-bold">
-              オアシスとして多くの常連が訪れます。昔ながらのメロンクリームソーダと、もちもちした食感がたまらないホットケーキが人気メニュー。
-            </span>
-            <br />
-            <span class="text-[16px] vdl-v7gothic-bold">
-              革張りのソファ、蝶ネクタイを締めた店員とともに、昭和にタイムスリップしたかのような懐かしさを感じられる空間が魅力だ。
-            </span>
-          </div>
-
-          <!-- Image Carousel Section -->
-          <div class="mt-[32px] w-full h-[610px] carousel">
-            <!-- Carousel Container -->
-            <div class="relative w-full h-full">
-              <!-- Slides Container -->
-              <div class="w-full h-full relative overflow-hidden">
-                <!-- Slide 1 -->
-                <div class="slide absolute inset-0 flex gap-[32px] transition-transform duration-500" data-slide="1">
-                  <img src="/image/article_01/ni-nana_01.jpg" alt="ニーナナ喫茶の赤い看板"
-                    class="w-[589px] h-[610px] object-cover" />
-                  <img src="/image/article_01/ni-nana_02.jpg" alt="デスコボールの店" class="w-[589px] h-[610px] object-cover" />
+            <!-- BORDER BETWEEN SECTIONS -->
+            <div class="w-full h-[1px] bg-[#000000]"></div>
+          </section>
+          <!-- INTERVIEW SECTION 2 -->
+          <section class="w-full">
+            <!-- Title -->
+            <div class="w-[fit-content] h-[auto] bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
+              <h2 class="text-[32px] text-white dotgothic16-regular">「珈琲の店 ピース」</h2>
+            </div>
+            <!-- Subtitle -->
+            <h3 class="mt-[16px] text-[16px] vdl-v7gothic-800 text-black">
+              ~新宿西口で愛煙家が憩う、昭和の香り漂う老舗喫茶~
+            </h3>
+            <!-- Main Text Content -->
+            <div class="mt-[16px] leading-[2.5] letter-spacing-normal">
+              <span class="text-[16px] vdl-v7gothic-bold">
+                1962年創業、新宿西口にたたずむ「喫茶ピース」は、昭和の香りが色濃く残る老舗喫茶店。店内でタバコを吸うことが許される数少ない喫茶店で、愛煙家の
+              </span>
+              <br />
+              <span class="text-[16px] vdl-v7gothic-bold">
+                オアシスとして多くの常連が訪れます。昔ながらのメロンクリームソーダと、もちもちした食感がたまらないホットケーキが人気メニュー。
+              </span>
+              <br />
+              <span class="text-[16px] vdl-v7gothic-bold">
+                革張りのソファ、蝶ネクタイを締めた店員とともに、昭和にタイムスリップしたかのような懐かしさを感じられる空間が魅力だ。
+              </span>
+            </div>
+            <!-- Image Carousel Section -->
+            <div class="mt-[32px] w-full h-[610px] carousel">
+              <!-- Carousel Container -->
+              <div class="relative w-full h-full">
+                <!-- Slides Container -->
+                <div class="w-full h-full relative overflow-hidden">
+                  <!-- Slide 1 -->
+                  <div class="slide absolute inset-0 flex gap-[32px] transition-transform duration-500" data-slide="1">
+                    <div class="w-full max-w-[589px] aspect-[589/610]">
+                      <img src="/image/article_01/ni-nana_01.jpg" alt="ニーナナ喫茶の赤い看板"
+                        class="w-full h-full object-cover" />
+                    </div>
+                    <div class="w-full max-w-[589px] aspect-[589/610]">
+                      <img src="/image/article_01/ni-nana_02.jpg" alt="デスコボールの店" class="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="slide absolute inset-0 flex gap-[32px] translate-x-full transition-transform duration-500"
+                    data-slide="2">
+                    <img src="/image/article_01/ni-nana_03.jpg" alt="店内の様子1" class="w-[589px] h-[610px] object-cover" />
+                    <img src="/image/article_01/ni-nana_04.jpg" alt="店内の様子2" class="w-[589px] h-[610px] object-cover" />
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="3">
+                    <img src="/image/article_01/ni-nana_05.jpg" alt="店内の全景" class="w-full h-[610px] object-cover" />
+                  </div>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="slide absolute inset-0 flex gap-[32px] translate-x-full transition-transform duration-500"
-                  data-slide="2">
-                  <img src="/image/article_01/ni-nana_03.jpg" alt="店内の様子1" class="w-[589px] h-[610px] object-cover" />
-                  <img src="/image/article_01/ni-nana_04.jpg" alt="店内の様子2" class="w-[589px] h-[610px] object-cover" />
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="3">
-                  <img src="/image/article_01/ni-nana_05.jpg" alt="店内の全景" class="w-full h-[610px] object-cover" />
-                </div>
-              </div>
-
-              <!-- Navigation Arrows and Dots Container -->
-              <div class="absolute bottom-8 right-8 flex flex-col gap-4">
-                <!-- Navigation Arrows -->
-                <div class="flex gap-8">
-                  <button
-                    class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
-                    aria-label="Previous slide">
-                    <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                        <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
-                          points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.39 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
-                      </g>
-                    </svg>
-                  </button>
-                  <button
-                    class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
-                    aria-label="Next slide">
-                    <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                        <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
-                          points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.3 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 269.23 269.23 192.31 230.77 192.31 230.77 153.85" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-
-                <!-- Navigation Dots -->
-                <div class="flex gap-4 justify-center w-[112px]">
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 1" data-slide-dot="1">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100" />
-                  </button>
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 2" data-slide-dot="2">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 hidden transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
-                  </button>
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 3" data-slide-dot="3">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 hidden transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
-                  </button>
+                <!-- Navigation Arrows and Dots Container -->
+                <div class="absolute bottom-8 right-8 flex flex-col gap-4">
+                  <!-- Navigation Arrows -->
+                  <div class="flex gap-8">
+                    <button
+                      class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
+                      aria-label="Previous slide">
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
+                            points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.39 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
+                        </g>
+                      </svg>
+                    </button>
+                    <button
+                      class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
+                      aria-label="Next slide">
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
+                            points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.3 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85" />
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- Navigation Dots -->
+                  <div class="flex gap-4 justify-center w-[112px]">
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 1" data-slide-dot="1">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100" />
+                    </button>
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 2" data-slide-dot="2">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 hidden transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
+                    </button>
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 3" data-slide-dot="3">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 hidden transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <!-- Address Section 2 -->
-        <section class="my-[64px]">
-          <!-- Card Container -->
-          <div class="w-[820px] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
-            <!-- Card Content Wrapper -->
-            <div class="flex gap-[32px]">
-              <!-- Left Side - Image -->
-              <div class="w-[362px] h-[276px]">
-                <img src="/image/article_01/ni-nana_link.jpg" alt="ニーナナ喫茶の店内" class="w-full h-full object-cover" />
-              </div>
-
-              <!-- Right Side - Info -->
-              <div class="w-[362px]">
-                <!-- Title -->
-                <div class="bg-[#00FF66] w-full px-[8px] py-[4px] mb-4">
-                  <h4 class="text-[20px] text-black dotgothic16-regular">珈琲の店 ピース</h4>
+          </section>
+          <!-- Address Section 2 -->
+          <section class="my-[64px]">
+            <!-- Card Container -->
+            <div
+              class="w-full max-w-[820px] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
+              <!-- Card Content Wrapper -->
+              <div class="flex gap-[32px]">
+                <!-- Left Side - Image -->
+                <div class="w-full max-w-[362px] h-[276px]">
+                  <img src="/image/article_01/ni-nana_link.jpg" alt="ニーナナ喫茶の店内" class="w-full h-full object-cover" />
                 </div>
-
-                <!-- Info Grid -->
-                <div class="grid grid-cols-[auto_1fr] gap-x-[48px] gap-y-[16px] text-[14px] text-white">
-                  <div class="dotgothic16-regular">所在地</div>
-                  <div class="dotgothic16-regular">
-                    〒160-0023<br />
-                    東京都新宿区西新宿１丁目５−１<br />
-                    新宿西口ハルク1F
+                <!-- Right Side - Info -->
+                <div class="w-full max-w-[362px]">
+                  <!-- Title -->
+                  <div class="bg-[#00FF66] w-full px-[8px] py-[4px] mb-4">
+                    <h4 class="text-[20px] text-black dotgothic16-regular">珈琲の店 ピース</h4>
                   </div>
-
-                  <div class="dotgothic16-regular">営業時間</div>
-                  <div class="dotgothic16-regular">
-                    11:00～21:30<br />
+                  <!-- Info Grid -->
+                  <div class="grid grid-cols-[auto_1fr] gap-x-[48px] gap-y-[16px] text-[14px] text-white">
+                    <div class="dotgothic16-regular">所在地</div>
+                    <div class="dotgothic16-regular">
+                      〒160-0023<br />
+                      東京都新宿区西新宿１丁目５−１<br />
+                      新宿西口ハルク1F
+                    </div>
+                    <div class="dotgothic16-regular">営業時間</div>
+                    <div class="dotgothic16-regular">
+                      11:00～21:30<br />
+                    </div>
+                    <div class="dotgothic16-regular">定休日</div>
+                    <div class="dotgothic16-regular">新宿西口ハルクに準ずる</div>
+                    <div class="dotgothic16-regular">ホームページ</div>
+                    <div class="bg-[#00FF66] px-2">
+                      <a href="https://www.instagram.com/27kissa/" target="_blank" rel="noopener noreferrer"
+                        class="block text-black break-all dotgothic16-regular hover:underline">
+                        https://x.com/peace_shinjyuku
+                      </a>
+                    </div>
+                    <div class="dotgothic16-regular">電話/mail</div>
+                    <div class="dotgothic16-regular">03-3342-0812</div>
                   </div>
-
-                  <div class="dotgothic16-regular">定休日</div>
-                  <div class="dotgothic16-regular">新宿西口ハルクに準ずる</div>
-
-                  <div class="dotgothic16-regular">ホームページ</div>
-                  <div class="bg-[#00FF66] px-2">
-                    <a href="https://www.instagram.com/27kissa/" target="_blank" rel="noopener noreferrer"
-                      class="block text-black break-all dotgothic16-regular hover:underline">
-                      https://x.com/peace_shinjyuku
-                    </a>
-                  </div>
-
-                  <div class="dotgothic16-regular">電話/mail</div>
-                  <div class="dotgothic16-regular">03-3342-0812</div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <!-- INTERVIEW SECTION 2 END -->
-
-        <!-- INTERVIEW SECTION 3 -->
-        <section class="w-full">
-          <!-- Title -->
-          <div class="w-[fit-content] h-[auto] bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
-            <h2 class="text-[32px] text-white dotgothic16-regular">「珈琲西武」</h2>
-          </div>
-
-          <!-- Subtitle -->
-          <h3 class="mt-[16px] text-[16px] vdl-v7gothic-800 text-black">
-            ~移転を経て生まれ変わる、新宿のステンドグラス喫茶~
-
-          </h3>
-
-          <!-- Main Text Content -->
-          <div class="mt-[16px] leading-[2.5] tracking-normal">
-            <span class="text-[16px] vdl-v7gothic-bold">
-              「珈琲西武」はその美しいステンドグラスが店内を彩り、訪れる人々を温かく迎える名店。昭和レトロとモダンが見事に融合した内装で、近年、歌舞伎町に移転。
-            </span>
-            <br />
-            <span class="text-[16px] vdl-v7gothic-bold">
-              新旧が絶妙に交わる店内は、どこか懐かしくも新しい趣。昭和を感じさせる空間ながらも現代的なスタイルで、満を持してリニューアル。
-            </span>
-            <br />
-            <span class="text-[15.9px] vdl-v7gothic-bold">
-              ボリューム満点の西武パフェをはじめ、昔ながらの名物メニューたちはそのままに、電源席やWi-fi、喫煙所を完備するなど、設備面でのホスピタリティがもうれしい。
-            </span>
-            <br />
-            <span class="text-[16px] vdl-v7gothic-bold">
-              待ち合わせや長話、一人で作業など、昭和レトロでありながらも今どきのニーズをがっちりとらえた業態に生まれ変わっている。
-            </span>
-          </div>
-
-          <!-- Image Carousel Section -->
-          <div class="mt-[32px] w-full h-[610px] carousel">
-            <!-- Carousel Container -->
-            <div class="relative w-full h-full">
-              <!-- Slides Container -->
-              <div class="w-full h-full relative overflow-hidden">
-                <!-- Slide 1 - Full Width -->
-                <div class="slide absolute inset-0 transition-transform duration-500" data-slide="1">
-                  <img src="/image/article_01/seibu_01.jpg" alt="珈琲西武の外観" class="w-full h-[610px] object-cover" />
+            <!-- BORDER BETWEEN SECTIONS -->
+            <div class="w-full h-[1px] bg-[#000000]"></div>
+          </section>
+          <!-- INTERVIEW SECTION 2 END -->
+          <!-- INTERVIEW SECTION 3 -->
+          <section class="w-full">
+            <!-- Title -->
+            <div class="w-[fit-content] h-[auto] bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
+              <h2 class="text-[32px] text-white dotgothic16-regular">「珈琲西武」</h2>
+            </div>
+            <!-- Subtitle -->
+            <h3 class="mt-[16px] text-[16px] vdl-v7gothic-800 text-black">
+              ~移転を経て生まれ変わる、新宿のステンドグラス喫茶~
+            </h3>
+            <!-- Main Text Content -->
+            <div class="mt-[16px] leading-[2.5] tracking-normal">
+              <span class="text-[16px] vdl-v7gothic-bold">
+                「珈琲西武」はその美しいステンドグラスが店内を彩り、訪れる人々を温かく迎える名店。昭和レトロとモダンが見事に融合した内装で、近年、歌舞伎町に移転。
+              </span>
+              <br />
+              <span class="text-[16px] vdl-v7gothic-bold">
+                新旧が絶妙に交わる店内は、どこか懐かしくも新しい趣。昭和を感じさせる空間ながらも現代的なスタイルで、満を持してリニューアル。
+              </span>
+              <br />
+              <span class="text-[15.9px] vdl-v7gothic-bold">
+                ボリューム満点の西武パフェをはじめ、昔ながらの名物メニューたちはそのままに、電源席やWi-fi、喫煙所を完備するなど、設備面でのホスピタリティがもうれしい。
+              </span>
+              <br />
+              <span class="text-[16px] vdl-v7gothic-bold">
+                待ち合わせや長話、一人で作業など、昭和レトロでありながらも今どきのニーズをがっちりとらえた業態に生まれ変わっている。
+              </span>
+            </div>
+            <!-- Image Carousel Section -->
+            <div class="mt-[32px] w-full h-[610px] carousel">
+              <!-- Carousel Container -->
+              <div class="relative w-full h-full">
+                <!-- Slides Container -->
+                <div class="w-full h-full relative overflow-hidden">
+                  <!-- Slide 1 - Full Width -->
+                  <div class="slide absolute inset-0 transition-transform duration-500" data-slide="1">
+                    <img src="/image/article_01/seibu_01.jpg" alt="珈琲西武の外観" class="w-full h-[610px] object-cover" />
+                  </div>
+                  <!-- Slide 2 - Full Width -->
+                  <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="2">
+                    <img src="/image/article_01/seibu_02.jpg" alt="珈琲西武のネオンライン" class="w-full h-[610px] object-cover" />
+                  </div>
+                  <!-- Slide 3 - Two Images -->
+                  <div class="slide absolute inset-0 flex gap-[32px] translate-x-full transition-transform duration-500"
+                    data-slide="3">
+                    <img src="/image/article_01/seibu_03.jpg" alt="店内の様子" class="w-[589px] h-[610px] object-cover" />
+                    <img src="/image/article_01/seibu_04.jpg" alt="メニューの様子" class="w-[589px] h-[610px] object-cover" />
+                  </div>
                 </div>
-
-                <!-- Slide 2 - Full Width -->
-                <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="2">
-                  <img src="/image/article_01/seibu_02.jpg" alt="珈琲西武のネオンライン" class="w-full h-[610px] object-cover" />
-                </div>
-
-                <!-- Slide 3 - Two Images -->
-                <div class="slide absolute inset-0 flex gap-[32px] translate-x-full transition-transform duration-500"
-                  data-slide="3">
-                  <img src="/image/article_01/seibu_03.jpg" alt="店内の様子" class="w-[589px] h-[610px] object-cover" />
-                  <img src="/image/article_01/seibu_04.jpg" alt="メニューの様子" class="w-[589px] h-[610px] object-cover" />
-                </div>
-              </div>
-
-              <!-- Navigation Arrows and Dots Container -->
-              <div class="absolute bottom-8 right-8 flex flex-col gap-4">
-                <!-- Navigation Arrows -->
-                <div class="flex gap-8">
-                  <button
-                    class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
-                    aria-label="Previous slide">
-                    <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                        <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
-                          points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
-                      </g>
-                    </svg>
-                  </button>
-                  <button
-                    class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
-                    aria-label="Next slide">
-                    <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                        <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
-                          points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.3 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 346.15 307.69 192.3 307.69 192.3 269.23 230.77 230.77 230.77 230.77 269.23 269.23 269.23 192.31 230.77 192.31 230.77 153.85" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-
-                <!-- Navigation Dots -->
-                <div class="flex gap-4 justify-center w-[112px]">
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 1" data-slide-dot="1">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100" />
-                  </button>
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 2" data-slide-dot="2">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 hidden transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
-                  </button>
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 3" data-slide-dot="3">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 hidden transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
-                  </button>
+                <!-- Navigation Arrows and Dots Container -->
+                <div class="absolute bottom-8 right-8 flex flex-col gap-4">
+                  <!-- Navigation Arrows -->
+                  <div class="flex gap-8">
+                    <button
+                      class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
+                      aria-label="Previous slide">
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
+                            points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
+                        </g>
+                      </svg>
+                    </button>
+                    <button
+                      class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
+                      aria-label="Next slide">
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
+                            points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.3 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85" />
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- Navigation Dots -->
+                  <div class="flex gap-4 justify-center w-[112px]">
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 1" data-slide-dot="1">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100" />
+                    </button>
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 2" data-slide-dot="2">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 hidden transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
+                    </button>
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 3" data-slide-dot="3">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 hidden transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <!-- Address Section 3 -->
-        <section class="my-[64px]">
-          <!-- Card Container -->
-          <div class="w-[820px] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
-            <!-- Card Content Wrapper -->
-            <div class="flex gap-[32px]">
-              <!-- Left Side - Image -->
-              <div class="w-[362px] h-[276px]">
-                <img src="/image/article_01/seibu_link.jpg" alt="珈琲西武の店内" class="w-full h-full object-cover" />
-              </div>
-
-              <!-- Right Side - Info -->
-              <div class="w-[362px]">
-                <!-- Title -->
-                <div class="bg-[#00FF66] w-full px-2 mb-4">
-                  <h4 class="text-[20px] text-black dotgothic16-regular">珈琲西武 本店</h4>
+          </section>
+          <!-- Address Section 3 -->
+          <section class="mt-[64px]">
+            <!-- Card Container -->
+            <div
+              class="w-full max-w-[820px] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
+              <!-- Card Content Wrapper -->
+              <div class="flex gap-[32px]">
+                <!-- Left Side - Image -->
+                <div class="w-full max-w-[362px] h-[276px]">
+                  <img src="/image/article_01/seibu_link.jpg" alt="珈琲西武の店内" class="w-full h-full object-cover" />
                 </div>
-
-                <!-- Info Grid -->
-                <div class="grid grid-cols-[auto_1fr] gap-x-[48px] gap-y-[16px] text-[14px] text-white">
-                  <div class="dotgothic16-regular">所在地</div>
-                  <div>
-                    〒160-0021<br />
-                    東京都新宿区歌舞伎町1丁目6<br />
-                    -12 ハナミチ東映画街1F
+                <!-- Right Side - Info -->
+                <div class="w-full max-w-[362px]">
+                  <!-- Title -->
+                  <div class="bg-[#00FF66] w-full px-2 mb-4">
+                    <h4 class="text-[20px] text-black dotgothic16-regular">珈琲西武 本店</h4>
                   </div>
-
-                  <div class="dotgothic16-regular">営業時間</div>
-                  <div class="dotgothic16-regular">
-                    11:00～23:30<br />
-                    日曜日-11:00～23:00
+                  <!-- Info Grid -->
+                  <div class="grid grid-cols-[auto_1fr] gap-x-[48px] gap-y-[16px] text-[14px] text-white">
+                    <div class="dotgothic16-regular">所在地</div>
+                    <div>
+                      〒160-0021<br />
+                      東京都新宿区歌舞伎町1丁目6<br />
+                      -12 ハナミチ東映画街1F
+                    </div>
+                    <div class="dotgothic16-regular">営業時間</div>
+                    <div class="dotgothic16-regular">
+                      11:00～23:30<br />
+                      日曜日-11:00～23:00
+                    </div>
+                    <div class="dotgothic16-regular">定休日</div>
+                    <div class="dotgothic16-regular">年中無休</div>
+                    <div class="dotgothic16-regular">ホームページ</div>
+                    <div class="bg-[#00FF66] px-2">
+                      <a href="https://www.instagram.com/coffee_seibu/" target="_blank" rel="noopener noreferrer"
+                        class="block text-black break-all hover:underline">
+                        https://www.instagram.com/coffee_seibu/
+                      </a>
+                    </div>
+                    <div class="dotgothic16-regular">電話/mail</div>
+                    <div class="dotgothic16-regular">03-4589-8731</div>
                   </div>
-
-                  <div class="dotgothic16-regular">定休日</div>
-                  <div class="dotgothic16-regular">年中無休</div>
-
-                  <div class="dotgothic16-regular">ホームページ</div>
-                  <div class="bg-[#00FF66] px-2">
-                    <a href="https://www.instagram.com/coffee_seibu/" target="_blank" rel="noopener noreferrer"
-                      class="block text-black break-all hover:underline">
-                      https://www.instagram.com/coffee_seibu/
-                    </a>
-                  </div>
-
-                  <div class="dotgothic16-regular">電話/mail</div>
-                  <div class="dotgothic16-regular">03-4589-8731</div>
                 </div>
               </div>
             </div>
+            <!-- BORDER BETWEEN SECTIONS -->
+            <div class="w-full h-[1px] bg-[#000000]"></div>
+          </section>
+        </main>
+
+        <!-- Remote Control -->
+        <div class="relative right-0">
+          <aside class="sticky top-[80px] z-50 float-right" id="remoteControl">
+            <div class="w-fit h-fit flex flex-col gap-[32px] bg-black p-[16px]">
+              <!-- TOP PAGE -->
+              <button
+                class="article-nav top w-[35px] h-[40px] flex items-center justify-center transition-all duration-300 group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="42" viewBox="0 0 35 42" fill="none">
+                  <path
+                    d="M19.0933 28.6509H22.2742V31.8326H25.4558V35.0134H28.6375V38.2001H31.8183V41.3809H35V38.2001V35.0134H31.8183V31.8326H28.6375V28.6509H25.4558V25.4651H22.2742V22.2835H19.0933V19.0977H15.9067V22.2835H12.7258V25.4651H9.54418V28.6509H6.36251V31.8326H3.18167V35.0134H0V38.2001V41.3809H3.18167V38.2001H6.36251V35.0134H9.54418V31.8326H12.7258V28.6509H15.9067V25.4651H19.0933V28.6509Z"
+                    class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                  <path
+                    d="M6.36251 25.4649V22.2833H9.54418V19.0975H12.7258V15.9158H15.9067V12.73H19.0933V15.9158H22.2742V19.0975H25.4558V22.2833H28.6375V25.4649H31.8183V28.6507H35V25.4649V22.2833H31.8183V19.0975H28.6375V15.9158H25.4558V12.73H22.2742V9.54914H19.0933V6.36251H22.2742H25.4558H28.6375H31.8183H35V3.18167H31.8183V0H28.6375H25.4558H22.2742H19.0933H15.9067H12.7258H9.54418H6.36251H3.18167V3.18167H0V6.36251H3.18167H6.36251H9.54418H12.7258H15.9067V9.54914H12.7258V12.73H9.54418V15.9158H6.36251V19.0975H3.18167V22.2833H0V25.4649V28.6507H3.18167V25.4649H6.36251Z"
+                    class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                </svg>
+              </button>
+
+              <!-- Navigation Group -->
+              <div class="flex flex-col gap-8">
+                <button
+                  class="page-nav up w-[35px] h-[40px] flex items-center justify-center transition-all duration-300 group">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="23" viewBox="0 0 35 23" fill="none">
+                    <path
+                      d="M3.1858 19.4758H6.36664V16.295H9.54749V13.1092H12.7283V9.92834H15.9092V6.74254H19.0908V9.92834H22.2758V13.1092H25.4567V16.295H28.6383V19.4758H31.8192V22.6616H35V19.4758V16.295H31.8192V13.1092H28.6383V9.92834H25.4567V6.74254H22.2758V3.5617H19.0908V0.380859H15.9092V3.5617H12.7283V6.74254H9.54749V9.92834H6.36664V13.1092H3.1858V16.295H0V19.4758V22.6616H3.1858V19.4758Z"
+                      class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                  </svg>
+                </button>
+                <button
+                  class="page-nav down w-[35px] h-[40px] flex items-center justify-center transition-all duration-300 group">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="23" viewBox="0 0 35 23" fill="none">
+                    <path
+                      d="M3.1858 3.84791H6.36664V7.02875H9.54749V10.2137H12.7283V13.3954H15.9092V16.5804H19.0908V13.3954H22.2758V10.2137H25.4567V7.02875H28.6383V3.84791H31.8192V0.662109H35V3.84791V7.02875H31.8192V10.2137H28.6383V13.3954H25.4567V16.5804H22.2758V19.762H19.0908V22.9429H15.9092V19.762H12.7283V16.5804H9.54749V13.3954H6.36664V10.2137H3.1858V7.02875H0V3.84791V0.662109H3.1858V3.84791Z"
+                      class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- BOTTOM PAGE -->
+              <button
+                class="article-nav bottom w-[35px] h-[40px] flex items-center justify-center transition-all duration-300 group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="43" viewBox="0 0 35 43" fill="none">
+                  <path
+                    d="M19.0933 13.6714H22.2742V10.4897H25.4558V7.30888H28.6375V4.12307H31.8183V0.941406H35V4.12307V7.30888H31.8183V10.4897H28.6375V13.6714H25.4558V16.8572H22.2742V20.0389H19.0933V23.2247H15.9067V20.0389H12.7258V16.8572H9.54418V13.6714H6.36251V10.4897H3.18167V7.30888H0V4.12307V0.941406H3.18167V4.12307H6.36251V7.30888H9.54418V10.4897H12.7258V13.6714H15.9067V16.8572H19.0933V13.6714Z"
+                    class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                  <path
+                    d="M6.36251 16.8577V20.0393H9.54418V23.2251H12.7258V26.4068H15.9067V29.5926H19.0933V26.4068H22.2742V23.2251H25.4558V20.0393H28.6375V16.8577H31.8183V13.6719H35V16.8577V20.0393H31.8183V23.2251H28.6375V26.4068H25.4558V29.5926H22.2742V32.7743H19.0933V35.9601H22.2742H25.4558H28.6375H31.8183H35V39.1418H31.8183V42.3226H28.6375H25.4558H22.2742H19.0933H15.9067H12.7258H9.54418H6.36251H3.18167V39.1418H0V35.9601H3.18167H6.36251H9.54418H12.7258H15.9067V32.7743H12.7258V29.5926H9.54418V26.4068H6.36251V23.2251H3.18167V20.0393H0V16.8577V13.6719H3.18167V16.8577H6.36251Z"
+                    class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                </svg>
+              </button>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- BACK TO HOME BUTTON -->
+      <div class="flex justify-center items-center mt-[48px] py-[32px]">
+        <div
+          class="flex items-center gap-[16px] bg-black hover:bg-[#FF2F00] transition-colors duration-300 px-[16px] py-[8px] group">
+          <div class="flex items-center justify-center w-fit">
+            <img src="/image/illusts/functional/carousel-left.svg" alt="Arrow Left"
+              class="w-[23px] h-[53px] brightness-100 group-hover:brightness-0 transition-all duration-300">
           </div>
-        </section>
-      </main>
+          <a href="/index.html">
+            <span
+              class="dotgothic16-regular text-[40px] text-white group-hover:text-black transition-colors duration-300">BACK
+              to HOME</span>
+          </a>
+        </div>
+      </div>
+      <!-- END OF BACK TO HOME BUTTON -->
 
       <!-- FOOTER -->
       <footer class="mt-[64px]">
@@ -922,6 +960,7 @@
   <script type="module" src="js/hover-effect.js"></script>
   <script type="module" src="js/scroll-behavior.js"></script>
   <script type="module" src="js/menu.js"></script>
+  <script type="module" src="js/remote-control.js"></script>
 </body>
 
 </html>

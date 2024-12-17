@@ -21,15 +21,15 @@
   <!-- Outer container with center alignment -->
   <div class="min-h-screen flex justify-center box-border relative overflow-x-hidden">
     <!-- Main container with fixed width -->
-    <div class="w-[1440px] relative bg-[url('/image/worn-dots.png')] bg-repeat bg-auto isolation">
+    <div class="w-full max-w-[1440px] relative bg-[url('/image/worn-dots.png')] bg-repeat bg-auto isolation">
       <!-- Add this before the header -->
       <div id="headerTrigger" class="h-1"></div>
 
       <!-- Sticky Header -->
       <header
-        class="fixed top-0 left-1/2 -translate-x-1/2 w-[1440px] transform-gpu transition-all duration-500 z-[100] opacity-0 -translate-y-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] [&.visible]:opacity-100 [&.visible]:translate-y-0">
+        class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1440px] transform-gpu transition-all duration-500 z-[100] opacity-0 -translate-y-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] [&.visible]:opacity-100 [&.visible]:translate-y-0">
         <!-- Main header content -->
-        <div class="max-w-[1440px] mx-auto relative">
+        <div class="w-full max-w-[1440px] mx-auto relative">
           <!-- MAYU Logo and menu button container -->
           <div class="flex h-16 items-center">
             <!-- Logo and menu button content -->
@@ -242,7 +242,7 @@
       </header>
 
       <!-- Hero Section -->
-      <section class="w-[1440px] relative" aria-label="Hero Banner">
+      <section class="w-full max-w-[1440px] relative" aria-label="Hero Banner">
         <div class="relative w-full h-[664px]">
           <img src="/image/takano-baba/hero.jpg" alt="高田馬場の街並み" class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-black/50">
@@ -251,7 +251,7 @@
         </div>
       </section>
       <!-- Main Content -->
-      <main class="w-[1210px] mx-auto mt-4">
+      <main class="w-full max-w-[1210px] mx-auto mt-4">
         <!-- Your content sections will go here -->
       </main>
       <!-- FOOTER -->
@@ -271,7 +271,7 @@
             </div>
             <hr class="py-[8px]" />
             <div id="footer-left-articles">
-              <span class="text-[32px] font-bold dotgothic16-regular">1月号</span>
+              <span class="text-[32px] dotgothic16-regular">1月号</span>
               <ul class="vdl-v7gothic">
                 <li class="py-[4px]">
                   <a href="/neo-retro.html" class="hover:text-[#FF2F00] transition-colors">

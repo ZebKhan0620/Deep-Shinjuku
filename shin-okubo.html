@@ -19,16 +19,16 @@
 
 <body>
   <!-- Outer container with center alignment -->
-  <div class="min-h-screen flex justify-center box-border relative overflow-x-hidden">
+  <div class="min-h-screen flex justify-center box-border relative">
     <!-- Main container with fixed width -->
-    <div class="w-[1440px] relative bg-[url('/image/worn-dots.png')] bg-repeat bg-auto isolation">
+    <div class="w-full max-w-[1440px] relative bg-[url('/image/worn-dots.png')] bg-repeat bg-auto isolation">
       <div id="headerTrigger" class="h-1"></div>
 
       <!-- Sticky Header -->
       <header
-        class="fixed top-0 left-1/2 -translate-x-1/2 w-[1440px] transform-gpu transition-all duration-500 z-[100] opacity-0 -translate-y-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] [&.visible]:opacity-100 [&.visible]:translate-y-0">
+        class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1440px] transform-gpu transition-all duration-500 z-[100] opacity-0 -translate-y-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] [&.visible]:opacity-100 [&.visible]:translate-y-0">
         <!-- Main header content -->
-        <div class="max-w-[1440px] mx-auto relative">
+        <div class="w-full max-w-[1440px] mx-auto relative">
           <!-- MAYU Logo and menu button container -->
           <div class="flex h-16 items-center">
             <!-- Logo and menu button content -->
@@ -128,7 +128,7 @@
                       </svg>
                     </button>
 
-                    <div class="inline-flex whitespace-nowrap group transition-colors hover:bg-white">
+                    <div class="inline-flex break-words group transition-colors hover:bg-white">
                       <span
                         class="text-[40px] font-dotgothic16 transition-colors group-hover:text-[#003BFF]">MAYU</span>
                       <span
@@ -243,7 +243,7 @@
       </header>
 
       <!-- Hero Section -->
-      <section class="w-[1440px] relative" aria-label="Hero Banner">
+      <section class="relative" aria-label="Hero Banner">
         <div class="relative w-full h-[664px]">
           <img src="/image/article_02/shinokubo_main.jpg" alt="新大久保の街並み" class="w-full h-full object-cover"
             loading="lazy" width="1440" height="664" style="
@@ -253,508 +253,541 @@
         </div>
       </section>
 
-      <!-- Main Content -->
-      <main class="w-[1210px] mx-auto mt-4 border-4 border-[#00FF95]">
-        <!-- First Section - Text Content -->
-        <section class="w-full">
-          <!-- Text Container -->
-          <div class="relative min-h-[200px]">
-            <!-- History and Trivia Tags -->
-            <div class="absolute top-0 left-8 z-20">
-              <div
-                class="text-[20px] text-white bg-[#003BFF] p-2 inline-block whitespace-nowrap w-fit dotgothic16-regular">
-                #ヒストリー #トリビア
+      <div class="relative flex justify-between w-full max-w-[1440px] mx-auto">
+        <!-- Main Content -->
+        <main class="w-full max-w-[1210px] mx-auto mt-4">
+          <!-- First Section - Text Content -->
+          <section class="w-full">
+            <!-- Text Container -->
+            <div class="relative min-h-[200px]">
+              <!-- History and Trivia Tags -->
+              <div class="absolute top-0 left-8 z-20">
+                <div class="text-[20px] text-white bg-[#003BFF] p-2 inline-block break-words w-fit dotgothic16-regular">
+                  #ヒストリー #トリビア
+                </div>
+              </div>
+              <!-- Main Title -->
+              <div class="absolute top-[40px] left-0 z-20">
+                <h1 class="text-[40px] text-white bg-[#003BFF] p-2 inline-block break-words w-fit dotgothic16-regular">
+                  はじまりのコリアンタウン
+                </h1>
+              </div>
+              <!-- Subtitle -->
+              <div class="absolute top-[110px] left-8 z-20">
+                <p class="text-[32px] text-white bg-[#003BFF] p-2 inline-block break-words w-fit dotgothic16-regular">
+                  アンニョンハセヨ！！ はじめてのしんおおくぼ
+                </p>
+              </div>
+              <!-- Writer Credit -->
+              <div class="absolute top-[170px] left-8 z-20">
+                <p class="text-[16px] text-white bg-[#003BFF] p-2 inline-block break-words w-fit dotgothic16-regular">
+                  writer:Shin Gen Shun
+                </p>
               </div>
             </div>
-
-            <!-- Main Title -->
-            <div class="absolute top-[40px] left-0 z-20">
-              <h1
-                class="text-[40px] text-white bg-[#003BFF] p-2 inline-block whitespace-nowrap w-fit dotgothic16-regular">
-                はじまりのコリアンタウン
-              </h1>
-            </div>
-
-            <!-- Subtitle -->
-            <div class="absolute top-[110px] left-8 z-20">
-              <p
-                class="text-[32px] text-white bg-[#003BFF] p-2 inline-block whitespace-nowrap w-fit dotgothic16-regular">
-                アンニョンハセヨ！！ はじめてのしんおおくぼ
-              </p>
-            </div>
-
-            <!-- Writer Credit -->
-            <div class="absolute top-[170px] left-8 z-20">
-              <p
-                class="text-[16px] text-white bg-[#003BFF] p-2 inline-block whitespace-nowrap w-fit dotgothic16-regular">
-                writer:Shin Gen Shun
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Text Content Section -->
-        <section class="w-full mt-[48px] mb-[64px]">
-          <!-- Bold Text with blue background -->
-          <div class="w-fit h-[auto] flex items-center">
-            <p
-              class="text-[32px] text-white bg-[#003BFF] px-[8px] py-2 inline-block whitespace-nowrap dotgothic16-regular">
-              知られざる新大久保の原点「始まりの地点」3選
-            </p>
-          </div>
-          <!-- Regular Text with spacing -->
-          <div class="mt-[16px] text-[14px] leading-[2.5] letter-spacing-normal w-fit vdl-v7gothic-bold">
-            <span class="text-[16px]">
-              新大久保エリアは、K-POPタウンとして多くの人々に親しまれている。しかし、その成り立ちについてはあまり知られていないのが現状だろう。
-              <br />
-            </span>
-            <span class="text-[16px]">
-              この地域がどのようにして現在の姿になったのか、3つのスポットを通してご紹介。
-              <br />
-            </span>
-          </div>
-
-          <!-- Image Carousel Section -->
-          <div class="mt-[32px] w-full h-[610px] carousel">
-            <!-- Carousel Container -->
-            <div class="relative w-full h-full">
-              <!-- Slides Container -->
-              <div class="w-full h-full relative overflow-hidden">
-                <!-- Slide 1 -->
-                <div class="slide absolute inset-0 transition-transform duration-500" data-slide="1">
-                  <img src="/image/article_02/shinokubo_01.jpg" alt="新大久保の街並み1" class="w-full h-[610px] object-cover" />
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="2">
-                  <img src="/image/article_02/shinokubo_02.jpg" alt="新大久保の街並み2" class="w-full h-[610px] object-cover" />
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="3">
-                  <img src="/image/article_02/shinokubo_03.jpg" alt="新大久保の街並み3" class="w-full h-[610px] object-cover" />
-                </div>
-              </div>
-
-              <!-- Navigation Arrows and Dots Container -->
-              <div class="absolute bottom-8 right-8 flex flex-col gap-4">
-                <!-- Navigation Arrows -->
-                <div class="flex gap-8">
-                  <button
-                    class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
-                    aria-label="Previous slide">
-                    <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                        <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
-                          points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
-                      </g>
-                    </svg>
-                  </button>
-                  <button
-                    class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
-                    aria-label="Next slide">
-                    <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                        <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
-                          points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.31 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-
-                <!-- Navigation Dots -->
-                <div class="flex gap-4 justify-center w-[112px]">
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 1" data-slide-dot="1">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100" />
-                  </button>
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 2" data-slide-dot="2">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 hidden transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
-                  </button>
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 3" data-slide-dot="3">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 hidden transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- INTERVIEW SECTION 1 -->
-        <section class="w-full">
-          <!-- Title -->
-          <div class="w-fit h-auto bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
-            <h2 class="text-[32px] text-white dotgothic16-regular">
-              1. ハウジングステージ新宿（旧ロッテ新宿チューインガム工場）
-            </h2>
-          </div>
-
-          <!-- Main Text Content -->
-          <div class="mt-[16px] leading-[2.5] letter-spacing-normal">
-            <span class="text-[16px] vdl-v7gothic-bold">
-              1950年3月、在日韓国人の辛格浩（日本名：重光武雄）氏が自身により「ロッテ」を創立し、新宿チューインガム工場を完成させた。この工場の設立により、大量の工員が必要となった。多くの在日韓国人が工として働き、すぐそばに居住地が形成されることとなる。何代も続く韓国人家系が新大久保エリアに密集している理由の一つが、このチューインガム工場設立だったのだろう。現在は大規模な住宅展示場となっており、その面影はない。
-            </span>
-          </div>
-
-          <!-- Image Carousel Section -->
-          <div class="mt-[32px] w-full h-[610px] carousel">
-            <!-- Carousel Container -->
-            <div class="relative w-full h-full">
-              <!-- Slides Container -->
-              <div class="w-full h-full relative overflow-hidden">
-                <!-- Slide 1 -->
-                <div class="slide absolute inset-0 transition-transform duration-500" data-slide="1">
-                  <img src="/image/article_02/shinokubo_04.jpg" alt="ハウジングステージ新宿の外観"
-                    class="w-full h-[610px] object-cover" loading="lazy" style="
-                        image-rendering: -webkit-optimize-contrast;
-                        image-rendering: crisp-edges;
-                      " />
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="2">
-                  <img src="/image/article_02/shinokubo_05.jpg" alt="ハウジングステージ新宿の建物"
-                    class="w-full h-[610px] object-cover" loading="lazy" style="
-                        image-rendering: -webkit-optimize-contrast;
-                        image-rendering: crisp-edges;
-                      " />
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="3">
-                  <img src="/image/article_02/shinokubo_06.jpg" alt="ハウジングステージ新宿の全景"
-                    class="w-full h-[610px] object-cover" loading="lazy" style="
-                        image-rendering: -webkit-optimize-contrast;
-                        image-rendering: crisp-edges;
-                      " />
-                </div>
-              </div>
-
-              <!-- Navigation Arrows and Dots Container -->
-              <div class="absolute bottom-8 right-8 flex flex-col gap-4">
-                <!-- Navigation Arrows -->
-                <div class="flex gap-8">
-                  <button
-                    class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
-                    aria-label="Previous slide">
-                    <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                        <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
-                          points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
-                      </g>
-                    </svg>
-                  </button>
-                  <button
-                    class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
-                    aria-label="Next slide">
-                    <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                        <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
-                          points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.31 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-
-                <!-- Navigation Dots -->
-                <div class="flex gap-4 justify-center w-[112px]">
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 1" data-slide-dot="1">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100" />
-                  </button>
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 2" data-slide-dot="2">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 hidden transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
-                  </button>
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 3" data-slide-dot="3">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 hidden transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Address Card Section -->
-        <section class="my-[64px]">
-          <!-- Card Container -->
-          <div class="w-[820px] h-[auto] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
-            <!-- Card Content Wrapper -->
-            <div class="flex flex-col gap-4">
-              <!-- Title -->
-              <div class="bg-[#00FF66] w-full px-2">
-                <h4 class="text-[20px] text-black dotgothic16-regular">ハウジングステージ新宿</h4>
-              </div>
-
-              <!-- Info Grid -->
-              <div class="grid grid-cols-[auto_1fr] gap-x-[48px] gap-y-4 text-[14px] text-white">
-                <div class="dotgothic16-regular">所在地</div>
-                <div class="dotgothic16-regular">
-                  〒169-0073<br />
-                  東京都新宿区百人町2丁目2-32
-                </div>
-
-                <div class="dotgothic16-regular">地図情報</div>
-                <div class="dotgothic16-regular">
-                  <a href="https://maps.app.goo.gl/ow2kbQR6vWBHkwtF8" target="_blank" rel="noopener noreferrer"
-                    class="inline-block bg-[#00FF66] px-2 text-black hover:underline">
-                    https://maps.app.goo.gl/ow2kbQR6vWBHkwtF8
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="border-b-[1px] border-b-[solid] border-b-[#000000]"></div>
-        </section>
-
-        <!-- INTERVIEW SECTION 2 -->
-        <section class="w-full">
-          <!-- Title -->
-          <div class="w-fit h-auto bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
-            <h2 class="text-[32px] text-white dotgothic16-regular">
-              2. 新宿区立百人町作業宿泊所
-            </h2>
-          </div>
-
-          <!-- Main Text Content -->
-          <div class="mt-[16px] leading-[2.5] letter-spacing-normal">
-            <span class="text-[16px] vdl-v7gothic-bold">
-              1950年代、先ほど紹介したロッテ工場の近隣には在日韓国人が多く集まっていた。当時、朝鮮人浮浪者と呼ばれた人々が保健所裏の道路敷にバラックを建てて居住
-              <br />
-              し、1953年には約30戸、翌年には倍にまで増加したのだ。不法占拠として立ち退き要求が続く中、昭和39年に新宿簡易裁判所で収去命令が決定され、和解に応じた
-              <br />
-              世帯の住宅施設として、1965年から作業宿泊所が発足。この施設は50年以上経過した現在も存在し、当時の住民やその子孫が新大久保コリアンタウンの気を支えているのである。
-            </span>
-          </div>
-
-          <!-- Image Carousel Section -->
-          <div class="mt-[32px] w-full h-[610px] carousel">
-            <!-- Carousel Container -->
-            <div class="relative w-full h-full">
-              <!-- Slides Container -->
-              <div class="w-full h-full relative overflow-hidden">
-                <!-- Slide 1 -->
-                <div class="slide absolute inset-0 transition-transform duration-500" data-slide="1">
-                  <img src="/image/article_02/shinokubo_07.jpg" alt="新宿区立百人町作業宿泊所の外観"
-                    class="w-full h-[610px] object-cover" loading="lazy" style="
-                        image-rendering: -webkit-optimize-contrast;
-                        image-rendering: crisp-edges;
-                      " />
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="2">
-                  <img src="/image/article_02/shinokubo_08.jpg" alt="新宿区立百人町作業宿泊所の建物"
-                    class="w-full h-[610px] object-cover" loading="lazy" style="
-                        image-rendering: -webkit-optimize-contrast;
-                        image-rendering: crisp-edges;
-                      " />
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="3">
-                  <img src="/image/article_02/shinokubo_09.jpg" alt="新宿区立百人町作業宿泊所の全景"
-                    class="w-full h-[610px] object-cover" loading="lazy" style="
-                        image-rendering: -webkit-optimize-contrast;
-                        image-rendering: crisp-edges;
-                      " />
-                </div>
-              </div>
-
-              <!-- Navigation Arrows and Dots Container -->
-              <div class="absolute bottom-8 right-8 flex flex-col gap-4">
-                <!-- Navigation Arrows -->
-                <div class="flex gap-8">
-                  <button
-                    class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
-                    aria-label="Previous slide">
-                    <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                        <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
-                          points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
-                      </g>
-                    </svg>
-                  </button>
-                  <button
-                    class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
-                    aria-label="Next slide">
-                    <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                        <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
-                          points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.31 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85" />
-                      </g>
-                    </svg>
-                  </button>
-                </div>
-
-                <!-- Navigation Dots -->
-                <div class="flex gap-4 justify-center w-[112px]">
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 1" data-slide-dot="1">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100" />
-                  </button>
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 2" data-slide-dot="2">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 hidden transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
-                  </button>
-                  <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 3" data-slide-dot="3">
-                    <img src="/image/illusts/functional/status-visible.svg" alt=""
-                      class="w-full h-full opacity-100 hidden transition-opacity" />
-                    <img src="/image/illusts/functional/status-hidden.svg" alt=""
-                      class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Address Card Section for Interview Section 2 -->
-          <section class="my-[64px] border-b-[1px] border-b-[solid] border-b-[#000000]">
-            <!-- Card Container -->
-            <div
-              class="w-[820px] h-[auto] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
-              <!-- Card Content Wrapper -->
-              <div class="flex flex-col gap-4">
-                <!-- Title -->
-                <div class="bg-[#00FF66] w-full px-2">
-                  <h4 class="text-[20px] text-black dotgothic16-regular">
-                    新宿区立百人町作業宿泊所
-                  </h4>
-                </div>
-
-                <!-- Info Grid -->
-                <div class="grid grid-cols-[auto_1fr] gap-x-[48px] gap-y-4 text-[14px] text-white">
-                  <div class="dotgothic16-regular">所在地</div>
-                  <div class="dotgothic16-regular">
-                    〒169-0072<br />
-                    東京都新宿区大久保1丁目
-                  </div>
-
-                  <div class="dotgothic16-regular">地図情報</div>
-                  <div class="dotgothic16-regular">
-                    <a href="https://maps.app.goo.gl/xowfRJj4lqs07rRt26" target="_blank" rel="noopener noreferrer"
-                      class="inline-block bg-[#00FF66] px-2 text-black hover:underline">
-                      https://maps.app.goo.gl/xowfRJj4lqs07rRt26
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="border-1 border-solid border-[#000000]"></div>
           </section>
-        </section>
-
-
-        <!-- INTERVIEW SECTION 3 -->
-        <section class="w-full mt-[64px] mb-[64px]">
-          <!-- Title -->
-          <div class="w-fit h-auto bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
-            <h2 class="text-[32px] text-white dotgothic16-regular">
-              3. 西大久保公園周辺
-            </h2>
-          </div>
-
-          <!-- Main Text Content -->
-          <div class="mt-[16px] leading-[2.5] letter-spacing-normal">
-            <span class="text-[16px] vdl-v7gothic-bold">
-              済州島出身の人々が、朝鮮戦争前後に職安通りや西大久保公園周辺に「パンパン宿」と呼ばれる施設を米兵相手向けの売春施設を建てた。当時戦勝国である米の兵隊た
-              <br>
-              ちは羽振りがよく、新大久保に居住する人々が財を築くのに一役買ったようだ。
-              <br>
-              彼らがこの地域の地主や家主となり、コリアンタウンの基盤を築いたのだ。
-            </span>
-          </div>
-
-          <!-- Image Carousel Section -->
-          <div class="mt-[32px] w-full h-[610px]">
-            <img src="/image/article_02/shinokubo_10.jpg" alt="西大久保公園周辺の写真" class="w-full h-[610px] object-cover"
-              loading="lazy" style="
-                        image-rendering: -webkit-optimize-contrast;
-                        image-rendering: crisp-edges;
-                      " />
-          </div>
-          <!-- Caption text at bottom right -->
-          <p class="text-right mt-2 text-[12px] text-black">
-            HAL東京から見たパンパン宿迹。墓地の奥のビル群が西大久保公園のあるエリア
-          </p>
-
+          <!-- Text Content Section -->
+          <section class="w-full mt-[48px] mb-[64px]">
+            <!-- Bold Text with blue background -->
+            <div class="w-fit h-[auto] flex items-center">
+              <p class="text-[32px] text-white bg-[#003BFF] px-[8px] py-2 inline-block break-words dotgothic16-regular">
+                知られざる新大久保の原点「始まりの地点」3選
+              </p>
+            </div>
+            <!-- Regular Text with spacing -->
+            <div class="mt-[16px] text-[14px] leading-[2.5] letter-spacing-normal w-fit vdl-v7gothic-bold">
+              <span class="text-[16px]">
+                新大久保エリアは、K-POPタウンとして多くの人々に親しまれている。しかし、その成り立ちについてはあまり知られていないのが現状だろう。
+                <br />
+              </span>
+              <span class="text-[16px]">
+                この地域がどのようにして現在の姿になったのか、3つのスポットを通してご紹介。
+                <br />
+              </span>
+            </div>
+            <!-- Image Carousel Section -->
+            <div class="mt-[32px] w-full h-[610px] carousel">
+              <!-- Carousel Container -->
+              <div class="relative w-full h-full">
+                <!-- Slides Container -->
+                <div class="w-full h-full relative overflow-hidden">
+                  <!-- Slide 1 -->
+                  <div class="slide absolute inset-0 transition-transform duration-500" data-slide="1">
+                    <img src="/image/article_02/shinokubo_01.jpg" alt="新大久保の街並み1"
+                      class="w-full h-[610px] object-cover" />
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="2">
+                    <img src="/image/article_02/shinokubo_02.jpg" alt="新大久保の街並み2"
+                      class="w-full h-[610px] object-cover" />
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="3">
+                    <img src="/image/article_02/shinokubo_03.jpg" alt="新大久保の街並み3"
+                      class="w-full h-[610px] object-cover" />
+                  </div>
+                </div>
+                <!-- Navigation Arrows and Dots Container -->
+                <div class="absolute bottom-8 right-8 flex flex-col gap-4">
+                  <!-- Navigation Arrows -->
+                  <div class="flex gap-8">
+                    <button
+                      class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
+                      aria-label="Previous slide">
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
+                            points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
+                        </g>
+                      </svg>
+                    </button>
+                    <button
+                      class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
+                      aria-label="Next slide">
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
+                            points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.31 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85" />
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- Navigation Dots -->
+                  <div class="flex gap-4 justify-center w-[112px]">
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 1" data-slide-dot="1">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100" />
+                    </button>
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 2" data-slide-dot="2">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 hidden transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
+                    </button>
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 3" data-slide-dot="3">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 hidden transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- INTERVIEW SECTION 1 -->
+          <section class="w-full">
+            <!-- Title -->
+            <div class="w-fit h-auto bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
+              <h2 class="text-[32px] text-white dotgothic16-regular">
+                1. ハウジングステージ新宿（旧ロッテ新宿チューインガム工場）
+              </h2>
+            </div>
+            <!-- Main Text Content -->
+            <div class="mt-[16px] leading-[2.5] letter-spacing-normal">
+              <span class="text-[16px] vdl-v7gothic-bold">
+                1950年3月、在日韓国人の辛格浩（日本名：重光武雄）氏が自身により「ロッテ」を創立し、新宿チューインガム工場を完成させた。この工場の設立により、大量の工員が必要となった。多くの在日韓国人が工として働き、すぐそばに居住地が形成されることとなる。何代も続く韓国人家系が新大久保エリアに密集している理由の一つが、このチューインガム工場設立だったのだろう。現在は大規模な住宅展示場となっており、その面影はない。
+              </span>
+            </div>
+            <!-- Image Carousel Section -->
+            <div class="mt-[32px] w-full h-[610px] carousel">
+              <!-- Carousel Container -->
+              <div class="relative w-full h-full">
+                <!-- Slides Container -->
+                <div class="w-full h-full relative overflow-hidden">
+                  <!-- Slide 1 -->
+                  <div class="slide absolute inset-0 transition-transform duration-500" data-slide="1">
+                    <img src="/image/article_02/shinokubo_04.jpg" alt="ハウジングステージ新宿の外観"
+                      class="w-full h-[610px] object-cover" loading="lazy" style="
+                          image-rendering: -webkit-optimize-contrast;
+                          image-rendering: crisp-edges;
+                        " />
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="2">
+                    <img src="/image/article_02/shinokubo_05.jpg" alt="ハウジングステージ新宿の建物"
+                      class="w-full h-[610px] object-cover" loading="lazy" style="
+                          image-rendering: -webkit-optimize-contrast;
+                          image-rendering: crisp-edges;
+                        " />
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="3">
+                    <img src="/image/article_02/shinokubo_06.jpg" alt="ハウジングステージ新宿の全景"
+                      class="w-full h-[610px] object-cover" loading="lazy" style="
+                          image-rendering: -webkit-optimize-contrast;
+                          image-rendering: crisp-edges;
+                        " />
+                  </div>
+                </div>
+                <!-- Navigation Arrows and Dots Container -->
+                <div class="absolute bottom-8 right-8 flex flex-col gap-4">
+                  <!-- Navigation Arrows -->
+                  <div class="flex gap-8">
+                    <button
+                      class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
+                      aria-label="Previous slide">
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
+                            points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
+                        </g>
+                      </svg>
+                    </button>
+                    <button
+                      class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
+                      aria-label="Next slide">
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
+                            points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.31 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85" />
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- Navigation Dots -->
+                  <div class="flex gap-4 justify-center w-[112px]">
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 1" data-slide-dot="1">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100" />
+                    </button>
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 2" data-slide-dot="2">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 hidden transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
+                    </button>
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 3" data-slide-dot="3">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 hidden transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
           <!-- Address Card Section -->
           <section class="my-[64px]">
             <!-- Card Container -->
-            <div
-              class="w-[820px] h-[auto] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
+            <div class="w-full max-w-[820px] h-auto mx-auto mb-[48px] p-[32px] bg-[#000] rounded-[32px]">
               <!-- Card Content Wrapper -->
               <div class="flex flex-col gap-4">
                 <!-- Title -->
                 <div class="bg-[#00FF66] w-full px-2">
-                  <h4 class="text-[20px] text-black dotgothic16-regular">西大久保公園</h4>
+                  <h4 class="text-[20px] text-black dotgothic16-regular">ハウジングステージ新宿</h4>
                 </div>
-
                 <!-- Info Grid -->
                 <div class="grid grid-cols-[auto_1fr] gap-x-[48px] gap-y-4 text-[14px] text-white">
                   <div class="dotgothic16-regular">所在地</div>
                   <div class="dotgothic16-regular">
-                    〒169-0072<br />
-                    東京都新宿区大久保1丁目
+                    〒169-0073<br />
+                    東京都新宿区百人町2丁目2-32
                   </div>
-
                   <div class="dotgothic16-regular">地図情報</div>
                   <div class="dotgothic16-regular">
-                    <a href="https://maps.app.goo.gl/xowRGj4iqsD7H8t26" target="_blank" rel="noopener noreferrer"
+                    <a href="https://maps.app.goo.gl/ow2kbQR6vWBHkwtF8" target="_blank" rel="noopener noreferrer"
                       class="inline-block bg-[#00FF66] px-2 text-black hover:underline">
-                      https://maps.app.goo.gl/xowRGj4iqsD7H8t26
+                      https://maps.app.goo.gl/ow2kbQR6vWBHkwtF8
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="border-b-[1px] border-b-[solid] border-b-[#000000]"></div>
+            <!-- BORDER BETWEEN SECTIONS -->
+            <div class="w-full h-[1px] bg-[#000000]"></div>
           </section>
-        </section>
+          <!-- INTERVIEW SECTION 2 -->
+          <section class="w-full">
+            <!-- Title -->
+            <div class="w-fit h-auto bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
+              <h2 class="text-[32px] text-white dotgothic16-regular">
+                2. 新宿区立百人町作業宿泊所
+              </h2>
+            </div>
+            <!-- Main Text Content -->
+            <div class="mt-[16px] leading-[2.5] letter-spacing-normal">
+              <span class="text-[16px] vdl-v7gothic-bold">
+                1950年代、先ほど紹介したロッテ工場の近隣には在日韓国人が多く集まっていた。当時、朝鮮人浮浪者と呼ばれた人々が保健所裏の道路敷にバラックを建てて居住
+                <br />
+                し、1953年には約30戸、翌年には倍にまで増加したのだ。不法占拠として立ち退き要求が続く中、昭和39年に新宿簡易裁判所で収去命令が決定され、和解に応じた
+                <br />
+                世帯の住宅施設として、1965年から作業宿泊所が発足。この施設は50年以上経過した現在も存在し、当時の住民やその子孫が新大久保コリアンタウンの気を支えているのである。
+              </span>
+            </div>
+            <!-- Image Carousel Section -->
+            <div class="mt-[32px] w-full h-[610px] carousel">
+              <!-- Carousel Container -->
+              <div class="relative w-full h-full">
+                <!-- Slides Container -->
+                <div class="w-full h-full relative overflow-hidden">
+                  <!-- Slide 1 -->
+                  <div class="slide absolute inset-0 transition-transform duration-500" data-slide="1">
+                    <img src="/image/article_02/shinokubo_07.jpg" alt="新宿区立百人町作業宿泊所の外観"
+                      class="w-full h-[610px] object-cover" loading="lazy" style="
+                          image-rendering: -webkit-optimize-contrast;
+                          image-rendering: crisp-edges;
+                        " />
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="2">
+                    <img src="/image/article_02/shinokubo_08.jpg" alt="新宿区立百人町作業宿泊所の建物"
+                      class="w-full h-[610px] object-cover" loading="lazy" style="
+                          image-rendering: -webkit-optimize-contrast;
+                          image-rendering: crisp-edges;
+                        " />
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="slide absolute inset-0 translate-x-full transition-transform duration-500" data-slide="3">
+                    <img src="/image/article_02/shinokubo_09.jpg" alt="新宿区立百人町作業宿泊所の全景"
+                      class="w-full h-[610px] object-cover" loading="lazy" style="
+                          image-rendering: -webkit-optimize-contrast;
+                          image-rendering: crisp-edges;
+                        " />
+                  </div>
+                </div>
+                <!-- Navigation Arrows and Dots Container -->
+                <div class="absolute bottom-8 right-8 flex flex-col gap-4">
+                  <!-- Navigation Arrows -->
+                  <div class="flex gap-8">
+                    <button
+                      class="prev-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
+                      aria-label="Previous slide">
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
+                            points="38.46 153.85 76.93 153.85 76.93 115.39 115.39 115.39 115.39 76.92 153.85 76.92 153.85 38.46 192.31 38.46 192.31 0 230.77 0 269.23 0 269.23 38.46 230.77 38.46 230.77 76.92 192.31 76.92 192.31 115.39 153.85 115.39 153.85 153.85 115.39 153.85 115.39 192.31 76.93 192.31 76.93 230.77 115.39 230.77 115.39 269.23 153.85 269.23 153.85 307.69 192.31 307.69 192.31 346.15 230.77 346.15 230.77 384.62 269.23 384.62 269.23 423.08 230.77 423.08 192.31 423.08 192.31 384.62 153.85 384.62 153.85 346.15 115.39 346.15 115.39 307.69 76.93 307.69 76.93 269.23 38.46 269.23 38.46 230.77 0 230.77 0 192.31 38.46 192.31 38.46 153.85" />
+                        </g>
+                      </svg>
+                    </button>
+                    <button
+                      class="next-slide w-[40px] h-[40px] flex items-center justify-center transition-transform hover:scale-110 group"
+                      aria-label="Next slide">
+                      <svg class="w-[24px] h-[24px]" viewBox="0 0 269.23 423.08" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <polygon class="fill-white transition-colors group-hover:fill-[#FF2F00]"
+                            points="230.77 153.85 192.3 153.85 192.3 115.39 153.84 115.39 153.84 76.92 115.38 76.92 115.38 38.46 76.92 38.46 76.92 0 38.46 0 0 0 0 38.46 38.46 38.46 38.46 76.92 76.92 76.92 76.92 115.39 115.38 115.39 115.38 153.85 153.84 153.85 153.84 192.31 192.3 192.31 192.3 230.77 153.84 230.77 153.84 269.23 115.38 269.23 115.38 307.69 76.92 307.69 76.92 346.15 38.46 346.15 38.46 384.62 0 384.62 0 423.08 38.46 423.08 76.92 423.08 76.92 384.62 115.38 384.62 115.38 346.15 153.84 346.15 153.84 307.69 192.3 307.69 192.3 269.23 230.77 269.23 230.77 230.77 269.23 230.77 269.23 192.31 230.77 192.31 230.77 153.85" />
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- Navigation Dots -->
+                  <div class="flex gap-4 justify-center w-[112px]">
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 1" data-slide-dot="1">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 hidden transition-opacity hover:opacity-100" />
+                    </button>
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 2" data-slide-dot="2">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 hidden transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
+                    </button>
+                    <button class="w-[14px] h-[14px] transition-opacity" aria-label="Go to slide 3" data-slide-dot="3">
+                      <img src="/image/illusts/functional/status-visible.svg" alt=""
+                        class="w-full h-full opacity-100 hidden transition-opacity" />
+                      <img src="/image/illusts/functional/status-hidden.svg" alt=""
+                        class="w-full h-full opacity-50 transition-opacity hover:opacity-100" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Address Card Section for Interview Section 2 -->
+            <section class="my-[64px]">
+              <!-- Card Container -->
+              <div
+                class="w-full max-w-[820px] h-auto mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
+                <!-- Card Content Wrapper -->
+                <div class="flex flex-col gap-4">
+                  <!-- Title -->
+                  <div class="bg-[#00FF66] w-full px-2">
+                    <h4 class="text-[20px] text-black dotgothic16-regular">
+                      新宿区立百人町作業宿泊所
+                    </h4>
+                  </div>
+                  <!-- Info Grid -->
+                  <div class="grid grid-cols-[auto_1fr] gap-x-[48px] gap-y-4 text-[14px] text-white">
+                    <div class="dotgothic16-regular">所在地</div>
+                    <div class="dotgothic16-regular">
+                      〒169-0072<br />
+                      東京都新宿区大久保1丁目
+                    </div>
+                    <div class="dotgothic16-regular">地図情報</div>
+                    <div class="dotgothic16-regular">
+                      <a href="https://maps.app.goo.gl/xowfRJj4lqs07rRt26" target="_blank" rel="noopener noreferrer"
+                        class="inline-block bg-[#00FF66] px-2 text-black hover:underline">
+                        https://maps.app.goo.gl/xowfRJj4lqs07rRt26
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- BORDER BETWEEN SECTIONS -->
+            <div class="w-full h-[1px] bg-[#000000]"></div>
+          </section>
+          <!-- INTERVIEW SECTION 3 -->
+          <section class="w-full mt-[64px] mb-[64px]">
+            <!-- Title -->
+            <div class="w-fit h-auto bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
+              <h2 class="text-[32px] text-white dotgothic16-regular">
+                3. 西大久保公園周辺
+              </h2>
+            </div>
+            <!-- Main Text Content -->
+            <div class="mt-[16px] leading-[2.5] letter-spacing-normal">
+              <span class="text-[16px] vdl-v7gothic-bold">
+                済州島出身の人々が、朝鮮戦争前後に職安通りや西大久保公園周辺に「パンパン宿」と呼ばれる施設を米兵相手向けの売春施設を建てた。当時戦勝国である米の兵隊た
+                <br>
+                ちは羽振りがよく、新大久保に居住する人々が財を築くのに一役買ったようだ。
+                <br>
+                彼らがこの地域の地主や家主となり、コリアンタウンの基盤を築いたのだ。
+              </span>
+            </div>
+            <!-- Image Carousel Section -->
+            <div class="mt-[32px] w-full h-[610px]">
+              <img src="/image/article_02/shinokubo_10.jpg" alt="西大久保公園周辺の写真" class="w-full h-[610px] object-cover"
+                loading="lazy" style="
+                          image-rendering: -webkit-optimize-contrast;
+                          image-rendering: crisp-edges;
+                        " />
+            </div>
+            <!-- Caption text at bottom right -->
+            <p class="text-right mt-2 text-[12px] text-black">
+              HAL東京から見たパンパン宿迹。墓地の奥のビル群が西大久保公園のあるエリア
+            </p>
+            <!-- Address Card Section -->
+            <section class="my-[64px]">
+              <!-- Card Container -->
+              <div
+                class="w-full max-w-[820px] h-auto mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
+                <!-- Card Content Wrapper -->
+                <div class="flex flex-col gap-4">
+                  <!-- Title -->
+                  <div class="bg-[#00FF66] w-full px-2">
+                    <h4 class="text-[20px] text-black dotgothic16-regular">西大久保公園</h4>
+                  </div>
+                  <!-- Info Grid -->
+                  <div class="grid grid-cols-[auto_1fr] gap-x-[48px] gap-y-4 text-[14px] text-white">
+                    <div class="dotgothic16-regular">所在地</div>
+                    <div class="dotgothic16-regular">
+                      〒169-0072<br />
+                      東京都新宿区大久保1丁目
+                    </div>
+                    <div class="dotgothic16-regular">地図情報</div>
+                    <div class="dotgothic16-regular">
+                      <a href="https://maps.app.goo.gl/xowRGj4iqsD7H8t26" target="_blank" rel="noopener noreferrer"
+                        class="inline-block bg-[#00FF66] px-2 text-black hover:underline">
+                        https://maps.app.goo.gl/xowRGj4iqsD7H8t26
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- BORDER BETWEEN SECTIONS -->
+            <div class="w-full h-[1px] bg-[#000000]"></div>
+          </section>
+          <!-- Text Content Section -->
+          <section class="w-full mt-[48px]">
+            <!-- Bold Text with blue background -->
+            <div class="w-fit h-auto bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
+              <h2 class="text-[32px] text-white dotgothic16-regular">
+                コリアンタウンの起源を巡って
+              </h2>
+            </div>
+            <!-- Regular Text with spacing -->
+            <div class="mt-[16px] leading-[2.5] letter-spacing-normal">
+              <span class="text-[16px] vdl-v7gothic-bold">
+                これらの歴史的背景を知ることで、新大久保のK-POPタウンとしての姿をよりく理解できるかもしれない。現在、新大久保には韓国文化を体験できるスポットが多数存在するが、今回紹介したような新大久保の起源にまつわるスポットを巡ってみると、また違ったコリアンタウンの姿が見えてくるのではないだろうか。
+              </span>
+            </div>
+          </section>
+        </main>
 
-        <!-- Text Content Section -->
-        <section class="w-full mt-[48px] mb-[64px]">
-          <!-- Bold Text with blue background -->
-          <div class="w-fit h-auto bg-[#003BFF] px-[8px] py-2 flex items-center justify-center">
-            <h2 class="text-[32px] text-white dotgothic16-regular">
-              コリアンタウンの起源を巡って
-            </h2>
+        <!-- Remote Control - More to the right -->
+        <div class="relative right-0">
+          <aside class="sticky top-[80px] z-50 float-right" id="remoteControl">
+            <div class="w-fit h-fit flex flex-col gap-[32px] bg-black p-[16px]">
+              <!-- TOP PAGE -->
+              <button
+                class="article-nav top w-[35px] h-[40px] flex items-center justify-center transition-all duration-300 group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="42" viewBox="0 0 35 42" fill="none">
+                  <path
+                    d="M19.0933 28.6509H22.2742V31.8326H25.4558V35.0134H28.6375V38.2001H31.8183V41.3809H35V38.2001V35.0134H31.8183V31.8326H28.6375V28.6509H25.4558V25.4651H22.2742V22.2835H19.0933V19.0977H15.9067V22.2835H12.7258V25.4651H9.54418V28.6509H6.36251V31.8326H3.18167V35.0134H0V38.2001V41.3809H3.18167V38.2001H6.36251V35.0134H9.54418V31.8326H12.7258V28.6509H15.9067V25.4651H19.0933V28.6509Z"
+                    class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                  <path
+                    d="M6.36251 25.4649V22.2833H9.54418V19.0975H12.7258V15.9158H15.9067V12.73H19.0933V15.9158H22.2742V19.0975H25.4558V22.2833H28.6375V25.4649H31.8183V28.6507H35V25.4649V22.2833H31.8183V19.0975H28.6375V15.9158H25.4558V12.73H22.2742V9.54914H19.0933V6.36251H22.2742H25.4558H28.6375H31.8183H35V3.18167H31.8183V0H28.6375H25.4558H22.2742H19.0933H15.9067H12.7258H9.54418H6.36251H3.18167V3.18167H0V6.36251H3.18167H6.36251H9.54418H12.7258H15.9067V9.54914H12.7258V12.73H9.54418V15.9158H6.36251V19.0975H3.18167V22.2833H0V25.4649V28.6507H3.18167V25.4649H6.36251Z"
+                    class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                </svg>
+              </button>
+
+              <!-- Navigation Group -->
+              <div class="flex flex-col gap-8">
+                <button
+                  class="page-nav up w-[35px] h-[40px] flex items-center justify-center transition-all duration-300 group">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="23" viewBox="0 0 35 23" fill="none">
+                    <path
+                      d="M3.1858 19.4758H6.36664V16.295H9.54749V13.1092H12.7283V9.92834H15.9092V6.74254H19.0908V9.92834H22.2758V13.1092H25.4567V16.295H28.6383V19.4758H31.8192V22.6616H35V19.4758V16.295H31.8192V13.1092H28.6383V9.92834H25.4567V6.74254H22.2758V3.5617H19.0908V0.380859H15.9092V3.5617H12.7283V6.74254H9.54749V9.92834H6.36664V13.1092H3.1858V16.295H0V19.4758V22.6616H3.1858V19.4758Z"
+                      class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                  </svg>
+                </button>
+                <button
+                  class="page-nav down w-[35px] h-[40px] flex items-center justify-center transition-all duration-300 group">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="23" viewBox="0 0 35 23" fill="none">
+                    <path
+                      d="M3.1858 3.84791H6.36664V7.02875H9.54749V10.2137H12.7283V13.3954H15.9092V16.5804H19.0908V13.3954H22.2758V10.2137H25.4567V7.02875H28.6383V3.84791H31.8192V0.662109H35V3.84791V7.02875H31.8192V10.2137H28.6383V13.3954H25.4567V16.5804H22.2758V19.762H19.0908V22.9429H15.9092V19.762H12.7283V16.5804H9.54749V13.3954H6.36664V10.2137H3.1858V7.02875H0V3.84791V0.662109H3.1858V3.84791Z"
+                      class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- BOTTOM PAGE -->
+              <button
+                class="article-nav bottom w-[35px] h-[40px] flex items-center justify-center transition-all duration-300 group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="43" viewBox="0 0 35 43" fill="none">
+                  <path
+                    d="M19.0933 13.6714H22.2742V10.4897H25.4558V7.30888H28.6375V4.12307H31.8183V0.941406H35V4.12307V7.30888H31.8183V10.4897H28.6375V13.6714H25.4558V16.8572H22.2742V20.0389H19.0933V23.2247H15.9067V20.0389H12.7258V16.8572H9.54418V13.6714H6.36251V10.4897H3.18167V7.30888H0V4.12307V0.941406H3.18167V4.12307H6.36251V7.30888H9.54418V10.4897H12.7258V13.6714H15.9067V16.8572H19.0933V13.6714Z"
+                    class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                  <path
+                    d="M6.36251 16.8577V20.0393H9.54418V23.2251H12.7258V26.4068H15.9067V29.5926H19.0933V26.4068H22.2742V23.2251H25.4558V20.0393H28.6375V16.8577H31.8183V13.6719H35V16.8577V20.0393H31.8183V23.2251H28.6375V26.4068H25.4558V29.5926H22.2742V32.7743H19.0933V35.9601H22.2742H25.4558H28.6375H31.8183H35V39.1418H31.8183V42.3226H28.6375H25.4558H22.2742H19.0933H15.9067H12.7258H9.54418H6.36251H3.18167V39.1418H0V35.9601H3.18167H6.36251H9.54418H12.7258H15.9067V32.7743H12.7258V29.5926H9.54418V26.4068H6.36251V23.2251H3.18167V20.0393H0V16.8577V13.6719H3.18167V16.8577H6.36251Z"
+                    class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                </svg>
+              </button>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- BACK TO HOME BUTTON -->
+      <div class="flex justify-center items-center mt-[48px] py-[32px]">
+        <div
+          class="flex items-center gap-[16px] bg-black hover:bg-[#FF2F00] transition-colors duration-300 px-[16px] py-[8px] group">
+          <div class="flex items-center justify-center w-fit">
+            <img src="/image/illusts/functional/carousel-left.svg" alt="Arrow Left"
+              class="w-[23px] h-[53px] brightness-100 group-hover:brightness-0 transition-all duration-300">
           </div>
-          <!-- Regular Text with spacing -->
-          <div class="mt-[16px] leading-[2.5] letter-spacing-normal">
-            <span class="text-[16px] vdl-v7gothic-bold">
-              これらの歴史的背景を知ることで、新大久保のK-POPタウンとしての姿をよりく理解できるかもしれない。現在、新大久保には韓国文化を体験できるスポットが多数存在するが、今回紹介したような新大久保の起源にまつわるスポットを巡ってみると、また違ったコリアンタウンの姿が見えてくるのではないだろうか。
-            </span>
-          </div>
-        </section>
-      </main>
+          <a href="/index.html">
+            <span
+              class="dotgothic16-regular text-[40px] text-white group-hover:text-black transition-colors duration-300">BACK
+              to HOME</span>
+          </a>
+        </div>
+      </div>
+      <!-- END OF BACK TO HOME BUTTON -->
 
       <!-- FOOTER -->
       <footer class="mt-[64px]">
         <div id="footer" class="flex flex-row w-full justify-between h-3/5 bg-black text-white items-center p-[64px]">
-          <div id="footer-left" class="w-[400px]">
+          <div id="footer-left" class="w-full max-w-[400px]">
             <div id="footer-left-socials" class="flex flex-row gap-[16px] pb-[16px]">
               <a href="#" class="hover:opacity-80">
                 <img src="/image/illusts/sns/instagram-logo.svg" class="h-[48px] w-[48px] mr-[16px]" alt="Instagram" />
@@ -881,6 +914,7 @@
   <script type="module" src="js/hover-effect.js"></script>
   <script type="module" src="js/scroll-behavior.js"></script>
   <script type="module" src="js/menu.js"></script>
+  <script type="module" src="js/remote-control.js"></script>
 </body>
 
 </html>

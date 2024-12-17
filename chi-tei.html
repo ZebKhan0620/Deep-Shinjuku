@@ -19,24 +19,24 @@
 
 <body>
   <!-- Outer container with center alignment -->
-  <div class="min-h-screen flex justify-center box-border relative overflow-x-hidden">
+  <div class="min-h-screen flex justify-center box-border relative">
     <!-- Main container with fixed width -->
-    <div class="w-[1440px] relative bg-[url('/image/worn-dots.png')] bg-repeat bg-auto isolation">
+    <div class="w-full max-w-[1440px] relative bg-[url('/image/worn-dots.png')] bg-repeat bg-auto isolation">
       <!-- Add this before the header -->
       <div id="headerTrigger" class="h-1"></div>
 
       <!-- Sticky Header -->
       <header
-        class="fixed top-0 left-1/2 -translate-x-1/2 w-[1440px] transform-gpu transition-all duration-500 z-[100] opacity-0 -translate-y-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] [&.visible]:opacity-100 [&.visible]:translate-y-0">
+        class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1440px] transform-gpu transition-all duration-500 z-[100] opacity-0 -translate-y-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] [&.visible]:opacity-100 [&.visible]:translate-y-0">
         <!-- Main header content -->
-        <div class="max-w-[1440px] mx-auto relative">
+        <div class="w-full max-w-[1440px] mx-auto relative">
           <!-- MAYU Logo and menu button container -->
           <div class="flex h-16 items-center">
             <!-- Logo and menu button content -->
             <div class="group flex-1 h-full flex items-center justify-start hover:bg-black transition-all duration-300">
               <!-- MAYU Logo -->
               <svg id="_レイヤー_2"
-                class="w-[160px] h-[44px] fill-black mx-auto group-hover:fill-[#FF2F00] transition-all duration-300"
+                class="w-full max-w-[160px] max-h-[44px] fill-black mx-auto group-hover:fill-[#FF2F00] transition-all duration-300"
                 data-name="レイヤ_1-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1106.05 299.68">
                 <g id="_レイヤー_1-2" data-name="レイヤー_1">
                   <g>
@@ -245,311 +245,300 @@
       </header>
 
       <!-- Hero Section -->
-      <section class="w-[1440px] relative" aria-label="Hero Banner">
+      <section class="relative" aria-label="Hero Banner" id="topPage">
         <div class="relative w-full h-[664px]">
           <img src="/image/article_03/underground_main.jpg" alt="新宿駅地下の様子" class="w-full h-full object-cover" />
         </div>
       </section>
 
-      <!-- Main Content -->
-      <main class="w-[1210px] mx-auto mt-4 border-4 border-[#00FF95]">
-        <!-- First Section - Text Content -->
-        <section class="w-full mb-[64px]">
-          <!-- Text Container -->
-          <div class="relative min-h-[200px]">
-            <!-- Culture & History Tags -->
-            <div class="absolute top-0 left-8 z-20 flex gap-2">
-              <div class="dotgothic16-regular text-[20px] text-white bg-[#003BFF] p-2 inline-block">
-                #カルチャー #ヒストリー
-              </div>
-            </div>
-
-            <!-- Main Title -->
-            <div class="absolute top-[45px] left-0 z-20">
-              <h1 class="text-[40px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
-                新宿駅に"地底人"!?
-              </h1>
-            </div>
-
-            <!-- Subtitle -->
-            <div class="absolute top-[120px] left-8 z-20">
-              <p class="text-[32px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
-                60'sヒッピー族とフーテン族と新宿の地下
-              </p>
-            </div>
-
-            <!-- Writer Credit -->
-            <div class="absolute top-[180px] left-8 z-20 mb-[24px]">
-              <p class="text-[16px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
-                writer:Sou Ikeda
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Text Content Section -->
-        <section class="w-full mt-[90px] mb-[64px]">
-          <!-- Bold Text with blue background -->
-          <p
-            class="text-3xl text-white bg-[#003BFF] w-[fit-content] h-[auto] flex items-center px-4 py-2 inline-block whitespace-nowrap dotgothic16-regular">
-            いま、新宿駅西口が変わろうとしている
-          </p>
-          <!-- Regular Text with spacing -->
-          <div class="mt-[16px] text-[14px] leading-7 w-[1210px]">
-            <span class="text-[16px] vdl-v7gothic-bold leading-[2.2]">
-              2024年8月上旬、新宿駅西口地上歩行開放すべく、大規模工事が開始された。
-              <br />
-            </span>
-            <span class="text-[16px] vdl-v7gothic-bold leading-[2.2]">
-              新宿駅の西口といえば、洞を巻いた車道が地下から地上へ延びる構造が印象的だが、これを歩行者が回遊できる広場にする計画だ。長く我々が慣れ親しんだ、薄暗く <br>
-              も空を仰むことのできるあの西口とはこれでおさらばらしい。
-              <br>
-            </span>
-            <span class="text-[16px] vdl-v7gothic-bold leading-[2.2]">
-              しかし、かつてこの薄暗い西口の地下に"地底人"がいたことはあまり知られていない。
-              <br />
-            </span>
-            <span class="text-[16px] vdl-v7gothic-bold leading-[2.2]">
-              なんと新宿に地底人がいたのだ。
-              <br />
-            </span>
-            <span class="text-[16px] vdl-v7gothic-bold leading-[2.2]">
-              西口とのお別れを前に、MAYUでは、60年代にここを住みかとし、西口という文化を形作った人々、「新宿地底人」について特集することとしたい。
-            </span>
-          </div>
-        </section>
-
-        <!-- Single Image Section -->
-        <section class="w-full mt-[64px] mb-[64px]">
-          <!-- Image Container -->
-          <div class="relative w-full">
-            <img src="/image/article_03/underground_01.jpg" alt="2024年秋の新宿駅西口" class="w-full h-[610px] object-cover"
-              loading="lazy" style="
-                  image-rendering: -webkit-optimize-contrast;
-                  image-rendering: crisp-edges;
-                " />
-          </div>
-          <!-- Caption -->
-          <p class="text-right mt-1 text-[12px] text-black vdl-v7gothic-bold">
-            2024年秋の新宿駅西口
-          </p>
-        </section>
-
-        <!-- Text Content Section -->
-        <section class="w-full">
-          <!-- Bold Text with blue background -->
-          <p
-            class="text-3xl text-white bg-[#003BFF] px-[8px] py-2 inline-block whitespace-nowrap w-[fit-content] h-[auto] flex items-center dotgothic16-regular">
-            新宿地底人とは
-          </p>
-          <!-- Regular Text with spacing -->
-          <div class="mt-[16px] text-[14px] w-[1210px]">
-            <span class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal">
-              60年代、日本も戦後の物質的な貧しさを克服し、高度経済成長や東京オリンピックに向けた好景気の流れに乗る中、この気風に物申す若者が現れた。
-              <br />
-            </span>
-            <span class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal">
-              今回の主役、ヒッピー族とフーテン族である。
-              <br />
-            </span>
-            <span class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal">
-              彼らは物質主義的でかれ調子の日本の体制をドロップアウトし、労働に異議を提起し、ともに新宿駅の地下街でたむろする種族であった。
-            </span>
-          </div>
-        </section>
-
-        <!-- Text Content Section -->
-        <section class="w-full mt-[64px]">
-          <!-- Bold Text with blue background -->
-          <p
-            class="text-3xl text-white bg-[#003BFF] px-[8px] py-2 inline-block whitespace-nowrap w-[fit-content] h-[auto] flex items-center dotgothic16-regular">
-            2種類の地底人
-          </p>
-          <!-- Regular Text with spacing -->
-          <div class="mt-[16px] text-[14px] w-[1210px]">
-            <span class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal">
-              彼らはよく混同されるが、実は似て非なる種族同士なのだ。ヒッピー族は「愛と平和」を信条とし、アメリカによるベトナム戦争を非難し、人類愛を唱えた。それに対し、フーテン族は単に社会からドロップアウトし、文学やジャズを好み、政治的な発言は一切行わず、一人の人間同士の向き合い方を実践した。
-              <br />
-            </span>
-            <span class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal">
-              彼らの違いを、彼らのモットーや趣味、暮らしぶりの観点からまとめると以下のようになる。
-            </span>
-          </div>
-        </section>
-
-        <!-- Comparison Image Section -->
-        <section class="w-full">
-          <!-- Image Container with Center Alignment -->
-          <div class="flex justify-center">
-            <img src="/image/article_03/地底人-表 1.png" alt="ヒッピー族とフーテン族の比較表"
-              class="w-[554px] h-[567.018px] object-contain" loading="lazy" style="
-                  image-rendering: -webkit-optimize-contrast;
-                  image-rendering: crisp-edges;
-                " />
-          </div>
-        </section>
-
-        <!-- Simple Text Section -->
-        <section class="w-full">
-          <span class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal">
-            さらに、当時実際に地底人であった、または交流のあった人の言葉を紹介する。
-          </span>
-        </section>
-
-        <!-- Hippie Declaration Section -->
-        <section class="w-full mt-[64px] mb-[64px]">
-          <!-- Title with green background -->
-          <div class="w-full flex items-center justify-center mb-[16px]">
-            <h2
-              class="text-[32px] text-black bg-[#00FF95] px-[8px] py-2 whitespace-nowrap w-[fit-content] h-[auto] flex items-center dotgothic16-regular">
-              ＜ヒッピーの"部族宣言"＞
-            </h2>
-          </div>
-
-          <!-- Content Container -->
-          <div class="w-[1060px] mx-auto">
-            <!-- ********************** -->
-            <!-- NEED TO WORK ON THIS -->
-            <!-- Text Content with Flex Spacing -->
-            <div class="flex py-[16px]">
-              <div class="flex-1"></div>
-              <div class="text-[16px] text-black flex-[8] w-[fit-content] h-[320px] vdl-v7gothic-bold">
-                <p class="indent-[1em] text-justify leading-[2.2] letter-spacing-normal">
-                  部族宣言――ぼくらは宣言しよう。この国家社会という殻の内にぼくらは、いま一つの、国家とは全く異なった相を支えとした社会を形作りつつある、と。統治する、或いは統治されるいかなる個人も機関もない、いや「統治」という言葉すら何の用もなさない社会、土からも生まれ、土の上に何を建てるわけでもなく、ただ土の共に在り、土に帰ってゆく社会、魂の呼吸そのものである愛と自由と知恵による一人一人の結びつきが支えている社会を、ぼくらは部族社会と呼ぶ。
-                </p>
-                <p class="indent-[6em] text-justify leading-[2.2] letter-spacing-normal">
-                  アメリカ、ヨーロッ、日本、その他の国々の若い世代の参加によって、何百万人という若い世代の参加によって、静かにあくまでも静かしし実に多の族会が作れつつあ。都会に或いは山の中に農村に海辺に島に。やがて、少なくともここ数年内に、全世界にわたる部族社会も結成され、ぼくらは国家の消え去るべき運命を見守るだろう。ぼくらは今一つの道、人類が死に至るべき道ではなく、生き残るべき道を作りつつあるのだ。（後略）
-                </p>
-              </div>
-              <div class="flex-1"></div>
-            </div>
-            <!-- NEED TO WORK ON THIS -->
-            <!-- ********************** -->
-
-            <!-- Reference Link with Flex Spacing -->
-            <div class="flex">
-              <div class="flex-1"></div>
-              <div class="flex-[8] flex justify-end w-[fit-content] h-[auto] flex items-center dotgothic16-regular">
-                <div class="bg-[#00FF95] px-2 py-1">
-                  <p class="text-[16px] text-black ">
-                    参照『ヒッピームーブメント史 in ヤポネシア』
-                    <br />
-                    <span class="text-[16px] pl-[40px]">link:</span>
-                    <a href="https://smarakuni.net/pon/hipple/"
-                      class="hover:underline">https://smarakuni.net/pon/hipple/</a>
-                  </p>
+      <div class="relative flex justify-between w-full max-w-[1440px] mx-auto">
+        <!-- Main Content -->
+        <main class="w-full max-w-[1210px] mx-auto mt-4">
+          <!-- First Section - Text Content -->
+          <section class="w-full mb-[64px]">
+            <!-- Text Container -->
+            <div class="relative min-h-[200px]">
+              <!-- Culture & History Tags -->
+              <div class="absolute top-0 left-8 z-20 flex gap-2">
+                <div class="dotgothic16-regular text-[20px] text-white bg-[#003BFF] p-2 inline-block">
+                  #カルチャー #ヒストリー
                 </div>
               </div>
-              <div class="flex-1"></div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Simple Text Section -->
-        <section class="w-full">
-          <div class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal leading-7 w-[1210px]">
-            <span class="letter-spacing-normal">
-              戦勝国であるアメリカや、アメリカの傘下の日本どんどん"強く"なろうとする中で、人間の魂は、無政府の原始的な生活の中でこそ生き生きとするという考えが根底にあるようだ。
-              <br />
-            </span>
-            <span class="letter-spacing-normal">
-              誰も統治したり統治されたりしない社会を望み、自然と共存する道を模索する彼らの考えが縮された宣言といえる。キーワードは「部族」、「魂」、「全世界」と<br />いったところだろうか。
-            </span>
-          </div>
-        </section>
-
-        <!-- Futen Conversation Section -->
-        <section class="w-full mt-[64px] mb-[64px]">
-          <!-- Title with green background -->
-          <div
-            class="w-full flex items-center justify-center mb-[16px] w-[fit-content] h-[auto] flex items-center dotgothic16-regular">
-            <h2 class="text-[32px] text-black bg-[#00FF95] px-4 py-2 whitespace-nowrap">
-              ＜フーテン族と大企業社長の会話＞
-            </h2>
-          </div>
-
-          <!-- Content Container -->
-          <div class="w-[1060px] mx-auto vdl-v7gothic">
-            <!-- Text Content with Flex Spacing -->
-            <div class="flex py-[16px]">
-              <div class="flex-1"></div>
-              <div class="text-[16px] text-black flex-[8] w-[800px]">
-                <p class="mb-4 vdl-v7gothic">――社長</p>
-                <p class="mb-4 vdl-v7gothic">
-                  これから何が始まるのかね わしゃそくそくしてきたぞ
-                </p>
-                <p class="mb-4 vdl-v7gothic">――フーテン</p>
-                <p class="mb-4 vdl-v7gothic">
-                  これから何かって あんたにクスリのんだでしょう・・・・・・？
-                </p>
-                <p class="mb-4 vdl-v7gothic">――社長</p>
-                <p class="mb-4 vdl-v7gothic">おう ハイミナールかね 三つぶ・・・・・・</p>
-                <p class="mb-4 vdl-v7gothic">――フーテン</p>
-                <p class="mb-4 vdl-v7gothic">クスリのんだらそれでいいじゃない</p>
-                <p class="mb-4 vdl-v7gothic">――社長</p>
-                <p class="mb-4 vdl-v7gothic">ただこれだけなのかね まさか・・・・・！！</p>
-                <p class="mb-4 vdl-v7gothic">――フーテン</p>
-                <p class="mb-4 vdl-v7gothic">
-                  社長さん・・・・・まさかって
-                  あなたはなにを期待してきたんです？
-                </p>
-                <p class="mb-4 vdl-v7gothic">――社長</p>
-                <p class="mb-4 vdl-v7gothic">
-                  期待ってわけじゃないかね
-                  こう・・・・・なにかおもしろくなるんだろうね・・・これから
-                </p>
-                <p class="mb-4 vdl-v7gothic">――フーテン</p>
-                <p class="mb-4 vdl-v7gothic">
-                  そう
-                  そんな期待させしてなけりゃおもしろくなりますよ・・・・・クスリがきいてきますからね
-                </p>
-                <p class="mb-4 vdl-v7gothic">（略）</p>
-                <p class="mb-4 vdl-v7gothic">――フーテン</p>
-                <p class="mb-4 vdl-v7gothic">
-                  ごらんなさい・・・・・ここに集まっている連中を・・・・
-                </p>
-                <p class="mb-4 vdl-v7gothic">
-                  あなたは自分とおなじ人間だと思いますか・・・・・・？
-                </p>
-                <p class="mb-4 vdl-v7gothic">――社長</p>
-                <p class="mb-4 vdl-v7gothic">ちがうでしょ</p>
-                <p class="mb-4 vdl-v7gothic">――フーテン</p>
-                <p class="mb-4 vdl-v7gothic">
-                  ところがほらクスリがきいてきた 皆がしびれてきたでしょう？
-                </p>
-                <p class="mb-4 vdl-v7gothic">笑ってごらんなさいって</p>
-                <p class="mb-4 vdl-v7gothic">
-                  若い者よ ここに集まってくる連中は何歳でもない
-                  社長だとか学生だとか・・・・・
-                </p>
-                <p class="mb-4 vdl-v7gothic">
-                  そんなことも関係がない ただ人間人間なんだ
-                </p>
-                <p class="mb-4 vdl-v7gothic">さあ！！</p>
-                <p>本当の人間の対話がはじまるんだ！！</p>
+              <!-- Main Title -->
+              <div class="absolute top-[45px] left-0 z-20">
+                <h1 class="text-[40px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
+                  新宿駅に"地底人"!?
+                </h1>
               </div>
-              <div class="flex-1"></div>
+              <!-- Subtitle -->
+              <div class="absolute top-[120px] left-8 z-20">
+                <p class="text-[32px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
+                  60'sヒッピー族とフーテン族と新宿の地下
+                </p>
+              </div>
+              <!-- Writer Credit -->
+              <div class="absolute top-[180px] left-8 z-20 mb-[24px]">
+                <p class="text-[16px] text-white bg-[#003BFF] p-2 inline-block dotgothic16-regular">
+                  writer:Sou Ikeda
+                </p>
+              </div>
             </div>
-
-            <!-- Reference Link with Flex Spacing -->
-            <div class="flex">
-              <div class="flex-1"></div>
-              <div class="flex-[8] flex justify-end w-[fit-content] h-[auto] flex items-center dotgothic16-regular">
-                <div class="bg-[#00FF95] px-[8px] py-[4px]">
-                  <p class="text-[16px] text-black">
-                    『フーテン』著：永島慎二 初版-1972/05
+          </section>
+          <!-- Text Content Section -->
+          <section class="w-full mt-[90px] mb-[64px]">
+            <!-- Bold Text with blue background -->
+            <p
+              class="text-3xl text-white bg-[#003BFF] w-fit h-auto flex items-center px-4 py-2 inline-block break-words dotgothic16-regular">
+              いま、新宿駅西口が変わろうとしている
+            </p>
+            <!-- Regular Text with spacing -->
+            <div class="mt-[16px] text-[14px] leading-7 w-full max-w-[1210px]">
+              <span class="text-[16px] vdl-v7gothic-bold leading-[2.2]">
+                2024年8月上旬、新宿駅西口地上歩行開放すべく、大規模工事が開始された。
+                <br />
+              </span>
+              <span class="text-[16px] vdl-v7gothic-bold leading-[2.2]">
+                新宿駅の西口といえば、洞を巻いた車道が地下から地上へ延びる構造が印象的だが、これを歩行者が回遊できる広場にする計画だ。長く我々が慣れ親しんだ、薄暗く <br>
+                も空を仰むことのできるあの西口とはこれでおさらばらしい。
+                <br>
+              </span>
+              <span class="text-[16px] vdl-v7gothic-bold leading-[2.2]">
+                しかし、かつてこの薄暗い西口の地下に"地底人"がいたことはあまり知られていない。
+                <br />
+              </span>
+              <span class="text-[16px] vdl-v7gothic-bold leading-[2.2]">
+                なんと新宿に地底人がいたのだ。
+                <br />
+              </span>
+              <span class="text-[16px] vdl-v7gothic-bold leading-[2.2]">
+                西口とのお別れを前に、MAYUでは、60年代にここを住みかとし、西口という文化を形作った人々、「新宿地底人」について特集することとしたい。
+              </span>
+            </div>
+          </section>
+          <!-- Single Image Section -->
+          <section class="w-full mt-[64px] mb-[64px]">
+            <!-- Image Container -->
+            <div class="relative w-full">
+              <img src="/image/article_03/underground_01.jpg" alt="2024年秋の新宿駅西口" class="w-full h-[610px] object-cover"
+                loading="lazy" style="
+                    image-rendering: -webkit-optimize-contrast;
+                    image-rendering: crisp-edges;
+                  " />
+            </div>
+            <!-- Caption -->
+            <p class="text-right mt-1 text-[12px] text-black vdl-v7gothic-bold">
+              2024年秋の新宿駅西口
+            </p>
+          </section>
+          <!-- Text Content Section -->
+          <section class="w-full">
+            <!-- Bold Text with blue background -->
+            <p
+              class="text-3xl text-white bg-[#003BFF] px-[8px] py-2 inline-block break-words w-fit max-w-full h-auto flex items-center dotgothic16-regular">
+              新宿地底人とは
+            </p>
+            <!-- Regular Text with spacing -->
+            <div class="mt-[16px] text-[14px] w-full max-w-[1210px]">
+              <span class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal">
+                60年代、日本も戦後の物質的な貧しさを克服し、高度経済成長や東京オリンピックに向けた好景気の流れに乗る中、この気風に物申す若者が現れた。
+                <br />
+              </span>
+              <span class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal">
+                今回の主役、ヒッピー族とフーテン族である。
+                <br />
+              </span>
+              <span class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal">
+                彼らは物質主義的でかれ調子の日本の体制をドロップアウトし、労働に異議を提起し、ともに新宿駅の地下街でたむろする種族であった。
+              </span>
+            </div>
+          </section>
+          <!-- Text Content Section -->
+          <section class="w-full mt-[64px]">
+            <!-- Bold Text with blue background -->
+            <p
+              class="text-2xl md:text-3xl text-white bg-[#003BFF] px-[8px] py-2 inline-block break-words w-fit max-w-[90%] md:max-w-full h-auto flex items-center dotgothic16-regular">
+              2種類の地底人
+            </p>
+            <!-- Regular Text with spacing -->
+            <div class="mt-[16px] text-[14px] w-full max-w-[1210px] mx-auto px-4">
+              <span class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal">
+                彼らはよく混同されるが、実は似て非なる種族同士なのだ。ヒッピー族は「愛と平和」を信条とし、アメリカによるベトナム戦争を非難し、人類愛を唱えた。それに対し、フーテン族は単に社会からドロップアウトし、文学やジャズを好み、政治的な発言は一切行わず、一人の人間同士の向き合い方を実践した。
+                <br />
+              </span>
+              <span class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal">
+                彼らの違いを、彼らのモットーや趣味、暮らしぶりの観点からまとめると以下のようになる。
+              </span>
+            </div>
+          </section>
+          <!-- Comparison Image Section -->
+          <section class="w-full">
+            <!-- Image Container with Center Alignment -->
+            <div class="flex justify-center">
+              <div class="w-full max-w-[554px] aspect-[554/567.018]">
+                <img src="/image/article_03/地底人-表 1.png" alt="ヒッピー族とフーテン族の比較表" class="w-full h-full object-contain"
+                  loading="lazy" style="
+                      image-rendering: -webkit-optimize-contrast;
+                      image-rendering: crisp-edges;
+                    " />
+              </div>
+            </div>
+          </section>
+          <!-- Simple Text Section -->
+          <section class="w-full">
+            <div class="w-full max-w-[1210px] mx-auto px-4">
+              <span class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal">
+                さらに、当時実際に地底人であった、または交流のあった人の言葉を紹介する。
+              </span>
+            </div>
+          </section>
+          <!-- Hippie Declaration Section -->
+          <section class="w-full mt-[64px] mb-[64px]">
+            <!-- Title with green background -->
+            <div class="w-full flex items-center justify-center mb-[16px]">
+              <h2
+                class="text-[32px] text-black bg-[#00FF95] px-[8px] py-2 whitespace-nowrap w-[fit-content] h-[auto] flex items-center dotgothic16-regular">
+                ＜ヒッピーの"部族宣言"＞
+              </h2>
+            </div>
+            <!-- Content Container -->
+            <div class="w-full max-w-[1060px] mx-auto px-4">
+              <!-- ********************** -->
+              <!-- NEED TO WORK ON THIS -->
+              <!-- Text Content with Flex Spacing -->
+              <div class="flex py-[16px]">
+                <div class="flex-1"></div>
+                <div class="text-[16px] text-black flex-[8] w-full max-w-[800px]">
+                  <p class="indent-[1em] text-justify leading-[2.2] letter-spacing-normal">
+                    部族宣言――ぼくらは宣言しよう。この国家社会という殻の内にぼくらは、いま一つの、国家とは全く異なった相を支えとした社会を形作りつつある、と。統治する、或いは統治されるいかなる個人も機関もない、いや「統治」という言葉すら何の用もなさない社会、土からも生まれ、土の上に何を建てるわけでもなく、ただ土の共に在り、土に帰ってゆく社会、魂の呼吸そのものである愛と自由と知恵による一人一人の結びつきが支えている社会を、ぼくらは部族社会と呼ぶ。
+                  </p>
+                  <p class="indent-[6em] text-justify leading-[2.2] letter-spacing-normal">
+                    アメリカ、ヨーロッ、日本、その他の国々の若い世代の参加によって、何百万人という若い世代の参加によって、静かにあくまでも静かしし実に多の族会が作れつつあ。都会に或いは山の中に農村に海辺に島に。やがて、少なくともここ数年内に、全世界にわたる部族社会も結成され、ぼくらは国家の消え去るべき運命を見守るだろう。ぼくらは今一つの道、人類が死に至るべき道ではなく、生き残るべき道を作りつつあるのだ。（後略）
                   </p>
                 </div>
+                <div class="flex-1"></div>
               </div>
-              <div class="flex-1"></div>
+              <!-- NEED TO WORK ON THIS -->
+              <!-- ********************** -->
+              <!-- Reference Link with Flex Spacing -->
+              <div class="flex">
+                <div class="flex-1"></div>
+                <div class="flex-[8] flex justify-end w-[fit-content] h-[auto] flex items-center dotgothic16-regular">
+                  <div class="bg-[#00FF95] px-2 py-1">
+                    <p class="text-[16px] text-black ">
+                      参照『ヒッピームーブメント史 in ヤポネシア』
+                      <br />
+                      <span class="text-[16px] pl-[40px]">link:</span>
+                      <a href="https://smarakuni.net/pon/hipple/"
+                        class="hover:underline">https://smarakuni.net/pon/hipple/</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="flex-1"></div>
+              </div>
             </div>
-          </div>
-        </section>
-
-        <!-- Simple Text Section -->
-        <section class="w-full">
-          <div class="text-[14px] leading-[2.2] letter-spacing-normal w-[1210px] my-[64px] vdl-v7gothic-bold">
-            <div class="my-[64px]">
+          </section>
+          <!-- Simple Text Section -->
+          <section class="w-full">
+            <div
+              class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal leading-7 w-full max-w-[1210px] mx-auto px-4">
+              <span class="letter-spacing-normal">
+                戦勝国であるアメリカや、アメリカの傘下の日本どんどん"強く"なろうとする中で、人間の魂は、無政府の原始的な生活の中でこそ生き生きとするという考えが根底にあるようだ。
+                <br />
+              </span>
+              <span class="letter-spacing-normal">
+                誰も統治したり統治されたりしない社会を望み、自然と共存する道を模索する彼らの考えが縮された宣言といえる。キーワードは「部族」、「魂」、「全世界」と<br />いったところだろうか。
+              </span>
+            </div>
+          </section>
+          <!-- Futen Conversation Section -->
+          <section class="w-full mt-[64px] mb-[64px]">
+            <!-- Title with green background -->
+            <div
+              class="w-full flex items-center justify-center mb-[16px] w-[fit-content] h-[auto] flex items-center dotgothic16-regular">
+              <h2 class="text-xl md:text-[32px] text-black bg-[#00FF95] px-4 py-2 break-words">
+                フーテン族と大企業社長の会話
+              </h2>
+            </div>
+            <!-- Content Container -->
+            <div class="w-full max-w-[1060px] mx-auto px-4">
+              <!-- Text Content with Flex Spacing -->
+              <div class="flex py-[16px]">
+                <div class="flex-1"></div>
+                <div class="text-[16px] text-black flex-[8] w-full max-w-[800px]">
+                  <p class="mb-4 vdl-v7gothic">――社長</p>
+                  <p class="mb-4 vdl-v7gothic">
+                    これから何が始まるのかね わしゃそくそくしてきたぞ
+                  </p>
+                  <p class="mb-4 vdl-v7gothic">――フーテン</p>
+                  <p class="mb-4 vdl-v7gothic">
+                    これから何かって あんたにクスリのんだでしょう・・・・・・？
+                  </p>
+                  <p class="mb-4 vdl-v7gothic">――社長</p>
+                  <p class="mb-4 vdl-v7gothic">おう ハイミナールかね 三つぶ・・・・・・</p>
+                  <p class="mb-4 vdl-v7gothic">――フーテン</p>
+                  <p class="mb-4 vdl-v7gothic">クスリのんだらそれでいいじゃない</p>
+                  <p class="mb-4 vdl-v7gothic">――社長</p>
+                  <p class="mb-4 vdl-v7gothic">ただこれだけなのかね まさか・・・・・！！</p>
+                  <p class="mb-4 vdl-v7gothic">――フーテン</p>
+                  <p class="mb-4 vdl-v7gothic">
+                    社長さん・・・・・まさかって
+                    あなたはなにを期待してきたんです？
+                  </p>
+                  <p class="mb-4 vdl-v7gothic">――社長</p>
+                  <p class="mb-4 vdl-v7gothic">
+                    期待ってわけじゃないかね
+                    こう・・・・・なにかおもしろくなるんだろうね・・・これから
+                  </p>
+                  <p class="mb-4 vdl-v7gothic">――フーテン</p>
+                  <p class="mb-4 vdl-v7gothic">
+                    そう
+                    そんな期待させしてなけりゃおもしろくなりますよ・・・・・クスリがきいてきますからね
+                  </p>
+                  <p class="mb-4 vdl-v7gothic">（略）</p>
+                  <p class="mb-4 vdl-v7gothic">――フーテン</p>
+                  <p class="mb-4 vdl-v7gothic">
+                    ごらんなさい・・・・・ここに集まっている連中を・・・・
+                  </p>
+                  <p class="mb-4 vdl-v7gothic">
+                    あなたは自分とおなじ人間だと思いますか・・・・・・？
+                  </p>
+                  <p class="mb-4 vdl-v7gothic">――社長</p>
+                  <p class="mb-4 vdl-v7gothic">ちがうでしょ</p>
+                  <p class="mb-4 vdl-v7gothic">――フーテン</p>
+                  <p class="mb-4 vdl-v7gothic">
+                    ところがほらクスリがきいてきた 皆がしびれてきたでしょう？
+                  </p>
+                  <p class="mb-4 vdl-v7gothic">笑ってごらんなさいって</p>
+                  <p class="mb-4 vdl-v7gothic">
+                    若い者よ ここに集まってくる連中は何歳でもない
+                    社長だとか学生だとか・・・・・
+                  </p>
+                  <p class="mb-4 vdl-v7gothic">
+                    そんなことも関係がない ただ人間人間なんだ
+                  </p>
+                  <p class="mb-4 vdl-v7gothic">さあ！！</p>
+                  <p>本当の人間の対話がはじまるんだ！！</p>
+                </div>
+                <div class="flex-1"></div>
+              </div>
+              <!-- Reference Link with Flex Spacing -->
+              <div class="flex">
+                <div class="flex-1"></div>
+                <div class="flex-[8] flex justify-end w-[fit-content] h-[auto] flex items-center dotgothic16-regular">
+                  <div class="bg-[#00FF95] px-[8px] py-[4px]">
+                    <p class="text-[16px] text-black ">
+                      『フーテン』著：永島慎二 初版-1972/05
+                    </p>
+                  </div>
+                </div>
+                <div class="flex-1"></div>
+              </div>
+            </div>
+          </section>
+          <!-- Simple Text Section -->
+          <section class="w-full">
+            <div
+              class="text-[16px] vdl-v7gothic-bold leading-[2.2] letter-spacing-normal leading-7 w-full max-w-[1210px] mx-auto px-4">
               <span class="text-[16px]">
                 彼らもまた、人間の本質のようなものを模索していることが見て取れる。
                 <br />
@@ -560,523 +549,569 @@
               </span>
             </div>
             <div>
-              <span class="text-[16px]">
+              <span class="text-[16px] vdl-v7gothic-bold">
                 このように、同じ新宿の地底人でもその在り方は違っていた。<br />
                 当事者の言葉を見てみると、ヒッピーは人間全体から見たマクロな視点に立って、政治や宗教の次元で物事を考えていたのに対し、フーテン族は日本の都市圏に居合わせた隣人とのミクロな視点で、「ただの人間」に戻るための方法を考えていたことが見えてきた。
               </span>
             </div>
             <div class="my-[64px]">
-              <span class="text-[16px]">
+              <span class="text-[16px] vdl-v7gothic-bold">
                 ではなぜ考えを異にする彼等が新宿駅でたむろし、アングラ文化を形作っていったのだろう。それは当時の若者にとっての都会とは渋谷や原宿ではなく、銀座と新宿であったことに由来する。
                 <br />
               </span>
-              <span class="text-[16px]">
+              <span class="text-[16px] vdl-v7gothic-bold">
                 日本の戦後文化史をファッションの観点から考察した名著『ＡＭＥＴＯＲＡ——日本がアメリカンスタイルを救った物語』（デーヴィッド・マークス著、2017年9月13日）には以下のようにある。
               </span>
             </div>
-        </section>
-
-        <!-- AMETORA Quote Section -->
-        <section class="w-full mt-[64px] mb-[64px]">
-          <!-- Content Container -->
-          <div class="w-[1060px] mx-auto">
-            <!-- Text Content with Flex Spacing -->
-            <div class="flex pb-[16px]">
-              <div class="flex-1"></div>
-              <div class="text-[16px] text-black flex-[8] w-[800px]">
-                <p class="text-justify leading-[2.2] vdl-v7gothic letter-spacing-normal">
-                  「新宿は夜の盛り場として、長年、銀座のライバル的存在だった。<br />
-                  しかし西ヨーロッパ風の銀座が明るく照らされていたのに対し、かすかにロシアの匂いを感じさせる新宿は、影の中にんでいた。」
-                </p>
+          </section>
+          <!-- AMETORA Quote Section -->
+          <section class="w-full mt-[64px] mb-[64px]">
+            <!-- Content Container -->
+            <div class="w-full max-w-[1060px] mx-auto px-4">
+              <!-- Text Content with Flex Spacing -->
+              <div class="flex pb-[16px]">
+                <div class="flex-1"></div>
+                <div class="text-[16px] text-black flex-[8] w-full max-w-[800px]">
+                  <p class="text-justify leading-[2.2] vdl-v7gothic-500 letter-spacing-normal">
+                    「新宿は夜の盛り場として、長年、銀座のライバル的存在だった。<br />
+                    しかし西ヨーロッパ風の銀座が明るく照らされていたのに対し、かすかにロシアの匂いを感じさせる新宿は、影の中にんでいた。」
+                  </p>
+                </div>
+                <div class="flex-1"></div>
               </div>
-              <div class="flex-1"></div>
+              <!-- Reference Link with Flex Spacing -->
+              <div class="flex">
+                <div class="flex-1"></div>
+                <div class="flex-[8] flex justify-end w-fit max-w-full h-auto flex items-center dotgothic16-regular">
+                  <div class="bg-[#00FF95] px-[8px] py-[4px]">
+                    <p class="text-[16px] text-black">
+                      『AMETORA――日本がアメリカンスタイルを救った物語』<br />
+                      <span class="pl-[20px]">著-デーヴィッド・マークス2017/09/13 発行-DU BOOKS</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="flex-1"></div>
+              </div>
             </div>
 
-            <!-- Reference Link with Flex Spacing -->
-            <div class="flex">
-              <div class="flex-1"></div>
-              <div class="flex-[8] flex justify-end w-[fit-content] h-[auto] flex items-center dotgothic16-regular">
-                <div class="bg-[#00FF95] px-[8px] py-[4px]">
-                  <p class="text-[16px] text-black">
-                    『AMETORA――日本がアメリカンスタイルを救った物語』<br />
-                    <span class="pl-[20px]">著-デーヴィッド・マークス2017/09/13 発行-DU BOOKS</span>
+            <div
+              class="text-[14px] leading-[2.2] letter-spacing-normal w-full max-w-[1210px] my-[64px] vdl-v7gothic-bold">
+              <div class="my-[64px]">
+                <span class="text-[16px]">
+                  60年代、建設的でプログレッシブな若者が集う銀座とは裏腹に、退廃的で反骨精神の渦巻く新宿があった。
+                  <br />
+                </span>
+                <span class="text-[16px]">
+                  互いに考え方が違っていても、ともに当時の日本に見切りをつけ、自分らの考えるコミュニティを実践する舞台として新宿駅地下は愛されたのだ。
+                </span>
+              </div>
+            </div>
+          </section>
+          <!-- Text Content Section -->
+          <section class="w-full mt-[64px] mb-[64px]">
+            <!-- Bold Text with blue background -->
+            <p
+              class="text-2xl md:text-3xl text-white bg-[#003BFF] px-[8px] py-[4px] inline-block break-words w-fit max-w-full h-auto flex items-center justify-center dotgothic16-regular">
+              地底人のドレスコード
+            </p>
+            <!-- Regular Text with spacing -->
+            <div
+              class="mt-[16px] text-[14px] leading-[2.2] letter-spacing-normal w-full max-w-[1210px] mx-auto px-4 vdl-v7gothic-bold">
+              <span class="text-[16px]">
+                そして、同著によると彼らにはもう一つ共通点があった。アメリカから輸入され始めたばかりの「ブルージーンズ」だ。
+                <br />
+              </span>
+              <span class="text-[16px]">
+                現在我々が当たり前のように履く青色のジーンズは、輸入され始めた当初、若者の社会に対する反骨のトレードマークとして機能していたようだ。だから反骨日本代表である地底人のドレスコードはいずれもブルージーンズ。異種族でありながら、長いものに巻かれてたまるかという気概を一にする彼らは、自由意志により同じ格好をしたのだ。彼らを映したカラー写真がないことが惜しまれる。タイムスリップが可能なら60年代新宿地下は群青色に占拠されていたことが確認できるはずだ。
+                <br />
+              </span>
+              <span class="text-[16px]">
+                我々の令和とはかなり異質なものばかりだろう。自らの考えに基づき、ライフスタイルや将来の展望、音楽やファッションを集団で共有し、特定のエリアで村を形成する。同じ若者でも、時代によって情熱の現し方は随分違う。デモやＳＮＳでの発言を通じて考えを提起するのではなく、自分の生活の在り様そのものからそれを表現する人々が、こんなに身近にいたとは驚きではないか。
+              </span>
+            </div>
+          </section>
+          <!-- Text Content Section -->
+          <section class="w-full mt-[64px] mb-[64px]">
+            <!-- Bold Text with blue background -->
+            <p
+              class="text-2xl md:text-3xl text-white w-fit max-w-full h-auto flex items-center bg-[#003BFF] px-[8px] py-[4px] inline-block break-words dotgothic16-regular">
+              新宿駅西口をみつめよう
+            </p>
+            <!-- Regular Text with spacing -->
+            <div
+              class="mt-[16px] leading-[2.2] letter-spacing-normal w-full max-w-[1210px] mx-auto px-4 vdl-v7gothic-bold">
+              <span class="text-[16px]">
+                しかし70年代には、薬物の危険性によやく気付いた警察の徹底的な浄化活動により、地底人はほみを追われることとなる。ヒッピー族は長野県の山間部や奄美大島 <br>
+                などの田舎のコミューンへと帰り、フーテン族は霧散した。その先の物語は、当事者の声以外、今となっては闇の中だ。
+                <br />
+              </span>
+              <span class="text-[16px]">
+                清潔なイメージを持たれる現在の日本は、こうした浄化活動の連続によるものなのかもしれない。
+                <br />
+              </span>
+              <div class="my-[64px]">
+                <span class="text-[16px]">
+                  新宿駅西口は、この度さらにキレイになる予定である。どんどんキレイになってゆく。キレイなのはだれにとってもいいことだろう。ただ、新築されたものの前に何があったか思い出すことは、けっこう難しい。大部分の人にとって身近でありながら他人事（ひとごと）な汚い新宿駅西口についても、思い出せなくなる前に心にとめるなら、すこしは晴れやかではないか。
+                  <br />
+                </span>
+              </div>
+              <span class="text-[16px]">
+                ここに地底人と、彼らの愛した新宿地下（アンダーグラウンド）のログを残しておこう。
+              </span>
+            </div>
+          </section>
+          <!-- Underground Photo Section -->
+          <section class="w-full mt-[64px] mb-[64px]">
+            <!-- Title Section -->
+            <div class="w-full flex items-center justify-center mb-[16px]">
+              <h2
+                class="text-3xl md:text-[32px] dotgothic16-regular text-blue bg-[#E5FF00] px-[8px] py-[4px] inline-block break-words w-fit max-w-[90%] h-auto flex items-center justify-center">
+                地底人の愛した新宿アンダーグラウンド
+              </h2>
+            </div>
+            <!-- Photo Grid Container -->
+            <div class="w-full mx-auto">
+              <!-- Full Width Image -->
+              <div class="w-full">
+                <img src="/image/article_03/underground_gallery_first_big.jpg" alt="東口で撮影された地底人たち"
+                  class="w-full h-[610px] object-cover cursor-pointer" loading="lazy"
+                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                  onclick="openImagePopup(this.src, this.alt)" />
+              </div>
+              <!-- Image Popup Container -->
+              <div id="imagePopupContainer"
+                class="fixed inset-0 z-[90] hidden items-center justify-center overflow-x-hidden overflow-y-hidden">
+                <div class="relative w-[1440px] h-[800px] my-[64px] flex items-center justify-center"
+                  style="background-color: #363636; background-image: url('/image/worn-dots.png');">
+                  <!-- Image Container with Header -->
+                  <div class="w-[796px]">
+                    <!-- Header row -->
+                    <div class="flex justify-between items-end">
+                      <h3 id="popupTitle" class="text-[14px] text-[#E5FF00]"></h3>
+                      <div class="bg-[#E5FF00] h-8 flex items-center">
+                        <button onclick="closeImagePopup()" class="w-8 h-8 flex items-center justify-center">
+                          <svg class="w-full h-full" viewBox="0 0 403.49 403.49">
+                            <defs>
+                              <style>
+                                .cls-1 {
+                                  fill: none;
+                                }
+
+                                .cls-2 {
+                                  fill: #003BFF;
+                                }
+                              </style>
+                            </defs>
+                            <g>
+                              <rect fill="none" width="403.49" height="403.49" />
+                              <g>
+                                <rect fill="#003BFF" x="161.39" y="0" width="80.7" height="403.49"
+                                  transform="translate(-83.57 201.74) rotate(-45)" />
+                                <rect fill="#003BFF" x="0" y="161.39" width="403.49" height="80.7"
+                                  transform="translate(-83.57 201.74) rotate(-45)" />
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Image -->
+                    <div class="w-full h-[469px]">
+                      <img id="popupImage" class="w-full h-full object-cover" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Grid for Additional Images -->
+              <div class="grid grid-cols-4 gap-2 mt-2">
+                <!-- Image 1 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_first_01.jpg" alt="丸ノ内線新宿駅とメトロプロムナード"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- Image 2 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_first_02.jpg" alt="丸ノ内線新宿駅とメトロプロムナード"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- Image 3 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_first_03.jpg" alt="地下鉄丸ノ内線　地下街"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- Image 4 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_first_04.jpg" alt="西口地下広場"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- Image 5 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_first_05.jpg" alt="新宿西口反戦フォーク集会"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- image 6 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_first_06.jpg" alt="駅ビル地下の若者たち"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- image 7 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_first_07.jpg" alt="新宿駅東口 グリーンハウスと呼ばれるフーテン族の聖地"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- image 8 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_first_08.jpg" alt="駅東口広場でのフーテン対策"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- image 9 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_first_09.jpg" alt="深夜喫茶の若者たち"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- image 10 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_first_10.jpg" alt="地下広場に残された落書き"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- image 11 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_first_11.jpg" alt="80's「新宿を明るくきれいにする運動」の様子"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- image 12 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_first_12.jpg" alt="80's「新宿を明るくきれいにする運動」オーニングパレード"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+              </div>
+              <!-- Source Credit -->
+              <div class="flex justify-end mt-2">
+                <div class="bg-[#E5FF00] px-2 py-1">
+                  <p class="text-[14px] text-black">
+                    新宿歴史博物館所蔵
                   </p>
                 </div>
               </div>
-              <div class="flex-1"></div>
             </div>
-          </div>
-        </section>
-
-        <!-- Simple Text Section -->
-        <section class="w-full">
-          <div class="text-[14px] leading-[2.2] letter-spacing-normal w-[1210px] my-[64px] vdl-v7gothic-bold">
-            <div class="my-[64px]">
-              <span class="text-[16px]">
-                60年代、建設的でプログレッシブな若者が集う銀座とは裏腹に、退廃的で反骨精神の渦巻く新宿があった。
-                <br />
-              </span>
-              <span class="text-[16px]">
-                互いに考え方が違っていても、ともに当時の日本に見切りをつけ、自分らの考えるコミュニティを実践する舞台として新宿駅地下は愛されたのだ。
-              </span>
+          </section>
+          <!-- Underground Photo Section 2-->
+          <section class="w-full mt-[64px] mb-[64px]">
+            <!-- Title with yellow/green background -->
+            <div class="w-full flex items-center justify-center mb-[32px]">
+              <h2 class="text-xl md:text-[32px] text-black bg-[#E5FF00] px-[8px] py-2 break-words dotgothic16-regular">
+                地底人の愛した新宿アンダーグラウンド
+              </h2>
             </div>
-          </div>
-        </section>
-
-        <!-- Text Content Section -->
-        <section class="w-full mt-[64px] mb-[64px]">
-          <!-- Bold Text with blue background -->
-          <p
-            class="text-3xl text-white bg-[#003BFF] px-[8px] py-[4px] inline-block whitespace-nowrap w-[fit-content] h-[auto] flex items-center justify-center dotgothic16-regular">
-            地底人のドレスコード
-          </p>
-          <!-- Regular Text with spacing -->
-          <div class="mt-[16px] text-[14px] leading-[2.2] letter-spacing-normal w-[1210px] vdl-v7gothic-bold">
-            <span class="text-[16px]">
-              そして、同著によると彼らにはもう一つ共通点があった。アメリカから輸入され始めたばかりの「ブルージーンズ」だ。
-              <br />
-            </span>
-            <span class="text-[16px]">
-              現在我々が当たり前のように履く青色のジーンズは、輸入され始めた当初、若者の社会に対する反骨のトレードマークとして機能していたようだ。だから反骨日本代表である地底人のドレスコードはいずれもブルージーンズ。異種族でありながら、長いものに巻かれてたまるかという気概を一にする彼らは、自由意志により同じ格好をしたのだ。彼らを映したカラー写真がないことが惜しまれる。タイムスリップが可能なら60年代新宿地下は群青色に占拠されていたことが確認できるはずだ。
-              <br />
-            </span>
-            <span class="text-[16px]">
-              我々の令和とはかなり異質なものばかりだろう。自らの考えに基づき、ライフスタイルや将来の展望、音楽やファッションを集団で共有し、特定のエリアで村を形成する。同じ若者でも、時代によって情熱の現し方は随分違う。デモやＳＮＳでの発言を通じて考えを提起するのではなく、自分の生活の在り様そのものからそれを表現する人々が、こんなに身近にいたとは驚きではないか。
-            </span>
-          </div>
-        </section>
-
-        <!-- Text Content Section -->
-        <section class="w-full mt-[64px] mb-[64px]">
-          <!-- Bold Text with blue background -->
-          <p
-            class="text-3xl text-white w-[fit-content] h-[auto] flex items-center bg-[#003BFF] px-[8px] py-[4px] inline-block whitespace-nowrap dotgothic16-regular">
-            新宿駅西口をみつめよう
-          </p>
-          <!-- Regular Text with spacing -->
-          <div class="mt-[16px] leading-[2.2] letter-spacing-normal w-[1210px] vdl-v7gothic-bold">
-            <span class="text-[16px]">
-              しかし70年代には、薬物の危険性によやく気付いた警察の徹底的な浄化活動により、地底人はほみを追われることとなる。ヒッピー族は長野県の山間部や奄美大島 <br>
-              などの田舎のコミューンへと帰り、フーテン族は霧散した。その先の物語は、当事者の声以外、今となっては闇の中だ。
-              <br />
-            </span>
-            <span class="text-[16px]">
-              清潔なイメージを持たれる現在の日本は、こうした浄化活動の連続によるものなのかもしれない。
-              <br />
-            </span>
-            <div class="my-[64px]">
-              <span class="text-[16px]">
-                新宿駅西口は、この度さらにキレイになる予定である。どんどんキレイになってゆく。キレイなのはだれにとってもいいことだろう。ただ、新築されたものの前に何があったか思い出すことは、けっこう難しい。大部分の人にとって身近でありながら他人事（ひとごと）な汚い新宿駅西口についても、思い出せなくなる前に心にとめるなら、すこしは晴れやかではないか。
-                <br />
-              </span>
+            <!-- Photo Container -->
+            <div class="w-full mx-auto">
+              <!-- Grid for Additional Images -->
+              <div class="grid grid-cols-4 gap-2">
+                <!-- Image 1 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_second_01.jpg" alt="西口の螺旋車道の裏側"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- Image 2 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_second_02.jpg" alt="西口地下の連絡通路の出口"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- Image 3 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_second_03.jpg" alt="西口地下の連絡通路"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- Image 4 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_second_04.jpg" alt="駅東口広場でのフーテン対策"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- Image 5 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_second_05.jpg" alt="東口広場に出る階段"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- Image 6 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_second_06.jpg" alt="東口広場からルミネへ"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- Image 7 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_second_07.jpg" alt="フーテン族の聖地「グリーンハウス」跡"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+                <!-- Image 8 -->
+                <div class="w-full h-[260px]">
+                  <img src="/image/article_03/underground_gallery_second_08.jpg" alt="新しくなった旧「グリーンハウス」"
+                    class="w-full h-full object-cover cursor-pointer" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                    onclick="openImagePopup(this.src, this.alt)" />
+                </div>
+              </div>
+              <!-- Full Width Image -->
+              <div class="w-full mt-2">
+                <img src="/image/article_03/underground_gallery_first_big_02.JPG" alt="2024新宿駅西口の大工事"
+                  class="w-full h-[300px] md:h-[610px] object-cover cursor-pointer" loading="lazy"
+                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
+                  onclick="openImagePopup(this.src, this.alt)" />
+              </div>
+              <!-- Source Credit -->
+              <div class="flex justify-end mt-2">
+                <div class="bg-[#E5FF00] px-2 py-1">
+                  <p class="text-[14px] text-black">
+                    Photo: Sou Ikeda
+                  </p>
+                </div>
+              </div>
             </div>
-            <span class="text-[16px]">
-              ここに地底人と、彼らの愛した新宿地下（アンダーグラウンド）のログを残しておこう。
-            </span>
-          </div>
-        </section>
-
-        <!-- Underground Photo Section -->
-        <section class="w-full mt-[64px] mb-[64px]">
-          <!-- Title with yellow/green background -->
-          <div class="w-full flex items-center justify-center mb-[16px]">
-            <h2
-              class="text-[32px] text-black bg-[#E5FF00] px-[8px] py-[4px] inline-block whitespace-nowrap w-[fit-content] h-[auto] flex items-center justify-center dotgothic16-regular">
-              地底人の愛した新宿アンダーグラウンド
-            </h2>
-          </div>
-
-          <!-- Photo Grid Container -->
-          <div class="w-full mx-auto">
-            <!-- Full Width Image -->
-            <div class="w-full">
-              <img src="/image/article_03/underground_gallery_first_big.jpg" alt="東口で撮影された地底人たち"
-                class="w-full h-[600px] object-cover cursor-pointer" loading="lazy"
-                style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                onclick="openImagePopup(this.src, this.alt)" />
-            </div>
-            <!-- Image Popup Container -->
-            <div id="imagePopupContainer"
-              class="fixed inset-0 z-50 hidden items-center justify-center overflow-x-hidden overflow-y-hidden">
-              <div class="relative w-[1440px] h-[800px] my-[64px] flex items-center justify-center"
-                style="background-color: #363636; background-image: url('/image/worn-dots.png');">
-                <!-- Image Container with Header -->
-                <div class="w-[796px]">
-                  <!-- Header row -->
-                  <div class="flex justify-between items-end">
-                    <h3 id="popupTitle" class="text-[14px] text-[#E5FF00]"></h3>
-                    <div class="bg-[#E5FF00] h-8 flex items-center">
-                      <button onclick="closeImagePopup()" class="w-8 h-8 flex items-center justify-center">
-                        <svg class="w-full h-full" viewBox="0 0 403.49 403.49">
-                          <defs>
-                            <style>
-                              .cls-1 {
-                                fill: none;
-                              }
-
-                              .cls-2 {
-                                fill: #003BFF;
-                              }
-                            </style>
-                          </defs>
-                          <g>
-                            <rect class="cls-1" width="403.49" height="403.49" />
-                            <g>
-                              <rect class="cls-2" x="161.39" y="0" width="80.7" height="403.49"
-                                transform="translate(-83.57 201.74) rotate(-45)" />
-                              <rect class="cls-2" x="0" y="161.39" width="403.49" height="80.7"
-                                transform="translate(-83.57 201.74) rotate(-45)" />
-                            </g>
-                          </g>
-                        </svg>
-                      </button>
+          </section>
+          <!-- ADDRESS SECTION 1 -->
+          <section>
+            <!-- Card Container -->
+            <div
+              class="w-full max-w-[820px] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
+              <!-- Card Content Wrapper -->
+              <div class="flex flex-col md:flex-row gap-4 md:gap-[32px]">
+                <!-- Left Side - Image -->
+                <div class="w-full max-w-[352px] h-[276px] flex items-center justify-center">
+                  <img src="/image/article_03/underground_link_01.jpg" alt="フーテン（漫画）の表紙"
+                    class="h-full w-auto object-contain" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" />
+                </div>
+                <!-- Right Side - Info -->
+                <div class="w-full max-w-[362px]">
+                  <!-- Title -->
+                  <div class="bg-[#00FF66] w-full px-[8px] py-[4px] flex justify-between items-center">
+                    <h4 class="text-[20px] text-black">フーテン（漫画）</h4>
+                    <span class="text-[20px] text-black">上</span>
+                  </div>
+                  <!-- Info Grid -->
+                  <div class="grid grid-cols-[auto_1fr] mt-4 gap-x-[48px] gap-y-[16px] text-[14px] text-white">
+                    <div class="dotgothic16-regular">出版社</div>
+                    <div class="dotgothic16-regular">グループ・ゼロ</div>
+                    <div class="dotgothic16-regular">著者</div>
+                    <div class="dotgothic16-regular">永島慎二</div>
+                    <div class="dotgothic16-regular">初版発行</div>
+                    <div class="dotgothic16-regular">1972/05</div>
+                    <div class="dotgothic16-regular">出版社HP</div>
+                    <div class="bg-[#00FF66] px-2 w-[fit-content]">
+                      <a href="https://group-zero.jp/" target="_blank" rel="noopener noreferrer"
+                        class="block text-black break-all">
+                        https://group-zero.jp/
+                      </a>
                     </div>
                   </div>
-                  <!-- Image -->
-                  <div class="w-full h-[469px]">
-                    <img id="popupImage" class="w-full h-full object-cover" alt="" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- ADDRESS SECTION 1 END -->
+          <!-- ADDRESS SECTION 2 -->
+          <section>
+            <!-- Card Container -->
+            <div
+              class="w-full max-w-[820px] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
+              <!-- Card Content Wrapper -->
+              <div class="flex flex-col md:flex-row gap-4 md:gap-[32px]">
+                <!-- Left Side - Image -->
+                <div class="w-full max-w-[352px] h-[276px] flex items-center justify-center">
+                  <img src="/image/article_03/underground_link_02.jpg" alt="AMETORA 日本がアメリカンスタイルを救った話"
+                    class="h-full w-auto object-contain" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" />
+                </div>
+                <!-- Right Side - Info -->
+                <div class="w-full max-w-[362px]">
+                  <!-- Title -->
+                  <div class="bg-[#00FF66] w-full px-[8px] py-[4px] flex justify-between items-center">
+                    <h4 class="text-[20px] text-black">AMETORA</h4>
+                    <span class="text-[14px] text-black">日本がアメリカンスタイルを救った話</span>
+                  </div>
+                  <!-- Info Grid -->
+                  <div class="grid grid-cols-[auto_1fr] mt-4 gap-x-[48px] gap-y-[16px] text-[14px] text-white">
+                    <div class="dotgothic16-regular">出版社</div>
+                    <div class="dotgothic16-regular">DU BOOKS</div>
+                    <div class="dotgothic16-regular">著者</div>
+                    <div class="dotgothic16-regular">デーヴィッド・マークス</div>
+                    <div class="dotgothic16-regular">訳者</div>
+                    <div class="dotgothic16-regular">奥田佑士</div>
+                    <div class="dotgothic16-regular">発行年</div>
+                    <div class="dotgothic16-regular">2017/09/13</div>
+                    <div class="dotgothic16-regular">出版社HP</div>
+                    <div class="bg-[#00FF66] px-2 w-[fit-content]">
+                      <a href="https://www.harmoto.com/bd/isbn/978-4-86647-006-4" target="_blank"
+                        rel="noopener noreferrer" class="block text-black break-all">
+                        https://www.harmoto.com/bd/isbn/978-4-86647-006-4
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Grid for Additional Images -->
-            <div class="grid grid-cols-4 gap-2 mt-2">
-              <!-- Image 1 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_first_01.jpg" alt="丸ノ内線新宿駅とメトロプロムナード"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- Image 2 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_first_02.jpg" alt="丸ノ内線新宿駅とメトロプロムナード"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- Image 3 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_first_03.jpg" alt="地下鉄丸ノ内線　地下街"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- Image 4 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_first_04.jpg" alt="西口地下広場"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- Image 5 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_first_05.jpg" alt="新宿西口反戦フォーク集会"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- image 6 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_first_06.jpg" alt="駅ビル地下の若者たち"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- image 7 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_first_07.jpg" alt="新宿駅東口 グリーンハウスと呼ばれるフーテン族の聖地"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- image 8 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_first_08.jpg" alt="駅東口広場でのフーテン対策"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- image 9 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_first_09.jpg" alt="深夜喫茶の若者たち"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- image 10 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_first_10.jpg" alt="地下広場に残された落書き"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- image 11 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_first_11.jpg" alt="80's「新宿を明るくきれいにする運動」の様子"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- image 12 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_first_12.jpg" alt="80's「新宿を明るくきれいにする運動」オープニングパレード"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-            </div>
-
-            <!-- Source Credit -->
-            <div class="flex justify-end mt-2">
-              <div class="bg-[#E5FF00] px-2 py-1">
-                <p class="text-[14px] text-black">
-                  新宿歴史博物館所蔵
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Underground Photo Section 2-->
-        <section class="w-full mt-[64px] mb-[64px]">
-          <!-- Title with yellow/green background -->
-          <div class="w-full flex items-center justify-center mb-[32px]">
-            <h2 class="text-[32px] text-black bg-[#E5FF00] px-4 py-2 whitespace-nowrap">
-              地底人の愛した新宿アンダーグラウンド
-            </h2>
-          </div>
-
-          <!-- Photo Container -->
-          <div class="w-full mx-auto">
-            <!-- Grid for Additional Images -->
-            <div class="grid grid-cols-4 gap-2">
-              <!-- Image 1 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_second_01.jpg" alt="西口の螺旋車道の裏側"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- Image 2 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_second_02.jpg" alt="西口地下の連絡通路の出口"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- Image 3 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_second_03.jpg" alt="西口地下の連絡通路"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- Image 4 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_second_04.jpg" alt="駅東口広場でのフーテン対策"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- Image 5 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_second_05.jpg" alt="東口広場に出る階段"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- Image 6 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_second_06.jpg" alt="東口広場からルミネへ"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- Image 7 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_second_07.jpg" alt="フーテン族の聖地「グリーンハウス」跡"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-              <!-- Image 8 -->
-              <div class="w-full h-[260px]">
-                <img src="/image/article_03/underground_gallery_second_08.jpg" alt="新しくなった旧「グリーンハウス」"
-                  class="w-full h-full object-cover cursor-pointer" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                  onclick="openImagePopup(this.src, this.alt)" />
-              </div>
-            </div>
-
-            <!-- Full Width Image -->
-            <div class="w-full mt-2">
-              <img src="/image/article_03/underground_gallery_first_big_02.JPG" alt="2024新宿駅西口の大工事"
-                class="w-full h-[610px] object-cover cursor-pointer" loading="lazy"
-                style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"
-                onclick="openImagePopup(this.src, this.alt)" />
-            </div>
-
-            <!-- Source Credit -->
-            <div class="flex justify-end mt-2">
-              <div class="bg-[#E5FF00] px-2 py-1">
-                <p class="text-[14px] text-black">
-                  Photo: Sou Ikeda
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ADDRESS SECTION 1 -->
-        <section>
-          <!-- Card Container -->
-          <div class="w-[820px] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
-            <!-- Card Content Wrapper -->
-            <div class="flex gap-[32px]">
-              <!-- Left Side - Image -->
-              <div class="w-[352px] h-[276px] flex items-center justify-center">
-                <img src="/image/article_03/underground_link_01.jpg" alt="フーテン（漫画）の表紙"
-                  class="h-full w-auto object-contain" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" />
-              </div>
-
-              <!-- Right Side - Info -->
-              <div class="w-[362px]">
-                <!-- Title -->
-                <div class="bg-[#00FF66] w-full px-[8px] py-[4px] flex justify-between items-center">
-                  <h4 class="text-[20px] text-black">フーテン（漫画）</h4>
-                  <span class="text-[20px] text-black">上</span>
+          </section>
+          <!-- ADDRESS SECTION 2 END -->
+          <!-- ADDRESS SECTION 3 -->
+          <section>
+            <!-- Card Container -->
+            <div
+              class="w-full max-w-[820px] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
+              <!-- Card Content Wrapper -->
+              <div class="flex flex-col md:flex-row gap-4 md:gap-[32px]">
+                <!-- Left Side - Image -->
+                <div class="w-full max-w-[352px] max-h-[276px]">
+                  <img src="/image/article_03/underground_link_03.jpg" alt="新宿歴史博物館の外観"
+                    class="w-full h-full object-cover" loading="lazy"
+                    style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" />
                 </div>
-
-                <!-- Info Grid -->
-                <div class="grid grid-cols-[auto_1fr] mt-4 gap-x-[48px] gap-y-[16px] text-[14px] text-white">
-                  <div class="font-bold">出版社</div>
-                  <div>グループ・ゼロ</div>
-
-                  <div class="font-bold">著者</div>
-                  <div>永島慎二</div>
-
-                  <div class="font-bold">初版発行</div>
-                  <div>1972/05</div>
-
-                  <div class="font-bold">出版社HP</div>
-                  <div class="bg-[#00FF66] px-2 w-[fit-content]">
-                    <a href="https://group-zero.jp/" target="_blank" rel="noopener noreferrer"
-                      class="block text-black break-all">
-                      https://group-zero.jp/
-                    </a>
+                <!-- Right Side - Info -->
+                <div class="w-full max-w-[362px]">
+                  <!-- Title -->
+                  <div class="bg-[#00FF66] w-full px-[8px] py-[4px] flex justify-between items-center">
+                    <h4 class="text-[20px] text-black">新宿歴史博物館</h4>
+                  </div>
+                  <!-- Info Grid -->
+                  <div class="grid grid-cols-[auto_1fr] mt-4 gap-x-[48px] gap-y-[16px] text-[14px] text-white">
+                    <div class="dotgothic16-regular">所在地</div>
+                    <div class="dotgothic16-regular">
+                      〒160-0008<br />
+                      東京都新宿区四谷三栄町12-16
+                    </div>
+                    <div class="dotgothic16-regular">営業時間</div>
+                    <div class="dotgothic16-regular">9:30～17:30</div>
+                    <div class="dotgothic16-regular">定休日</div>
+                    <div class="dotgothic16-regular">
+                      第2・4月曜日<br />
+                      （祝休日の場合は翌平日）
+                    </div>
+                    <div class="dotgothic16-regular">ホームページ</div>
+                    <div class="bg-[#00FF66] px-2 w-[fit-content]">
+                      <a href="https://www.regasu-shinjuku.or.jp/rekihaku/" target="_blank" rel="noopener noreferrer"
+                        class="block text-black break-all">
+                        https://www.regasu-shinjuku.or.jp/rekihaku/
+                      </a>
+                    </div>
+                    <div class="dotgothic16-regular">電話/mail</div>
+                    <div class="dotgothic16-regular">03-3359-2131</div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <!-- ADDRESS SECTION 1 END -->
+          </section>
+          <!-- ADDRESS SECTION 3 END -->
+          <!-- BORDER BETWEEN SECTIONS -->
+          <div class="w-full h-[1px] bg-[#000000]"></div>
+        </main>
 
-        <!-- ADDRESS SECTION 2 -->
-        <section>
-          <!-- Card Container -->
-          <div class="w-[820px] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
-            <!-- Card Content Wrapper -->
-            <div class="flex gap-[32px]">
-              <!-- Left Side - Image -->
-              <div class="w-[352px] h-[276px] flex items-center justify-center">
-                <img src="/image/article_03/underground_link_02.jpg" alt="AMETORA 日本がアメリカンスタイルを救った話"
-                  class="h-full w-auto object-contain" loading="lazy"
-                  style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" />
+        <!-- Remote Control -->
+        <div class="relative right-0">
+          <aside class="sticky top-[80px] z-[40] float-right" id="remoteControl">
+            <div class="w-fit h-fit flex flex-col gap-[32px] bg-black p-[16px]">
+              <!-- TOP PAGE -->
+              <button
+                class="article-nav top w-[35px] h-[40px] flex items-center justify-center transition-all duration-300 group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="42" viewBox="0 0 35 42" fill="none">
+                  <path
+                    d="M19.0933 28.6509H22.2742V31.8326H25.4558V35.0134H28.6375V38.2001H31.8183V41.3809H35V38.2001V35.0134H31.8183V31.8326H28.6375V28.6509H25.4558V25.4651H22.2742V22.2835H19.0933V19.0977H15.9067V22.2835H12.7258V25.4651H9.54418V28.6509H6.36251V31.8326H3.18167V35.0134H0V38.2001V41.3809H3.18167V38.2001H6.36251V35.0134H9.54418V31.8326H12.7258V28.6509H15.9067V25.4651H19.0933V28.6509Z"
+                    class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                  <path
+                    d="M6.36251 25.4649V22.2833H9.54418V19.0975H12.7258V15.9158H15.9067V12.73H19.0933V15.9158H22.2742V19.0975H25.4558V22.2833H28.6375V25.4649H31.8183V28.6507H35V25.4649V22.2833H31.8183V19.0975H28.6375V15.9158H25.4558V12.73H22.2742V9.54914H19.0933V6.36251H22.2742H25.4558H28.6375H31.8183H35V3.18167H31.8183V0H28.6375H25.4558H22.2742H19.0933H15.9067H12.7258H9.54418H6.36251H3.18167V3.18167H0V6.36251H3.18167H6.36251H9.54418H12.7258H15.9067V9.54914H12.7258V12.73H9.54418V15.9158H6.36251V19.0975H3.18167V22.2833H0V25.4649V28.6507H3.18167V25.4649H6.36251Z"
+                    class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                </svg>
+              </button>
+
+              <!-- Navigation Group -->
+              <div class="flex flex-col gap-8">
+                <button
+                  class="page-nav up w-[35px] h-[40px] flex items-center justify-center transition-all duration-300 group">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="23" viewBox="0 0 35 23" fill="none">
+                    <path
+                      d="M3.1858 19.4758H6.36664V16.295H9.54749V13.1092H12.7283V9.92834H15.9092V6.74254H19.0908V9.92834H22.2758V13.1092H25.4567V16.295H28.6383V19.4758H31.8192V22.6616H35V19.4758V16.295H31.8192V13.1092H28.6383V9.92834H25.4567V6.74254H22.2758V3.5617H19.0908V0.380859H15.9092V3.5617H12.7283V6.74254H9.54749V9.92834H6.36664V13.1092H3.1858V16.295H0V19.4758V22.6616H3.1858V19.4758Z"
+                      class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                  </svg>
+                </button>
+                <button
+                  class="page-nav down w-[35px] h-[40px] flex items-center justify-center transition-all duration-300 group">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="23" viewBox="0 0 35 23" fill="none">
+                    <path
+                      d="M3.1858 3.84791H6.36664V7.02875H9.54749V10.2137H12.7283V13.3954H15.9092V16.5804H19.0908V13.3954H22.2758V10.2137H25.4567V7.02875H28.6383V3.84791H31.8192V0.662109H35V3.84791V7.02875H31.8192V10.2137H28.6383V13.3954H25.4567V16.5804H22.2758V19.762H19.0908V22.9429H15.9092V19.762H12.7283V16.5804H9.54749V13.3954H6.36664V10.2137H3.1858V7.02875H0V3.84791V0.662109H3.1858V3.84791Z"
+                      class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                  </svg>
+                </button>
               </div>
 
-              <!-- Right Side - Info -->
-              <div class="w-[362px]">
-                <!-- Title -->
-                <div class="bg-[#00FF66] w-full px-[8px] py-[4px] flex justify-between items-center">
-                  <h4 class="text-[20px] text-black">AMETORA</h4>
-                  <span class="text-[14px] text-black">日本がアメリカンスタイルを救った話</span>
-                </div>
-
-                <!-- Info Grid -->
-                <div class="grid grid-cols-[auto_1fr] mt-4 gap-x-[48px] gap-y-[16px] text-[14px] text-white">
-                  <div class="font-bold">出版社</div>
-                  <div>DU BOOKS</div>
-
-                  <div class="font-bold">著者</div>
-                  <div>デーヴィッド・マークス</div>
-
-                  <div class="font-bold">訳者</div>
-                  <div>奥田佑士</div>
-
-                  <div class="font-bold">発行年</div>
-                  <div>2017/09/13</div>
-
-                  <div class="font-bold">出版社HP</div>
-                  <div class="bg-[#00FF66] px-2 w-[fit-content]">
-                    <a href="https://www.harmoto.com/bd/isbn/978-4-86647-006-4" target="_blank"
-                      rel="noopener noreferrer" class="block text-black break-all">
-                      https://www.harmoto.com/bd/isbn/978-4-86647-006-4
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <!-- BOTTOM PAGE -->
+              <button
+                class="article-nav bottom w-[35px] h-[40px] flex items-center justify-center transition-all duration-300 group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="43" viewBox="0 0 35 43" fill="none">
+                  <path
+                    d="M19.0933 13.6714H22.2742V10.4897H25.4558V7.30888H28.6375V4.12307H31.8183V0.941406H35V4.12307V7.30888H31.8183V10.4897H28.6375V13.6714H25.4558V16.8572H22.2742V20.0389H19.0933V23.2247H15.9067V20.0389H12.7258V16.8572H9.54418V13.6714H6.36251V10.4897H3.18167V7.30888H0V4.12307V0.941406H3.18167V4.12307H6.36251V7.30888H9.54418V10.4897H12.7258V13.6714H15.9067V16.8572H19.0933V13.6714Z"
+                    class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                  <path
+                    d="M6.36251 16.8577V20.0393H9.54418V23.2251H12.7258V26.4068H15.9067V29.5926H19.0933V26.4068H22.2742V23.2251H25.4558V20.0393H28.6375V16.8577H31.8183V13.6719H35V16.8577V20.0393H31.8183V23.2251H28.6375V26.4068H25.4558V29.5926H22.2742V32.7743H19.0933V35.9601H22.2742H25.4558H28.6375H31.8183H35V39.1418H31.8183V42.3226H28.6375H25.4558H22.2742H19.0933H15.9067H12.7258H9.54418H6.36251H3.18167V39.1418H0V35.9601H3.18167H6.36251H9.54418H12.7258H15.9067V32.7743H12.7258V29.5926H9.54418V26.4068H6.36251V23.2251H3.18167V20.0393H0V16.8577V13.6719H3.18167V16.8577H6.36251Z"
+                    class="fill-white transition-colors duration-300 group-hover:fill-[#FF2F00]" />
+                </svg>
+              </button>
             </div>
+          </aside>
+        </div>
+      </div>
+
+
+      <!-- BACK TO HOME BUTTON -->
+      <div class="flex justify-center items-center mt-[48px] py-[32px]">
+        <div
+          class="flex items-center gap-[16px] bg-black hover:bg-[#FF2F00] transition-colors duration-300 px-[16px] py-[8px] group">
+          <div class="flex items-center justify-center w-fit">
+            <img src="/image/illusts/functional/carousel-left.svg" alt="Arrow Left"
+              class="w-[23px] h-[53px] brightness-100 group-hover:brightness-0 transition-all duration-300">
           </div>
-        </section>
-        <!-- ADDRESS SECTION 2 END -->
-
-        <!-- ADDRESS SECTION 3 -->
-        <section>
-          <!-- Card Container -->
-          <div class="w-[820px] mx-auto mb-[48px] border-4 border-[#00FF95] p-[32px] bg-[#000] rounded-[32px]">
-            <!-- Card Content Wrapper -->
-            <div class="flex gap-[32px]">
-              <!-- Left Side - Image -->
-              <div class="w-[352px] h-[276px]">
-                <img src="/image/article_03/underground_link_03.jpg" alt="新宿歴史博物館の外観" class="w-full h-full object-cover"
-                  loading="lazy" style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" />
-              </div>
-
-              <!-- Right Side - Info -->
-              <div class="w-[362px]">
-                <!-- Title -->
-                <div class="bg-[#00FF66] w-full px-[8px] py-[4px] flex justify-between items-center">
-                  <h4 class="text-[20px] text-black">新宿歴史博物館</h4>
-                </div>
-
-                <!-- Info Grid -->
-                <div class="grid grid-cols-[auto_1fr] mt-4 gap-x-[48px] gap-y-[16px] text-[14px] text-white">
-                  <div class="font-bold">所在地</div>
-                  <div>
-                    〒160-0008<br />
-                    東京都新宿区四谷三栄町12-16
-                  </div>
-
-                  <div class="font-bold">営業時間</div>
-                  <div>9:30～17:30</div>
-
-                  <div class="font-bold">定休日</div>
-                  <div>
-                    第2・4月曜日<br />
-                    （祝休日の場合は翌平日）
-                  </div>
-
-                  <div class="font-bold">ホームページ</div>
-                  <div class="bg-[#00FF66] px-2 w-[fit-content]">
-                    <a href="https://www.regasu-shinjuku.or.jp/rekihaku/" target="_blank" rel="noopener noreferrer"
-                      class="block text-black break-all">
-                      https://www.regasu-shinjuku.or.jp/rekihaku/
-                    </a>
-                  </div>
-
-                  <div class="font-bold">電話/mail</div>
-                  <div>03-3359-2131</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- ADDRESS SECTION 3 END -->
-      </main>
+          <a href="/index.html">
+            <span
+              class="dotgothic16-regular text-[40px] text-white group-hover:text-black transition-colors duration-300">BACK
+              to HOME</span>
+          </a>
+        </div>
+      </div>
+      <!-- END OF BACK TO HOME BUTTON -->
 
       <!-- FOOTER -->
       <footer class="mt-[64px]">
@@ -1095,7 +1130,7 @@
             </div>
             <hr class="py-[8px]" />
             <div id="footer-left-articles">
-              <span class="text-[32px] font-bold dotgothic16-regular">1月号</span>
+              <span class="text-[32px] dotgothic16-regular dotgothic16-regular">1月号</span>
               <ul class="vdl-v7gothic">
                 <li class="py-[4px]">
                   <a href="/neo-retro.html" class="hover:text-[#FF2F00] transition-colors">
@@ -1209,6 +1244,7 @@
   <script type="module" src="js/hover-effect.js"></script>
   <script type="module" src="js/scroll-behavior.js"></script>
   <script type="module" src="js/menu.js"></script>
+  <script type="module" src="js/remote-control.js"></script>
 </body>
 
 </html>

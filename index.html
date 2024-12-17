@@ -17,29 +17,34 @@
 </head>
 
 <body>
-  <!-- Change this parent container -->
+  <!-- Main outer container - add responsive width -->
   <div class="min-h-screen flex justify-center box-border relative overflow-x-hidden">
-    <!-- Main container - keep original width but add positioning context -->
-    <div
-      class="w-[1440px] relative bg-[url('/image/worn-dots.png')] bg-repeat bg-auto isolation border border-blue-500">
-      <!-- Inner container - add proper positioning -->
-      <div class="relative border border-green-500">
-        <!-- Hero Section -->
-        <section class="relative h-screen w-[1410px] mx-auto overflow-hidden py-4 border border-red-500"
-          aria-label="Hero Banner">
-          <!-- Main Content Container -->
-          <div class="relative z-10 h-full mx-[32px] flex flex-col items-center justify-center border border-blue-500"
+    <!-- Main container - add responsive width -->
+    <div class="w-full max-w-[1440px] relative bg-[url('/image/worn-dots.png')] bg-repeat bg-auto isolation">
+
+      <!-- Inner container - add responsive width -->
+      <div class="relative w-full">
+
+        <!-- Hero Section - add responsive width and aspect ratio -->
+        <section class="relative h-screen w-full max-w-[1410px] mx-auto overflow-hidden pt-4" aria-label="Hero Banner">
+
+          <!-- Main Content Container - add responsive margins -->
+          <div class="relative z-10 h-full mx-[32px] mx-[clamp(16px,3%,32px)] flex flex-col items-center justify-center"
             role="banner">
-            <!-- Background Image -->
+
+            <!-- Background Image - add aspect ratio -->
             <div class="absolute inset-0">
               <img src="image/hp-main-visual/mainV34 (compressed).jpg" alt="Urban Japanese Street"
                 class="w-full h-full object-cover hero-image" loading="lazy" style="
-                    image-rendering: -webkit-optimize-contrast;
-                    image-rendering: crisp-edges;
-                  " />
+                  aspect-ratio: 16/9;
+                  image-rendering: -webkit-optimize-contrast;
+                  image-rendering: crisp-edges;
+                " />
             </div>
+
             <!-- STATUS HIDDEN/STATUS VISIBLE -->
-            <div class="absolute bottom-[115px] right-[43px] flex w-[177px] items-center justify-between"
+            <div
+              class="absolute bottom-[115px] bottom-[calc(8%_+_35px)] right-[43px] right-[calc(4%_+_9px)] flex w-[177px] w-[clamp(120px,15vw,177px)] h-[38px] my-3 items-center justify-between"
               aria-label="Status Indicators">
               <!-- Status Container 1 -->
               <div class="relative w-[14px] h-[14px] cursor-pointer">
@@ -210,7 +215,8 @@
             <!-- END -->
             <!-- Logo Container -->
             <!-- ロゴのサイズは810pxと177pxが60%で表示されるように設定 -->
-            <div class="absolute top-8 left-8 w-full max-w-[810px] h-auto md:h-[177px] transition-all duration-300">
+            <div
+              class="absolute top-8 left-8 w-full max-w-[810px] max-w-[min(60%,810px)] h-auto md:h-[177px] transition-all duration-300">
               <svg class="w-full h-auto fill-current" viewBox="0 0 1494.02 326.04" xmlns="http://www.w3.org/2000/svg"
                 aria-label="MAYU Logo" role="img">
                 <g class="fill-white">
@@ -285,7 +291,8 @@
               </svg>
             </div>
             <!-- Navigation Controls Container -->
-            <div class="absolute bottom-8 right-8 flex items-center gap-12" aria-label="Slideshow Controls">
+            <div class="absolute bottom-8 right-8 right-[4%] flex items-center gap-12 gap-[clamp(24px,3vw,48px)]"
+              aria-label="Slideshow Controls">
               <!-- Left Arrow -->
               <button class="w-[23px] h-[35px] focus:outline-none group" aria-label="Previous Slide">
                 <svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 269.23 423.08"
@@ -325,7 +332,7 @@
       <div id="headerTrigger" class="h-1"></div>
       <!-- Then the header -->
       <header
-        class="fixed top-0 left-1/2 -translate-x-1/2 w-[1440px] transform-gpu transition-all duration-500 z-[100] opacity-0 -translate-y-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] [&.visible]:opacity-100 [&.visible]:translate-y-0">
+        class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1440px] transform-gpu transition-all duration-500 z-[100] opacity-0 -translate-y-full bg-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] [&.visible]:opacity-100 [&.visible]:translate-y-0">
         <!-- Main header content -->
         <div class="max-w-[1440px] mx-auto relative">
           <!-- Single container for logo and menu -->
@@ -335,7 +342,7 @@
               <!-- MAYU Logo -->
               <svg id="_レイヤー_2"
                 class="w-[160px] h-[44px] fill-black mx-auto group-hover:fill-[#FF2F00] transition-all duration-300"
-                data-name="���イヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1106.05 299.68">
+                data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1106.05 299.68">
                 <g id="_レイヤー_1-2" data-name="レイヤー_1">
                   <g>
                     <polygon points="193.71 260.65 202.85 225.35 146.54 244.56 193.71 260.65" />
@@ -541,9 +548,9 @@
         </div>
       </header>
       <!-- MAIN CONTENTS -->
-      <main class="mt-[85px] max-w-[1210px] mx-auto border border-red-500">
+      <main class="mt-[85px] max-w-[1210px] w-full mx-auto">
         <!-- SECTION 1 -->
-        <section class="w-full border border-red-500">
+        <section class="w-full">
           <div class="relative">
             <div class="relative text-container section-1-text">
               <!-- Food Tag -->
@@ -574,7 +581,7 @@
 
             <div class="flex justify-between">
               <!-- Left side with images -->
-              <div class="relative w-[326px]">
+              <div class="relative w-full max-w-[326px]">
                 <!-- IMAGE CONTAINER -->
                 <img src="/image/illusts/seals/neo-kissa.png" alt="Neo Kissa"
                   class="absolute z-10 w-[360px] h-[190px] top-[190px] left-[25px] rotate-[-8deg]" loading="lazy"
@@ -613,8 +620,9 @@
               </div>
 
               <!-- Right side with main image and button -->
-              <div class="relative w-[880px] h-[600px] overflow-hidden right-image-container group/section1">
-                <img src="/image/thumbNails/thumbnail_01.jpg" alt="Main Image" class="object-cover w-[880px] h-[600px]"
+              <div
+                class="relative max-w-[880px] max-h-[600px] overflow-hidden border-4 border-black right-image-container group/section1">
+                <img src="/image/thumbNails/thumbnail_01.jpg" alt="Main Image" class="object-cover w-full h-full"
                   loading="lazy" width="880" height="600" draggable="false" style="
                       image-rendering: -webkit-optimize-contrast;
                       image-rendering: crisp-edges;
@@ -630,7 +638,7 @@
           </div>
         </section>
         <!-- SECTION 2 -->
-        <section class="mt-[184px] mb-[184px] w-full border border-red-500">
+        <section class="mt-[184px] mb-[184px] w-full">
           <div class="relative section-2-hover">
             <div class="relative text-container section-2-text">
               <!-- History and Trivia Tags -->
@@ -660,8 +668,9 @@
             </div>
             <div class="flex">
               <!-- Left Side - Main Image -->
-              <div class="relative w-[880px] h-[600px] overflow-hidden left-image-container">
-                <img src="/image/thumbNails/thumbnail_02.jpg" alt="Main Image" class="object-cover w-[880px] h-[600px]"
+              <div
+                class="relative max-w-[880px] max-h-[600px] border-4 border-black overflow-hidden left-image-container">
+                <img src="/image/thumbNails/thumbnail_02.jpg" alt="Main Image" class="object-cover w-full h-full"
                   loading="lazy" width="880" height="600" style="
                       image-rendering: -webkit-optimize-contrast;
                       image-rendering: crisp-edges;
@@ -676,20 +685,20 @@
               <!-- Right Side - Text and Decorative Images -->
               <!-- Decorative Images -->
               <img src="/image/illusts/seals/why.png" alt="Why Image"
-                class="absolute z-30 w-[350px] h-auto top-[250px] right-[40px] rotate-[10deg] object-contain"
+                class="absolute z-30 w-full max-w-[350px] h-auto top-[250px] right-[40px] rotate-[10deg] object-contain"
                 width="350" height="auto" draggable="false" style="
                       image-rendering: -webkit-optimize-contrast;
                       image-rendering: crisp-edges;
                     " loading="lazy" aria-hidden="true" focusable="false" />
               <img src="/image/illusts/seals/annyo1.png" alt="Annyo Image"
-                class="absolute z-20 w-[307px] h-[168px] top-[370px] right-[0px] object-contain" width="307"
-                height="168" draggable="false" style="
+                class="absolute z-20 w-full max-w-[307px] max-h-[168px] top-[370px] right-[0px] object-contain"
+                width="307" height="168" draggable="false" style="
                       image-rendering: -webkit-optimize-contrast;
                       image-rendering: crisp-edges;
                     " />
               <img src="/image/illusts/seals/htg1.png" alt="Htg1 Image"
-                class="absolute z-20 w-[487px] h-[304px] top-[400px] right-[100px] object-contain" width="487"
-                height="304" draggable="false" style="
+                class="absolute z-20 w-full max-w-[487px] max-h-[304px] top-[400px] right-[100px] object-contain"
+                width="487" height="304" draggable="false" style="
                     image-rendering: -webkit-optimize-contrast;
                     image-rendering: crisp-edges;
                   " />
@@ -698,7 +707,7 @@
         </section>
         <!-- SECTION 2 END -->
         <!-- SECTION 3 -->
-        <section class="mt-[184px] mb-[184px] w-full border border-red-500">
+        <section class="mt-[184px] mb-[184px] w-full">
           <div class="relative section-3-hover">
             <div class="relative text-container section-3-text">
               <!-- Culture and History Tags -->
@@ -731,15 +740,15 @@
               <!-- Left side with images -->
               <!-- JEANS TAG -->
               <img src="/image/illusts/seals/jeans-tag.png" alt="Jeans Tag"
-                class="absolute z-10 w-[506px] h-[337px] top-[130px] left-[0px] rotate-[-8deg]" loading="lazy"
-                width="506" height="337" draggable="false" style="
+                class="absolute z-10 w-full max-w-[506px] max-h-[337px] top-[130px] left-[0px] rotate-[-8deg]"
+                loading="lazy" width="506" height="337" draggable="false" style="
                   image-rendering: -webkit-optimize-contrast;
                   image-rendering: crisp-edges;
                 " />
               <!-- CAPSULE IMAGE -->
               <img src="/image/illusts/seals/capsule-06.png" alt="Capsule Image"
-                class="absolute z-30 w-[331px] h-[260px] top-[400px] left-[0px]" loading="lazy" width="331" height="260"
-                draggable="false" style="
+                class="absolute z-30 w-full max-w-[331px] max-h-[260px] top-[400px] left-[0px]" loading="lazy"
+                width="331" height="260" draggable="false" style="
                   image-rendering: -webkit-optimize-contrast;
                   image-rendering: crisp-edges;
                 " />
@@ -752,14 +761,15 @@
               " />
               <!-- UNDERGRADE IMAGE 2 -->
               <img src="/image/illusts/seals/ungra-02.png" alt="Undergrade 2 Image"
-                class="absolute z-40 w-[128px] h-[318px] top-[400px] left-[430px] rotate-[-3deg] object-contain"
+                class="absolute z-40 w-full max-w-[128px] max-h-[318px] top-[400px] left-[430px] rotate-[-3deg] object-contain"
                 loading="lazy" width="128" height="318" draggable="false" style="
                 image-rendering: -webkit-optimize-contrast;
                 image-rendering: crisp-edges;
               " />
               <!-- Right Side - Main Image -->
-              <div class="relative w-[880px] h-[600px] overflow-hidden right-image-container-2 group">
-                <img src="/image/thumbNails/thumbnail_03.jpg" alt="Main Image" class="object-cover w-[880px] h-[600px]"
+              <div
+                class="relative max-w-[880px] max-h-[600px] border-4 border-black overflow-hidden right-image-container-2 group">
+                <img src="/image/thumbNails/thumbnail_03.jpg" alt="Main Image" class="object-cover w-full h-full"
                   loading="lazy" width="880" height="600" style="
                       image-rendering: -webkit-optimize-contrast;
                       image-rendering: crisp-edges;
@@ -776,7 +786,7 @@
         </section>
         <!-- SECTION 3 END -->
         <!-- SECTION 4 -->
-        <section class="mt-[184px] mb-[184px] border border-red-500">
+        <section class="mt-[184px] mb-[184px] w-full">
           <div class="relative section-4-hover">
             <div class="relative text-container section-4-text">
               <!-- Trip Tag -->
@@ -806,8 +816,9 @@
             </div>
             <div class="flex">
               <!-- Left Side - Main Image -->
-              <div class="relative w-[880px] h-[600px] overflow-hidden left-image-container-2">
-                <img src="/image/thumbNails/thumbnail_04.jpg" alt="Main Image" class="object-cover w-[880px] h-[600px]"
+              <div
+                class="relative max-w-[880px] max-h-[600px] border-4 border-black overflow-hidden left-image-container-2">
+                <img src="/image/thumbNails/thumbnail_04.jpg" alt="Main Image" class="object-cover w-full h-full"
                   loading="lazy" width="880" height="600" style="
                       image-rendering: -webkit-optimize-contrast;
                       image-rendering: crisp-edges;
@@ -820,7 +831,7 @@
                 </a>
               </div>
               <!-- Right Side - Empty Space -->
-              <div class="relative w-[326px]">
+              <div class="relative w-full max-w-[326px]">
                 <!-- UJU MURA RIGHT 1 IMAGE -->
                 <img src="/image/illusts/seals/comet.png" alt="Why Image"
                   class="absolute z-30 w-[350px] h-auto top-[200px] right-[110px] object-contain" loading="lazy"
@@ -831,14 +842,14 @@
               </div>
               <!-- UJU MURA RIGHT 2 IMAGE -->
               <img src="/image/illusts/seals/galax-02.png" alt="Annyo Image"
-                class="absolute z-20 w-[519px] h-[506px] top-[200px] right-[-50px] object-contain" loading="lazy"
-                width="519" height="506" draggable="false" style="
+                class="absolute z-20 w-full max-w-[519px] max-h-[506px] top-[200px] right-[-50px] object-contain"
+                loading="lazy" width="519" height="506" draggable="false" style="
                     image-rendering: -webkit-optimize-contrast;
                     image-rendering: crisp-edges;
                   " />
               <!-- UJU MURA RIGHT 3 IMAGE -->
               <img src="/image/illusts/seals/astr.png" alt="Uju Mura Right 3 Image"
-                class="absolute z-30 w-[285px] h-[508px] top-[200px] rotate-[-5deg] right-[-50px] object-contain"
+                class="absolute z-30 w-full max-w-[285px] max-h-[508px] top-[200px] rotate-[-5deg] right-[-50px] object-contain"
                 loading="lazy" width="285" height="508" draggable="false" style="
                     image-rendering: -webkit-optimize-contrast;
                     image-rendering: crisp-edges;
@@ -848,7 +859,7 @@
         </section>
         <!-- SECTION 4 END -->
         <!-- SECTION 5 -->
-        <section class="mt-[184px] mb-[64px] border border-red-500">
+        <section class="mt-[184px] mb-[64px] w-full">
           <div class="relative section-5-hover">
             <div class="relative text-container section-5-text">
               <!-- Culture and Trip Tags -->
@@ -879,32 +890,33 @@
             <div class="flex justify-end">
               <!-- Left Side - Empty Space -->
               <img src="/image/illusts/seals/arcademachine 2.png"
-                class="absolute z-30 w-[240px] h-[321px] rotate-[-8deg] top-[300px] left-[-14px]" loading="lazy"
-                width="240" height="321" draggable="false" style="
+                class="absolute z-30 w-full max-w-[240px] max-h-[321px] rotate-[-8deg] top-[300px] left-[-14px]"
+                loading="lazy" width="240" height="321" draggable="false" style="
                     image-rendering: -webkit-optimize-contrast;
                     image-rendering: crisp-edges;
                   " alt="Arcade Machine Image" />
               <img src="/image/illusts/seals/arcademachine 2.png"
-                class="absolute z-20 w-[240px] h-[321px] rotate-[8deg] top-[200px] left-[200px]" loading="lazy"
-                width="240" height="321" draggable="false" style="
+                class="absolute z-20 w-full max-w-[240px] max-h-[321px] rotate-[8deg] top-[200px] left-[200px]"
+                loading="lazy" width="240" height="321" draggable="false" style="
                     image-rendering: -webkit-optimize-contrast;
                     image-rendering: crisp-edges;
                   " alt="Arcade Machine Image" />
               <img src="/image/illusts/seals/drunk 1.png"
-                class="absolute z-20 w-[170px] h-[171px] rotate-[10deg] top-[480px] left-[420px]" alt="Drunk Image"
-                loading="lazy" width="170" height="171" draggable="false" style="
+                class="absolute z-20 w-full max-w-[170px] max-h-[171px] rotate-[10deg] top-[480px] left-[420px]"
+                alt="Drunk Image" loading="lazy" width="170" height="171" draggable="false" style="
                     image-rendering: -webkit-optimize-contrast;
                     image-rendering: crisp-edges;
                   " />
               <img src="/image/illusts/seals/drunk 1.png"
-                class="absolute z-20 w-[170px] h-[171px] rotate-[10deg] top-[480px] left-[580px]" alt="Drunk Image"
-                loading="lazy" width="170" height="171" draggable="false" style="
+                class="absolute z-20 w-full max-w-[170px] max-h-[171px] rotate-[10deg] top-[480px] left-[580px]"
+                alt="Drunk Image" loading="lazy" width="170" height="171" draggable="false" style="
                     image-rendering: -webkit-optimize-contrast;
                     image-rendering: crisp-edges;
                   " />
               <!-- Right Side - Main Image -->
-              <div class="relative w-[880px] h-[600px] overflow-hidden right-image-container-3">
-                <img src="/image/thumbNails/thumbnail_05.jpg" alt="Main Image" class="object-cover w-[880px] h-[600px]"
+              <div
+                class="relative max-w-[880px] max-h-[600px] border-4 border-black overflow-hidden right-image-container-3">
+                <img src="/image/thumbNails/thumbnail_05.jpg" alt="Main Image" class="object-cover w-full h-full"
                   loading="lazy" width="880" height="600" style="
                       image-rendering: -webkit-optimize-contrast;
                       image-rendering: crisp-edges;
